@@ -1,0 +1,128 @@
+
+
+.gallery-box {
+    width: 100px;
+    padding: 5px;
+    margin: 7px;
+    float: left;
+    min-height: 200px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+.gallery-box .progress {
+    margin-bottom: 0;
+}
+.gallery-box .thumbnail {
+    height: 88px;
+    width: 88px;
+}
+.gallery-box .title {
+    height: 22px;
+    overflow: hidden;
+    display: block;
+}
+
+.modal-dialog.modal-md .modal-content {
+    background: #fff;
+}
+.modal-dialog.modal-md .modal-content * {
+    font-size: 14px;
+}
+.modal-dialog.modal-md .modal-content .modal-header{
+    background-color: #f6f7f9;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 10px 15px;
+}
+.modal-dialog.modal-md .modal-content .modal-header  .close span{
+    font-weight: bold!important;
+    font-size: 18px!important;
+}
+.modal-dialog.modal-md .modal-content .modal-header .modal-title {
+    text-align: left;
+}
+.modal-dialog.modal-md .modal-content .modal-footer {
+    padding: 10px 15px;
+}
+.modal-dialog.modal-md .modal-content .modal-body ul{
+    padding: 0;
+    list-style-type: none;
+}
+.modal-dialog.modal-md .modal-content .modal-body ul li label{
+    font-weight: normal!important;
+    display: block;
+}
+.modal-dialog.modal-md .modal-content .modal-body ul li label input[type=radio] {
+    margin-right: 10px;
+}
+.modal-dialog.modal-md .modal-content .modal-footer button {
+    text-transform: none;
+    font-weight: normal;
+    padding: 3px 5px;
+    font-size: 13px;
+}
+
+.media-footer .edit-media {
+    position: absolute;
+    right: 0px;
+    top: -5px;
+    float: right;
+}
+.media-footer .edit-media .btn-edit {
+    background: none;
+    border-width: 0;
+    width: 30px;
+    line-height: 30px;
+    padding: 0;
+    text-align: right;
+}
+.media-footer .edit-media .btn-edit span {
+    font-size: 12px;
+    color: #ccc;
+    padding-right: 3px;
+}
+.media-footer .edit-media .dropdown-menu a {
+    font-weight: normal!important;
+    display: block;
+    position: relative;
+    padding-left: 40px;
+}
+.media-footer .edit-media .dropdown-menu a i {
+    position: absolute;
+    left: 10px;
+    top: 2px;
+    font-size: 16px;
+    width: 16px;
+    text-align: center;
+}
+.media-footer .edit-media .btn-edit:hover span {
+    color: #666;
+}
+.suggest-list .suggest-item .suggest-info .info-left {
+    width: 100%!important;
+}
+.box-empty {
+    background: #fff;
+    padding: 10px;
+}
+.box-empty .ion-android-search {
+    font-size: 60px;
+}
+.feed-item .thumbnail .caption {
+    word-break: normal!important;
+}
+.ads-sidebar {
+    z-index: 300;
+    position: fixed !important;
+}
+.new-post{
+    left:0 !important;
+}
+.new-post .new-inner a{
+    width: 50px !important;
+    height: 50px !important;
+}
+@media (max-width:1199px){
+    .ads-sidebar{
+        display:none;
+    }
+}
