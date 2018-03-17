@@ -54,7 +54,11 @@ Route::group([
         'as' => 'post@'
     ],function () {
         Route::get('/',['as' => 'index' , 'uses'=>'PostController@index']);
-        Route::get('/create',['as' => 'create' , 'uses'=>'PostController@create']);
+        Route::get('/datatables',['as' => 'datatables' , 'uses'=>'PostController@datatables']);
+        Route::get('/add',['as' => 'add' , 'uses'=>'PostController@create']);
         Route::post('/store',['as' => 'store' , 'uses'=>'PostController@store']);
+        Route::post('/update/{id}',['as' => 'update' , 'uses'=>'PostController@update']);
+        Route::get('/edit/{id}',['as' => 'edit' , 'uses'=>'PostController@edit']);
+        Route::get('/delete/{id}',['as' => 'delete' , 'uses'=>'PostController@delete']);
     });
 });

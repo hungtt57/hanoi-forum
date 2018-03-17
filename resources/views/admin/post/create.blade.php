@@ -13,20 +13,26 @@
     </style>
 @endsection
 @section('content')
+
+    @if(empty($post))
+    <h3>Thêm bài viết mới</h3>
+    @else
+        <h3>Sửa bài viết </h3>
+
+        @endif
     @include('admin.flash_message')
-    @if(request()->input('type') == config('constants.INTRODUCTION'))
-        <h3>Thêm bài tin tức mới</h3>
-    @elseif (request()->input('type') == config('constants.TRAINING'))
-        <h3>Thêm bài chính sách mới</h3>
-    @endif
+    @if(empty($post))
     <form action="{{route('Backend::post@store')}}" class="form-horizontal" method="post" enctype="multipart/form-data">
+        @else
+            <form action="{{route('Backend::post@update',['id' => $post->id])}}" class="form-horizontal" method="post" enctype="multipart/form-data">
+            @endif
         <div class="form-body">
             {{ csrf_field() }}
             <div class="form-group">
                 <label class="col-md-3 control-label">Tiêu đề</label>
                 <div class="col-md-6">
                     <input type="text" name="title" class="form-control" id="title" placeholder="Điền tiêu đề"
-                           value="{{old('title')}}">
+                           value="{{old('title',@$post->title)}}">
                 </div>
             </div>
 
@@ -87,17 +93,39 @@
                 <label class="col-md-3 control-label">Nội dung</label>
                 <div class="col-md-6">
                     <textarea class="form-control ckeditor" placeholder="Điền miêu tả"
-                              name="content">{{old('content')}} </textarea>
+                              name="content">{{old('content',@$post->content)}} </textarea>
                 </div>
             </div>
 
+
+            <div class="form-group">
+                <label class="col-md-3 control-label">Meta title</label>
+                <div class="col-md-6">
+                    <input type="text" name="meta_title" class="form-control" placeholder="Điền meta title"
+                           value="{{old('meta_title',@$post->meta_title)}}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-3 control-label">Meta description</label>
+                <div class="col-md-6">
+                    <textarea class="form-control" placeholder="Điền meta description"
+                              name="meta_description">{{old('meta_description',@$post->meta_description)}}</textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-3 control-label">Meta keyword</label>
+                <div class="col-md-6">
+                    <textarea class="form-control" placeholder="Điền miêu tả"
+                              name="meta_keyword">{{old('meta_keyword',@$post->meta_keyword)}}</textarea>
+                </div>
+            </div>
 
             <div class="form-group">
                 <label class="col-md-3 control-label">Trạng thái</label>
                 <div class="col-md-6">
                     <div class="mt-checkbox-inline">
                         <label class="mt-checkbox mt-checkbox-outline">
-                            <input type="checkbox" name="status" value="0">
+                            <input type="checkbox" name="status" @if($post and $post->status == 1) checked @endif>
                             <span></span>
                         </label>
                     </div>
@@ -109,7 +137,13 @@
         <div class="form-actions">
             <div class="row" style="text-align: center">
 
-                <button type="submit" class="btn green">Thêm</button>
+
+                @if(empty($post))
+                    <button type="submit" class="btn green">Thêm</button>
+                @else
+                    <button type="submit" class="btn green">Sửa</button>
+
+                @endif
                 <button type="button" class="btn default">Hủy</button>
 
             </div>
@@ -127,7 +161,14 @@
       $(function () {
         $(".post-image").fileinput({
           'showUpload': false, 'previewFileType': 'any',
-          'showCaption': false
+          'showCaption': false,
+            @if(isset($post) and $post->image)
+            'initialPreview': [
+              '<img src="{{ $post->image }}" class="kv-preview-data file-preview-image" style="width:auto;height:160px;">'
+            ],
+            @endif
+          'showUploadedThumbs': false,
+          'allowedFileTypes': ['image']
         });
       });
     </script>
