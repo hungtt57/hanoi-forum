@@ -41,11 +41,20 @@ Route::post('/admin/login','Backend\AuthController@postLogin');
 Route::group([
     'prefix' => 'admin',
     'namespace' => 'Backend',
-    'middleware' => 'auth.backend'
+    'middleware' => 'auth.backend',
+    'as' => 'Backend::'
 ], function () {
     Route::get('/', [
         'as' => 'admin',
         'uses' => 'AdminController@index'
     ]);
 
+    Route::group([
+        'prefix' => 'posts',
+        'as' => 'post@'
+    ],function () {
+        Route::get('/',['as' => 'index' , 'uses'=>'PostController@index']);
+        Route::get('/create',['as' => 'create' , 'uses'=>'PostController@create']);
+        Route::post('/store',['as' => 'store' , 'uses'=>'PostController@store']);
+    });
 });
