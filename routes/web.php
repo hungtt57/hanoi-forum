@@ -13,14 +13,17 @@
 //Frontend
 Route::group([
     'namespace' => 'Frontend',
-
+    'as' => 'Frontend::'
 ], function () {
     Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
     Route::get('register', [
         'as' => 'register',
-        'uses' => 'HomeController@logout'
+        'uses' => 'HomeController@register'
     ]);
-
+    Route::post('register', [
+        'as' => 'postRegister',
+        'uses' => 'HomeController@postRegister'
+    ]);
 });
 
 

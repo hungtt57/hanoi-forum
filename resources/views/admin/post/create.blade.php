@@ -22,7 +22,7 @@
     @endif
     @include('admin.flash_message')
     @if(empty($post))
-        <form action="{{route('Backend::post@store')}}" class="form-horizontal" method="post"
+        <form action="{{route('Backend::post@store')}}" class="form-horizontal" method="POST"
               enctype="multipart/form-data">
             @else
                 <form action="{{route('Backend::post@update',['id' => $post->id])}}" class="form-horizontal"

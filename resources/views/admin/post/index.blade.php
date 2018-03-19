@@ -41,7 +41,7 @@
             {data: 'title', name: 'title'},
             {
               "render": function (data, type, full, meta) {
-                return '<img src="' + full.image + '" style="max-width: 150px">';
+                return '<img src="' + full.image + '" style="max-width: 150px;max-height: 200px">';
               }
             },
             {data: 'status', name: 'status'},

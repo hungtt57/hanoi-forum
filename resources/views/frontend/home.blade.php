@@ -74,65 +74,58 @@
                         <p class="entry-text">Lorem ipsum dolor sit amet, con adipiscing elit. Etiam convallis elit id impedie. Quisq commodo ornare tortor Quiue bibendum.</p>
                     </article>
                 </div>
+                @php $posts = App\Models\Post::where('status',1)->orderBy('created_at','desc')->limit(5)->get(); @endphp
+                @if($posts)
                 <div class="col-sm-4">
                     <article class="news-card sabbi-thumlinepost-card solitude-bg__x">
                         <h2 class="stage-title">Latest Events</h2>
                         <ul class="list-unstyled lst_news_list" tabindex="0">
+                            @foreach($posts as $post)
                             <li class="lst_news_item">
-                                <h3 class="title mg_0"><a href="events_single.html">Haematopoietic stem cell transplantation for autoimmune diseases</a></h3>
+                                <h3 class="title mg_0"><a href="events_single.html">{{$post->title}}</a></h3>
                                 <div>
-                                    <span class="date">Dec 15, 2016</span>
+                                    <span class="date">{{$post->created_at->format('M d Y')}}</span>
                                 </div>
                             </li>
-                            <li class="lst_news_item">
-                                <h3 class="title mg_0"><a href="events_single.html">Antithrombotic therapy for patients with STEMI undergoing primary PCI</a></h3>
-                                <div>
-                                    <span class="date">Oct 19, 2016</span>
-                                </div>
-                            </li>
-                            <li class="lst_news_item">
-                                <h3 class="title mg_0"><a href="events_single.html">Cardiovascular disease: Commonality with cancer</a></h3>
-                                <div>
-                                    <span class="date">Oct 12, 2016</span>
-                                </div>
-                            </li>
+                            @endforeach
                         </ul>
                         <a href="events.html" class="btn btn-unsolemn btn-action read-more">VIEW ALL</a>
                     </article>
                 </div>
+                    @endif
             </div>
         </div>
     </section><!-- /.home-info -->
-    <section class="section-brand_quickfact section">
-        <div class="container">
-            <div class="brand_quickfact-wrap">
-                <div class="row">
-                    <div class="col-sm-10 col-sm-offset-1">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="brand_quickfact-content font-2 text-center">
-                                    <div class="brand_quickfact-count_value">33</div>
-                                    <div class="brand_quickfact-label">Journal Articles</div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="brand_quickfact-content font-2 text-center">
-                                    <div class="brand_quickfact-count_value">4.8</div>
-                                    <div class="brand_quickfact-label">Million USD Grants Received</div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="brand_quickfact-content font-2 text-center">
-                                    <div class="brand_quickfact-count_value">13</div>
-                                    <div class="brand_quickfact-label">Research members</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!-- /.section-brand_quickfact -->
+    {{--<section class="section-brand_quickfact section">--}}
+        {{--<div class="container">--}}
+            {{--<div class="brand_quickfact-wrap">--}}
+                {{--<div class="row">--}}
+                    {{--<div class="col-sm-10 col-sm-offset-1">--}}
+                        {{--<div class="row">--}}
+                            {{--<div class="col-sm-4">--}}
+                                {{--<div class="brand_quickfact-content font-2 text-center">--}}
+                                    {{--<div class="brand_quickfact-count_value">33</div>--}}
+                                    {{--<div class="brand_quickfact-label">Journal Articles</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                            {{--<div class="col-sm-4">--}}
+                                {{--<div class="brand_quickfact-content font-2 text-center">--}}
+                                    {{--<div class="brand_quickfact-count_value">4.8</div>--}}
+                                    {{--<div class="brand_quickfact-label">Million USD Grants Received</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                            {{--<div class="col-sm-4">--}}
+                                {{--<div class="brand_quickfact-content font-2 text-center">--}}
+                                    {{--<div class="brand_quickfact-count_value">13</div>--}}
+                                    {{--<div class="brand_quickfact-label">Research members</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</section>--}}
 
     <section class="sabbi-section section-selected_publication">
         <div class="container">

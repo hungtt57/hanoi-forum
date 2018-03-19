@@ -21,6 +21,7 @@ class PostController extends AdminController
 
     public function store(Request $request)
     {
+
         $this->validate($request, [
             'title' => 'required',
             'content' => 'required',
@@ -35,7 +36,9 @@ class PostController extends AdminController
 
         $data['status'] = ($request->input('status') == 'on') ? 1 : 0;
         $data['image'] = $this->saveImage($request->file('image'));
+
         $post = Post::create($data);
+
         return redirect()->back()->with('success', 'Tạo bài viết thành công');
     }
 
