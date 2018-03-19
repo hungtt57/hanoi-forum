@@ -38,6 +38,10 @@ Route::get('/admin/logout', [
     'uses' => 'Backend\AuthController@logout'
 ]);
 Route::post('/admin/login','Backend\AuthController@postLogin');
+Route::get('register', [
+    'as' => 'register',
+    'uses' => 'Frontend\HomeController@logout'
+]);
 Route::group([
     'prefix' => 'admin',
     'namespace' => 'Backend',
