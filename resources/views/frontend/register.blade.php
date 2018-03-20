@@ -26,6 +26,11 @@
                             <div class="form-group">
                                 <input type="password" name="password_confirmation" tabindex="2" class="form-control" placeholder="Password Confirm">
                             </div>
+                            <p>
+                                Registration fee is USD100 and includes access to all sessions and side events, welcome dinner, refreshments during the conference and conference materials.
+                                Registration fee will be waived to delegates with accepted abstracts. Limited financial assistance to support registration fee can be provided on a case-by-case basis. Please indicate if you wish to apply for this assistance in the registration form.
+
+                            </p>
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-xs-6 col-xs-offset-3">
