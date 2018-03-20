@@ -5,7 +5,7 @@
                     data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span> <span
                         class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
             <a class="navbar-brand" href="index.html"><img alt="" class="img-responsive"
-                                                           src="/frontend/assets/img/site-logo.png"></a>
+                                                           src="/frontend/assets/img/logo2.png"></a>
         </div>
         <div class="navbar-collapse collapse sabbi-navbar-collapse  navbar-nav-hov_underline" id="navbar">
             <div class="nav-btn-wrap">
