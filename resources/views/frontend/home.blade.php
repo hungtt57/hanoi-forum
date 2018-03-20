@@ -6,7 +6,7 @@
             <div class="row mt_30">
                 <div class="col-sm-4">
                     <article class="sabbi-thumlinepost-card solitude-bg__x">
-                        <h2 class="entry-title ht-4">About HaNoi Forum</h2>
+                        <h2 class="entry-title ht-4">About Hanoi Forum</h2>
                         <div class="sabbi-thumlinepost-card-meta">
                             <p class="entry-text">Description</p>
                             <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
