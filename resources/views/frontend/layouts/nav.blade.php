@@ -8,7 +8,10 @@
                                                            src="/frontend/assets/img/site-logo.png"></a>
         </div>
         <div class="navbar-collapse collapse sabbi-navbar-collapse  navbar-nav-hov_underline" id="navbar">
-            <div class="nav-btn-wrap"><a href="#" class="btn btn-primary pull-right">Join Research</a></div>
+            <div class="nav-btn-wrap">
+                <a href="{{url('/')}}" class="btn btn-info pull-right">Login</a>
+                <a href="#" class="btn btn-primary pull-right">Register</a>
+            </div>
             <ul class="nav navbar-nav navbar-right" id="menu-main-nav">
                 <li class="active">
                     <a href="{{url('/')}}" title="Home">Home</a>
