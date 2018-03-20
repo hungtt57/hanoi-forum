@@ -32,4 +32,22 @@ class HomeController extends Controller
         $user = User::create($data);
         return redirect()->back()->with('success','Regiter Successful');
     }
+
+
+
+    public function about() {
+        return view('frontend.about');
+    }
+    public function program() {
+        return view('frontend.program');
+    }
+    public function publication() {
+        return view('frontend.publication');
+    }
+    public function organizers() {
+        return view('frontend.organizers');
+    }
+    public function news() {
+        return view('frontend.news');
+    }
 }

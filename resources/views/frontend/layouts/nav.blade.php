@@ -9,24 +9,27 @@
         </div>
         <div class="navbar-collapse collapse sabbi-navbar-collapse  navbar-nav-hov_underline" id="navbar">
             <div class="nav-btn-wrap">
-                <a href="{{url('/')}}" class="btn btn-info pull-right">Login</a>
-                <a href="#" class="btn btn-primary pull-right">Register</a>
+                <a href="{{url('/admin/login')}}" class="btn btn-primary pull-right">Login</a>
+                <a href="{{url('/register')}}" class="btn btn-info pull-right" style="margin-right:10px">Register</a>
             </div>
             <ul class="nav navbar-nav navbar-right" id="menu-main-nav">
-                <li class="active">
+                <li class="{{Request::is('/') ? 'active' : ''}}">
                     <a href="{{url('/')}}" title="Home">Home</a>
                 </li>
-                <li>
-                    <a href="{{url('/')}}" title="About">About</a>
+                <li class="{{Request::is('about') ? 'active' : ''}}">
+                    <a href="{{url('/about')}}" title="About">About</a>
                 </li>
-                <li>
-                    <a href="{{url('/')}}" title="Program">Program</a>
+                <li class="{{Request::is('program') ? 'active' : ''}}">
+                    <a href="{{url('/program')}}" title="Program">Program</a>
                 </li>
-                <li>
-                    <a href="{{url('/')}}" title="Publication">Publication</a>
+                <li  class="{{Request::is('organizers') ? 'active' : ''}}">
+                    <a href="{{url('/organizers')}}" title="Organizers">Organizers</a>
                 </li>
-                <li>
-                    <a href="{{url('/')}}" title="News">News</a>
+                <li  class="{{Request::is('publication') ? 'active' : ''}}">
+                    <a href="{{url('/publication')}}" title="Publication">Publication</a>
+                </li>
+                <li  class="{{Request::is('news') ? 'active' : ''}}">
+                    <a href="{{url('/news')}}" title="News">News</a>
                 </li>
                 <li>
                     <a href="{{url('/')}}" title="Multimedia">Multimedia</a>

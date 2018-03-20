@@ -24,6 +24,11 @@ Route::group([
         'as' => 'postRegister',
         'uses' => 'HomeController@postRegister'
     ]);
+    Route::get('about', 'HomeController@about');
+    Route::get('program', 'HomeController@program');
+    Route::get('publication', 'HomeController@publication');
+    Route::get('organizers', 'HomeController@organizers');
+    Route::get('news', 'HomeController@news');
 });
 
 
