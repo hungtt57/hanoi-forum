@@ -3,6 +3,46 @@
 @section('content')
     <section class="sabbbi-section home-info mt_35">
         <div class="container">
+            <div class="row mt_30">
+                <div class="col-sm-4">
+                    <article class="sabbi-thumlinepost-card solitude-bg__x">
+                        <h2 class="entry-title ht-4">About HaNoi Forum</h2>
+                        <div class="sabbi-thumlinepost-card-meta">
+                            <p class="entry-text">Description</p>
+                            <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-4">
+                    <article class="sabbi-thumlinepost-card card-video solitude-bg__x">
+                        <figure class="sabbi-thumlinepost-card-figure">
+                            <a class="video-play"  href="https://www.youtube.com/watch?v=qarc7AA4-wM" data-toggle="lightbox"><img src="/frontend/assets/img/sabbi-post/card-img-5.jpg" alt="" class="img-responsive img-thumpost"></a>
+                            <figcaption>Trailer</figcaption>
+                        </figure>
+                        <h3 class="entry-title"><a href="#">Title</a></h3>
+                        <p class="entry-text">Description</p>
+                    </article>
+                </div>
+                @php $posts = App\Models\Post::where('status',1)->orderBy('created_at','desc')->limit(5)->get(); @endphp
+                @if($posts)
+                    <div class="col-sm-4">
+                        <article class="news-card sabbi-thumlinepost-card solitude-bg__x">
+                            <h2 class="stage-title">Latest Events</h2>
+                            <ul class="list-unstyled lst_news_list" tabindex="0">
+                                @foreach($posts as $post)
+                                    <li class="lst_news_item">
+                                        <h3 class="title mg_0"><a href="events_single.html">{{$post->title}}</a></h3>
+                                        <div>
+                                            <span class="date">{{$post->created_at->format('M d Y')}}</span>
+                                        </div>
+                                    </li>
+                                @endforeach
+                            </ul>
+                            <a href="events.html" class="btn btn-unsolemn btn-action read-more">VIEW ALL</a>
+                        </article>
+                    </div>
+                @endif
+            </div>
             <div class="row home-info-block-first">
                 <div class="col-md-3 col-sm-6">
                     <article class="sabbi-thumlinepost-card solitude-bg__x">
@@ -10,9 +50,9 @@
                             <img src="/frontend/assets/img/sabbi-post/card-1.png" alt="" class="img-responsive img-thumpost">
                         </figure>
                         <div class="sabbi-thumlinepost-card-meta">
-                            {{--<h2 class="meta-title ht-5">Immunology: T-cell tweaks to target tumours</h2>--}}
-                            {{--<p class="meta-text">Lorem ipsum dolor sit amet, con adipiscing elit. Etiam convallis elit id impedie. Quisq commodo</p>--}}
-                            {{--<a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>--}}
+                            <h2 class="meta-title ht-5">Panel</h2>
+                            <p class="meta-text">Desc</p>
+                            <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
                         </div>
                     </article>
                 </div>
@@ -22,9 +62,9 @@
                             <img src="/frontend/assets/img/sabbi-post/card-2.png" alt="" class="img-responsive img-thumpost">
                         </figure>
                         <div class="sabbi-thumlinepost-card-meta">
-                            {{--<h2 class="meta-title ht-5">Molecular biology: RNA editing packs a two punch</h2>--}}
-                            {{--<p class="meta-text">Lorem ipsum dolor sit amet, con adipiscing elit. Etiam convallis elit id impedie. Quisq commodo</p>--}}
-                            {{--<a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>--}}
+                            <h2 class="meta-title ht-5">Panel</h2>
+                            <p class="meta-text">Desc</p>
+                            <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
                         </div>
                     </article>
                 </div>
@@ -34,9 +74,9 @@
                             <img src="/frontend/assets/img/sabbi-post/card-3.png" alt="" class="img-responsive img-thumpost">
                         </figure>
                         <div class="sabbi-thumlinepost-card-meta">
-                            {{--<h2 class="meta-title ht-5">Cardiovascular disease: Commonality with cancer</h2>--}}
-                            {{--<p class="meta-text">Lorem ipsum dolor sit amet, con adipiscing elit. Etiam convallis elit id impedie. Quisq commodo</p>--}}
-                            {{--<a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>--}}
+                            <h2 class="meta-title ht-5">Panel</h2>
+                            <p class="meta-text">Desc</p>
+                            <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
                         </div>
                     </article>
                 </div>
@@ -46,54 +86,54 @@
                             <img src="/frontend/assets/img/sabbi-post/card-4.png" alt="" class="img-responsive img-thumpost">
                         </figure>
                         <div class="sabbi-thumlinepost-card-meta">
-                            {{--<h2 class="meta-title ht-5">Immunology: T-cell tweaks to target tumours</h2>--}}
-                            {{--<p class="meta-text">Lorem ipsum dolor sit amet, con adipiscing elit. Etiam convallis elit id impedie. Quisq commodo</p>--}}
-                            {{--<a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>--}}
+                            <h2 class="meta-title ht-5">Panel</h2>
+                            <p class="meta-text">Desc</p>
+                            <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
                         </div>
                     </article>
                 </div>
 
             </div>
-            <div class="row mt_30">
-                <div class="col-sm-4">
+            <div class="row home-info-block-first">
+                <div class="col-md-4 col-sm-6">
                     <article class="sabbi-thumlinepost-card solitude-bg__x">
-                        {{--<h2 class="entry-title ht-4">About Research Group</h2>--}}
-                        {{--<div class="sabbi-thumlinepost-card-meta">--}}
-                            {{--<p class="entry-text">Lorem ipsum dolor sit amet, con adipiscing elit. Etiam convallis elit id impedie. Quisq commodo ornare tortor Quiue bibendum. magna vitae ex interdum cursus. Nullam lacinia pretium nibh, vitae imperdiet lacus tempor sit amet. Donec ultrices est nec tellus finibus facilisis. Nullam sodales justo id magna fringilla rutrum. Duis bibendum id eros congue bibendum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam convallis elit</p>--}}
-                            {{--<a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>--}}
-                        {{--</div>--}}
+                        <figure class="sabbi-thumlinepost-card-figure">
+                            <img src="/frontend/assets/img/sabbi-post/card-1.png" alt="" class="img-responsive img-thumpost">
+                        </figure>
+                        <div class="sabbi-thumlinepost-card-meta">
+                            <h2 class="meta-title ht-5">Panel</h2>
+                            <p class="meta-text">Desc</p>
+                            <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
+                        </div>
                     </article>
                 </div>
-                <div class="col-sm-4">
-                    <article class="sabbi-thumlinepost-card card-video solitude-bg__x">
-                        {{--<figure class="sabbi-thumlinepost-card-figure">--}}
-                            {{--<a class="video-play"  href="https://www.youtube.com/watch?v=qarc7AA4-wM" data-toggle="lightbox"><img src="/frontend/assets/img/sabbi-post/card-img-5.jpg" alt="" class="img-responsive img-thumpost"></a>--}}
-                            {{--<figcaption>DR.Rushmore  Remarkable Journey</figcaption>--}}
-                        {{--</figure>--}}
-                        {{--<h3 class="entry-title"><a href="#">DR.Rushmore  Remarkable Journey</a></h3>--}}
-                        {{--<p class="entry-text">Lorem ipsum dolor sit amet, con adipiscing elit. Etiam convallis elit id impedie. Quisq commodo ornare tortor Quiue bibendum.</p>--}}
+                <div class="col-md-4 col-sm-6">
+                    <article class="sabbi-thumlinepost-card solitude-bg__x">
+                        <figure class="sabbi-thumlinepost-card-figure">
+                            <img src="/frontend/assets/img/sabbi-post/card-2.png" alt="" class="img-responsive img-thumpost">
+                        </figure>
+                        <div class="sabbi-thumlinepost-card-meta">
+                            <h2 class="meta-title ht-5">Panel</h2>
+                            <p class="meta-text">Desc</p>
+                            <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
+                        </div>
                     </article>
                 </div>
-                @php $posts = App\Models\Post::where('status',1)->orderBy('created_at','desc')->limit(5)->get(); @endphp
-                @if($posts)
-                <div class="col-sm-4">
-                    <article class="news-card sabbi-thumlinepost-card solitude-bg__x">
-                        <h2 class="stage-title">Latest Events</h2>
-                        <ul class="list-unstyled lst_news_list" tabindex="0">
-                            @foreach($posts as $post)
-                            <li class="lst_news_item">
-                                <h3 class="title mg_0"><a href="events_single.html">{{$post->title}}</a></h3>
-                                <div>
-                                    <span class="date">{{$post->created_at->format('M d Y')}}</span>
-                                </div>
-                            </li>
-                            @endforeach
-                        </ul>
-                        <a href="events.html" class="btn btn-unsolemn btn-action read-more">VIEW ALL</a>
+                <div class="col-md-4 col-sm-6">
+                    <article class="sabbi-thumlinepost-card solitude-bg__x">
+                        <figure class="sabbi-thumlinepost-card-figure">
+                            <img src="/frontend/assets/img/sabbi-post/card-3.png" alt="" class="img-responsive img-thumpost">
+                        </figure>
+                        <div class="sabbi-thumlinepost-card-meta">
+                            <h2 class="meta-title ht-5">Panel</h2>
+                            <p class="meta-text">Desc</p>
+                            <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
+                        </div>
                     </article>
                 </div>
-                    @endif
+
             </div>
+
         </div>
     </section><!-- /.home-info -->
     {{--<section class="section-brand_quickfact section">--}}
