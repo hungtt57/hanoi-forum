@@ -11,7 +11,7 @@
         <div class="navbar-collapse collapse sabbi-navbar-collapse  navbar-nav-hov_underline" id="navbar">
             <div class="nav-btn-wrap">
                 <a href="{{url('/admin/login')}}" class="btn btn-primary pull-right">Login</a>
-                <a href="{{url('/register')}}" class="btn btn-info pull-right" style="margin-right:10px">Register</a>
+                <a href="{{url('/register')}}" class="btn btn-info pull-right" style="margin-right:10px;background:#007f49;">Register</a>
             </div>
             <ul class="nav navbar-nav navbar-right" id="menu-main-nav">
                 <li class="{{Request::is('/') ? 'active' : ''}}">

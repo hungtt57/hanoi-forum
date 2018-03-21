@@ -26,9 +26,17 @@ class HomeController extends AdminController
         $this->validate($request, [
             'email' => 'required|email|max:255',
             'password' => 'required|min:6|confirmed',
-            'file' => 'max:5120'
+            'file' => 'max:5120',
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'title' => 'required',
+            'affiliation' => 'required',
         ], [
-            'file.max' => 'Max file size 5MB'
+            'file.max' => 'Max file size 5MB',
+            'first_name.required' => 'Please enter first name',
+            'last_name.required' => 'Please enter last name',
+            'title.required' => 'Please enter title',
+            'affiliation.required' => 'Please enter Affiliation',
         ]);
         $data = $request->all();
 

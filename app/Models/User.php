@@ -12,12 +12,18 @@ class User extends Authenticatable
     const REVIEWER = 1;
     const PARTNER = 2;
     /**
+     *
      * The attributes that are mass assignable.
      *
      * @var array
      */
+    const MALE = 2;
+    const FEMALE = 1;
+    const NOT_SPECIFY = 0;
     protected $fillable = [
-        'name', 'email', 'password', 'type', 'phone','file'
+        'name', 'email', 'password', 'type', 'phone','file',
+        'first_name','last_name','title','affiliation','gender','nationality','link_cv','abstract','paper',
+        'status'
     ];
 
     /**
