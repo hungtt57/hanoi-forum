@@ -93,4 +93,20 @@ class HomeController extends AdminController
     {
         return view('frontend.news');
     }
+
+    public function climateChangeEvidenceAndSecurity(Request $request) {
+        return view('frontend.panel.climateChangeEvidenceAndSecurity');
+    }
+    public function humanImpactClimate(Request $request) {
+        return view('frontend.panel.humanImpactClimate');
+    }
+    public function climateChangeResponse(Request $request) {
+        return view('frontend.panel.climateChangeResponse');
+    }
+    public function policyAndGovernance(Request $request) {
+        return view('frontend.panel.policyAndGovernance');
+    }
+    public function scienceTechnology(Request $request) {
+        return view('frontend.panel.scienceTechnology');
+    }
 }

@@ -25,17 +25,20 @@ class PostController extends AdminController
         $this->validate($request, [
             'title' => 'required',
             'content' => 'required',
-            'image' => 'required'
+//            'image' => 'required'
         ], [
             'title.required' => 'Vui lòng nhập tiêu đề',
             'content.required' => 'Vui lòng nhập nội dung',
-            'image.required' => 'Vui lòng chọn ảnh đại diện'
+//            'image.required' => 'Vui lòng chọn ảnh đại diện'
         ]);
 
         $data = $request->all();
 
         $data['status'] = ($request->input('status') == 'on') ? 1 : 0;
-        $data['image'] = $this->saveImage($request->file('image'));
+        if($request->file('image')) {
+            $data['image'] = $this->saveImage($request->file('image'));
+        }
+
 
         $post = Post::create($data);
 

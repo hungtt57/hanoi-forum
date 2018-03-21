@@ -9,6 +9,7 @@
                         <h2 class="entry-title ht-4">About Hanoi Forum</h2>
                         <div class="sabbi-thumlinepost-card-meta">
                             <p class="entry-text">Hanoi Forum is an international academic conference co-hosted by Vietnam National University, Hanoi (VNU) and Korea Foundation for Advanced Studies (KFAS).
+                                The general theme of Hanoi Forum is “Towards Sustainable Development”. Hanoi Forum aims at promoting the study of sustainability science around the world.
                             </p>
                             <a href="{{url('hanoi-forum')}}" class="btn btn-unsolemn btn-action read-more">Read More</a>
                         </div>
@@ -53,7 +54,7 @@
                         <div class="sabbi-thumlinepost-card-meta">
                             <h2 class="meta-title ht-5">Climate change evidence and security</h2>
                             <p class="meta-text"></p>
-                            <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
+                            <a href="{{url('climate-change-evidence-and-security')}}" class="btn btn-unsolemn btn-action read-more">Read More</a>
                         </div>
                     </article>
                 </div>
@@ -65,7 +66,7 @@
                         <div class="sabbi-thumlinepost-card-meta">
                             <h2 class="meta-title ht-5">Humans impact climate</h2>
                             <p class="meta-text"></p>
-                            <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
+                            <a href="{{url('humans-impact-climate')}}" class="btn btn-unsolemn btn-action read-more">Read More</a>
                         </div>
                     </article>
                 </div>
@@ -77,7 +78,7 @@
                         <div class="sabbi-thumlinepost-card-meta">
                             <h2 class="meta-title ht-5">Climate change response</h2>
                             <p class="meta-text"></p>
-                            <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
+                            <a href="{{url('climate-change-response')}}" class="btn btn-unsolemn btn-action read-more">Read More</a>
                         </div>
                     </article>
                 </div>
@@ -89,7 +90,7 @@
                         <div class="sabbi-thumlinepost-card-meta">
                             <h2 class="meta-title ht-5">Policy and governance of climate change response and sustainability</h2>
                             <p class="meta-text"></p>
-                            <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
+                            <a href="{{url('policy-and-governance-of-climate-change-response-and-sustainability')}}" class="btn btn-unsolemn btn-action read-more">Read More</a>
                         </div>
                     </article>
                 </div>
@@ -102,9 +103,9 @@
                             <img src="/frontend/assets/img/sabbi-post/card-1.png" alt="" class="img-responsive img-thumpost">
                         </figure>
                         <div class="sabbi-thumlinepost-card-meta">
-                            <h2 class="meta-title ht-5">Science, technology and education for climate change response and</h2>
+                            <h2 class="meta-title ht-5">Science, technology and education for climate change response and sustainability</h2>
                             <p class="meta-text"></p>
-                            <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
+                            <a href="{{url('science-technology-and-education-for-climate-change-response-and-sustainability')}}" class="btn btn-unsolemn btn-action read-more">Read More</a>
                         </div>
                     </article>
                 </div>

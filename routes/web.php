@@ -39,6 +39,13 @@ Route::group([
     Route::get('academic-committee', 'HomeController@academicCommittee');
 
     Route::get('news', 'HomeController@news');
+
+    //panel
+    Route::get('climate-change-evidence-and-security', 'HomeController@climateChangeEvidenceAndSecurity');
+    Route::get('humans-impact-climate', 'HomeController@humanImpactClimate');
+    Route::get('climate-change-response', 'HomeController@climateChangeResponse');
+    Route::get('policy-and-governance-of-climate-change-response-and-sustainability', 'HomeController@policyAndGovernance');
+    Route::get('science-technology-and-education-for-climate-change-response-and-sustainability', 'HomeController@scienceTechnology');
 });
 
 
