@@ -4,7 +4,7 @@
             <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar"
                     data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span> <span
                         class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
-            <a class="navbar-brand" href="http://vnu.edu.vn/home/"><img alt="" class="img-responsive"
+            <a class="navbar-brand" href="{{url('/')}}"><img alt="" class="img-responsive"
                                                                         style="max-width: 110px"
                                                                         src="/frontend/assets/img/logo2.png"></a>
         </div>
