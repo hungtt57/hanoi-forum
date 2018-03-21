@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\Models\Post;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -108,5 +109,13 @@ class HomeController extends AdminController
     }
     public function scienceTechnology(Request $request) {
         return view('frontend.panel.scienceTechnology');
+    }
+
+    public function detailPost(Request $request,$slug,$id) {
+        $post = Post::where('id',$id)->where('status',1)->first();
+        if(empty($post)) {
+            abort(404);
+        }
+        return view('frontend.post',compact($post));
     }
 }
