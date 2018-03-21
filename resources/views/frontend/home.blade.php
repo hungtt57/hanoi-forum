@@ -33,7 +33,7 @@
                             <ul class="list-unstyled lst_news_list" tabindex="0">
                                 @foreach($posts as $post)
                                     <li class="lst_news_item">
-                                        <h3 class="title mg_0"><a href="{{url('post/').str_slug($post->title).'-'.$post->id}}">{{$post->title}}</a></h3>
+                                        <h3 class="title mg_0"><a href="{{url('post').'/'.str_slug($post->title).'-'.$post->id}}">{{$post->title}}</a></h3>
                                         <div>
                                             <span class="date">{{$post->created_at->format('M d Y')}}</span>
                                         </div>

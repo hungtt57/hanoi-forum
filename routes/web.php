@@ -46,7 +46,7 @@ Route::group([
     Route::get('climate-change-response', 'HomeController@climateChangeResponse');
     Route::get('policy-and-governance-of-climate-change-response-and-sustainability', 'HomeController@policyAndGovernance');
     Route::get('science-technology-and-education-for-climate-change-response-and-sustainability', 'HomeController@scienceTechnology');
-    Route::get('posts/{slug}-{id}', 'HomeController@detailPost')
+    Route::get('post/{slug}-{id}', 'HomeController@detailPost')
         ->where(['slug' => '[a-zA-Z0-9-]+', 'id' => '[0-9-]+']);
 
 });

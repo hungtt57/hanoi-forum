@@ -116,6 +116,6 @@ class HomeController extends AdminController
         if(empty($post)) {
             abort(404);
         }
-        return view('frontend.post',compact($post));
+        return view('frontend.post',compact('post'));
     }
 }
