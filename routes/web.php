@@ -28,6 +28,10 @@ Route::group([
     Route::get('program', 'HomeController@program');
     Route::get('publication', 'HomeController@publication');
     Route::get('organizers', 'HomeController@organizers');
+    Route::get('steering-committee', 'HomeController@steeringCommittee');
+    Route::get('organizing-committee', 'HomeController@OrganizingCommittee');
+    Route::get('academic-committee', 'HomeController@academicCommittee');
+
     Route::get('news', 'HomeController@news');
 });
 

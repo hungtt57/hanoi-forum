@@ -22,9 +22,24 @@
                 <li class="{{Request::is('program') ? 'active' : ''}}">
                     <a href="{{url('/program')}}" title="Program">Program</a>
                 </li>
-                <li  class="{{Request::is('organizers') ? 'active' : ''}}">
-                    <a href="{{url('/organizers')}}" title="Organizers">Organizers</a>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" title="Organizers"  data-hover="dropdown" data-animations="zoomIn">Organizers <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="{{url('steering-committee')}}" title="Steering Committee">Steering Committee</a>
+                        </li>
+                        <li>
+                            <a href="{{url('organizing-committee')}}" title="Organizing Committee">Organizing Committee</a>
+                        </li>
+                        <li>
+                            <a href="{{url('academic-committee')}}" title="Academic Committee">Academic Committee</a>
+                        </li>
+
+                    </ul>
                 </li>
+
+
+
                 <li  class="{{Request::is('publication') ? 'active' : ''}}">
                     <a href="{{url('/publication')}}" title="Publication">Publication</a>
                 </li>
@@ -40,17 +55,7 @@
                 <li>
                     <a href="{{url('/')}}" title="Contact Us">Contact Us</a>
                 </li>
-                {{--<li class="dropdown">--}}
-                {{--<a class="dropdown-toggle" data-toggle="dropdown" href="#" title="People"  data-hover="dropdown" data-animations="zoomIn">People <span class="caret"></span></a>--}}
-                {{--<ul class="dropdown-menu" role="menu">--}}
-                {{--<li>--}}
-                {{--<a href="professor.html" title="Dr Rushmore">Dr. Rushmore</a>--}}
-                {{--</li>--}}
-                {{--<li>--}}
-                {{--<a href="ourteam.html" title="Our Team">Our Team</a>--}}
-                {{--</li>--}}
-                {{--</ul>--}}
-                {{--</li>--}}
+
 
             </ul>
         </div>

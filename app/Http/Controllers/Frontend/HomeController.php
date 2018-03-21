@@ -70,7 +70,15 @@ class HomeController extends AdminController
     {
         return view('frontend.organizers');
     }
-
+    public function steeringCommittee() {
+        return view('frontend.steeringCommittee');
+    }
+    public function OrganizingCommittee() {
+        return view('frontend.organizingCommittee');
+    }
+    public function academicCommittee() {
+        return view('frontend.academicCommittee');
+    }
     public function news()
     {
         return view('frontend.news');
