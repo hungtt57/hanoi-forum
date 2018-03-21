@@ -8,8 +8,9 @@
                     <article class="sabbi-thumlinepost-card solitude-bg__x">
                         <h2 class="entry-title ht-4">About Hanoi Forum</h2>
                         <div class="sabbi-thumlinepost-card-meta">
-                            <p class="entry-text">Description</p>
-                            <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
+                            <p class="entry-text">Hanoi Forum is an international academic conference co-hosted by Vietnam National University, Hanoi (VNU) and Korea Foundation for Advanced Studies (KFAS).
+                            </p>
+                            <a href="{{url('hanoi-forum')}}" class="btn btn-unsolemn btn-action read-more">Read More</a>
                         </div>
                     </article>
                 </div>
@@ -51,7 +52,7 @@
                         </figure>
                         <div class="sabbi-thumlinepost-card-meta">
                             <h2 class="meta-title ht-5">Climate change evidence and security</h2>
-                            <p class="meta-text">Desc</p>
+                            <p class="meta-text"></p>
                             <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
                         </div>
                     </article>
@@ -63,7 +64,7 @@
                         </figure>
                         <div class="sabbi-thumlinepost-card-meta">
                             <h2 class="meta-title ht-5">Humans impact climate</h2>
-                            <p class="meta-text">Desc</p>
+                            <p class="meta-text"></p>
                             <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
                         </div>
                     </article>
@@ -75,7 +76,7 @@
                         </figure>
                         <div class="sabbi-thumlinepost-card-meta">
                             <h2 class="meta-title ht-5">Climate change response</h2>
-                            <p class="meta-text">Desc</p>
+                            <p class="meta-text"></p>
                             <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
                         </div>
                     </article>
@@ -87,7 +88,7 @@
                         </figure>
                         <div class="sabbi-thumlinepost-card-meta">
                             <h2 class="meta-title ht-5">Policy and governance of climate change response and sustainability</h2>
-                            <p class="meta-text">Desc</p>
+                            <p class="meta-text"></p>
                             <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
                         </div>
                     </article>
@@ -102,7 +103,7 @@
                         </figure>
                         <div class="sabbi-thumlinepost-card-meta">
                             <h2 class="meta-title ht-5">Science, technology and education for climate change response and</h2>
-                            <p class="meta-text">Desc</p>
+                            <p class="meta-text"></p>
                             <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
                         </div>
                     </article>
@@ -115,7 +116,7 @@
                         <div class="sabbi-thumlinepost-card-meta">
                             <h2 class="meta-title ht-5">Resources Management in Mekong Delta Region: An Institution Perspective
                             </h2>
-                            <p class="meta-text">Desc</p>
+                            <p class="meta-text"></p>
                             <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
                         </div>
                     </article>
@@ -128,7 +129,7 @@
                         <div class="sabbi-thumlinepost-card-meta">
                             <h2 class="meta-title ht-5">Building Resilient and Safe City for Sustainable Development in the Red River Delta
                             </h2>
-                            <p class="meta-text">Desc</p>
+                            <p class="meta-text"></p>
                             <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
                         </div>
                     </article>
