@@ -40,7 +40,7 @@
                                 </tbody>
                             </table>
                             <br />
-                            <p dir="ltr"><b id="docs-internal-guid-b6c1a49f-4260-03d7-8a24-c3a030a1033d">Hanoi Forum 2018 to boost climate change response effectiveness</b></p>
+                            <p dir="ltr"><b id="docs-internal-guid-b6c1a49f-4260-03d7-8a24-c3a030a1033d">Announcing Hanoi Forum 2018: Towards Sustainable Development – Climate Change Response for Sustainability and Security</b></p>
                             <br />
                             <p dir="ltr"><span id="docs-internal-guid-b6c1a49f-4260-03d7-8a24-c3a030a1033d">HANOI, Vietnam &ndash; Vietnam National University, Hanoi (VNU) and Korea Foundation for Advanced Studies (KFAS) will host Hanoi Forum 2018, an international academic conference on climate change response and sustainable development, on November 8- 10, 2018 in Hanoi, Vietnam. </span></p>
 

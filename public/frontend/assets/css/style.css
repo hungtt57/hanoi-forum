@@ -1121,7 +1121,9 @@ body .mb_100 {
 /* header */
 .sabbi-page-header {
     min-height: 230px;
-    background-color: rgba(163, 22, 117, 0.12);
+    /*background-color: rgba(163, 22, 117, 0.12);*/
+    background-color: rgba(0,127,73,0.12);
+
     position: relative;
 }
 
