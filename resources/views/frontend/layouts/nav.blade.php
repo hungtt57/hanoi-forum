@@ -4,8 +4,9 @@
             <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar"
                     data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span> <span
                         class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
-            <a class="navbar-brand" href="{{url('/')}}"><img alt="" class="img-responsive" style="max-width: 110px"
-                                                           src="/frontend/assets/img/logo2.png"></a>
+            <a class="navbar-brand" href="http://vnu.edu.vn/home/"><img alt="" class="img-responsive"
+                                                                        style="max-width: 110px"
+                                                                        src="/frontend/assets/img/logo2.png"></a>
         </div>
         <div class="navbar-collapse collapse sabbi-navbar-collapse  navbar-nav-hov_underline" id="navbar">
             <div class="nav-btn-wrap">
@@ -18,14 +19,16 @@
                 </li>
 
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" title="Organizers"  data-hover="dropdown" data-animations="zoomIn">About <span class="caret"></span></a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" title="About" data-hover="dropdown"
+                       data-animations="zoomIn">About <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li>
-                            <a href="{{url('hanoi-forum')}}" title="Steering Committee">Ha noi Forum 2018</a>
+                            <a href="{{url('hanoi-forum')}}" title="Introduction">Hanoi Forum</a>
                         </li>
                         <li>
-                            <a href="{{url('focus')}}" title="Steering Committee">Focus</a>
+                            <a href="{{url('hanoi-forum-2018')}}" title="Hanoi Forum 2018">Hanoi Forum 2018</a>
                         </li>
+
 
                     </ul>
                 </li>
@@ -33,13 +36,15 @@
                     <a href="{{url('/program')}}" title="Program">Program</a>
                 </li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" title="Organizers"  data-hover="dropdown" data-animations="zoomIn">Organizers <span class="caret"></span></a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" title="Organizers" data-hover="dropdown"
+                       data-animations="zoomIn">Organizers <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li>
                             <a href="{{url('steering-committee')}}" title="Steering Committee">Steering Committee</a>
                         </li>
                         <li>
-                            <a href="{{url('organizing-committee')}}" title="Organizing Committee">Organizing Committee</a>
+                            <a href="{{url('organizing-committee')}}" title="Organizing Committee">Organizing
+                                Committee</a>
                         </li>
                         <li>
                             <a href="{{url('academic-committee')}}" title="Academic Committee">Academic Committee</a>
@@ -49,11 +54,10 @@
                 </li>
 
 
-
-                <li  class="{{Request::is('publication') ? 'active' : ''}}">
+                <li class="{{Request::is('publication') ? 'active' : ''}}">
                     <a href="{{url('/publication')}}" title="Publication">Publication</a>
                 </li>
-                <li  class="{{Request::is('news') ? 'active' : ''}}">
+                <li class="{{Request::is('news') ? 'active' : ''}}">
                     <a href="{{url('/news')}}" title="News">News</a>
                 </li>
                 <li>

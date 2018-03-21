@@ -47,7 +47,7 @@
             <div class="col-sm-3">
                 <div class="footer-site-info">
                     <header>
-                        <a class="footer-brand" href="index.html"><img alt="" class="img-responsive" style="max-width: 90px" src="/frontend/assets/img/site-logo.png"></a>
+                        <a class="footer-brand" href="http://vnu.edu.vn/home/"><img alt="" class="img-responsive" style="max-width: 90px" src="/frontend/assets/img/site-logo.png"></a>
                     </header>
                     <address>
                         <h3 class="entry-title">Contact Information</h3>

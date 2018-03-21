@@ -25,7 +25,8 @@ Route::group([
         'uses' => 'HomeController@postRegister'
     ]);
     Route::get('about', 'HomeController@about');
-    Route::get('hanoi-forum', 'HomeController@hanoiForum');
+    Route::get('hanoi-forum', 'HomeController@hanoi');
+    Route::get('hanoi-forum-2018', 'HomeController@hanoiForum2018');
     Route::get('focus', 'HomeController@focus');
 
 
