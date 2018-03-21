@@ -121,4 +121,19 @@ class HomeController extends AdminController
     public function sponsor(Request $request) {
         return view('frontend.sponsor');
     }
+
+
+
+    public function importantDates(Request $request) {
+        return view('frontend.importantDates');
+    }
+
+    public function forumProgram(Request $request) {
+        return view('frontend.forumProgram');
+    }
+
+    public function keynoteSpeakers(Request $request) {
+        return view('frontend.keynoteSpeakers');
+    }
 }
+

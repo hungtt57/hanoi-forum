@@ -27,7 +27,14 @@ Route::group([
     Route::get('about', 'HomeController@about');
     Route::get('hanoi-forum', 'HomeController@hanoi');
     Route::get('hanoi-forum-2018', 'HomeController@hanoiForum2018');
-    Route::get('focus', 'HomeController@focus');
+
+
+    Route::get('important-dates', 'HomeController@importantDates');
+    Route::get('forum-program', 'HomeController@forumProgram');
+    Route::get('keynote-speakers', 'HomeController@keynoteSpeakers');
+
+
+
 
 
 

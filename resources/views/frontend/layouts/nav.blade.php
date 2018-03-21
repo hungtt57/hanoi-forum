@@ -32,9 +32,24 @@
 
                     </ul>
                 </li>
-                <li class="{{Request::is('program') ? 'active' : ''}}">
-                    <a href="{{url('/program')}}" title="Program">Program</a>
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" title="Program" data-hover="dropdown"
+                       data-animations="zoomIn">Program <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="{{url('important-dates')}}" title="Important dates">Important dates</a>
+                        </li>
+                        <li>
+                            <a href="{{url('forum-program')}}" title="Forum Program">Forum Program</a>
+                        </li>
+                        <li>
+                            <a href="{{url('keynote-speakers')}}" title="Keynote Speakers">Keynote Speakers</a>
+                        </li>
+                    </ul>
                 </li>
+
+
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" title="Organizers" data-hover="dropdown"
                        data-animations="zoomIn">Organizers <span class="caret"></span></a>
