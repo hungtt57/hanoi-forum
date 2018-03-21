@@ -49,6 +49,9 @@
                         <li>
                             <a href="{{url('academic-committee')}}" title="Academic Committee">Academic Committee</a>
                         </li>
+                           <li>
+                            <a href="{{url('sponsors')}}" title="Academic Committee">Sponsors</a>
+                        </li>
 
                     </ul>
                 </li>

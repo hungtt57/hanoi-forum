@@ -37,6 +37,7 @@ Route::group([
     Route::get('steering-committee', 'HomeController@steeringCommittee');
     Route::get('organizing-committee', 'HomeController@OrganizingCommittee');
     Route::get('academic-committee', 'HomeController@academicCommittee');
+    Route::get('sponsors', 'HomeController@sponsor');
 
     Route::get('news', 'HomeController@news');
 

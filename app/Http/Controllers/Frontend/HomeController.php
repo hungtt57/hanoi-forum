@@ -118,4 +118,7 @@ class HomeController extends AdminController
         }
         return view('frontend.post',compact('post'));
     }
+    public function sponsor(Request $request) {
+        return view('frontend.sponsor');
+    }
 }
