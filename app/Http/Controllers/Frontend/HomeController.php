@@ -55,6 +55,15 @@ class HomeController extends AdminController
     {
         return view('frontend.about');
     }
+    public function hanoiForum()
+    {
+        return view('frontend.hanoiForum');
+    }
+
+ public function focus()
+    {
+        return view('frontend.focus');
+    }
 
     public function program()
     {

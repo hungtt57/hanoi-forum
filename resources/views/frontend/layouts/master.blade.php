@@ -47,22 +47,24 @@
             <div class="col-sm-3">
                 <div class="footer-site-info">
                     <header>
-                        <a class="footer-brand" href="index.html"><img alt="" class="img-responsive" src="/frontend/assets/img/site-logo.png"></a>
+                        <a class="footer-brand" href="index.html"><img alt="" class="img-responsive" style="max-width: 90px" src="/frontend/assets/img/site-logo.png"></a>
                     </header>
                     <address>
-                        <h3 class="entry-title">Address</h3>
+                        <h3 class="entry-title">Contact Information</h3>
                         <div class="address-entry">
-                            <p class="__adtext">Kingsland Micro and Nanotechnology Centre Nathan campus, Friffith University</p>
-                            <p class="__ad-num">1173 Kessels Road</p>
-                            <p class="__ad-num">Nathan, Kingsland 5712</p>
-                            <p class="__ad-num">Australia</p>
+                            <p class="__adtext">Hanoi Forum Secretariat</p>
+                            <p class="__ad-num">R1006, Administration Building</p>
+                            <p class="__ad-num">Vietnam National University, Hanoi</p>
+                            <p class="__ad-num">144 Xuan Thuy, Cau Giay</p>
+                            <p class="__ad-num">Tel: (84) 24 37547670 - Ext: 723</p>
+                            <p class="__ad-num">Email: hanoiforum@vnu.edu.vn</p>
                         </div>
                     </address>
-                    <footer class="contact-info">
-                        <h3 class="entry-title">Contact Information</h3>
-                        <p class="__ci_num">Call: <span>+61(07)373 53921</span></p>
-                        <p class="__ci_num">Email: <span>rushmore@mail.com</span></p>
-                    </footer>
+                    {{--<footer class="contact-info">--}}
+                        {{--<h3 class="entry-title">Contact Information</h3>--}}
+                        {{--<p class="__ci_num">Call: <span>+61(07)373 53921</span></p>--}}
+                        {{--<p class="__ci_num">Email: <span>rushmore@mail.com</span></p>--}}
+                    {{--</footer>--}}
                 </div>
             </div>
             <div class="col-sm-5">

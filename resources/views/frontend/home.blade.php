@@ -50,7 +50,7 @@
                             <img src="/frontend/assets/img/sabbi-post/card-1.png" alt="" class="img-responsive img-thumpost">
                         </figure>
                         <div class="sabbi-thumlinepost-card-meta">
-                            <h2 class="meta-title ht-5">Panel</h2>
+                            <h2 class="meta-title ht-5">Climate change evidence and security</h2>
                             <p class="meta-text">Desc</p>
                             <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
                         </div>
@@ -62,7 +62,7 @@
                             <img src="/frontend/assets/img/sabbi-post/card-2.png" alt="" class="img-responsive img-thumpost">
                         </figure>
                         <div class="sabbi-thumlinepost-card-meta">
-                            <h2 class="meta-title ht-5">Panel</h2>
+                            <h2 class="meta-title ht-5">Humans impact climate</h2>
                             <p class="meta-text">Desc</p>
                             <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
                         </div>
@@ -74,7 +74,7 @@
                             <img src="/frontend/assets/img/sabbi-post/card-3.png" alt="" class="img-responsive img-thumpost">
                         </figure>
                         <div class="sabbi-thumlinepost-card-meta">
-                            <h2 class="meta-title ht-5">Panel</h2>
+                            <h2 class="meta-title ht-5">Climate change response</h2>
                             <p class="meta-text">Desc</p>
                             <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
                         </div>
@@ -86,7 +86,7 @@
                             <img src="/frontend/assets/img/sabbi-post/card-4.png" alt="" class="img-responsive img-thumpost">
                         </figure>
                         <div class="sabbi-thumlinepost-card-meta">
-                            <h2 class="meta-title ht-5">Panel</h2>
+                            <h2 class="meta-title ht-5">Policy and governance of climate change response and sustainability</h2>
                             <p class="meta-text">Desc</p>
                             <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
                         </div>
@@ -101,7 +101,7 @@
                             <img src="/frontend/assets/img/sabbi-post/card-1.png" alt="" class="img-responsive img-thumpost">
                         </figure>
                         <div class="sabbi-thumlinepost-card-meta">
-                            <h2 class="meta-title ht-5">Panel</h2>
+                            <h2 class="meta-title ht-5">Science, technology and education for climate change response and</h2>
                             <p class="meta-text">Desc</p>
                             <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
                         </div>
@@ -113,7 +113,8 @@
                             <img src="/frontend/assets/img/sabbi-post/card-2.png" alt="" class="img-responsive img-thumpost">
                         </figure>
                         <div class="sabbi-thumlinepost-card-meta">
-                            <h2 class="meta-title ht-5">Panel</h2>
+                            <h2 class="meta-title ht-5">Resources Management in Mekong Delta Region: An Institution Perspective
+                            </h2>
                             <p class="meta-text">Desc</p>
                             <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
                         </div>
@@ -125,7 +126,8 @@
                             <img src="/frontend/assets/img/sabbi-post/card-3.png" alt="" class="img-responsive img-thumpost">
                         </figure>
                         <div class="sabbi-thumlinepost-card-meta">
-                            <h2 class="meta-title ht-5">Panel</h2>
+                            <h2 class="meta-title ht-5">Building Resilient and Safe City for Sustainable Development in the Red River Delta
+                            </h2>
                             <p class="meta-text">Desc</p>
                             <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
                         </div>

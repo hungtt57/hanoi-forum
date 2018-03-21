@@ -25,9 +25,14 @@ Route::group([
         'uses' => 'HomeController@postRegister'
     ]);
     Route::get('about', 'HomeController@about');
+    Route::get('hanoi-forum', 'HomeController@hanoiForum');
+    Route::get('focus', 'HomeController@focus');
+
+
+
     Route::get('program', 'HomeController@program');
     Route::get('publication', 'HomeController@publication');
-    Route::get('organizers', 'HomeController@organizers');
+//    Route::get('organizers', 'HomeController@organizers');
     Route::get('steering-committee', 'HomeController@steeringCommittee');
     Route::get('organizing-committee', 'HomeController@OrganizingCommittee');
     Route::get('academic-committee', 'HomeController@academicCommittee');

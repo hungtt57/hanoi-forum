@@ -4,7 +4,7 @@
             <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar"
                     data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span> <span
                         class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
-            <a class="navbar-brand" href="index.html"><img alt="" class="img-responsive"
+            <a class="navbar-brand" href="{{url('/')}}"><img alt="" class="img-responsive" style="max-width: 110px"
                                                            src="/frontend/assets/img/logo2.png"></a>
         </div>
         <div class="navbar-collapse collapse sabbi-navbar-collapse  navbar-nav-hov_underline" id="navbar">
@@ -16,8 +16,18 @@
                 <li class="{{Request::is('/') ? 'active' : ''}}">
                     <a href="{{url('/')}}" title="Home">Home</a>
                 </li>
-                <li class="{{Request::is('about') ? 'active' : ''}}">
-                    <a href="{{url('/about')}}" title="About">About</a>
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" title="Organizers"  data-hover="dropdown" data-animations="zoomIn">About <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="{{url('hanoi-forum')}}" title="Steering Committee">Ha noi Forum 2018</a>
+                        </li>
+                        <li>
+                            <a href="{{url('focus')}}" title="Steering Committee">Focus</a>
+                        </li>
+
+                    </ul>
                 </li>
                 <li class="{{Request::is('program') ? 'active' : ''}}">
                     <a href="{{url('/program')}}" title="Program">Program</a>
