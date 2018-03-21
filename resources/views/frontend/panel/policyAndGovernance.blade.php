@@ -15,7 +15,9 @@
                     <div class="col-md-8 col-sm-5 col-md-offset-2 col-xs-12">
                         <div>
                             <h2><meta charset="utf-8" /></h2>
+                            <b id="docs-internal-guid-701c63ca-47a6-b698-73a5-58d58dc4b616">Moderator (TBC)</b></h2>
 
+                            <p dir="ltr"><b id="docs-internal-guid-701c63ca-47a6-b698-73a5-58d58dc4b616">Brief introduction: </b></p>
                             <p dir="ltr"><span id="docs-internal-guid-701c63ca-47b8-38ed-4c0e-d75d41655882">Climate change has wide-ranging impacts whose consequences burden poor developing countries most seriously. Dealing with this problem requires global cooperation. OECD analysis shows that large reductions in greenhouse gases emissions are achievable at relatively low costs, if the right policies are put in place. This includes strong use of market-based instruments world wide to develop a global price for GHG emissions, accompanied by better integration of climate change objectives in relevant policy areas such as energy, transport, building, agriculture or forestry, and other measures to speed technological innovation and diffusion.</span></p>
 
                             <p dir="ltr"><span id="docs-internal-guid-701c63ca-47b8-38ed-4c0e-d75d41655882">This session will try to discuss these issues, focusing on big questions as follows: </span></p>
