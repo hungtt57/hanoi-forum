@@ -2,14 +2,23 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\Mail\RegisterEmail;
 use App\Models\Post;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Hash;
 use Illuminate\Support\Facades\Input;
+use Mail;
 class HomeController extends AdminController
 {
+    public function sendEmailReminder(Request $request)
+    {
+        $id = 1; // điền 1 mã id bất kỳ của user trong bảng users
+        $user = User::findOrFail($id);
+
+        Mail::to('hunguet1471994@gmail.com')->send(new RegisterEmail());
+    }
     public function index()
     {
         return view('frontend.home');

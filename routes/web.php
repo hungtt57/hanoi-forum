@@ -11,6 +11,7 @@
 |
 */
 //Frontend
+Route::get('/send_email', array('uses' => 'Frontend\HomeController@sendEmailReminder'));
 Route::group([
     'namespace' => 'Frontend',
     'as' => 'Frontend::'
