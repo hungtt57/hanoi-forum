@@ -19,7 +19,7 @@ class RegisterEmail extends Mailable
     protected $user;
     public function __construct()
     {
-       
+
     }
 
     /**

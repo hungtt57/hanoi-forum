@@ -17,7 +17,7 @@ class HomeController extends AdminController
         $id = 1; // điền 1 mã id bất kỳ của user trong bảng users
         $user = User::findOrFail($id);
 
-        Mail::to('hunguet1471994@gmail.com')->send(new RegisterEmail());
+
     }
     public function index()
     {
@@ -60,6 +60,7 @@ class HomeController extends AdminController
             $data['type'] = User::PARTNER;
             $data['name'] = '';
             $user = User::create($data);
+            Mail::to($user->email)->send(new RegisterEmail());
             if($data['apply'] == 1) {
                 return redirect()->back()->with('success', 'Thank you for your registration. An automatic confirmation email has been sent to your email address. You may want to check your junk mail in case you do not receive this automatic email. Please click on the provided link in the email to activate your account. Contact us directly at hanoiforum@vnu.edu.vn if you do not receive a confirmation within 24 hours. After the verification, you can log in your account and manage your information and setting. 
 Registration fee is USD100 and includes access to all sessions and side events, welcome dinner, refreshments during the conference and conference materials.
