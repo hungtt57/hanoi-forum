@@ -91,7 +91,7 @@
                             <img style="max-width: 200px" src="/frontend/vastlogo.png" alt="">
 
                         </div>
-                        <div class="row  show-xs " style="text-align: center"  id="partner">
+                        <div class="row  hidden-sm hidden-md hidden-lg " style="text-align: center"  id="partner">
                             <img style="max-width: 70px" src="/frontend/bkhvcn.png" alt="">
                             <img style="max-width: 70px" src="/frontend/btnvmt.png" alt="">
                             <img style="max-width: 120px" src="/frontend/vastlogo.png" alt="">
