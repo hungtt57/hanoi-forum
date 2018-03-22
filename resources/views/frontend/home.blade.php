@@ -63,14 +63,16 @@
                                 <img src="/frontend/assets/img/sabbi-post/card-1.png" alt=""
                                      class="img-responsive img-thumpost">
                             </figure>
+                        </a>
 
-                            <div class="sabbi-thumlinepost-card-meta">
-                                <a href="{{url('climate-change-evidence-and-security')}}" style="color:inherit">
-                                    <h2 class="meta-title ht-5">Climate change evidence and security</h2></a>
-                                <p class="meta-text"></p>
-                                <a href="{{url('climate-change-evidence-and-security')}}"
-                                   class="btn btn-unsolemn btn-action read-more">Read More</a>
-                            </div>
+
+                        <div class="sabbi-thumlinepost-card-meta">
+                            <a href="{{url('climate-change-evidence-and-security')}}" style="color:inherit">
+                            <h2 class="meta-title ht-5">Climate change evidence and security</h2></a>
+                            <p class="meta-text"></p>
+                            <a href="{{url('climate-change-evidence-and-security')}}" class="btn btn-unsolemn btn-action read-more">Read More</a>
+                        </div>
+
                     </article>
                 </div>
                 <div class="col-md-3 col-sm-6">
@@ -135,6 +137,7 @@
             <div class="row home-info-block-first">
                 <div class="col-md-4 col-sm-6">
                     <article class="sabbi-thumlinepost-card solitude-bg__x">
+<<<<<<< HEAD
                         <a href="{{url('science-technology-and-education-for-climate-change-response-and-sustainability')}}"
                            style="color:inherit">
                             <figure class="sabbi-thumlinepost-card-figure">
@@ -142,6 +145,13 @@
                                      class="img-responsive img-thumpost">
                             </figure>
                         </a>
+=======
+                        <a href="{{url('science-technology-and-education-for-climate-change-response-and-sustainability')}}" style="color:inherit">
+                        <figure class="sabbi-thumlinepost-card-figure">
+                            <img src="/frontend/assets/img/sabbi-post/card-1.png" alt="" class="img-responsive img-thumpost">
+                        </figure>
+
+>>>>>>> 8f06d91143a55c9f86b263bfc706e5130aa97492
                         <div class="sabbi-thumlinepost-card-meta">
                             <a href="{{url('science-technology-and-education-for-climate-change-response-and-sustainability')}}"
                                style="color:inherit">
@@ -152,10 +162,12 @@
                             <a href="{{url('science-technology-and-education-for-climate-change-response-and-sustainability')}}"
                                class="btn btn-unsolemn btn-action read-more">Read More</a>
                         </div>
+                        </a>
                     </article>
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <article class="sabbi-thumlinepost-card solitude-bg__x">
+<<<<<<< HEAD
                         <figure class="sabbi-thumlinepost-card-figure">
                             <img src="/frontend/assets/img/sabbi-post/card-2.png" alt=""
                                  class="img-responsive img-thumpost">
@@ -164,13 +176,29 @@
                             <h2 class="meta-title ht-5">Resources Management in Mekong Delta Region: An Institution
                                 Perspective
                             </h2>
+=======
+                        <a href="#" style="color:inherit">
+                            <figure class="sabbi-thumlinepost-card-figure">
+                                <img src="/frontend/assets/img/sabbi-post/card-2.png" alt="" class="img-responsive img-thumpost">
+                            </figure>
+                        </a>
+
+                        <div class="sabbi-thumlinepost-card-meta">
+                            <a href="#" style="color:inherit">
+                                <h2 class="meta-title ht-5">Resources Management in Mekong Delta Region: An Institution Perspective
+                                </h2>
+                            </a>
+>>>>>>> 8f06d91143a55c9f86b263bfc706e5130aa97492
                             <p class="meta-text"></p>
                             <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
                         </div>
+
+
                     </article>
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <article class="sabbi-thumlinepost-card solitude-bg__x">
+<<<<<<< HEAD
                         <figure class="sabbi-thumlinepost-card-figure">
                             <img src="/frontend/assets/img/sabbi-post/card-3.png" alt=""
                                  class="img-responsive img-thumpost">
@@ -179,9 +207,24 @@
                             <h2 class="meta-title ht-5">Building Resilient and Safe City for Sustainable Development in
                                 the Red River Delta
                             </h2>
+=======
+                        <a href="#" style="color:inherit">
+                            <figure class="sabbi-thumlinepost-card-figure">
+                                <img src="/frontend/assets/img/sabbi-post/card-3.png" alt="" class="img-responsive img-thumpost">
+                            </figure>
+                        </a>
+
+                        <div class="sabbi-thumlinepost-card-meta">
+                            <a href="#" style="color:inherit">
+                                <h2 class="meta-title ht-5">Building Resilient and Safe City for Sustainable Development in the Red
+                                    River Delta
+                                </h2>
+                            </a>
+>>>>>>> 8f06d91143a55c9f86b263bfc706e5130aa97492
                             <p class="meta-text"></p>
                             <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
                         </div>
+
                     </article>
                 </div>
 

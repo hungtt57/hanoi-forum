@@ -45,6 +45,7 @@
 
                 </div>
             </section><!-- /.bio__holder -->
+            @include('frontend.panels')
 
         </div>
 
