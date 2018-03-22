@@ -34,7 +34,7 @@
 </head>
 <body class="auth-theme-rashmore">
 <!--[if lt IE 8]>
-<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 <header class="sabbi-site-head">
     @include('frontend.layouts.nav')
@@ -50,7 +50,7 @@
             <div class="col-sm-3">
                 <div class="footer-site-info">
                     <header>
-                        <a class="footer-brand" href="http://vnu.edu.vn/home/"><img alt="" class="img-responsive" style="max-width: 90px" src="/frontend/assets/img/site-logo.png"></a>
+                        <a class="footer-brand" href="https://vnu.edu.vn/home/"><img alt="" class="img-responsive" style="max-width: 90px" src="/frontend/assets/img/site-logo.png"></a>
                     </header>
                     <address>
                         <h3 class="entry-title">Contact Information</h3>
