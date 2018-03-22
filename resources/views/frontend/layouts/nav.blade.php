@@ -1,23 +1,25 @@
 <nav class="navbar navbar-white navbar-kawsa navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
-            <div class="col-xs-12 hidden-sm hidden-md hidden-lg" style="text-align: center;margin-top: 5px">
-                <a href="{{url('/admin/login')}}" class="btn btn-primary ">Login</a>
-                <a href="{{url('/register')}}" class="btn btn-info " style="margin-right:10px;background:#007f49;">Register</a>
-            </div>
+
             <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar"
                     data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span> <span
                         class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
-            <a class="navbar-brand" href="{{url('/')}}"><img alt="" class="img-responsive" style="max-width: 110px" src="/frontend/assets/img/logo2.png"></a>
+            <a class="navbar-brand" href="{{url('/')}}"><img alt="" class="img-responsive" style="max-width: 110px"
+                                                             src="/frontend/assets/img/logo2.png"></a>
         </div>
         <div class="navbar-collapse collapse sabbi-navbar-collapse  navbar-nav-hov_underline" id="navbar">
             <div class="nav-btn-wrap">
                 <a href="{{url('/admin/login')}}" class="btn btn-primary pull-right">Login</a>
-                <a href="{{url('/register')}}" class="btn btn-info pull-right" style="margin-right:10px;background:#007f49;">Register</a>
+                <a href="{{url('/register')}}" class="btn btn-info pull-right"
+                   style="margin-right:10px;background:#007f49;">Register</a>
             </div>
             <ul class="nav navbar-nav navbar-right" id="menu-main-nav">
-                <li class="{{Request::is('/') ? 'active' : ''}}">
-                    <a href="{{url('/')}}" title="Home">Home</a>
+                <li class="hidden-sm hidden-md hidden-lg{{Request::is('/admin/login') ? 'active' : ''}}">
+                    <a href="{{url('/admin/login')}}" title="Login">Login</a>
+                </li>
+                <li class="hidden-sm hidden-md hidden-lg {{Request::is('/register') ? 'active' : ''}}">
+                    <a href="{{url('/register')}}" title="Register">Register</a>
                 </li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" title="About" data-hover="dropdown"
@@ -64,7 +66,7 @@
                         <li>
                             <a href="{{url('academic-committee')}}" title="Academic Committee">Academic Committee</a>
                         </li>
-                           <li>
+                        <li>
                             <a href="{{url('sponsors')}}" title="Academic Committee">Sponsors</a>
                         </li>
 
