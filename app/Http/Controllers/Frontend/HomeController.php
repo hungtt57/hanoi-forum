@@ -51,7 +51,7 @@ class HomeController extends AdminController
             $data['type'] = User::PARTNER;
             $data['name'] = '';
             $user = User::create($data);
-            return redirect()->back()->with('success', 'Regiter Successful');
+            return redirect()->back()->with('success', 'Registration successful ');
         } catch (\Exception $ex) {
             return redirect()->back()->with('success', 'Server error.Try again');
         }

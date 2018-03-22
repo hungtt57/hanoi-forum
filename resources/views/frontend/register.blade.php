@@ -28,7 +28,7 @@
                 <div class="row">
 
                     <div class="col-md-8 col-sm-5 col-md-offset-2 col-xs-12">
-                        @include('admin.flash_message')
+                        @include('admin2.flash_message')
                         <p>
                             Please fill in the following form, and click <b>Submit</b>.
                             You will receive an automatic email to confirm your registration.
@@ -146,18 +146,7 @@
                                            value="{{old('paper')}}">
                                 </div>
                             </div>
-                            <p>
-                                Registration fee is USD100 and includes access to all sessions and side
-                                events, welcome
-                                dinner, refreshments during the conference and conference materials.
-                            </p>
-                            <p>
-                                Registration fee will be waived to delegates with accepted abstracts.
-                                Limited financial
-                                assistance to support registration fee can be provided on a case-by-case
-                                basis. Please
-                                indicate if you wish to apply for this assistance in the registration form.
-                            </p>
+
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-xs-6 col-xs-offset-3">
