@@ -2,8 +2,11 @@
 @section('title','Home')
 @section('content')
     <style>
-        .solitude-bg__x {
-            /*height: 350px;*/
+        #panelRow4 .solitude-bg__x {
+            height: 350px;
+        }
+        #panelRow3 .solitude-bg__x {
+            height: 430px;
         }
     </style>
     <section class="sabbbi-section home-info mt_35">
@@ -62,7 +65,7 @@
                     </div>
                 @endif
             </div>
-            <div class="row home-info-block-first">
+            <div class="row home-info-block-first" id="panelRow4">
                 <div class="col-md-3 col-sm-6">
                     <article class="sabbi-thumlinepost-card solitude-bg__x">
                         <a href="{{url('climate-change-evidence-and-security')}}">
@@ -142,7 +145,7 @@
                 </div>
 
             </div>
-            <div class="row home-info-block-first">
+            <div class="row home-info-block-first" id="panelRow3">
                 <div class="col-md-4 col-sm-6">
                     <article class="sabbi-thumlinepost-card solitude-bg__x">
 

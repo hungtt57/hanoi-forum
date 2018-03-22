@@ -126,7 +126,7 @@
                                                                        @if(old('apply') == 0) checked @endif>No</label>
                                 </div>
                             </div>
-                            <div class="applyContainer">
+                            <div class="applyContainer  @if(old('apply') != 1)hide @endif">
                                 <div class="form-group">
                                     <label class="control-label " for="Name">Resume/CV </label>
                                     <p class="control-label " >Paste the link to your online CV here (preferably LinkedIN if available) </p>
@@ -199,6 +199,15 @@
           // 'maxFileSize': '5120',
           'showUploadedThumbs': false,
           'allowedFileTypes': 'any'
+        });
+        $('input[name="apply"]').change(function () {
+          var value = $(this).val();
+
+          if(value == 1) {
+            $('.applyContainer').removeClass('hide');
+          }else {
+            $('.applyContainer').addClass('hide');
+          }
         });
       });
     </script>

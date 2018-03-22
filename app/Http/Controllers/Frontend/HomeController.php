@@ -7,7 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Hash;
-
+use Illuminate\Support\Facades\Input;
 class HomeController extends AdminController
 {
     public function index()
@@ -36,13 +36,13 @@ class HomeController extends AdminController
             'first_name.required' => 'Please enter first name',
             'last_name.required' => 'Please enter last name',
             'title.required' => 'Please enter title',
-            'affiliation.required' => 'Please enter Affiliation',
+            'affiliation.required' => 'Please enter ffiliation',
         ]);
         $data = $request->all();
 
         try {
             if (User::where('email', $data['email'])->count()) {
-                return redirect()->back()->with('error', 'Email exist');
+                return redirect()->back()->with('error', 'Email exist')->withInput(Input::all());
             }
             if ($request->file('file')) {
                 $data['file'] = $this->saveFile($request->file('file'));
@@ -51,9 +51,18 @@ class HomeController extends AdminController
             $data['type'] = User::PARTNER;
             $data['name'] = '';
             $user = User::create($data);
-            return redirect()->back()->with('success', 'Registration successful ');
+            if($data['apply'] == 1) {
+                return redirect()->back()->with('success', 'Thank you for your registration. An automatic confirmation email has been sent to your email address. You may want to check your junk mail in case you do not receive this automatic email. Please click on the provided link in the email to activate your account. Contact us directly at hanoiforum@vnu.edu.vn if you do not receive a confirmation within 24 hours. After the verification, you can log in your account and manage your information and setting. 
+Registration fee is USD100 and includes access to all sessions and side events, welcome dinner, refreshments during the conference and conference materials.
+Registration fee will automatically be waived to delegates with accepted abstracts. ');
+            }else {
+                return redirect()->back()->with('success','Thank you for your registration. An automatic confirmation email has been sent to your email address. You may want to check your junk mail in case you do not receive this automatic email. Please click on the provided link in the email to activate your account. Contact us directly at hanoiforum@vnu.edu.vn if you do not receive a confirmation within 24 hours. 
+After the verification, you can log in your account, and manage your information and setting. You can pay the registration fee until October 20, 2018 by logging onto your account. The registration fee is USD100 and includes access to all sessions and side events, welcome dinner, refreshments during the event, and the event materials. ');
+            }
+
         } catch (\Exception $ex) {
-            return redirect()->back()->with('success', 'Server error.Try again');
+            dd($ex->getMessage());
+            return redirect()->back()->with('success', 'Server error.Try again')->withInput(Input::all());
         }
 
 
