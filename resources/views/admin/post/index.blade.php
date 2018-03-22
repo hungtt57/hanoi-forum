@@ -1,7 +1,7 @@
 @extends('admin.layouts.master')
 
 @section('content')
-    <h3 class="inline">Quản lý bài viết</h3>
+    <h3 class="inline">Manager post</h3>
 
     @include('admin2.flash_message')
     <div class="col-md-12">
@@ -48,6 +48,7 @@
           processing: true,
           // serverSide: true,
           // searching: true,
+
           ajax: '{{route('Backend::post@datatables')}}',
           columns: [
             {data: 'title', name: 'title'},

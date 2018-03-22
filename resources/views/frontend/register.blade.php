@@ -117,36 +117,53 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label " for="Name">Link CV online</label>
+
+                                <label class="control-label"> Do you wish to submit an abstract and present at the Forum?</label>
                                 <div class="controls">
-                                    <input type="text" name="link_cv" tabindex="2"
-                                           class="form-control"
-                                           value="{{old('link_cv')}}">
+                                    <label class="radio-inline"><input type="radio" name="apply" value="1"
+                                                                       @if(old('apply') == 1) checked @endif>Yes</label>
+                                    <label class="radio-inline"><input type="radio" name="apply" value="0"
+                                                                       @if(old('apply') == 0) checked @endif>No</label>
                                 </div>
                             </div>
-                            <div class="form-group clearfix">
-                                <label class="control-label">File attachment</label>
-                                <div class="controls">
-                                    <input type="file" class="post-image form-control" name="file"
-                                           rel="post_status_images">
+                            <div class="applyContainer">
+                                <div class="form-group">
+                                    <label class="control-label " for="Name">Resume/CV </label>
+                                    <p class="control-label " >Paste the link to your online CV here (preferably LinkedIN if available) </p>
+                                    <div class="controls">
+                                        <input type="text" name="link_cv" tabindex="2"
+                                               class="form-control"
+                                               value="{{old('link_cv')}}">
+                                    </div>
+                                    <p>Or  upload a file</p>
+                                    <div class="controls">
+                                        <input type="file" class="post-image form-control" name="file"
+                                               rel="post_status_images">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label " for="Name">Abstract</label>
-                                <div class="controls">
+
+
+                                <div class="form-group">
+                                    <label class="control-label ">Title of the paper</label>
+                                    <div class="controls">
+                                        <input type="text" name="paper"
+                                               class="form-control"
+                                               value="{{old('paper')}}">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label " for="Name">Abstract</label>
+                                    <div class="controls">
                                     <textarea name="abstract" class="form-control" maxlength="250"
                                               rows="5">{{old('abstract')}}</textarea>
-                                </div>
-                                <p class="help-block">(Should not exceed 250 words)</p>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label " for="Name">Paper</label>
-                                <div class="controls">
-                                    <input type="text" name="paper"
-                                           class="form-control"
-                                           value="{{old('paper')}}">
+                                    </div>
+                                    <p class="help-block">(Should not exceed 250 words)</p>
                                 </div>
                             </div>
+
+
+
+
 
                             <div class="form-group">
                                 <div class="row">
