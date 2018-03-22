@@ -110,7 +110,8 @@
                                     @php $nations = \App\Models\Country::orderBy('nicename','desc')->get(); @endphp
                                     <select class="form-control" name="nationality" id="nationality">
                                         @foreach($nations as $nation)
-                                        <option value="{{$nation->iso}}" @if($nation->iso == old('nationality')) checked @endif>{{$nation->nicename}}</option>
+                                            <option value="{{$nation->iso}}"
+                                                    @if($nation->iso == old('nationality')) checked @endif>{{$nation->nicename}}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -120,7 +121,7 @@
                                 <div class="controls">
                                     <input type="text" name="link_cv" tabindex="2"
                                            class="form-control"
-                                          value="{{old('link_cv')}}">
+                                           value="{{old('link_cv')}}">
                                 </div>
                             </div>
                             <div class="form-group clearfix">
@@ -133,9 +134,8 @@
                             <div class="form-group">
                                 <label class="control-label " for="Name">Abstract</label>
                                 <div class="controls">
-                                    <input type="text" name="abstract"
-                                           class="form-control"
-                                           value="{{old('abstract')}}">
+                                    <textarea name="abstract" class="form-control" maxlength="250"
+                                              rows="5">{{old('abstract')}}</textarea>
                                 </div>
                                 <p class="help-block">(Should not exceed 250 words)</p>
                             </div>

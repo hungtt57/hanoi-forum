@@ -63,7 +63,7 @@ class PostController extends AdminController
 
                 $string = '';
 
-                $string .= '<a  href="' . $urlEdit . '" class="btn btn-info btn-sm ">Edit</a>';
+                $string .= '<a  href="' . $urlEdit . '" class="btn btn-info">Edit</a>';
 
 
                 $string .= '<a href="' . $urlDelete . '" class="btn btn-danger delete-btn">Delete</a>';

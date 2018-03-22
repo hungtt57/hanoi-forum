@@ -1,12 +1,14 @@
 <nav class="navbar navbar-white navbar-kawsa navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
+            <div class="col-xs-12 hidden-sm hidden-md hidden-lg" style="text-align: center;margin-top: 5px">
+                <a href="{{url('/admin/login')}}" class="btn btn-primary ">Login</a>
+                <a href="{{url('/register')}}" class="btn btn-info " style="margin-right:10px;background:#007f49;">Register</a>
+            </div>
             <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar"
                     data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span> <span
                         class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
-            <a class="navbar-brand" href="{{url('/')}}"><img alt="" class="img-responsive"
-                                                                        style="max-width: 110px"
-                                                                        src="/frontend/assets/img/logo2.png"></a>
+            <a class="navbar-brand" href="{{url('/')}}"><img alt="" class="img-responsive" style="max-width: 110px" src="/frontend/assets/img/logo2.png"></a>
         </div>
         <div class="navbar-collapse collapse sabbi-navbar-collapse  navbar-nav-hov_underline" id="navbar">
             <div class="nav-btn-wrap">
@@ -17,7 +19,6 @@
                 <li class="{{Request::is('/') ? 'active' : ''}}">
                     <a href="{{url('/')}}" title="Home">Home</a>
                 </li>
-
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" title="About" data-hover="dropdown"
                        data-animations="zoomIn">About <span class="caret"></span></a>
@@ -32,7 +33,6 @@
 
                     </ul>
                 </li>
-
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" title="Program" data-hover="dropdown"
                        data-animations="zoomIn">Program <span class="caret"></span></a>

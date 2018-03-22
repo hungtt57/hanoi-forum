@@ -78,38 +78,13 @@
 
             <div class="navbar-custom-menu">
                 <ul class="nav navbar-nav">
-                    <!-- Messages: style can be found in dropdown.less-->
+
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                            <span class="hidden-xs">Alexander Pierce</span>
+                            <span class="hidden-xs">{{auth('backend')->user()->name}}</span>
                         </a>
                         <ul class="dropdown-menu">
-                            <!-- User image -->
-                            <li class="user-header">
-                                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
-                                <p>
-                                    Alexander Pierce - Web Developer
-                                    <small>Member since Nov. 2012</small>
-                                </p>
-                            </li>
-                            <!-- Menu Body -->
-                            <li class="user-body">
-                                <div class="row">
-                                    <div class="col-xs-4 text-center">
-                                        <a href="#">Followers</a>
-                                    </div>
-                                    <div class="col-xs-4 text-center">
-                                        <a href="#">Sales</a>
-                                    </div>
-                                    <div class="col-xs-4 text-center">
-                                        <a href="#">Friends</a>
-                                    </div>
-                                </div>
-                                <!-- /.row -->
-                            </li>
-                            <!-- Menu Footer-->
                             <li class="user-footer">
                                 <div class="pull-left">
                                     <a href="#" class="btn btn-default btn-flat">Profile</a>
@@ -124,29 +99,15 @@
             </div>
         </nav>
     </header>
-    <!-- Left side column. contains the logo and sidebar -->
+
 @include('admin.layouts.nav')
 
-
-<!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        {{--<section class="content-header">--}}
-            {{--<h1>--}}
-                {{--Dashboard--}}
-                {{--<small>Control panel</small>--}}
-            {{--</h1>--}}
-            {{--<ol class="breadcrumb">--}}
-                {{--<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>--}}
-                {{--<li class="active">Dashboard</li>--}}
-            {{--</ol>--}}
-        {{--</section>--}}
 
-        <!-- Main content -->
         <section class="content">
             @yield('content')
         </section>
-        <!-- /.content -->
+
     </div>
 </div>
 <!-- ./wrapper -->
@@ -170,8 +131,6 @@
 <script src="/backend/datatables/datatable.js" type="text/javascript"></script>
 <script src="/backend/datatables/plugins/bootstrap/datatables.bootstrap.js"
         type="text/javascript"></script>
-
-
 
 <!-- Sparkline -->
 <script src="/backend/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>

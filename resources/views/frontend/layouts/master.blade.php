@@ -57,9 +57,9 @@
                 <div class="footer-site-info">
                     <header>
 
-                        <a class="footer-brand" href="http://vnu.edu.vn/home/"><img alt="" class="img-responsive"
-                                                                                    style="max-width: 90px"
-                                                                                    src="/frontend/assets/img/site-logo.png"></a>
+                        {{--<a class="footer-brand" href="http://vnu.edu.vn/home/"><img alt="" class="img-responsive"--}}
+                                                                                    {{--style="max-width: 90px"--}}
+                                                                                    {{--src="/frontend/assets/img/site-logo.png"></a>--}}
 
                     </header>
                     <address>
@@ -84,14 +84,14 @@
 
                 <div class="row " id="partner">
                     <h2 class="widget-title" style="text-align: center">Partners</h2>
-                    <div class="col-xs-4" style="text-align: center">
+                    <div class="col-md-4 col-xs-12" style="text-align: center">
                         <section class="widget widget_sec">
                             <div class="widget-main">
                                 <img style="max-width: 90px" src="/frontend/bkhvcn.png" alt="">
                             </div>
                         </section>
                     </div>
-                    <div class="col-xs-4" style="text-align: center">
+                    <div class="col-md-4 col-xs-12" style="text-align: center">
                         <section class="widget widget_sec">
                             <div class="widget-main">
 
@@ -99,7 +99,7 @@
                             </div>
                         </section>
                     </div>
-                    <div class="col-xs-4" style="text-align: center">
+                    <div class="col-md-4 col-xs-12" style="text-align: center">
                         <section class="widget widget_sec">
                             <div class="widget-main">
 
@@ -118,7 +118,7 @@
                 <div class="row">
                     <div class="col-sm-8">
                         <div class="widget_black_studio_tinymce" id="black-studio-tinymce-4">
-                            <div class="copyright">Copyright 2017 -</div>
+                            {{--<div class="copyright">Copyright 2018 -</div>--}}
                         </div>
                     </div>
                     <div class="col-sm-4 ">
