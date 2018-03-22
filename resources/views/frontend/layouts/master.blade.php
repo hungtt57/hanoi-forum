@@ -71,11 +71,14 @@
                 </div>
             </div>
             <div class="col-sm-9">
-                <div class="row pull-right" id="partner" >
+                <div class="footer-site-info">
+                <h3 class="entry-title">Partners</h3>
+                <div class="row pull-left" id="partner" >
                     <img style="max-width: 90px" src="/frontend/bkhvcn.png" alt="">
                     <img style="max-width: 90px" src="/frontend/btnvmt.jpg" alt="">
                     <img style="max-width: 200px"  src="/frontend/vast.png" alt="">
 
+                </div>
                 </div>
             </div>
 
