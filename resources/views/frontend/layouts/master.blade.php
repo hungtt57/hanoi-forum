@@ -37,8 +37,10 @@
 </head>
 <body class="auth-theme-rashmore">
 <!--[if lt IE 8]>
-<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
+
 <![endif]-->
 <header class="sabbi-site-head">
     @include('frontend.layouts.nav')
@@ -54,9 +56,11 @@
             <div class="col-sm-3">
                 <div class="footer-site-info">
                     <header>
+
                         <a class="footer-brand" href="http://vnu.edu.vn/home/"><img alt="" class="img-responsive"
                                                                                     style="max-width: 90px"
                                                                                     src="/frontend/assets/img/site-logo.png"></a>
+
                     </header>
                     <address>
                         <h3 class="entry-title">Contact Information</h3>
@@ -77,6 +81,7 @@
                 </div>
             </div>
             <div class="col-sm-9">
+
                 <div class="row " id="partner">
                     <h2 class="widget-title" style="text-align: center">Partners</h2>
                     <div class="col-xs-4" style="text-align: center">
@@ -104,21 +109,21 @@
                     </div>
 
                 </div>
+
+
             </div>
-
-
         </div>
-    </div>
-    <div id="site-footer-bar" class="footer-bar mt_30">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-8">
-                    <div class="widget_black_studio_tinymce" id="black-studio-tinymce-4">
-                        <div class="copyright">Copyright 2017 -</div>
+        <div id="site-footer-bar" class="footer-bar mt_30">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="widget_black_studio_tinymce" id="black-studio-tinymce-4">
+                            <div class="copyright">Copyright 2017 -</div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-sm-4 ">
-                    <div class="powredby">Developed and Managed by: hinKeu</div>
+                    <div class="col-sm-4 ">
+                        <div class="powredby">Developed and Managed by: hinKeu</div>
+                    </div>
                 </div>
             </div>
         </div>
