@@ -251,7 +251,7 @@
     <!-- END HEADER & CONTENT DIVIDER -->
     <!-- BEGIN CONTAINER -->
     <div class="page-container">
-    @include('admin.nav')
+    @include('admin2.nav')
     <!-- Modal -->
         <!-- END SIDEBAR -->
         <!-- BEGIN CONTENT -->

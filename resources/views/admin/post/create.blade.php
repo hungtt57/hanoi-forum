@@ -1,4 +1,5 @@
-@extends('admin')
+@extends('admin.layouts.master')
+
 @section('style')
     <link href="/assets/css/fileinput.min.css" rel="stylesheet" type="text/css"/>
     <style>
@@ -15,12 +16,12 @@
 @section('content')
 
     @if(empty($post))
-        <h3>Thêm bài viết mới</h3>
+        <h3>Add new post</h3>
     @else
-        <h3>Sửa bài viết </h3>
+        <h3>Edit post </h3>
 
     @endif
-    @include('admin.flash_message')
+    @include('admin2.flash_message')
     @if(empty($post))
         <form action="{{route('Backend::post@store')}}" class="form-horizontal" method="POST"
               enctype="multipart/form-data">
@@ -31,7 +32,7 @@
                     <div class="form-body">
                         {{ csrf_field() }}
                         <div class="form-group">
-                            <label class="col-md-3 control-label">Tiêu đề</label>
+                            <label class="col-md-3 control-label">Title</label>
                             <div class="col-md-6">
                                 <input type="text" name="title" class="form-control" id="title"
                                        placeholder="Điền tiêu đề"
@@ -79,7 +80,7 @@
                         {{--</div>--}}
                         {{--</div>--}}
                         <div class="form-group clearfix">
-                            <label class="col-md-3 control-label">Ảnh đại diện</label>
+                            <label class="col-md-3 control-label">Image</label>
                             <div class="col-md-6">
                                 <input type="file" class="post-image form-control" name="image"
                                        rel="post_status_images">
@@ -93,7 +94,7 @@
                         {{--</div>--}}
                         {{--</div>--}}
                         <div class="form-group">
-                            <label class="col-md-3 control-label">Nội dung</label>
+                            <label class="col-md-3 control-label">Content</label>
                             <div class="col-md-6">
                     <textarea class="form-control ckeditor" placeholder="Điền miêu tả"
                               name="content">{{old('content',@$post->content)}} </textarea>
@@ -124,7 +125,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="col-md-3 control-label">Trạng thái</label>
+                            <label class="col-md-3 control-label">Status</label>
                             <div class="col-md-6">
                                 <div class="mt-checkbox-inline">
                                     <label class="mt-checkbox mt-checkbox-outline">
@@ -143,12 +144,12 @@
 
 
                             @if(empty($post))
-                                <button type="submit" class="btn green">Thêm</button>
+                                <button type="submit" class="btn green">Add</button>
                             @else
-                                <button type="submit" class="btn green">Sửa</button>
+                                <button type="submit" class="btn green">Edit</button>
 
                             @endif
-                            <button type="button" class="btn default">Hủy</button>
+                            <button type="button" class="btn default">Reset</button>
 
                         </div>
                     </div>

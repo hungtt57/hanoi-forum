@@ -1,24 +1,36 @@
-@extends('admin')
+@extends('admin.layouts.master')
 
 @section('content')
     <h3 class="inline">Quản lý bài viết</h3>
 
-    @include('admin.flash_message')
+    @include('admin2.flash_message')
     <div class="col-md-12">
 
-        <a href="{{ route('Backend::post@add')}}" class="btn btn-success pull-right" style="margin-bottom: 20px">Thêm bài viết</a>
+        <a href="{{ route('Backend::post@add')}}" class="btn btn-success pull-right" style="margin-bottom: 20px">Add new
+            post</a>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-body">
+                        <table class="table table-bordered table-hover" id="departments-table">
+                            <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Image</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
 
-        <table class="table table-striped table-bordered table-hover" id="departments-table">
-            <thead>
-            <tr>
+                            </tbody>
+                        </table>
 
-                <th>Tiêu đề</th>
-                <th>Hình Ảnh</th>
-                <th>Trạng thái</th>
-                <th>Hành động</th>
-            </tr>
-            </thead>
-        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
 
@@ -35,7 +47,7 @@
         table = $('#departments-table').DataTable({
           processing: true,
           // serverSide: true,
-          searching: true,
+          // searching: true,
           ajax: '{{route('Backend::post@datatables')}}',
           columns: [
             {data: 'title', name: 'title'},

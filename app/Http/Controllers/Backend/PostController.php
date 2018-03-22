@@ -27,8 +27,8 @@ class PostController extends AdminController
             'content' => 'required',
 //            'image' => 'required'
         ], [
-            'title.required' => 'Vui lòng nhập tiêu đề',
-            'content.required' => 'Vui lòng nhập nội dung',
+            'title.required' => 'Please enter title',
+            'content.required' => 'Please enter content',
 //            'image.required' => 'Vui lòng chọn ảnh đại diện'
         ]);
 
@@ -42,7 +42,7 @@ class PostController extends AdminController
 
         $post = Post::create($data);
 
-        return redirect()->back()->with('success', 'Tạo bài viết thành công');
+        return redirect()->back()->with('success', 'Success');
     }
 
     public function datatables(Request $request)
@@ -51,9 +51,9 @@ class PostController extends AdminController
         return \Datatables::eloquent($posts)
             ->editColumn('status', function ($post) {
                 if ($post->status == 1) {
-                    return '<label class="label label-success">Hiển thị</label>';
+                    return '<label class="label label-success">Show</label>';
                 } else {
-                    return '<label class="label label-danger">Không hiển thị</label>';
+                    return '<label class="label label-danger">Hide</label>';
                 }
             })
             ->addColumn('action', function ($post) {
@@ -63,10 +63,10 @@ class PostController extends AdminController
 
                 $string = '';
 
-                $string .= '<a  href="' . $urlEdit . '" class="btn btn-info btn-sm ">Sửa</a>';
+                $string .= '<a  href="' . $urlEdit . '" class="btn btn-info btn-sm ">Edit</a>';
 
 
-                $string .= '<a href="' . $urlDelete . '" class="btn btn-danger delete-btn">Xóa</a>';
+                $string .= '<a href="' . $urlDelete . '" class="btn btn-danger delete-btn">Delete</a>';
 
 
                 return $string;
@@ -87,8 +87,8 @@ class PostController extends AdminController
             'content' => 'required',
 
         ], [
-            'title.required' => 'Vui lòng nhập tiêu đề',
-            'content.required' => 'Vui lòng nhập nội dung',
+            'title.required' => 'Please enter title',
+            'content.required' => 'Please enter content',
         ]);
         $data = $request->all();
         $post = Post::findOrFail($id);
@@ -97,6 +97,6 @@ class PostController extends AdminController
             $data['image'] = $this->saveImage($request->file('image'));
         }
         $post->update($data);
-        return redirect()->back()->with('success', 'Sửa thành công');
+        return redirect()->back()->with('success', 'Success');
     }
 }
