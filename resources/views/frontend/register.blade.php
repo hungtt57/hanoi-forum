@@ -78,14 +78,14 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label " for="Name">Password</label>
+                                <label class="control-label " for="Name">Password*</label>
                                 <div class="controls">
                                     <input type="password" name="password" tabindex="2" class="form-control"
                                            placeholder="Password">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label " for="Name">Password confirmation</label>
+                                <label class="control-label " for="Name">Password confirmation*</label>
                                 <div class="controls">
                                     <input type="password" name="password_confirmation" tabindex="2"
                                            class="form-control"
@@ -137,6 +137,7 @@
                                            class="form-control"
                                            value="{{old('abstract')}}">
                                 </div>
+                                <p class="help-block">(Should not exceed 250 words)</p>
                             </div>
                             <div class="form-group">
                                 <label class="control-label " for="Name">Paper</label>
