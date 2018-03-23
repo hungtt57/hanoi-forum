@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Mail\RegisterEmail;
+use App\Models\Contact;
 use App\Models\Post;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -82,11 +83,29 @@ After the verification, you can log in your account, and manage your information
             }
 
         } catch (\Exception $ex) {
-            dd($ex->getMessage());
             return redirect()->back()->with('success', 'Server error.Try again later')->withInput(Input::all());
         }
 
 
+    }
+
+    public function contactUs(Request $request)
+    {
+        return view('frontend.contactUs');
+    }
+
+    public function postContactUs(Request $request)
+    {
+        $this->validate($request, [
+            'email' => 'required|email|max:255',
+            'first_name' => 'required',
+            'sur_name' => 'required',
+            'title' => 'required',
+        ]);
+        $data = $request->all();
+
+        Contact::create($data);
+        return redirect()->back()->with('success', 'Thank you for contacting us. Your request has been recorded. We will try to get back to you as soon as we can. ');
     }
 
     public function vefiryEmail(Request $request)

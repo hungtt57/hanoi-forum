@@ -87,7 +87,7 @@
                     <a href="{{url('/')}}" title="FAQ">FAQ</a>
                 </li>
                 <li>
-                    <a href="{{url('/')}}" title="Contact Us">Contact Us</a>
+                    <a href="{{url('/contact-us')}}" title="Contact Us">Contact Us</a>
                 </li>
 
 

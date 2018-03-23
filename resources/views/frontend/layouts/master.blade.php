@@ -81,21 +81,57 @@
                 </div>
             </div>
             <div class="col-sm-9">
+            <div class="row">
+                <div class="footer-site-info col-xs-12">
+                    <h3 class="entry-title">Co-hosts</h3>
+                    <div class="row pull-left hidden-xs">
+                        <a href="https://www.vnu.edu.vn/home/" target="_blank">
+                            <img style="max-width: 90px" src="/frontend/assets/img/logo2.png" alt="">
+                        </a>
+                        <a href="http://kfas.or.kr/" target="_blank">
+                            <img style="max-width: 360px" src="/frontend/assets/img/kfas_logo.jpg" alt="">
+                        </a>
 
+                    </div>
+                    <div class="row  hidden-sm hidden-md hidden-lg " style="text-align: center">
+                        <a href="https://www.vnu.edu.vn/home/" target="_blank">
+                            <img style="max-width: 70px" src="/frontend/assets/img/logo2.png" alt="">
+                        </a>
+
+                        <a href="http://kfas.or.kr/" target="_blank">
+                            <img style="max-width: 140px" src="/frontend/assets/img/kfas_logo.jpg" alt=""></a>
+
+                    </div>
+                </div>
+            </div>
                 <div class="row " id="partner">
                     <div class="footer-site-info col-xs-12">
                         <h3 class="entry-title">Partners</h3>
                         <div class="row pull-left hidden-xs" id="partner">
-                            <img style="max-width: 90px" src="/frontend/bkhvcn.png" alt="">
-                            <img style="max-width: 90px" src="/frontend/btnvmt.png" alt="">
-                            <img style="max-width: 200px" src="/frontend/vastlogo.png" alt="">
+                            <a href="https://www.most.gov.vn/vn/Pages/Trangchu.aspx" target="_blank">
+                                <img style="max-width: 90px" src="/frontend/bkhvcn.png" alt="">
+                            </a>
+                            <a href="http://www.monre.gov.vn" target="_blank">
+                                <img style="max-width: 90px"
+                                     src="/frontend/btnvmt.png"
+                                     alt=""></a>
+                            <a href="http://www.vast.ac.vn/en/" target="_blank">
+                                <img style="max-width: 200px" src="/frontend/vastlogo.png" alt="">
+                            </a>
 
                         </div>
-                        <div class="row  hidden-sm hidden-md hidden-lg " style="text-align: center"  id="partner">
-                            <img style="max-width: 70px" src="/frontend/bkhvcn.png" alt="">
-                            <img style="max-width: 70px" src="/frontend/btnvmt.png" alt="">
-                            <img style="max-width: 120px" src="/frontend/vastlogo.png" alt="">
+                        <div class="row  hidden-sm hidden-md hidden-lg " style="text-align: center" id="partner">
+                            <a href="https://www.most.gov.vn/vn/Pages/Trangchu.aspx" target="_blank">
+                                <img style="max-width: 70px" src="/frontend/bkhvcn.png" alt="">
+                            </a>
 
+                            <a href="http://www.monre.gov.vn" target="_blank">
+                                <img style="max-width: 70px"
+                                                                                    src="/frontend/btnvmt.png"
+                                                                                    alt=""></a>
+                            <a href="http://www.vast.ac.vn/en/" target="_blank">
+                                <img style="max-width: 120px" src="/frontend/vastlogo.png" alt="">
+                            </a>
                         </div>
                     </div>
                 </div>
