@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Mail\RegisterEmail;
 use App\Models\Contact;
+use App\Models\EmailLog;
 use App\Models\Post;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -11,7 +12,7 @@ use App\Http\Controllers\Controller;
 use Hash;
 use Illuminate\Support\Facades\Input;
 use Mail;
-
+use DB;
 class HomeController extends AdminController
 {
 //    public function sendEmailReminder(Request $request)
@@ -52,7 +53,7 @@ class HomeController extends AdminController
             'affiliation.required' => 'Please enter ffiliation',
         ]);
         $data = $request->all();
-
+        \DB::beginTransaction();
         try {
             if (User::where('email', $data['email'])->count()) {
                 return redirect()->back()->with('error', 'Email exist')->withInput(Input::all());
@@ -73,6 +74,12 @@ class HomeController extends AdminController
             $data['code'] = $code;
             $user = User::create($data);
             Mail::to($user->email)->send(new RegisterEmail($user));
+            EmailLog::create([
+               'to' => $user->email,
+               'event' => 'register',
+                'data' => $user->toArray()
+            ]);
+            DB::commit();
             if ($data['apply'] == 1) {
                 return redirect()->back()->with('success', 'Thank you for your registration. An automatic confirmation email has been sent to your email address. You may want to check your junk mail in case you do not receive this automatic email. Please click on the provided link in the email to activate your account. Contact us directly at hanoiforum@vnu.edu.vn if you do not receive a confirmation within 24 hours. After the verification, you can log in your account and manage your information and setting. 
 Registration fee is USD100 and includes access to all sessions and side events, welcome dinner, refreshments during the conference and conference materials.
@@ -83,6 +90,8 @@ After the verification, you can log in your account, and manage your information
             }
 
         } catch (\Exception $ex) {
+            dd($ex->getMessage());
+            DB::rollback();
             return redirect()->back()->with('success', 'Server error.Try again later')->withInput(Input::all());
         }
 
