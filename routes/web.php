@@ -94,7 +94,14 @@ Route::group([
         'as' => 'admin',
         'uses' => 'AdminController@index'
     ]);
+    Route::group([
+        'prefix' => 'contact-us',
+        'as' => 'contact@'
+    ], function () {
+        Route::get('/', ['as' => 'index', 'uses' => 'ContactUsController@index']);
+        Route::get('/datatables', ['as' => 'datatables', 'uses' => 'ContactUsController@datatables']);
 
+    });
     Route::group([
         'prefix' => 'posts',
         'as' => 'post@'

@@ -21,7 +21,7 @@
         <h3>Edit post </h3>
 
     @endif
-    @include('admin2.flash_message')
+    @include('admin.flash_message')
     @if(empty($post))
         <form action="{{route('Backend::post@store')}}" class="form-horizontal" method="POST"
               enctype="multipart/form-data">
@@ -144,9 +144,9 @@
 
 
                             @if(empty($post))
-                                <button type="submit" class="btn green">Add</button>
+                                <button type="submit" class="btn btn-primary">Add</button>
                             @else
-                                <button type="submit" class="btn green">Edit</button>
+                                <button type="submit" class="btn btn-primary">Edit</button>
 
                             @endif
                             <button type="button" class="btn default">Reset</button>

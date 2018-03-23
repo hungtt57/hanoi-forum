@@ -55,6 +55,14 @@ class PostController extends AdminController
                 } else {
                     return '<label class="label label-danger">Hide</label>';
                 }
+            })->
+            editColumn('image',function ($post) {
+                if($post->image) {
+
+                        return '<img src="'.$post->image. '" style="max-width: 150px;max-height: 200px">';
+
+                }
+                return '';
             })
             ->addColumn('action', function ($post) {
                 $urlEdit = route('Backend::post@edit', ['id' => $post->id]);
@@ -73,7 +81,11 @@ class PostController extends AdminController
 
             })->make(true);
     }
-
+    public function delete($id) {
+        $post = Post::findOrFail($id);
+        $post->delete;
+        return redirect()->back()->with('success','Success');
+    }
     public function edit($id)
     {
         $post = Post::findOrFail($id);
