@@ -17,9 +17,9 @@ class RegisterEmail extends Mailable
      * @return void
      */
     protected $user;
-    public function __construct()
+    public function __construct($user)
     {
-
+        $this->user = $user;
     }
 
     /**
@@ -29,6 +29,8 @@ class RegisterEmail extends Mailable
      */
     public function build()
     {
-        return $this->view('email.registerEmail');
+        return $this->from(['address' => 'no-reply@hanoiforum.vnu.edu.vn', 'name' => 'Hanoi forum 2018'])
+            ->subject('Welcome to Hanoi Forum 2018')
+            ->view('email.registerEmail')->with(['user' => $this->user]);
     }
 }

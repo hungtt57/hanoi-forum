@@ -11,12 +11,13 @@
 |
 */
 //Frontend
-Route::get('/send_email', array('uses' => 'Frontend\HomeController@sendEmailReminder'));
+//Route::get('/send_email', array('uses' => 'Frontend\HomeController@sendEmailReminder'));
 Route::group([
     'namespace' => 'Frontend',
     'as' => 'Frontend::'
 ], function () {
     Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
+    Route::get('verify-email', ['as' => 'confirm', 'uses' => 'HomeController@vefiryEmail']);
     Route::get('register', [
         'as' => 'register',
         'uses' => 'HomeController@register'

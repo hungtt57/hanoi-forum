@@ -10,15 +10,18 @@ use App\Http\Controllers\Controller;
 use Hash;
 use Illuminate\Support\Facades\Input;
 use Mail;
+
 class HomeController extends AdminController
 {
-    public function sendEmailReminder(Request $request)
-    {
-        $id = 1; // điền 1 mã id bất kỳ của user trong bảng users
-        $user = User::findOrFail($id);
+//    public function sendEmailReminder(Request $request)
+//    {
+//        $id = 1; // điền 1 mã id bất kỳ của user trong bảng users
+//        $user = User::findOrFail(4);
+//        Mail::to($user->email)->send(new RegisterEmail($user));
+//
+//
+//    }
 
-
-    }
     public function index()
     {
         return view('frontend.home');
@@ -59,37 +62,55 @@ class HomeController extends AdminController
             $data['password'] = Hash::make($data['password']);
             $data['type'] = User::PARTNER;
             $data['name'] = '';
+            $data['status'] = 0;
+            $code = '';
+            $count = 1;
+            do {
+                $code = str_random(5);
+                $count = User::where('code', $code)->count();
+            } while ($count);
+            $data['code'] = $code;
             $user = User::create($data);
-            Mail::to($user->email)->send(new RegisterEmail());
-            if($data['apply'] == 1) {
+            Mail::to($user->email)->send(new RegisterEmail($user));
+            if ($data['apply'] == 1) {
                 return redirect()->back()->with('success', 'Thank you for your registration. An automatic confirmation email has been sent to your email address. You may want to check your junk mail in case you do not receive this automatic email. Please click on the provided link in the email to activate your account. Contact us directly at hanoiforum@vnu.edu.vn if you do not receive a confirmation within 24 hours. After the verification, you can log in your account and manage your information and setting. 
 Registration fee is USD100 and includes access to all sessions and side events, welcome dinner, refreshments during the conference and conference materials.
 Registration fee will automatically be waived to delegates with accepted abstracts. ');
-            }else {
-                return redirect()->back()->with('success','Thank you for your registration. An automatic confirmation email has been sent to your email address. You may want to check your junk mail in case you do not receive this automatic email. Please click on the provided link in the email to activate your account. Contact us directly at hanoiforum@vnu.edu.vn if you do not receive a confirmation within 24 hours. 
+            } else {
+                return redirect()->back()->with('success', 'Thank you for your registration. An automatic confirmation email has been sent to your email address. You may want to check your junk mail in case you do not receive this automatic email. Please click on the provided link in the email to activate your account. Contact us directly at hanoiforum@vnu.edu.vn if you do not receive a confirmation within 24 hours. 
 After the verification, you can log in your account, and manage your information and setting. You can pay the registration fee until October 20, 2018 by logging onto your account. The registration fee is USD100 and includes access to all sessions and side events, welcome dinner, refreshments during the event, and the event materials. ');
             }
 
         } catch (\Exception $ex) {
             dd($ex->getMessage());
-            return redirect()->back()->with('success', 'Server error.Try again')->withInput(Input::all());
+            return redirect()->back()->with('success', 'Server error.Try again later')->withInput(Input::all());
         }
 
 
     }
 
+    public function vefiryEmail(Request $request)
+    {
+        $code = $request->input('code');
+        if ($code) {
+            $user = User::where('code', $code)->update(['status' => 1]);
+        }
+
+        return view('frontend.verifyEmail');
+    }
 
     public function about()
     {
         return view('frontend.about');
     }
+
     public function hanoiForum2018()
     {
         return view('frontend.hanoiForum2018');
     }
 
 
-        public function hanoi()
+    public function hanoi()
     {
         return view('frontend.hanoiForum');
     }
@@ -108,58 +129,79 @@ After the verification, you can log in your account, and manage your information
     {
         return view('frontend.organizers');
     }
-    public function steeringCommittee() {
+
+    public function steeringCommittee()
+    {
         return view('frontend.steeringCommittee');
     }
-    public function OrganizingCommittee() {
+
+    public function OrganizingCommittee()
+    {
         return view('frontend.organizingCommittee');
     }
-    public function academicCommittee() {
+
+    public function academicCommittee()
+    {
         return view('frontend.academicCommittee');
     }
+
     public function news()
     {
         return view('frontend.news');
     }
 
-    public function climateChangeEvidenceAndSecurity(Request $request) {
+    public function climateChangeEvidenceAndSecurity(Request $request)
+    {
         return view('frontend.panel.climateChangeEvidenceAndSecurity');
     }
-    public function humanImpactClimate(Request $request) {
+
+    public function humanImpactClimate(Request $request)
+    {
         return view('frontend.panel.humanImpactClimate');
     }
-    public function climateChangeResponse(Request $request) {
+
+    public function climateChangeResponse(Request $request)
+    {
         return view('frontend.panel.climateChangeResponse');
     }
-    public function policyAndGovernance(Request $request) {
+
+    public function policyAndGovernance(Request $request)
+    {
         return view('frontend.panel.policyAndGovernance');
     }
-    public function scienceTechnology(Request $request) {
+
+    public function scienceTechnology(Request $request)
+    {
         return view('frontend.panel.scienceTechnology');
     }
 
-    public function detailPost(Request $request,$slug,$id) {
-        $post = Post::where('id',$id)->where('status',1)->first();
-        if(empty($post)) {
+    public function detailPost(Request $request, $slug, $id)
+    {
+        $post = Post::where('id', $id)->where('status', 1)->first();
+        if (empty($post)) {
             abort(404);
         }
-        return view('frontend.post',compact('post'));
+        return view('frontend.post', compact('post'));
     }
-    public function sponsor(Request $request) {
+
+    public function sponsor(Request $request)
+    {
         return view('frontend.sponsor');
     }
 
 
-
-    public function importantDates(Request $request) {
+    public function importantDates(Request $request)
+    {
         return view('frontend.importantDates');
     }
 
-    public function forumProgram(Request $request) {
+    public function forumProgram(Request $request)
+    {
         return view('frontend.forumProgram');
     }
 
-    public function keynoteSpeakers(Request $request) {
+    public function keynoteSpeakers(Request $request)
+    {
         return view('frontend.keynoteSpeakers');
     }
 }
