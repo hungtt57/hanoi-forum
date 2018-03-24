@@ -28,7 +28,7 @@
                 <div class="row">
 
                     <div class="col-md-8 col-sm-5 col-md-offset-2 col-xs-12">
-                        @include('admin2.flash_message')
+                        @include('admin.flash_message')
                         <p>
                             Please fill in the following form, and click <b>Submit</b>.
                             You will receive an automatic email to confirm your registration.

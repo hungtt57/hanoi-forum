@@ -22,10 +22,23 @@ Route::group([
         'as' => 'register',
         'uses' => 'HomeController@register'
     ]);
+
     Route::post('register', [
         'as' => 'postRegister',
         'uses' => 'HomeController@postRegister'
     ]);
+    Route::get('contact-us', [
+        'as' => 'contactUs',
+        'uses' => 'HomeController@contactUs'
+    ]);
+    Route::post('contact-us', [
+        'as' => 'postContactUs',
+        'uses' => 'HomeController@postContactUs'
+    ]);
+
+
+
+
     Route::get('about', 'HomeController@about');
     Route::get('hanoi-forum', 'HomeController@hanoi');
     Route::get('hanoi-forum-2018', 'HomeController@hanoiForum2018');
@@ -34,10 +47,6 @@ Route::group([
     Route::get('important-dates', 'HomeController@importantDates');
     Route::get('forum-program', 'HomeController@forumProgram');
     Route::get('keynote-speakers', 'HomeController@keynoteSpeakers');
-
-
-
-
 
 
     Route::get('program', 'HomeController@program');
@@ -65,12 +74,6 @@ Route::group([
 //END FRONTEND
 
 
-
-
-
-
-
-
 Route::get('/admin/login', [
     'as' => 'admin.login',
     'uses' => 'Backend\AuthController@getLogin'
@@ -79,7 +82,7 @@ Route::get('/admin/logout', [
     'as' => 'admin.logout',
     'uses' => 'Backend\AuthController@logout'
 ]);
-Route::post('/admin/login','Backend\AuthController@postLogin');
+Route::post('/admin/login', 'Backend\AuthController@postLogin');
 
 Route::group([
     'prefix' => 'admin',
@@ -91,17 +94,24 @@ Route::group([
         'as' => 'admin',
         'uses' => 'AdminController@index'
     ]);
+    Route::group([
+        'prefix' => 'contact-us',
+        'as' => 'contact@'
+    ], function () {
+        Route::get('/', ['as' => 'index', 'uses' => 'ContactUsController@index']);
+        Route::get('/datatables', ['as' => 'datatables', 'uses' => 'ContactUsController@datatables']);
 
+    });
     Route::group([
         'prefix' => 'posts',
         'as' => 'post@'
-    ],function () {
-        Route::get('/',['as' => 'index' , 'uses'=>'PostController@index']);
-        Route::get('/datatables',['as' => 'datatables' , 'uses'=>'PostController@datatables']);
-        Route::get('/add',['as' => 'add' , 'uses'=>'PostController@create']);
-        Route::post('/store',['as' => 'store' , 'uses'=>'PostController@store']);
-        Route::post('/update/{id}',['as' => 'update' , 'uses'=>'PostController@update']);
-        Route::get('/edit/{id}',['as' => 'edit' , 'uses'=>'PostController@edit']);
-        Route::get('/delete/{id}',['as' => 'delete' , 'uses'=>'PostController@delete']);
+    ], function () {
+        Route::get('/', ['as' => 'index', 'uses' => 'PostController@index']);
+        Route::get('/datatables', ['as' => 'datatables', 'uses' => 'PostController@datatables']);
+        Route::get('/add', ['as' => 'add', 'uses' => 'PostController@create']);
+        Route::post('/store', ['as' => 'store', 'uses' => 'PostController@store']);
+        Route::post('/update/{id}', ['as' => 'update', 'uses' => 'PostController@update']);
+        Route::get('/edit/{id}', ['as' => 'edit', 'uses' => 'PostController@edit']);
+        Route::get('/delete/{id}', ['as' => 'delete', 'uses' => 'PostController@delete']);
     });
 });

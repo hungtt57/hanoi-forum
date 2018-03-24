@@ -17,7 +17,8 @@
                 </ul>
             </li>
 
-            <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
+            <li class="{{ (Request::is('admin/contact-us')) ? 'active' : '' }}"><a href="{{url('admin/contact-us')}}"><i class="fa fa-address-card"></i> <span>Contact us</span></a></li>
+            {{--<li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>--}}
         </ul>
     </section>
     <!-- /.sidebar -->
