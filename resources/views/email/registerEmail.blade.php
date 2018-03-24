@@ -31,4 +31,17 @@
         user-select: none;">Verify </button>
     </a>
 </p>
-<p><em>If you didn&rsquo;t </em><em>create an account on Hanoi Forum website, just ignore this email. </em></p>
+
+<p dir="ltr"><b id="docs-internal-guid-bce07a37-56fd-a84c-d641-59fb31f6947b">Hanoi Forum Secretariat</b></p>
+<p dir="ltr"><b id="docs-internal-guid-bce07a37-56fd-a84c-d641-59fb31f6947b">R1006, Administration Building</b></p>
+<p dir="ltr"><b id="docs-internal-guid-bce07a37-56fd-a84c-d641-59fb31f6947b">Vietnam National University, Hanoi</b></p>
+
+<p dir="ltr"><b id="docs-internal-guid-bce07a37-56fd-a84c-d641-59fb31f6947b">144 Xuan Thuy, Cau Giay</b></p>
+
+<p dir="ltr"><b id="docs-internal-guid-bce07a37-56fd-a84c-d641-59fb31f6947b">Tel: (84) 24 37547670 - Ext: 723</b></p>
+
+<p dir="ltr"><b id="docs-internal-guid-bce07a37-56fd-a84c-d641-59fb31f6947b">W: https://hanoiforum.vnu.edu.vn</b></p>
+
+<p dir="ltr"><em>If you didn&rsquo;t </em><em>create an account on Hanoi Forum website, just ignore this email. </em></p>
+<br />
+&nbsp;

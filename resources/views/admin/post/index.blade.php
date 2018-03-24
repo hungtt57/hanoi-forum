@@ -46,7 +46,7 @@
       $(function () {
         table = $('#departments-table').DataTable({
           processing: true,
-          // serverSide: true,
+          serverSide: true,
           // searching: true,
 
           ajax: '{{route('Backend::post@datatables')}}',
