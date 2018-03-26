@@ -51,6 +51,10 @@
         .dataTables_filter {
             display: none;
         }
+
+        #departments-table {
+            width: 100% !important;
+        }
     </style>
 
 
@@ -88,7 +92,7 @@
 
                             <li class="user-footer">
                                 {{--<div class="pull-left">--}}
-                                    {{--<a href="#" class="btn btn-default btn-flat">Profile</a>--}}
+                                {{--<a href="#" class="btn btn-default btn-flat">Profile</a>--}}
                                 {{--</div>--}}
                                 <div class="pull-right">
                                     <a href="{{ url('logout') }}" class="btn btn-default btn-flat">Log out</a>
@@ -101,7 +105,7 @@
         </nav>
     </header>
 
-@include('admin.layouts.nav')
+    @include('admin.layouts.nav')
 
     <div class="content-wrapper">
 
@@ -126,7 +130,15 @@
 
 
 <!-- DataTables -->
+<script>
 
+  var baseUrl = '{{url('/admin')}}';
+  $.ajaxSetup({
+    headers: {'X-CSRF-Token': $('meta[name=csrf-token]').attr('content')}
+  });
+
+
+</script>
 
 <script src="/backend/datatables/datatables.min.js" type="text/javascript"></script>
 <script src="/backend/datatables/datatable.js" type="text/javascript"></script>

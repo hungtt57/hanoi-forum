@@ -18,8 +18,13 @@ class ParticipantController extends AdminController
 
     public function datatables(Request $request)
     {
-        $contacs = User::select('*')->where('type',User::PARTNER);
-        return \Datatables::eloquent($contacs)
+        $contacts = User::select('*')->where('type',User::PARTNER);
+        $reviewers = User::select('*')->where('type',User::REVIEWER)->get();
+        return \Datatables::eloquent($contacts)
+            ->addColumn('reviewer',function ($user) use ($reviewers) {
+
+                return view('admin.participant.reviewer',compact('user','reviewers'))->render();
+            })
             ->addColumn('action', function ($post) {
 //                $urlEdit = route('Backend::post@edit', ['id' => $post->id]);
 //
@@ -37,5 +42,31 @@ class ParticipantController extends AdminController
 
             })->make(true);
     }
-
+    public function select(Request $request) {
+        $id = $request->input('id');
+        $reviewId = $request->input('reviewer_id');
+        $user = User::where('id',$id)->where('type',User::PARTNER)->first();
+        if(empty($user) ) {
+            return response([
+                'status' => 0,
+                'message' => 'Participant not exist',
+                'data' => null
+            ],200);
+        }
+        $review = User::where('id',$reviewId)->where('type',User::REVIEWER)->first();
+        if(empty($review) ) {
+            return response([
+                'status' => 0,
+                'message' => 'Reviewer not exist',
+                'data' => null
+            ],200);
+        }
+        $user->reviewer_id = $reviewId;
+        $user->save();
+        return response([
+            'status' => 1,
+            'message' => 'Success',
+            'data' => null
+        ],200);
+    }
 }

@@ -71,7 +71,6 @@ class AdminController extends Controller
                 $string = '';
 
 
-
                 if (auth('backend')->user()->id != $post->id) {
                     $string .= '<a  href="' . $urlEdit . '" class="btn btn-info">Edit</a>';
                     $string .= '<a href="' . $urlDelete . '" class="btn btn-danger delete-btn">Delete</a>';

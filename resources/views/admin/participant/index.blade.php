@@ -20,8 +20,9 @@
                                 <th>Affiliation</th>
                                 <th>Gender</th>
                                 <th>Nationality</th>
+                                <th>Reviewer</th>
                                 <th>Created at</th>
-                                <th>Action</th>
+                                {{--<th>Action</th>--}}
                             </tr>
                             </thead>
                             <tbody>
@@ -47,12 +48,36 @@
       var table;
 
       $(function () {
+        $(document).on('change', '.select-reviewer', function () {
+          var val = $(this).val();
+          var id = $(this).attr('data-id');
+          $.ajax({
+            url: '{{ route('Backend::participants@select') }}',
+            type: 'post',
+            data: {
+              reviewer_id: val,
+              id: id
+            },
+            dataType: 'json',
+
+            success: function (response) {
+              if (response.status == 1) {
+                swal(response.message, '', 'success');
+
+              } else {
+                swal(response.message, '', 'error');
+              }
+            }, error: function (error) {
+              swal('Error,Try again later', '', 'error');
+            }
+          });
+        });
         table = $('#departments-table').DataTable({
           responsive: true,
           processing: true,
           serverSide: true,
           // searching: true,
-          orders : [[8,'desc']],
+          orders: [[8, 'desc']],
           ajax: '{{route('Backend::participants@datatables')}}',
           columns: [
             {data: 'email', name: 'email'},
@@ -63,9 +88,10 @@
 
             {data: 'gender', name: 'gender'},
             {data: 'nationality', name: 'nationality'},
+            {data: 'reviewer', name: 'reviewer'},
             {data: 'created_at', name: 'created_at'},
 
-            {data: 'action', name: 'action'},
+//            {data: 'action', name: 'action'},
           ],
 
           initComplete: function () {

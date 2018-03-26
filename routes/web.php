@@ -37,8 +37,6 @@ Route::group([
     ]);
 
 
-
-
     Route::get('about', 'HomeController@about');
     Route::get('hanoi-forum', 'HomeController@hanoi');
     Route::get('hanoi-forum-2018', 'HomeController@hanoiForum2018');
@@ -94,59 +92,65 @@ Route::group([
         'as' => 'admin',
         'uses' => 'AdminController@index'
     ]);
-    Route::group([
-        'prefix' => 'contact-us',
-        'as' => 'contact@'
-    ], function () {
-        Route::get('/', ['as' => 'index', 'uses' => 'ContactUsController@index']);
-        Route::get('/datatables', ['as' => 'datatables', 'uses' => 'ContactUsController@datatables']);
-
-    });
-
-    Route::group([
-        'prefix'  => '',
-        'as' => 'admin@'
-    ],function () {
-        Route::get('/', ['as' => 'index', 'uses' => 'AdminController@index']);
-        Route::get('/datatables', ['as' => 'datatables', 'uses' => 'AdminController@datatables']);
-        Route::get('/add', ['as' => 'add', 'uses' => 'AdminController@create']);
-        Route::post('/store', ['as' => 'store', 'uses' => 'AdminController@store']);
-        Route::post('/update/{id}', ['as' => 'update', 'uses' => 'AdminController@update']);
-        Route::get('/edit/{id}', ['as' => 'edit', 'uses' => 'AdminController@edit']);
-        Route::get('/delete/{id}', ['as' => 'delete', 'uses' => 'AdminController@delete']);
-    });
 
 
-    Route::group([
-        'prefix' => 'posts',
-        'as' => 'post@'
-    ], function () {
-        Route::get('/', ['as' => 'index', 'uses' => 'PostController@index']);
-        Route::get('/datatables', ['as' => 'datatables', 'uses' => 'PostController@datatables']);
-        Route::get('/add', ['as' => 'add', 'uses' => 'PostController@create']);
-        Route::post('/store', ['as' => 'store', 'uses' => 'PostController@store']);
-        Route::post('/update/{id}', ['as' => 'update', 'uses' => 'PostController@update']);
-        Route::get('/edit/{id}', ['as' => 'edit', 'uses' => 'PostController@edit']);
-        Route::get('/delete/{id}', ['as' => 'delete', 'uses' => 'PostController@delete']);
-    });
-    Route::group([
-        'prefix' => 'participants',
-        'as' => 'participants@'
-    ],function () {
-        Route::get('/', ['as' => 'index', 'uses' => 'ParticipantController@index']);
-        Route::get('/datatables', ['as' => 'datatables', 'uses' => 'ParticipantController@datatables']);
+    Route::group(['middleware' => 'ADMIN'], function () {
+        Route::group([
+            'prefix' => 'contact-us',
+            'as' => 'contact@'
+        ], function () {
+            Route::get('/', ['as' => 'index', 'uses' => 'ContactUsController@index']);
+            Route::get('/datatables', ['as' => 'datatables', 'uses' => 'ContactUsController@datatables']);
+
+        });
+        Route::group([
+            'prefix' => '',
+            'as' => 'admin@'
+        ], function () {
+            Route::get('/', ['as' => 'index', 'uses' => 'AdminController@index']);
+            Route::get('/datatables', ['as' => 'datatables', 'uses' => 'AdminController@datatables']);
+            Route::get('/add', ['as' => 'add', 'uses' => 'AdminController@create']);
+            Route::post('/store', ['as' => 'store', 'uses' => 'AdminController@store']);
+            Route::post('/update/{id}', ['as' => 'update', 'uses' => 'AdminController@update']);
+            Route::get('/edit/{id}', ['as' => 'edit', 'uses' => 'AdminController@edit']);
+            Route::get('/delete/{id}', ['as' => 'delete', 'uses' => 'AdminController@delete']);
+        });
+
+
+        Route::group([
+            'prefix' => 'posts',
+            'as' => 'post@'
+        ], function () {
+            Route::get('/', ['as' => 'index', 'uses' => 'PostController@index']);
+            Route::get('/datatables', ['as' => 'datatables', 'uses' => 'PostController@datatables']);
+            Route::get('/add', ['as' => 'add', 'uses' => 'PostController@create']);
+            Route::post('/store', ['as' => 'store', 'uses' => 'PostController@store']);
+            Route::post('/update/{id}', ['as' => 'update', 'uses' => 'PostController@update']);
+            Route::get('/edit/{id}', ['as' => 'edit', 'uses' => 'PostController@edit']);
+            Route::get('/delete/{id}', ['as' => 'delete', 'uses' => 'PostController@delete']);
+        });
+        Route::group([
+            'prefix' => 'participants',
+            'as' => 'participants@'
+        ], function () {
+            Route::get('/', ['as' => 'index', 'uses' => 'ParticipantController@index']);
+            Route::get('/datatables', ['as' => 'datatables', 'uses' => 'ParticipantController@datatables']);
+            Route::post('select-reviewer',['as' => 'select', 'uses' => 'ParticipantController@select']);
+        });
+
+        Route::group([
+            'prefix' => 'reviewer',
+            'as' => 'reviewer@'
+        ], function () {
+            Route::get('/', ['as' => 'index', 'uses' => 'ReviewerController@index']);
+            Route::get('/datatables', ['as' => 'datatables', 'uses' => 'ReviewerController@datatables']);
+            Route::get('/add', ['as' => 'add', 'uses' => 'ReviewerController@create']);
+            Route::post('/store', ['as' => 'store', 'uses' => 'ReviewerController@store']);
+            Route::post('/update/{id}', ['as' => 'update', 'uses' => 'ReviewerController@update']);
+            Route::get('/edit/{id}', ['as' => 'edit', 'uses' => 'ReviewerController@edit']);
+            Route::get('/delete/{id}', ['as' => 'delete', 'uses' => 'ReviewerController@delete']);
+        });
     });
 
-    Route::group([
-        'prefix'  => 'reviewer',
-        'as' => 'reviewer@'
-    ],function () {
-        Route::get('/', ['as' => 'index', 'uses' => 'ReviewerController@index']);
-        Route::get('/datatables', ['as' => 'datatables', 'uses' => 'ReviewerController@datatables']);
-        Route::get('/add', ['as' => 'add', 'uses' => 'ReviewerController@create']);
-        Route::post('/store', ['as' => 'store', 'uses' => 'ReviewerController@store']);
-        Route::post('/update/{id}', ['as' => 'update', 'uses' => 'ReviewerController@update']);
-        Route::get('/edit/{id}', ['as' => 'edit', 'uses' => 'ReviewerController@edit']);
-        Route::get('/delete/{id}', ['as' => 'delete', 'uses' => 'ReviewerController@delete']);
-    });
+
 });

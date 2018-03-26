@@ -72,34 +72,6 @@
     <link href="/assets/layouts/layout/css/themes/darkblue.min.css" rel="stylesheet" type="text/css" id="style_color"/>
     <link href="/assets/layouts/layout/css/custom.min.css" rel="stylesheet" type="text/css"/>
 
-    <style>
-        .ht-on-loading {
-            display: block;
-            position: relative;
-        }
-
-        .ht-on-loading:after {
-            content: "";
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(255, 255, 255, .6);
-            background-image: url('/spinner.gif');
-            background-position: 50% 50%;
-            -webkit-background-size: 36px 36px;
-            background-size: 36px 36px;
-            background-repeat: no-repeat;
-        }
-
-        .ht-page-header {
-            background-color: white !important;
-        }
-    </style>
-
-
     @yield('styles')
     @yield('style')
 
@@ -107,6 +79,9 @@
     <style>
         .dataTables_filter {
             display: none;
+        }
+        #departments-table {
+            width: 100% !important;
         }
     </style>
 
@@ -118,36 +93,6 @@
     <style>
         .select2-container {
             width: 100% !important;
-        }
-
-        #divLoading {
-            display: none;
-        }
-
-        #divLoading.show {
-            display: block;
-            position: fixed;
-            z-index: 100;
-            background-image: url('http://loadinggif.com/images/image-selection/3.gif');
-            background-color: #666;
-            opacity: 0.4;
-            background-repeat: no-repeat;
-            background-position: center;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            top: 0;
-        }
-
-        #loadinggif.show {
-            left: 50%;
-            top: 50%;
-            position: absolute;
-            z-index: 101;
-            width: 32px;
-            height: 32px;
-            margin-left: -16px;
-            margin-top: -16px;
         }
 
 

@@ -6,7 +6,21 @@
 
 
             @if(auth('backend')->user()->type == \App\Models\User::ADMIN)
-
+                <li class=" treeview {{ (Request::is('admin') ||  Request::is('admin/add')) ? 'active' : '' }}">
+                    <a href="#">
+                        <i class="fa fa-dashboard"></i> <span>Manager admin</span>
+                        <span class="pull-right-container">
+                                 <i class="fa fa-angle-left pull-right"></i>
+                         </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li class="{{ (Request::is('admin')) ? 'active' : '' }}"><a href="{{url('admin/')}}"><i
+                                        class="fa fa-circle-o"></i> List Admin</a></li>
+                        <li class="{{ (Request::is('admin/add')) ? 'active' : '' }}"><a
+                                    href="{{url('admin/add')}}"><i class="fa fa-circle-o"></i> Add New Admin</a>
+                        </li>
+                    </ul>
+                </li>
                 <li class=" treeview {{ (Request::is('admin/posts/*') ||  Request::is('admin/posts')) ? 'active' : '' }}">
                     <a href="#">
                         <i class="fa fa-dashboard"></i> <span>Manager Post</span>
@@ -22,7 +36,6 @@
                         </li>
                     </ul>
                 </li>
-
                 <li class=" treeview {{ (Request::is('admin/reviewer/*') ||  Request::is('admin/reviewer')) ? 'active' : '' }}">
                     <a href="#">
                         <i class="fa fa-dashboard"></i> <span>Manager Reviewer</span>
@@ -31,7 +44,8 @@
                          </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li class="{{ (Request::is('admin/reviewer')) ? 'active' : '' }}"><a href="{{url('admin/reviewer')}}"><i
+                        <li class="{{ (Request::is('admin/reviewer')) ? 'active' : '' }}"><a
+                                    href="{{url('admin/reviewer')}}"><i
                                         class="fa fa-circle-o"></i> List Reviewer</a></li>
                         <li class="{{ (Request::is('admin/reviewer/add')) ? 'active' : '' }}"><a
                                     href="{{url('admin/reviewer/add')}}"><i class="fa fa-circle-o"></i> Add New Reviewer</a>
