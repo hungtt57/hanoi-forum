@@ -82,7 +82,7 @@
 
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <span class="hidden-xs">{{auth('backend')->user()->first_name}}</span>
+                            <span class="hidden-xs">{{auth('backend')->user()->first_name.' '.auth('backend')->user()->last_name}}</span>
                         </a>
                         <ul class="dropdown-menu">
 
