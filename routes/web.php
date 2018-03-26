@@ -114,4 +114,11 @@ Route::group([
         Route::get('/edit/{id}', ['as' => 'edit', 'uses' => 'PostController@edit']);
         Route::get('/delete/{id}', ['as' => 'delete', 'uses' => 'PostController@delete']);
     });
+    Route::group([
+        'prefix' => 'participants',
+        'as' => 'participants@'
+    ],function () {
+        Route::get('/', ['as' => 'index', 'uses' => 'ParticipantController@index']);
+        Route::get('/datatables', ['as' => 'datatables', 'uses' => 'ParticipantController@datatables']);
+    });
 });

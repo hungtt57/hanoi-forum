@@ -29,12 +29,7 @@
 
                     <div class="col-md-8 col-sm-5 col-md-offset-2 col-xs-12">
                         @include('admin.flash_message')
-                        <p>
-                            Please fill in the following form, and click <b>Submit</b>.
-                            You will receive an automatic email to confirm your registration.
-                            If you do not receive the reply within 5 days, please contact us directly at <strong>hanoiforum@vnu.edu.vn</strong>.
 
-                        </p>
                         <form id="login-form" action="{{route('Frontend::postRegister')}}" method="post" role="form"
                               enctype="multipart/form-data">
                             {{ csrf_field() }}

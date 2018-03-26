@@ -42,7 +42,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label ">Sur name*</label>
+                                <label class="control-label ">Surname*</label>
                                 <div class="controls">
                                     <input type="text" name="sur_name" value="{{old('sur_name')}}" tabindex="2"
                                            class="form-control"
