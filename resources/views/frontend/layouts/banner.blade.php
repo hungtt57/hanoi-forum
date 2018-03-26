@@ -37,7 +37,7 @@
                         {{--</div>--}}
                     {{--</li>--}}
 
-                    <li class="seq-step1" id="step1" style="background:url(/frontend/banner/1.png);background-repeat: no-repeat;background-size: cover;">
+                    <li class="seq-step1" id="step1" style="background:url(/frontend/banner/slide.jpg);background-repeat: no-repeat;background-size: cover;">
                         <div class="bg-blend"></div>
                         <div class="seq-content" >
 
