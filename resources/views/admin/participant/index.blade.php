@@ -13,14 +13,13 @@
                         <table class="table table-bordered table-hover" id="departments-table">
                             <thead>
                             <tr>
-                                <th>First name</th>
-                                <th>Surname</th>
-                                <th>Title</th>
                                 <th>Email</th>
-                                <th>Registration ID</th>
-                                <th>Issue</th>
-                                <th>Subject</th>
-                                <th>Question</th>
+                                <th>First name</th>
+                                <th>Last name</th>
+                                <th>Title</th>
+                                <th>Affiliation</th>
+                                <th>Gender</th>
+                                <th>Nationality</th>
                                 <th>Created at</th>
                                 <th>Action</th>
                             </tr>
@@ -51,19 +50,19 @@
         table = $('#departments-table').DataTable({
           responsive: true,
           processing: true,
-          // serverSide: true,
+          serverSide: true,
           // searching: true,
-            orders : [[8,'desc']],
+          orders : [[8,'desc']],
           ajax: '{{route('Backend::participants@datatables')}}',
           columns: [
-            {data: 'first_name', name: 'first_name'},
-            {data: 'sur_name', name: 'sur_name'},
-            {data: 'title', name: 'title'},
             {data: 'email', name: 'email'},
-            {data: 'code', name: 'code'},
-            {data: 'issue', name: 'issue'},
-            {data: 'subject', name: 'subject'},
-            {data: 'question', name: 'question'},
+            {data: 'first_name', name: 'first_name'},
+            {data: 'last_name', name: 'sur_name'},
+            {data: 'title', name: 'title'},
+            {data: 'affiliation', name: 'affiliation'},
+
+            {data: 'gender', name: 'gender'},
+            {data: 'nationality', name: 'nationality'},
             {data: 'created_at', name: 'created_at'},
 
             {data: 'action', name: 'action'},

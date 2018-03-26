@@ -1,11 +1,13 @@
 @extends('admin.layouts.master')
 
 @section('content')
-    <h3 class="inline">List contact</h3>
+    <h3 class="inline">Manager admins</h3>
 
     @include('admin.flash_message')
-    <div class="col-md-12" style="margin-top: 20px">
+    <div class="col-md-12">
 
+        <a href="{{ route('Backend::admin@add')}}" class="btn btn-success pull-right" style="margin-bottom: 20px">Add new
+            admin</a>
         <div class="row">
             <div class="col-xs-12">
                 <div class="box">
@@ -13,14 +15,9 @@
                         <table class="table table-bordered table-hover" id="departments-table">
                             <thead>
                             <tr>
-                                <th>First name</th>
-                                <th>Sur name</th>
-                                <th>Title</th>
                                 <th>Email</th>
-                                <th>Registration ID</th>
-                                <th>Issue</th>
-                                <th>Subject</th>
-                                <th>Question</th>
+                                <th>First name</th>
+                                <th>Last name</th>
                                 <th>Created at</th>
                                 <th>Action</th>
                             </tr>
@@ -37,7 +34,7 @@
 
     </div>
 
-    <div class="clearfix"></div>
+
 
 @endsection
 
@@ -51,21 +48,16 @@
         table = $('#departments-table').DataTable({
           responsive: true,
           processing: true,
-           serverSide: true,
+          serverSide: true,
           // searching: true,
-            order : [[7,'desc']],
-          ajax: '{{route('Backend::contact@datatables')}}',
+          order : [[3,'desc']],
+          ajax: '{{route('Backend::admin@datatables')}}',
           columns: [
-            {data: 'first_name', name: 'first_name'},
-            {data: 'sur_name', name: 'sur_name'},
-            {data: 'title', name: 'title'},
-            {data: 'email', name: 'email'},
-            {data: 'code', name: 'code'},
-            {data: 'issue', name: 'issue'},
-            {data: 'subject', name: 'subject'},
-            {data: 'question', name: 'question'},
-            {data: 'created_at', name: 'created_at'},
 
+            {data: 'email', name: 'email'},
+            {data: 'first_name', name: 'first_name'},
+            {data: 'last_name', name: 'last_name'},
+            {data: 'created_at', name: 'created_at'},
             {data: 'action', name: 'action'},
           ],
 

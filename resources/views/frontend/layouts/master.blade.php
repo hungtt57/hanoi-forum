@@ -97,7 +97,7 @@
                             <img style="max-width: 90px" src="/frontend/assets/img/logo2.png" alt="">
                         </a>
                         <a href="http://kfas.or.kr/" target="_blank">
-                            <img style="max-width: 360px" src="/frontend/assets/img/kfas_logo.jpg" alt="">
+                            <img style="max-width: 360px;margin-left:10px" src="/frontend/assets/img/kfas_logo.jpg" alt="">
                         </a>
 
                     </div>
@@ -107,7 +107,7 @@
                         </a>
 
                         <a href="http://kfas.or.kr/" target="_blank">
-                            <img style="max-width: 140px" src="/frontend/assets/img/kfas_logo.jpg" alt=""></a>
+                            <img style="max-width: 140px;margin-left:20px" src="/frontend/assets/img/kfas_logo.jpg" alt=""></a>
 
                     </div>
                 </div>

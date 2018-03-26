@@ -2,37 +2,24 @@
 
 namespace App\Http\Controllers\Backend;
 
+use App\Models\Contact;
+use App\Models\Post;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Intervention\Image\Facades\Image;
+use Datatables;
 use Hash;
 
-class AdminController extends Controller
+class ReviewerController extends AdminController
 {
-
-
-    public function saveImage($file, $old = null, $name = null)
-    {
-
-        $filename = $name . md5(time()) . '.' . $file->getClientOriginalExtension();
-        Image::make($file->getRealPath())->save(public_path('files/' . $filename));
-
-        if ($old) {
-            @unlink(public_path($old));
-        }
-        return '/files/' . $filename;
-    }
-
-
     public function index()
     {
-        return view('admin.admin.index');
+        return view('admin.reviewer.index');
     }
 
     public function create()
     {
-        return view('admin.admin.create');
+        return view('admin.reviewer.create');
     }
 
     public function store(Request $request)
@@ -52,7 +39,7 @@ class AdminController extends Controller
 
         $data = $request->all();
         $data['name'] = '';
-        $data['type'] = User::ADMIN;
+        $data['type'] = User::REVIEWER;
         $data['password'] = Hash::make($data['password']);
         $post = User::create($data);
 
@@ -61,21 +48,19 @@ class AdminController extends Controller
 
     public function datatables(Request $request)
     {
-        $posts = User::select('*')->where('type', User::ADMIN);
+        $posts = User::select('*')->where('type', User::REVIEWER);
         return \Datatables::eloquent($posts)
             ->addColumn('action', function ($post) {
-                $urlEdit = route('Backend::admin@edit', ['id' => $post->id]);
+                $urlEdit = route('Backend::reviewer@edit', ['id' => $post->id]);
 
-                $urlDelete = route('Backend::admin@delete', ['id' => $post->id]);
+                $urlDelete = route('Backend::reviewer@delete', ['id' => $post->id]);
 
                 $string = '';
 
+                $string .= '<a  href="' . $urlEdit . '" class="btn btn-info">Edit</a>';
 
 
-                if (auth('backend')->user()->id != $post->id) {
-                    $string .= '<a  href="' . $urlEdit . '" class="btn btn-info">Edit</a>';
-                    $string .= '<a href="' . $urlDelete . '" class="btn btn-danger delete-btn">Delete</a>';
-                }
+                $string .= '<a href="' . $urlDelete . '" class="btn btn-danger delete-btn">Delete</a>';
 
 
                 return $string;
@@ -85,9 +70,9 @@ class AdminController extends Controller
 
     public function delete($id)
     {
-        $post = User::where('id', $id)->where('type', User::ADMIN)->first();
+        $post = User::where('id', $id)->where('type', User::REVIEWER)->first();
         if (empty($post)) {
-            return redirect()->back()->with('error', 'admin not exist!');
+            return redirect()->back()->with('error', 'Reviewer not exist!');
         }
         $post->delete();
         return redirect()->back()->with('success', 'Success');
@@ -95,8 +80,8 @@ class AdminController extends Controller
 
     public function edit($id)
     {
-        $admin = User::findOrFail($id);
-        return view('admin.admin.create', compact('admin'));
+        $reviewer = User::findOrFail($id);
+        return view('admin.reviewer.create', compact('reviewer'));
     }
 
     public function update(Request $request, $id)
@@ -121,6 +106,5 @@ class AdminController extends Controller
         $post->update($data);
         return redirect()->back()->with('success', 'Success');
     }
-
 
 }

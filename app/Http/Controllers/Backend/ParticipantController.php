@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Models\Contact;
 use App\Models\Post;
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Datatables;
@@ -17,7 +18,7 @@ class ParticipantController extends AdminController
 
     public function datatables(Request $request)
     {
-        $contacs = Contact::select('*');
+        $contacs = User::select('*')->where('type',User::PARTNER);
         return \Datatables::eloquent($contacs)
             ->addColumn('action', function ($post) {
 //                $urlEdit = route('Backend::post@edit', ['id' => $post->id]);

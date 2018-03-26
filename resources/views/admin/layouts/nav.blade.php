@@ -23,6 +23,21 @@
                     </ul>
                 </li>
 
+                <li class=" treeview {{ (Request::is('admin/reviewer/*') ||  Request::is('admin/reviewer')) ? 'active' : '' }}">
+                    <a href="#">
+                        <i class="fa fa-dashboard"></i> <span>Manager Reviewer</span>
+                        <span class="pull-right-container">
+                                 <i class="fa fa-angle-left pull-right"></i>
+                         </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li class="{{ (Request::is('admin/reviewer')) ? 'active' : '' }}"><a href="{{url('admin/reviewer')}}"><i
+                                        class="fa fa-circle-o"></i> List Reviewer</a></li>
+                        <li class="{{ (Request::is('admin/reviewer/add')) ? 'active' : '' }}"><a
+                                    href="{{url('admin/reviewer/add')}}"><i class="fa fa-circle-o"></i> Add New Reviewer</a>
+                        </li>
+                    </ul>
+                </li>
                 <li class="{{ (Request::is('admin/contact-us')) ? 'active' : '' }}"><a
                             href="{{url('admin/contact-us')}}"><i class="fa fa-address-card"></i>
                         <span>Contact us</span></a></li>
