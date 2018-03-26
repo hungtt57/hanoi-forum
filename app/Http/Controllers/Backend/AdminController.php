@@ -27,7 +27,12 @@ class AdminController extends Controller
 
     public function index()
     {
-        return view('admin.admin.index');
+        if(auth('backend')->user()->type == User::ADMIN) {
+            return view('admin.admin.index');
+        }
+        if(auth('backend')->user()->type == User::PARTNER) {
+            return view('admin.partner.index');
+        }
     }
 
     public function create()

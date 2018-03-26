@@ -153,9 +153,15 @@ Route::group([
     });
 
     Route::group(['middleware' => 'REVIEWER'], function () {
-
+        Route::get('/', [
+            'as' => 'admin',
+            'uses' => 'AdminController@index'
+        ]);
     });
     Route::group(['middleware' => 'PARTNER'], function () {
-
+        Route::get('/', [
+            'as' => 'admin',
+            'uses' => 'AdminController@index'
+        ]);
     });
 });
