@@ -32,6 +32,14 @@
     <script src="/frontend/assets/js/vendor/modernizr-2.8.3.min.js"></script>
     @stack('styles')
     <style>
+        #panelRow4 .solitude-bg__x {
+            height: 350px;
+        }
+        #panelRow3 .solitude-bg__x {
+            height: 430px;
+        }
+    </style>
+    <style>
 
     </style>
 </head>
