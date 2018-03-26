@@ -72,7 +72,7 @@ class ReviewerController extends AdminController
     {
         $post = User::where('id', $id)->where('type', User::REVIEWER)->first();
         if (empty($post)) {
-            return redirect()->back()->with('error', 'Reviewer not exist!');
+            return redirect()->back()->with('error', 'REVIEWER not exist!');
         }
         $post->delete();
         return redirect()->back()->with('success', 'Success');

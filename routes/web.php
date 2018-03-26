@@ -135,7 +135,7 @@ Route::group([
         ], function () {
             Route::get('/', ['as' => 'index', 'uses' => 'ParticipantController@index']);
             Route::get('/datatables', ['as' => 'datatables', 'uses' => 'ParticipantController@datatables']);
-            Route::post('select-reviewer',['as' => 'select', 'uses' => 'ParticipantController@select']);
+            Route::post('select-reviewer', ['as' => 'select', 'uses' => 'ParticipantController@select']);
         });
 
         Route::group([
@@ -152,5 +152,10 @@ Route::group([
         });
     });
 
+    Route::group(['middleware' => 'REVIEWER'], function () {
 
+    });
+    Route::group(['middleware' => 'PARTNER'], function () {
+
+    });
 });

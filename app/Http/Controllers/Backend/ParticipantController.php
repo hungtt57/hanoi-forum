@@ -57,7 +57,7 @@ class ParticipantController extends AdminController
         if(empty($review) ) {
             return response([
                 'status' => 0,
-                'message' => 'Reviewer not exist',
+                'message' => 'REVIEWER not exist',
                 'data' => null
             ],200);
         }
