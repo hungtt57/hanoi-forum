@@ -14,7 +14,7 @@
                             <thead>
                             <tr>
                                 <th>First name</th>
-                                <th>Sur name</th>
+                                <th>Surname</th>
                                 <th>Title</th>
                                 <th>Email</th>
                                 <th>Registration ID</th>
