@@ -121,7 +121,7 @@
                             </a>
                             <a href="http://www.monre.gov.vn" target="_blank">
                                 <img style="max-width: 90px" src="/frontend/btnvmt.png" alt=""></a>
-                            <a href="http://www.monre.gov.vn" target="_blank">
+                            <a href="http://hanoi.gov.vn/home" target="_blank">
                                 <img style="max-width: 90px" src="/frontend/hanoi.png" alt=""></a>
                             <a href="http://www.vast.ac.vn/en/" target="_blank">
                                 <img style="max-width: 200px" src="/frontend/vastlogo.png" alt="">
@@ -135,7 +135,7 @@
 
                             <a href="http://www.monre.gov.vn" target="_blank">
                                 <img style="max-width: 70px" src="/frontend/btnvmt.png" alt=""></a>
-                            <a href="http://www.monre.gov.vn" target="_blank">
+                            <a href="http://hanoi.gov.vn/home" target="_blank">
                                 <img style="max-width: 70px" src="/frontend/hanoi.png" alt=""></a>
                             <a href="http://www.vast.ac.vn/en/" target="_blank">
                                 <img style="max-width: 120px" src="/frontend/vastlogo.png" alt="">
