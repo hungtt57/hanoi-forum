@@ -23,7 +23,7 @@
         <article class="sabbi-thumlinepost-card solitude-bg__x">
             <a href="{{url('humans-impact-climate')}}" style="color:inherit">
                 <figure class="sabbi-thumlinepost-card-figure">
-                    <img src="/frontend/assets/img/sabbi-post/card-2.png" alt=""
+                    <img src="/frontend/assets/img/panel/human.jpg" alt=""
                          class="img-responsive img-thumpost">
                 </figure>
             </a>
@@ -132,7 +132,7 @@
 
             <a href="#" style="color:inherit">
                 <figure class="sabbi-thumlinepost-card-figure">
-                    <img src="/frontend/assets/img/sabbi-post/card-3.png" alt=""
+                    <img src="/frontend/assets/img/panel/redriver.jpg" alt=""
                          class="img-responsive img-thumpost">
                 </figure>
             </a>
