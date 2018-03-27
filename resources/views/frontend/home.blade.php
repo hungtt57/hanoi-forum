@@ -11,11 +11,9 @@
                                 Forum</h2>
                             <div class="sabbi-thumlinepost-card-meta">
 
-                                <p class="entry-text">Hanoi Forum is an international academic conference co-hosted
-                                    by Vietnam National University, Hanoi (VNU) and Korea Foundation for Advanced
-                                    Studies (KFAS).
-                                    The general theme of Hanoi Forum is “Towards Sustainable Development”. Hanoi
-                                    Forum aims at promoting the study of sustainability science around the world.
+                                <p class="entry-text">
+                                    Hanoi Forum is an international academic conference co-hosted by Vietnam National University, Hanoi (VNU) and Korea Foundation for Advanced Studies (KFAS). The general theme of Hanoi Forum is “Towards Sustainable Development”. Hanoi Forum aims at promoting the goal of inclusive and sustainable development for all.
+
                                 </p>
                                 <div class="btn btn-unsolemn btn-action read-more" style="color: #32813E;">Read
                                     More
