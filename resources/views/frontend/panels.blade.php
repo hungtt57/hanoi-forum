@@ -1,3 +1,17 @@
+<style>
+    #panelRow4 .solitude-bg__x {
+        height: 300px;
+    }
+    #panelRow3 .solitude-bg__x {
+        height: 400px;
+    }
+    #panelRow4 .sabbi-thumlinepost-card-figure img {
+        height: 160px;
+    }
+    #panelRow3 .sabbi-thumlinepost-card-figure img {
+        height: 250px;
+    }
+</style>
 <div class="row home-info-block-first" id="panelRow4">
     <div class="col-md-3 col-sm-6">
         <article class="sabbi-thumlinepost-card solitude-bg__x">
