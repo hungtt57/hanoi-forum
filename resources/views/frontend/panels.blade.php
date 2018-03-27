@@ -85,7 +85,7 @@
             <a href="{{url('science-technology-and-education-for-climate-change-response-and-sustainability')}}"
                style="color:inherit">
                 <figure class="sabbi-thumlinepost-card-figure">
-                    <img src="/frontend/assets/img/panel/educationTechScience.jpg" alt=""
+                    <img src="/frontend/assets/img/panel/science.jpg" alt=""
                          class="img-responsive img-thumpost">
                 </figure>
             </a>
