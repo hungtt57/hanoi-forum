@@ -15,14 +15,14 @@ use Mail;
 use DB;
 class HomeController extends AdminController
 {
-//    public function sendEmailReminder(Request $request)
-//    {
-//        $id = 1; // điền 1 mã id bất kỳ của user trong bảng users
-//        $user = User::findOrFail(4);
-//        Mail::to($user->email)->send(new RegisterEmail($user));
-//
-//
-//    }
+    public function sendEmailReminder(Request $request)
+    {
+        $id = 1; // điền 1 mã id bất kỳ của user trong bảng users
+        $user = User::findOrFail(4);
+        Mail::to($user->email)->send(new RegisterEmail($user));
+
+
+    }
 
     public function index()
     {

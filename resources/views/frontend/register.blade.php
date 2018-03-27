@@ -36,7 +36,7 @@
                             <div class="form-group">
                                 <label class="control-label ">First name*</label>
                                 <div class="controls">
-                                    <input type="text" name="first_name" value="{{old('first_name')}}" tabindex="2"
+                                    <input type="text" name="first_name" value="{{old('first_name')}}"
                                            class="form-control"
                                     >
                                 </div>
@@ -44,7 +44,7 @@
                             <div class="form-group">
                                 <label class="control-label ">Last name*</label>
                                 <div class="controls">
-                                    <input type="text" name="last_name" value="{{old('last_name')}}" tabindex="2"
+                                    <input type="text" name="last_name" value="{{old('last_name')}}"
                                            class="form-control"
                                     >
                                 </div>
@@ -52,7 +52,7 @@
                             <div class="form-group">
                                 <label class="control-label ">Title*</label>
                                 <div class="controls">
-                                    <input type="text" name="title" value="{{old('title')}}" tabindex="2"
+                                    <input type="text" name="title" value="{{old('title')}}"
                                            class="form-control"
                                     >
                                 </div>
@@ -60,29 +60,29 @@
                             <div class="form-group">
                                 <label class="control-label ">Affiliation*</label>
                                 <div class="controls">
-                                    <input type="text" name="affiliation" value="{{old('affiliation')}}" tabindex="2"
+                                    <input type="text" name="affiliation" value="{{old('affiliation')}}"
                                            class="form-control"
                                     >
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label " for="Name">Email address*</label>
+                                <label class="control-label ">Email address*</label>
                                 <div class="controls">
-                                    <input type="email" name="email" tabindex="1" class="form-control"
+                                    <input type="email" name="email"  class="form-control"
                                            value="{{old('email')}}">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label " for="Name">Password*</label>
+                                <label class="control-label " >Password*</label>
                                 <div class="controls">
-                                    <input type="password" name="password" tabindex="2" class="form-control"
+                                    <input type="password" name="password" class="form-control"
                                            placeholder="Password">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label " for="Name">Password confirmation*</label>
+                                <label class="control-label " >Password confirmation*</label>
                                 <div class="controls">
-                                    <input type="password" name="password_confirmation" tabindex="2"
+                                    <input type="password" name="password_confirmation"
                                            class="form-control"
                                            placeholder="Password">
                                 </div>
@@ -123,10 +123,10 @@
                             </div>
                             <div class="applyContainer  @if(old('apply') != 1)hide @endif">
                                 <div class="form-group">
-                                    <label class="control-label " for="Name">Resume/CV </label>
+                                    <label class="control-label ">Resume/CV </label>
                                     <p class="control-label " >Paste the link to your online CV here (preferably LinkedIN if available) </p>
                                     <div class="controls">
-                                        <input type="text" name="link_cv" tabindex="2"
+                                        <input type="text" name="link_cv"
                                                class="form-control"
                                                value="{{old('link_cv')}}">
                                     </div>
@@ -147,7 +147,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label " for="Name">Abstract</label>
+                                    <label class="control-label ">Abstract</label>
                                     <div class="controls">
                                     <textarea name="abstract" class="form-control" maxlength="250"
                                               rows="5">{{old('abstract')}}</textarea>

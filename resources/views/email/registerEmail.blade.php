@@ -1,11 +1,12 @@
-
-<p><strong>Welcome email after registration</strong></p>
-<p>Dear {{$user->title}}.{{$user->last_name}},</p>
+<style>
+    .contact a {color:#000000!important; text-decoration:underline!important;}
+</style>
+<p>Dear {{ucfirst($user->title)}}. {{ucfirst ($user->last_name)}},</p>
 <p>Welcome to Hanoi Forum 2018!</p>
 <p>We&rsquo;re ready to activate your account. All we need to do is make sure this is your email address. Once your account is activated, you can log in to your account on Hanoi Forum website to manage your setting, submit your abstract, and get the most updated information from the Forum.</p>
 <p>Your unique registration ID is <b>{{$user->code}}</b>. Please include it when you pay the registration fee and in all other communication with Hanoi Forum staff.</p>
 <p>We look forward to welcoming you in Hanoi this November.</p>
-<p>Please click verify to active account</p>
+<p>Please click verify to active account.</p>
 <p align="center">
     <a href="{{url('verify-email').'?code='.$user->code}}">
         <button class="verify" style=" color: #fff;
@@ -32,16 +33,15 @@
     </a>
 </p>
 
-<p dir="ltr"><b id="docs-internal-guid-bce07a37-56fd-a84c-d641-59fb31f6947b">Hanoi Forum Secretariat</b></p>
-<p dir="ltr"><b id="docs-internal-guid-bce07a37-56fd-a84c-d641-59fb31f6947b">R1006, Administration Building</b></p>
-<p dir="ltr"><b id="docs-internal-guid-bce07a37-56fd-a84c-d641-59fb31f6947b">Vietnam National University, Hanoi</b></p>
+<p dir="ltr"><span id="docs-internal-guid-bce07a37-56fd-a84c-d641-59fb31f6947b">Hanoi Forum Secretariat</span></p>
+<p dir="ltr"><span id="docs-internal-guid-bce07a37-56fd-a84c-d641-59fb31f6947b">R1006, Administration Building</span></p>
+<p dir="ltr"><span id="docs-internal-guid-bce07a37-56fd-a84c-d641-59fb31f6947b">Vietnam National University, Hanoi</span></p>
+<p class="contact"><a href="#" style="color: inherit;text-decoration: none;">144 Xuan Thuy road, Cau Giay district, Hanoi, Vietnam</a></p>
+<p dir="ltr"><span >Tel: (84) 24 37547670 - Ext: 723</span></p>
 
-<p dir="ltr"><b id="docs-internal-guid-bce07a37-56fd-a84c-d641-59fb31f6947b">144 Xuan Thuy, Cau Giay</b></p>
-
-<p dir="ltr"><b id="docs-internal-guid-bce07a37-56fd-a84c-d641-59fb31f6947b">Tel: (84) 24 37547670 - Ext: 723</b></p>
-
-<p dir="ltr"><b id="docs-internal-guid-bce07a37-56fd-a84c-d641-59fb31f6947b">W: https://hanoiforum.vnu.edu.vn</b></p>
-
-<p dir="ltr"><em>If you didn&rsquo;t </em><em>create an account on Hanoi Forum website, just ignore this email. </em></p>
+<p dir="ltr"><span class="contact">W: <a href="#" style="color: inherit;text-decoration: none;">https://hanoiforum.vnu.edu.vn</a></span></p>
 <br />
+<br />
+<p dir="ltr"><em>If you didn&rsquo;t </em><em>create an account on Hanoi Forum website, just ignore this email. </em></p>
+
 &nbsp;
