@@ -94,7 +94,6 @@ class HomeController extends AdminController
             }
 
         } catch (\Exception $ex) {
-            dd($ex->getMessage());
             DB::rollback();
             return redirect()->back()->with('success', 'Server error.Try again later')->withInput(Input::all());
         }

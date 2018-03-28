@@ -66,9 +66,9 @@
             @endif
 
             @if(auth('backend')->user()->type == \App\Models\User::PARTNER)
-                    <li class="{{ (Request::is('admin/')) ? 'active' : '' }}"><a
-                                href="{{url('admin/participants')}}"><i class="fa  fa-user-plus"></i>
-                            <span>Participants</span></a></li>
+                    <li class="{{ (Request::is('admin/submit')) ? 'active' : '' }}"><a
+                                href="{{url('admin/submit')}}"><i class="fa  fa-user-plus"></i>
+                            <span>Submit abstract/paper</span></a></li>
             @endif
         </ul>
     </section>

@@ -107,7 +107,6 @@ Route::group([
             'prefix' => '',
             'as' => 'admin@'
         ], function () {
-            Route::get('/', ['as' => 'index', 'uses' => 'AdminController@index']);
             Route::get('/datatables', ['as' => 'datatables', 'uses' => 'AdminController@datatables']);
             Route::get('/add', ['as' => 'add', 'uses' => 'AdminController@create']);
             Route::post('/store', ['as' => 'store', 'uses' => 'AdminController@store']);
@@ -159,9 +158,13 @@ Route::group([
 //        ]);
     });
     Route::group(['middleware' => 'PARTNER'], function () {
-//        Route::get('/', [
-//            'as' => 'admin',
-//            'uses' => 'AdminController@index'
-//        ]);
+        Route::get('/submit', [
+            'as' => 'submit',
+            'uses' => 'PartnerController@submit'
+        ]);
+        Route::post('/submit', [
+            'as' => 'postSubmit',
+            'uses' => 'PartnerController@postSubmit'
+        ]);
     });
 });
