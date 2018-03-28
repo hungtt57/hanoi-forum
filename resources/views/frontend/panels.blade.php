@@ -43,7 +43,7 @@
             </a>
             <div class="sabbi-thumlinepost-card-meta">
                 <a href="{{url('humans-impact-climate')}}" style="color:inherit"><h2
-                            class="meta-title ht-5">Humans impact climate</h2></a>
+                            class="meta-title ht-5">Human impacts on climate</h2></a>
 
                 <p class="meta-text"></p>
                 <a href="{{url('humans-impact-climate')}}" class="btn btn-unsolemn btn-action read-more">Read
