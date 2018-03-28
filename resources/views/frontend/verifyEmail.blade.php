@@ -15,8 +15,8 @@
                 <div class="row">
                     <div class="col-md-8 col-sm-5 col-md-offset-2 col-xs-12">
                         <div>
-                            <p>Your account is now activated. You can <a href="{{url('admin/login')}}" class="btn btn-primary ">Login</a> to your account or go back to the home page
-                                <a href="{{url('/')}}">here</a>. </p>
+                            <p> Your account is now activated. You can <a href="{{url('admin/login')}}" class="btn btn-primary ">Login</a> to your account or go back to the homepage <a href="{{url('/')}}">here</a>. </p>
+
                         </div>
                     </div>
 
