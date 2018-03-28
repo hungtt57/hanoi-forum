@@ -14,7 +14,8 @@ class AddColumnConfirmUser extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->tinyInteger('confirm')
+            $table->tinyInteger('confirm_abstract')->nullable()->default(0);
+            $table->tinyInteger('confirm_paper')->nullable()->default(0);
         });
     }
 
@@ -26,7 +27,8 @@ class AddColumnConfirmUser extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            //
+            $table->tinyInteger('confirm_abstract');
+            $table->tinyInteger('confirm_paper');
         });
     }
 }
