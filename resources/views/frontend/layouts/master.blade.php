@@ -31,12 +31,23 @@
     <link href="/frontend/assets/css/style.css" rel="stylesheet">
     <script src="/frontend/assets/js/vendor/modernizr-2.8.3.min.js"></script>
     @stack('styles')
-    <style>
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-    </style>
-    <style>
+      ga('create', 'UA-116562676-1', 'auto');
+      ga('send', 'pageview');
 
-    </style>
+    </script>
 </head>
 <body class="auth-theme-rashmore">
 <!--[if lt IE 8]>
@@ -84,29 +95,31 @@
                 </div>
             </div>
             <div class="col-sm-9">
-            <div class="row">
-                <div class="footer-site-info col-xs-12">
-                    <h3 class="entry-title">Co-hosts</h3>
-                    <div class="row pull-left hidden-xs">
-                        <a href="https://www.vnu.edu.vn/home/" target="_blank">
-                            <img style="max-width: 90px" src="/frontend/assets/img/logo2.png" alt="">
-                        </a>
-                        <a href="http://kfas.or.kr/" target="_blank">
-                            <img style="max-width: 360px;margin-left:10px" src="/frontend/assets/img/kfas_logo.jpg" alt="">
-                        </a>
+                <div class="row">
+                    <div class="footer-site-info col-xs-12">
+                        <h3 class="entry-title">Co-hosts</h3>
+                        <div class="row pull-left hidden-xs">
+                            <a href="https://www.vnu.edu.vn/home/" target="_blank">
+                                <img style="max-width: 90px" src="/frontend/assets/img/logo2.png" alt="">
+                            </a>
+                            <a href="http://kfas.or.kr/" target="_blank">
+                                <img style="max-width: 360px;margin-left:10px" src="/frontend/assets/img/kfas_logo.jpg"
+                                     alt="">
+                            </a>
 
-                    </div>
-                    <div class="row  hidden-sm hidden-md hidden-lg " style="text-align: center">
-                        <a href="https://www.vnu.edu.vn/home/" target="_blank">
-                            <img style="max-width: 70px" src="/frontend/assets/img/logo2.png" alt="">
-                        </a>
+                        </div>
+                        <div class="row  hidden-sm hidden-md hidden-lg " style="text-align: center">
+                            <a href="https://www.vnu.edu.vn/home/" target="_blank">
+                                <img style="max-width: 70px" src="/frontend/assets/img/logo2.png" alt="">
+                            </a>
 
-                        <a href="http://kfas.or.kr/" target="_blank">
-                            <img style="max-width: 140px;margin-left:20px" src="/frontend/assets/img/kfas_logo.jpg" alt=""></a>
+                            <a href="http://kfas.or.kr/" target="_blank">
+                                <img style="max-width: 140px;margin-left:20px" src="/frontend/assets/img/kfas_logo.jpg"
+                                     alt=""></a>
 
+                        </div>
                     </div>
                 </div>
-            </div>
                 <div class="row " id="partner">
                     <div class="footer-site-info col-xs-12">
                         <h3 class="entry-title">Partners</h3>

@@ -21,7 +21,7 @@
 
     <form  class="form-horizontal">
         <div class="alert alert-success"> Successful submision! A confirmation has been sent to your email address.
-            <p>Do you want to submit again.Click <a href="{{url('admin/submit')}}">here</a></p>
+            <p>Do you want to submit again? Click <a href="{{url('admin/submit')}}">here.</a></p>
         </div>
 
         <div class="form-body">
