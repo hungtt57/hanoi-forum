@@ -24,21 +24,24 @@
 
         <div class="form-body">
             {{ csrf_field() }}
+            @if(!$user->confirm_abstract)
             <div class="form-group">
                 <label class="control-label col-md-3 " for="Name">Abstract*</label>
                 <div class="col-md-6">
                     <textarea name="abstract" class="form-control" maxlength="250"
-                                           rows="5">{{old('abstract')}}</textarea>
+                                           rows="5">{{old('abstract',$user->abstract)}}</textarea>
                 </div>
             </div>
-            {{--<div class="form-group">--}}
-                {{--<label class="control-label col-md-3 " for="Name">Paper*</label>--}}
-                {{--<div class="col-md-6">--}}
-                    {{--<input type="file" class="post-image form-control" name="file"--}}
-                           {{--rel="post_status_images">--}}
-                {{--</div>--}}
-            {{--</div>--}}
-
+            @endif
+            @if($user->confirm_abstract)
+            <div class="form-group">
+                <label class="control-label col-md-3 " for="Name">Paper*</label>
+                <div class="col-md-6">
+                    <input type="file" class="post-image form-control" name="file"
+                           rel="post_status_images">
+                </div>
+            </div>
+            @endif
         </div>
         <div class="form-actions">
             <div class="row" style="text-align: center">
