@@ -19,43 +19,36 @@
 
     @include('admin.flash_message')
 
-    <form action="{{route('Backend::postSubmit')}}" class="form-horizontal"
-          method="POST" enctype="multipart/form-data">
+    <form  class="form-horizontal">
+        <div class="alert alert-success"> Successful submision! A confirmation has been sent to your email address.
+            <p>Do you want to submit again.Click <a href="{{url('admin/submit')}}">here</a></p>
+        </div>
 
         <div class="form-body">
             {{ csrf_field() }}
-            @if(!$user->confirm_abstract)
+
                 <div class="form-group">
-                    <label class="control-label col-md-3">Title of the paper*</label>
+                    <label class="control-label col-md-3">Title of the paper</label>
                     <div class="col-md-6">
-                        <input type="text" name="title_of_paper"
+
+                        <input type="text" name="paper"
                                class="form-control"
-                               value="{{old('paper',$user->title_of_paper)}}">
+                               value="{{old('paper',$user->title_of_paper)}}" disabled>
                     </div>
                 </div>
             <div class="form-group">
-                <label class="control-label col-md-3 " for="Name">Abstract*</label>
+                <label class="control-label col-md-3 " for="Name">Abstract</label>
                 <div class="col-md-6">
-                    <textarea name="abstract" class="form-control" maxlength="250"
+                    <textarea name="abstract" disabled class="form-control" maxlength="250"
                                            rows="5">{{old('abstract',$user->abstract)}}</textarea>
                 </div>
             </div>
-            @endif
-            @if($user->confirm_abstract)
-            <div class="form-group">
-                <label class="control-label col-md-3 " for="Name">Paper*</label>
-                <div class="col-md-6">
-                    <input type="file" class="post-image form-control" name="file"
-                           rel="post_status_images">
-                </div>
-            </div>
-            @endif
+
+
         </div>
         <div class="form-actions">
             <div class="row" style="text-align: center">
 
-                <button type="submit" class="btn btn-primary">Submit</button>
-                <button type="button" class="btn default">Reset</button>
 
             </div>
         </div>

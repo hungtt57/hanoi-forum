@@ -12,7 +12,7 @@
 </p>
 <p> Thank you for your interest in Hanoi Forum 2018.</p>
 <p> Regards,</p>
-<span>Diep-Ngoc Tran</span><br>
+
 <span id="docs-internal-guid-bce07a37-56fd-a84c-d641-59fb31f6947b">Hanoi Forum Secretariat</span><br>
 <span id="docs-internal-guid-bce07a37-56fd-a84c-d641-59fb31f6947b">R1006, Administration Building</span><br>
 <span id="docs-internal-guid-bce07a37-56fd-a84c-d641-59fb31f6947b">Vietnam National University, Hanoi</span><br>

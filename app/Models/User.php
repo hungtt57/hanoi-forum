@@ -24,7 +24,7 @@ class User extends Authenticatable
         'name', 'email', 'password', 'type', 'phone','file',
         'first_name','last_name','title','affiliation','gender','nationality','link_cv','abstract','paper',
         'status','apply','code','reviewer_id',
-        'confirm_abstract','confirm_paper'
+        'confirm_abstract','confirm_paper','title_of_paper'
     ];
 
     /**

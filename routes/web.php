@@ -162,6 +162,10 @@ Route::group([
             'as' => 'submit',
             'uses' => 'PartnerController@submit'
         ]);
+        Route::get('/submit/success', [
+            'as' => 'submitSuccess',
+            'uses' => 'PartnerController@submitSuccess'
+        ]);
         Route::post('/submit', [
             'as' => 'postSubmit',
             'uses' => 'PartnerController@postSubmit'

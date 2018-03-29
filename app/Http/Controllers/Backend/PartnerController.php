@@ -10,7 +10,7 @@ use DB;
 use Mail;
 use App\Models\EmailLog;
 use App\Mail\SubmitAbstract;
-
+use Illuminate\Support\Facades\Input;
 class PartnerController extends AdminController
 {
     public function submit(Request $request)
@@ -26,11 +26,15 @@ class PartnerController extends AdminController
         if (!$user->confirm_abstract) {
             $this->validate($request, [
                 'abstract' => 'required',
+                'title_of_paper' => 'required'
+            ],[
+                'title_of_paper.required' => 'Title of paper is required'
             ]);
             \DB::beginTransaction();
             try {
 
                 $user->abstract = $request->input('abstract');
+                $user->title_of_paper = $request->input('title_of_paper');
                 $user->save();
                 Mail::to($user->email)->send(new SubmitAbstract($user));
                 EmailLog::create([
@@ -40,7 +44,7 @@ class PartnerController extends AdminController
                 ]);
                 DB::commit();
 
-                return redirect('/admin/submit')->with('success', 'Successful submision! A confirmation has been sent to your email address.');
+                return redirect('/admin/submit/success');
             } catch (\Exception $ex) {
                 DB::rollback();
                 return redirect()->back()->with('success', 'Server error.Try again later')->withInput(Input::all());
@@ -53,6 +57,9 @@ class PartnerController extends AdminController
             ]);
         }
 
-
+    }
+    public function submitSuccess(Request $request) {
+        $user = auth('backend')->user();
+        return view('admin.partner.submitSuccess',compact('user'));
     }
 }
