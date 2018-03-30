@@ -18,8 +18,8 @@ class HomeController extends AdminController
     public function sendEmailReminder(Request $request)
     {
         $id = 1; // điền 1 mã id bất kỳ của user trong bảng users
-        $user = User::findOrFail(4);
-        Mail::to($user->email)->send(new RegisterEmail($user));
+        $user = User::findOrFail(16);
+        Mail::to($user->email)->cc('hin1471994@gmail.com')->send(new RegisterEmail($user));
 
 
     }
@@ -73,7 +73,7 @@ class HomeController extends AdminController
             } while ($count);
             $data['code'] = $code;
             $user = User::create($data);
-            Mail::to($user->email)->cc(' hanoiforum@vnu.edu.vn')->send(new RegisterEmail($user));
+            Mail::to($user->email)->cc('hanoiforum@vnu.edu.vn')->send(new RegisterEmail($user));
             EmailLog::create([
                'to' => $user->email,
                'event' => 'register',
