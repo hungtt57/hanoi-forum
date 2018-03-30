@@ -22,7 +22,7 @@
                                 <th>Nationality</th>
                                 <th>Reviewer</th>
                                 <th>Created at</th>
-                                {{--<th>Action</th>--}}
+                                <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -91,7 +91,7 @@
             {data: 'reviewer', name: 'reviewer'},
             {data: 'created_at', name: 'created_at'},
 
-//            {data: 'action', name: 'action'},
+           {data: 'action', name: 'action'},
           ],
 
           initComplete: function () {

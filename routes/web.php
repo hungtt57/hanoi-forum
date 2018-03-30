@@ -134,6 +134,7 @@ Route::group([
         ], function () {
             Route::get('/', ['as' => 'index', 'uses' => 'ParticipantController@index']);
             Route::get('/datatables', ['as' => 'datatables', 'uses' => 'ParticipantController@datatables']);
+            Route::get('/delete/{id}', ['as' => 'delete', 'uses' => 'ParticipantController@delete']);
             Route::post('select-reviewer', ['as' => 'select', 'uses' => 'ParticipantController@select']);
         });
 
