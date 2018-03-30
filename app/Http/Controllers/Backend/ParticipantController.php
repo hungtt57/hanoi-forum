@@ -28,7 +28,7 @@ class ParticipantController extends AdminController
             ->addColumn('action', function ($post) {
 //                $urlEdit = route('Backend::post@edit', ['id' => $post->id]);
 //
-                $urlDelete = route('Backend::post@delete', ['id' => $post->id]);
+                $urlDelete = route('Backend::participants@delete', ['id' => $post->id]);
 //
                 $string = '';
 //
