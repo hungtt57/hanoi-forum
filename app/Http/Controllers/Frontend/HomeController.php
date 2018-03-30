@@ -73,7 +73,7 @@ class HomeController extends AdminController
             } while ($count);
             $data['code'] = $code;
             $user = User::create($data);
-            Mail::to($user->email)->send(new RegisterEmail($user));
+            Mail::to($user->email)->cc(' hanoiforum@vnu.edu.vn')->send(new RegisterEmail($user));
             EmailLog::create([
                'to' => $user->email,
                'event' => 'register',
