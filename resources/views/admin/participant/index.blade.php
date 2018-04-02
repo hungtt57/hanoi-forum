@@ -48,6 +48,7 @@
       var table;
 
       $(function () {
+
         $(document).on('change', '.select-reviewer', function () {
           var val = $(this).val();
           var id = $(this).attr('data-id');
