@@ -150,6 +150,19 @@ Route::group([
             Route::get('/edit/{id}', ['as' => 'edit', 'uses' => 'ReviewerController@edit']);
             Route::get('/delete/{id}', ['as' => 'delete', 'uses' => 'ReviewerController@delete']);
         });
+
+        Route::group([
+            'prefix' => 'subcommittee',
+            'as' => 'subcommittee@'
+        ], function () {
+            Route::get('/', ['as' => 'index', 'uses' => 'SubcommitteeController@index']);
+            Route::get('/datatables', ['as' => 'datatables', 'uses' => 'SubcommitteeController@datatables']);
+            Route::get('/add', ['as' => 'add', 'uses' => 'SubcommitteeController@create']);
+            Route::post('/store', ['as' => 'store', 'uses' => 'SubcommitteeController@store']);
+            Route::post('/update/{id}', ['as' => 'update', 'uses' => 'SubcommitteeController@update']);
+            Route::get('/edit/{id}', ['as' => 'edit', 'uses' => 'SubcommitteeController@edit']);
+            Route::get('/delete/{id}', ['as' => 'delete', 'uses' => 'SubcommitteeController@delete']);
+        });
     });
 
     Route::group(['middleware' => 'REVIEWER'], function () {
