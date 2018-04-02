@@ -161,11 +161,11 @@
                 <div class="row">
                     <div class="col-sm-8">
                         <div class="widget_black_studio_tinymce" id="black-studio-tinymce-4">
-                            <div class="copyright">Copyright 2018 -</div>
+                            <div class="copyright">Copyright@Hanoi Forum. All rights reserved</div>
                         </div>
                     </div>
                     <div class="col-sm-4 ">
-                        <div class="powredby">Developed and Managed by: hinKeu</div>
+                        {{--<div class="powredby">Developed and Managed by: hinKeu</div>--}}
                     </div>
                 </div>
             </div>
