@@ -26,9 +26,9 @@
                     <article class="sabbi-thumlinepost-card card-video solitude-bg__x">
                         <figure class="sabbi-thumlinepost-card-figure">
                             <a class="video-play" href="https://www.youtube.com/watch?v=qarc7AA4-wM"
-                               data-toggle="lightbox"><img src="/frontend/assets/img/sabbi-post/card-img-5.jpg" alt=""
+                               data-toggle="lightbox"><img src="/frontend/assets/img/thumbvideo.jpg" alt=""
                                                            class="img-responsive img-thumpost"></a>
-                            <figcaption>Trailer</figcaption>
+                            <figcaption> Welcome message</figcaption>
                         </figure>
                         {{--<h3 class="entry-title"><a href="#">Title</a></h3>--}}
                         {{--<p class="entry-text">Description</p>--}}
