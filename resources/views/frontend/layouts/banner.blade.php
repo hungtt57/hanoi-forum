@@ -4,8 +4,8 @@
             <div class="seq-screen">
                 <ul class="seq-canvas">
 
-                    <li class="seq-step0" id="step0" style="background:url(/frontend/banner/slide.jpg);background-repeat: no-repeat;background-size: cover;background-position: center center;">
-                        <div class="bg-blend"></div>
+                    {{--<li class="seq-step0" id="step0" style="background:url(/frontend/banner/slide.jpg);background-repeat: no-repeat;background-size: cover;background-position: center center;">--}}
+                        {{--<div class="bg-blend"></div>--}}
                         {{--<div class="seq-content" >--}}
 
                         {{--<h2 class="seq-title font-2 tt_up" data-seq="">Where it all began</h2>--}}
@@ -14,7 +14,7 @@
                         {{--</div>--}}
                         {{--<a href="#" class="btn-link btn-more">READ MORE</a>--}}
                         {{--</div>--}}
-                    </li>
+                    {{--</li>--}}
                     <li class="seq-step1" id="step1" style="background:url(/frontend/banner/slide1.jpg);background-repeat: no-repeat;background-size: cover;background-position: center center;">
                         <div class="bg-blend"></div>
                         {{--<div class="seq-content" >--}}
