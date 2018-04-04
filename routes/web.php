@@ -129,6 +129,18 @@ Route::group([
             Route::get('/delete/{id}', ['as' => 'delete', 'uses' => 'PostController@delete']);
         });
         Route::group([
+            'prefix' => 'banners',
+            'as' => 'banner@'
+        ], function () {
+            Route::get('/', ['as' => 'index', 'uses' => 'BannerController@index']);
+            Route::get('/datatables', ['as' => 'datatables', 'uses' => 'BannerController@datatables']);
+            Route::get('/add', ['as' => 'add', 'uses' => 'BannerController@create']);
+            Route::post('/store', ['as' => 'store', 'uses' => 'BannerController@store']);
+            Route::post('/update/{id}', ['as' => 'update', 'uses' => 'BannerController@update']);
+            Route::get('/edit/{id}', ['as' => 'edit', 'uses' => 'BannerController@edit']);
+            Route::get('/delete/{id}', ['as' => 'delete', 'uses' => 'BannerController@delete']);
+        });
+        Route::group([
             'prefix' => 'participants',
             'as' => 'participants@'
         ], function () {

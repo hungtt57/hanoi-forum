@@ -52,6 +52,21 @@
                         </li>
                     </ul>
                 </li>
+                <li class=" treeview {{ (Request::is('admin/banners/*') ||  Request::is('admin/banners')) ? 'active' : '' }}">
+                    <a href="#">
+                        <i class="fa fa-dashboard"></i> <span>Manager Banner</span>
+                        <span class="pull-right-container">
+                                 <i class="fa fa-angle-left pull-right"></i>
+                         </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li class="{{ (Request::is('admin/banners')) ? 'active' : '' }}"><a href="{{url('admin/banners')}}"><i
+                                        class="fa fa-circle-o"></i> List Banner</a></li>
+                        <li class="{{ (Request::is('admin/banners/add')) ? 'active' : '' }}"><a
+                                    href="{{url('admin/banners/add')}}"><i class="fa fa-circle-o"></i> Add New Banner</a>
+                        </li>
+                    </ul>
+                </li>
                 <li class=" treeview {{ (Request::is('admin/subcommittee/*') ||  Request::is('admin/subcommittee')) ? 'active' : '' }}">
                     <a href="#">
                         <i class="fa fa-dashboard"></i> <span>Manager Subcommittee</span>
