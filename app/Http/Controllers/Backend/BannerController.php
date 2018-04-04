@@ -37,7 +37,7 @@ class BannerController extends AdminController
 
 
         $banner = Banner::create($data);
-        cache()->forget('banner');
+        cache()->forget('banners');
         return redirect()->back()->with('success', 'Success');
     }
 
@@ -73,7 +73,8 @@ class BannerController extends AdminController
     }
     public function delete($id) {
         $banner = Banner::findOrFail($id);
-        $banner->delete;
+        $banner->delete();
+        cache()->forget('banners');
         return redirect()->back()->with('success','Success');
     }
     public function edit($id)
@@ -99,7 +100,7 @@ class BannerController extends AdminController
             $data['image'] = $this->saveImage($request->file('image'));
         }
         $banner->update($data);
-        cache()->forget('banner');
+        cache()->forget('banners');
         return redirect()->back()->with('success', 'Success');
     }
 }

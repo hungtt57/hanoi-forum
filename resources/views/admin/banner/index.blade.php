@@ -6,7 +6,8 @@
     @include('admin.flash_message')
     <div class="col-md-12">
 
-        <a href="{{ route('Backend::banner@add')}}" class="btn btn-success pull-right" style="margin-bottom: 20px">Add new
+        <a href="{{ route('Backend::banner@add')}}" class="btn btn-success pull-right" style="margin-bottom: 20px">Add
+            new
             banner</a>
         <div class="row">
             <div class="col-xs-12">
@@ -53,23 +54,12 @@
           ajax: '{{route('Backend::banner@datatables')}}',
           columns: [
             {
-                data : 'image' ,name : 'image'
+              data: 'image', name: 'image'
+              , searchable: false, orderable: false
             },
-            {data: 'order', name: 'order'},
-            {data: 'action', name: 'action'},
-          ],
-
-          initComplete: function () {
-            this.api().columns().every(function () {
-              var column = this;
-              var input = document.createElement("input");
-              input.className = "form-control form-filter input-sm";
-              $(input).appendTo($(column.header()))
-                .on('keyup', function () {
-                  column.search($(this).val()).draw();
-                });
-            });
-          }
+            {data: 'order', name: 'order', searchable: false, orderable: false},
+            {data: 'action', name: 'action', searchable: false, orderable: false},
+          ]
         });
 
 

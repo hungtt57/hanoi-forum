@@ -83,7 +83,7 @@ class PostController extends AdminController
     }
     public function delete($id) {
         $post = Post::findOrFail($id);
-        $post->delete;
+        $post->delete();
         return redirect()->back()->with('success','Success');
     }
     public function edit($id)
