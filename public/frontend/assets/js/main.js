@@ -26,7 +26,7 @@ jQuery(document).ready(function($) {
 	// See: http://sequencejs.com/documentation/#options
 	var options = {
 	  startingStepAnimatesIn: true,
-	  autoPlay: false,
+	  autoPlay: true,
 	  /* Make this the same as the animateCanvasDuration */
 	  phaseThreshold: 250,
 	  preloader: false,
@@ -48,7 +48,8 @@ jQuery(document).ready(function($) {
 		// See: http://sequencejs.com/documentation/#options
 		var options = {
 		  startingStepAnimatesIn: true,
-		  autoPlay: false,
+		  autoPlay: true,
+      autoPlayInterval: 250,
 		  /* Make this the same as the animateCanvasDuration */
 		  phaseThreshold: 250,
 		  preloader: true,
