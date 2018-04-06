@@ -2,6 +2,9 @@
                         return  \App\Models\Banner::orderBy('order', 'DESC')->get();
                      }); @endphp
 @if($banners)
+    <style>
+
+    </style>
     <div class="sabbi-site-header-meta">
         <div class="site-hmsl-content text-center mt_60">
             <div class="seq seq--kawsa" id="sequence">
