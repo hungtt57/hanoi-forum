@@ -5,7 +5,8 @@
     <section class="sabbbi-section home-info mt_35">
         <div class="container">
             <div class="row mt_30">
-                <div class="col-sm-4">
+
+                <div class="col-sm-6 ">
                     <article class="sabbi-thumlinepost-card solitude-bg__x">
                         <a href="{{url('hanoi-forum')}}" style="color:inherit"><h2 class="entry-title ht-4">About Hanoi
                                 Forum</h2>
@@ -22,21 +23,19 @@
                         </a>
                     </article>
                 </div>
-                <div class="col-sm-4">
-                    <article class="sabbi-thumlinepost-card card-video solitude-bg__x">
-                        <figure class="sabbi-thumlinepost-card-figure">
-                            <a class="video-play" href="https://www.youtube.com/watch?v=qarc7AA4-wM"
-                               data-toggle="lightbox"><img src="/frontend/assets/img/thumbvideo.jpg" alt=""
-                                                           class="img-responsive img-thumpost"></a>
-                            <figcaption> Welcome message</figcaption>
-                        </figure>
-                        {{--<h3 class="entry-title"><a href="#">Title</a></h3>--}}
-                        {{--<p class="entry-text">Description</p>--}}
-                    </article>
-                </div>
+                {{--<div class="col-sm-4">--}}
+                    {{--<article class="sabbi-thumlinepost-card card-video solitude-bg__x">--}}
+                        {{--<figure class="sabbi-thumlinepost-card-figure">--}}
+                            {{--<a class="video-play" href="https://www.youtube.com/watch?v=qarc7AA4-wM"--}}
+                               {{--data-toggle="lightbox"><img src="/frontend/assets/img/thumbvideo.jpg" alt=""--}}
+                                                           {{--class="img-responsive img-thumpost"></a>--}}
+                            {{--<figcaption> Welcome message</figcaption>--}}
+                        {{--</figure>--}}
+                    {{--</article>--}}
+                {{--</div>--}}
                 @php $posts = App\Models\Post::where('status',1)->orderBy('created_at','desc')->limit(5)->get(); @endphp
                 @if($posts)
-                    <div class="col-sm-4">
+                    <div class="col-sm-6">
                         <article class="news-card sabbi-thumlinepost-card solitude-bg__x">
                             <h2 class="stage-title">Latest Events</h2>
                             <ul class="list-unstyled lst_news_list" tabindex="0">
