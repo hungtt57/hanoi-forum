@@ -31,6 +31,18 @@
     <link href="/frontend/assets/css/style.css" rel="stylesheet">
     <script src="/frontend/assets/js/vendor/modernizr-2.8.3.min.js"></script>
     @stack('styles')
+
+
+    <style>
+        @media (min-width: 1400px) {
+            .container {
+                width: 1600px;
+            }
+        }
+
+    </style>
+
+
     <script>
       (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
