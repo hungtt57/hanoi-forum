@@ -6,7 +6,7 @@
         <div class="container">
             <div class="row mt_30">
 
-                <div class="col-sm-6 ">
+                <div class="col-sm-4">
                     <article class="sabbi-thumlinepost-card solitude-bg__x">
                         <a href="{{url('hanoi-forum')}}" style="color:inherit"><h2 class="entry-title ht-4">About Hanoi
                                 Forum</h2>
@@ -33,9 +33,43 @@
                         {{--</figure>--}}
                     {{--</article>--}}
                 {{--</div>--}}
+                <div class="col-sm-4">
+                    <div class="education_timeline_wrap">
+                        <ol class="ol-timeline" style="margin-top: 50px !important;">
+
+
+                            <li class="tl-item with-icon">
+                                <p><span class="item-section">8 - 10 November 2018</span></p>
+                                <div class="content-wrapper">
+                                    <h3 class="title">Forum dates</h3>
+                                </div>
+                            </li>
+
+                            <li class="tl-item with-icon">
+                                <p><span class="item-section">15 September 2018</span></p>
+                                <div class="content-wrapper">
+                                    <h3 class="title">Deadline for full papers</h3>
+                                </div>
+                            </li>
+                            <li class="tl-item with-icon">
+                                <p><span class="item-section">15 June 2018</span></p>
+                                <div class="content-wrapper">
+                                    <h3 class="title">Notification of abstract review results</h3>
+                                </div>
+                            </li>
+
+                            <li class="tl-item with-icon">
+                                <p><span class="item-section">30 May 2018</span></p>
+                                <div class="content-wrapper">
+                                    <h3 class="title">Deadline for abstracts</h3>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
                 @php $posts = App\Models\Post::where('status',1)->orderBy('created_at','desc')->limit(5)->get(); @endphp
                 @if($posts)
-                    <div class="col-sm-6">
+                    <div class="col-sm-4">
                         <article class="news-card sabbi-thumlinepost-card solitude-bg__x">
                             <h2 class="stage-title">Latest Events</h2>
                             <ul class="list-unstyled lst_news_list" tabindex="0">
