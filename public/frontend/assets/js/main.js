@@ -49,13 +49,13 @@ jQuery(document).ready(function($) {
 		var options = {
 		  startingStepAnimatesIn: true,
 		  autoPlay: true,
-      autoPlayInterval: 1000,
+      autoPlayInterval: 2000,
 		  /* Make this the same as the animateCanvasDuration */
 		  phaseThreshold: 250,
 		  preloader: true,
 		  reverseWhenNavigatingBackwards: true,
 		  keyNavigation: true,
-		  fadeStepWhenSkipped: false
+		  fadeStepWhenSkipped: true
 		}
 		if($(sequenceElement).length) {
 		// Launch Sequence on the element, and with the options we specified above
