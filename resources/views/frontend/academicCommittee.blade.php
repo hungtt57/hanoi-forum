@@ -164,7 +164,7 @@
                                         <li>Deputy Head of Vietnam Association for Conservation of Nature and
                                             Environment.
                                         </li>
-                                        <li>Member of VNU &ndash; Centre Institute for Natural Resources&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <li>Member of VNU Centre Institute for Natural Resources
                                             and Environmental Studies.
                                         </li>
                                     </ul>

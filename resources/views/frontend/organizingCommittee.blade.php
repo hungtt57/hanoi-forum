@@ -58,14 +58,15 @@
 
                             <p><strong>Do Canh Duong, Assoc. Professor</strong></p>
 
-                            <p>General Director, General Department of&nbsp;Geology and Minerals<br />
-                                Ministry of Natural Resources and Environment.</p>
-
+                            <p>General Director, General Department of&nbsp;Geology and Minerals </p>
+                             <p>   Ministry of Natural Resources and Environment.</p>
                             <p>&nbsp;</p>
+
 
                             <p><strong>Pham Hoang Mai, Ph.D</strong></p>
 
-                            <p>Director, Department of Science, Education, Natural Resources and Environment Vietnam Ministry of Planning and Investment.</p>
+                            <p>Director, Department of Science, Education, Natural Resources and Environment.</p>
+                            <p>Ministry of Planning and Investment.</p>
 
                             <p>&nbsp;</p>
 
@@ -85,9 +86,9 @@
 
                             <p><strong>Vu Van Tich, Assoc. Professor</strong></p>
 
-                            <p>Director, Department of Science and Technology<br />
-                                Vietnam National University, Hanoi.</p>
+                            <p>Director, Department of Science and Technology</p>
 
+                            <p> Vietnam National University, Hanoi.</p>
                             <p>&nbsp;</p>
 
                             <p><strong>Nguyen Hoang Oanh, PhD</strong></p>
