@@ -32,6 +32,9 @@
                         text-align: center;
                     }
                 }
+                .content-human ul li {
+                    list-style: disc ;
+                }
             </style>
             <section class="bio__holder">
                 <div class="row">
@@ -42,14 +45,13 @@
                                     <div class="image-human">
                                         <img class="" src="/frontend/anh/maitrongnhuan.jpg" alt="">
                                     </div>
-                                    <p><strong>Mai Trong Nhuan, </strong>Professor</p>
+                                    <p><strong>MAI Trong Nhuan, </strong>Professor</p>
                                     <p>Affiliation(s):</p>
                                     <ul>
                                         <li>Member of the National Steering Committee for International Integration of
                                             Education, Science, and Technology.
                                         </li>
-                                        <li>Chairman of the VNU &ndash; Council for Education Quality Assurance.</li>
-                                        <li>Former Director of VNU.</li>
+                                        <li>Chairman of the VNU Council for Education Quality Assurance.</li>
                                     </ul>
                                     <p>Research areas: Earth science, Environment, Climate change, Sustainable
                                         development.</p>
@@ -116,7 +118,7 @@
                                     </div>
 
 
-                                    <p><strong>Cuong Le Van</strong><strong>, </strong>Emeritus Professor</p>
+                                    <p><strong>Cuong LE Van</strong><strong>, </strong>Emeritus Professor</p>
 
                                     <p>Affiliation(s):</p>
 
@@ -137,14 +139,13 @@
                                         <img  src="/frontend/anh/vuminhgiang.jpg" alt="">
                                     </div>
 
-                                    <p><strong>Vu Minh Giang, </strong>Professor</p>
+                                    <p><strong>VU Minh Giang, </strong>Professor</p>
 
                                     <p>Affiliation(s):</p>
 
                                     <ul>
                                         <li>Chairman of VNU - Council for Science and Training.</li>
                                         <li>Member of the National Council for Science and Technology.</li>
-                                        <li>Former Deputy Director of VNU.</li>
                                     </ul>
 
                                     <p>Research areas: </p>
@@ -156,7 +157,7 @@
                                     <div class="image-human">
                                         <img  src="/frontend/anh/truongquanghoc.jpg" alt="">
                                     </div>
-                                    <p><strong>Truong Quang Hoc, </strong>Professor</p>
+                                    <p><strong>TRUONG Quang Hoc, </strong>Professor</p>
 
                                     <p>Affiliation(s):</p>
 
@@ -180,9 +181,9 @@
                                     <div class="image-human">
                                         <img  src="/frontend/anh/hoangvanthang.jpg" alt="">
                                     </div>
-                                    <p><strong>Hoang Van Thang, </strong>Professor</p>
+                                    <p><strong>HOANG Van Thang, </strong>Professor</p>
 
-                                    <p>Affiliation(s): Director, VNU &ndash; Centre Institute for Natural Resources and
+                                    <p>Affiliation(s): Director, VNU Centre Institute for Natural Resources and
                                         Environmental Studies.</p>
 
                                     <p>Research areas: Management and conservation of wetlands, Environmental planning,
@@ -196,7 +197,7 @@
                                     <div class="image-human">
                                         <img  src="/frontend/anh/phanvantan.png" alt="">
                                     </div>
-                                    <p><strong>Phan Van Tan, </strong>Professor</p>
+                                    <p><strong>PHAN Van Tan, </strong>Professor</p>
 
                                     <p>Affiliation(s): VNU University of Science.</p>
 
