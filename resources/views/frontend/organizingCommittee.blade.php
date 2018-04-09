@@ -19,12 +19,11 @@
                             <p><strong>Nguyen Kim Son</strong><strong>,</strong> <strong>Assoc. Professor</strong></p>
 
                             <p>President of Vietnam National University, Hanoi.</p>
-
-
+                            
+                            <p align="center">&nbsp;</p>
 
                             <p align="center"><strong>Commitee members</strong></p>
 
-                            <p align="center">&nbsp;</p>
 
                             <p><strong>Nguyen Thi Anh Thu</strong><strong>, Ph.D</strong></p>
 
