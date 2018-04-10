@@ -52,14 +52,14 @@
                                 </div>
                             </li>
                             <li class="tl-item with-icon">
-                                <p><span class="item-section">15 June 2018</span></p>
+                                <p><span class="item-section">15 July 2018</span></p>
                                 <div class="content-wrapper">
                                     <h3 class="title">Notification of abstract review results</h3>
                                 </div>
                             </li>
 
                             <li class="tl-item with-icon">
-                                <p><span class="item-section">30 May 2018</span></p>
+                                <p><span class="item-section">30 June 2018</span></p>
                                 <div class="content-wrapper">
                                     <h3 class="title">Deadline for abstracts</h3>
                                 </div>

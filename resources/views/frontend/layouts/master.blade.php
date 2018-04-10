@@ -39,6 +39,11 @@
                 width: 1600px;
             }
         }
+        .partner-footer {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
 
     </style>
 
@@ -149,15 +154,15 @@
 
                         </div>
                         <div class="row  hidden-sm hidden-md hidden-lg " style="text-align: center" id="partner">
-                            <a href="https://www.most.gov.vn/vn/Pages/Trangchu.aspx" target="_blank">
+                            <a href="https://www.most.gov.vn/vn/Pages/Trangchu.aspx" target="_blank" class="partner-footer">
                                 <img style="max-width: 70px" src="/frontend/bkhvcn.png" alt="">
                             </a>
 
-                            <a href="http://www.monre.gov.vn" target="_blank">
+                            <a href="http://www.monre.gov.vn" target="_blank"   class="partner-footer">
                                 <img style="max-width: 70px" src="/frontend/btnvmt.png" alt=""></a>
-                            <a href="http://hanoi.gov.vn/home" target="_blank">
+                            <a href="http://hanoi.gov.vn/home" target="_blank"   class="partner-footer">
                                 <img style="max-width: 70px" src="/frontend/hanoi.png" alt=""></a>
-                            <a href="http://www.vast.ac.vn/en/" target="_blank">
+                            <a href="http://www.vast.ac.vn/en/" target="_blank"  class="partner-footer">
                                 <img style="max-width: 120px" src="/frontend/vastlogo.png" alt="">
                             </a>
 
