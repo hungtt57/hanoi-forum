@@ -53,7 +53,7 @@ jQuery(document).ready(function($) {
 		  /* Make this the same as the animateCanvasDuration */
 		  phaseThreshold: 250,
 		  preloader: true,
-		  reverseWhenNavigatingBackwards: true,
+		  // reverseWhenNavigatingBackwards: true,
 		  keyNavigation: true,
 		  fadeStepWhenSkipped: true
 		}
