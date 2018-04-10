@@ -34,6 +34,11 @@ class AdminController extends Controller
             return redirect('admin/submit');
             return view('admin.partner.index');
         }
+        if(auth('backend')->user()->type == User::REVIEWER) {
+
+            return view('admin.review_partner.index');
+        }
+        abort(403);
     }
 
     public function create()
