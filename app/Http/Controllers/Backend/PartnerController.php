@@ -55,6 +55,11 @@ class PartnerController extends AdminController
             $this->validate($request, [
                 'paper' => 'required'
             ]);
+
+
+
+
+
         }
 
     }

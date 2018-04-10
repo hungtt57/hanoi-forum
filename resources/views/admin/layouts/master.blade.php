@@ -166,6 +166,7 @@
 <script src="/backend/dist/js/demo.js"></script>
 <script src="/assets/global/plugins/bootbox/bootbox.min.js" type="text/javascript"></script>
 <script src="/assets/global/plugins/select2/js/select2.full.min.js" type="text/javascript"></script>
+<script src="/js/admin/ckeditor/ckeditor.js"></script>
 <script>
   function strip_and_string(content) {
     var regex = /(<([^>]+)>)/ig
@@ -183,7 +184,7 @@
 
   $(document).ready(function () {
 
-
+    // CKEDITOR.replace('ckeditor');
     $('.select2').select2();
   });
 
