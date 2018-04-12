@@ -83,6 +83,9 @@
                         </li>
                     </ul>
                 </li>
+                <li class="{{ (Request::is('admin/documents')) ? 'active' : '' }}"><a
+                            href="{{url('admin/documents')}}"><i class="fa fa-address-card"></i>
+                        <span>List documents</span></a></li>
                 <li class="{{ (Request::is('admin/contact-us')) ? 'active' : '' }}"><a
                             href="{{url('admin/contact-us')}}"><i class="fa fa-address-card"></i>
                         <span>Contact us</span></a></li>
@@ -93,7 +96,9 @@
             @endif
 
             @if(auth('backend')->user()->type == \App\Models\User::REVIEWER)
-
+                    <li class="{{ (Request::is('admin/review-participants')) ? 'active' : '' }}"><a
+                                href="{{url('admin/review-participants')}}"><i class="fa  fa-user-plus"></i>
+                            <span>List Participants</span></a></li>
             @endif
 
             @if(auth('backend')->user()->type == \App\Models\User::PARTNER)

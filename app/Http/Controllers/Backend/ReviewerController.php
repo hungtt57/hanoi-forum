@@ -107,4 +107,34 @@ class ReviewerController extends AdminController
         return redirect()->back()->with('success', 'Success');
     }
 
+
+    public function reviewParticipants(Request $request) {
+        return view('admin.review_partner.index');
+    }
+    public function reviewParticipantsDatatables(Request $request) {
+        $user = auth('backend')->user();
+        $contacts = User::select('*')->where('type', User::PARTNER)->where('reviewer_id',$user->id);
+
+        return \Datatables::eloquent($contacts)
+
+            ->addColumn('action', function ($post) {
+
+                $urlDelete = route('Backend::reviewParticipants@review', ['id' => $post->id]);
+
+                $string = '';
+                if($post->abstract || $post->paper) {
+                    $string .= '<a href="' . $urlDelete . '" class="btn btn-primary">Review</a>';
+
+                }
+
+
+                return $string;
+
+            })->make(true);
+    }
+    public function review(Request $request,$id) {
+        $user = auth('backend')->user();
+        $participant =  User::select('*')->where('type', User::PARTNER)->where('reviewer_id',$user->id)->where('id',$id)->first();
+        return view('admin.review_partner.review',compact('participant'));
+    }
 }

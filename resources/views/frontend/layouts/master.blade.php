@@ -39,10 +39,11 @@
                 width: 1600px;
             }
         }
-        .partner-footer {
-            display: block;
-            width: 100%;
-            margin-bottom: 10px;
+
+        @media (max-width: 468px) {
+            .navbar-brand img {
+              max-height: 52px;
+            }
         }
 
     </style>
@@ -117,7 +118,7 @@
                         <h3 class="entry-title">Co-hosts</h3>
                         <div class="row pull-left hidden-xs">
                             <a href="https://www.vnu.edu.vn/home/" target="_blank">
-                                <img style="max-width: 90px" src="/frontend/assets/img/logo2.png" alt="">
+                                <img style="max-width: 90px" src="/frontend/assets/img/vnu.png" alt="">
                             </a>
                             <a href="http://kfas.or.kr/" target="_blank">
                                 <img style="max-width: 360px;margin-left:10px" src="/frontend/assets/img/kfas_logo.jpg"
@@ -127,7 +128,7 @@
                         </div>
                         <div class="row  hidden-sm hidden-md hidden-lg " style="text-align: center">
                             <a href="https://www.vnu.edu.vn/home/" target="_blank">
-                                <img style="max-width: 70px" src="/frontend/assets/img/logo2.png" alt="">
+                                <img style="max-width: 70px" src="/frontend/assets/img/vnu.png" alt="">
                             </a>
 
                             <a href="http://kfas.or.kr/" target="_blank">
