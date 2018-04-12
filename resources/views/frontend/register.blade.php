@@ -50,9 +50,9 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label ">Title*</label>
+                                <label class="control-label ">Title* (Prof., Dr., Mrs., Ms., Mr.,....)</label>
                                 <div class="controls">
-                                    <input type="text" name="title" value="{{old('title')}}" placeholder="Prof., Dr., Mrs., Ms., Mr.,........"
+                                    <input type="text" name="title" value="{{old('title')}}"
                                            class="form-control"
                                     >
                                 </div>
