@@ -52,7 +52,7 @@
                             <div class="form-group">
                                 <label class="control-label ">Title*</label>
                                 <div class="controls">
-                                    <input type="text" name="title" value="{{old('title')}}"
+                                    <input type="text" name="title" value="{{old('title')}}" placeholder="Prof., Dr., Mrs., Ms., Mr.,........"
                                            class="form-control"
                                     >
                                 </div>
