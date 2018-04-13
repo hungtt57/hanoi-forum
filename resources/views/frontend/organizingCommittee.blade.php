@@ -28,12 +28,12 @@
 
                             <p align="center">&nbsp;</p>
 
-                            <p><strong>PARK In Kook, Ph.D</strong></p>
+                            {{--<p><strong>PARK In Kook, Ph.D</strong></p>--}}
 
-                            <p>President</p>
-                            <p>Korean Foundation for Advanced Studies.</p>
+                            {{--<p>President</p>--}}
+                            {{--<p>Korean Foundation for Advanced Studies.</p>--}}
 
-                            <p align="center">&nbsp;</p>
+                            {{--<p align="center">&nbsp;</p>--}}
 
 
                             <p align="center"><strong>Commitee members</strong></p>

@@ -11,6 +11,7 @@ use Mail;
 use App\Models\EmailLog;
 use App\Mail\SubmitAbstract;
 use Illuminate\Support\Facades\Input;
+use App\Models\User;
 class PartnerController extends AdminController
 {
     public function submit(Request $request)
@@ -66,5 +67,52 @@ class PartnerController extends AdminController
     public function submitSuccess(Request $request) {
         $user = auth('backend')->user();
         return view('admin.partner.submitSuccess',compact('user'));
+    }
+    public function editProfile(Request $request) {
+        $user = auth('backend')->user();
+        return view('admin.partner.editProfile',compact('user'));
+    }
+    public function updateProfile(Request $request) {
+        $this->validate($request, [
+            'file' => 'max:5120',
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'title' => 'required',
+            'affiliation' => 'required',
+        ], [
+            'file.max' => 'Max file size 5MB',
+            'first_name.required' => 'Please enter first name',
+            'last_name.required' => 'Please enter last name',
+            'title.required' => 'Please enter title',
+            'affiliation.required' => 'Please enter affiliation',
+        ]);
+        $data = $request->all();
+        if(isset($data['password'])) {
+            $this->validate($request, [
+                'password' => 'min:6|confirmed',
+
+            ], [
+
+            ]);
+        }
+        try {
+
+            if ($request->file('file')) {
+                $data['file'] = $this->saveFile($request->file('file'));
+            }
+            if(isset($data['password']) and $data['password']) {
+                $data['password'] = Hash::make($data['password']);
+            }
+            $data['type'] = User::PARTNER;
+            $data['name'] = '';
+            $userId = auth('backend')->user()->id;
+            $user = User::find($userId);
+            $user->update($data);
+            return redirect()->back()->with('success', 'Success');
+        } catch (\Exception $ex) {
+
+            return redirect()->back()->with('error', 'Server error.Try again later')->withInput(Input::all());
+        }
+
     }
 }

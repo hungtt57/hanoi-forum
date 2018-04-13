@@ -202,6 +202,15 @@ Route::group([
         });
     });
     Route::group(['middleware' => 'PARTNER'], function () {
+
+        Route::get('partner/edit', [
+            'as' => 'edit',
+            'uses' => 'PartnerController@editProfile'
+        ]);
+        Route::post('partner/edit', [
+            'as' => 'editPròile',
+            'uses' => 'PartnerController@updateProfile'
+        ]);
         Route::get('/submit', [
             'as' => 'submit',
             'uses' => 'PartnerController@submit'

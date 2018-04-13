@@ -12,6 +12,16 @@ class AdminController extends Controller
 {
 
 
+    public function saveFile($file,$old = null, $name = null)
+    {
+        $filename = $name . md5(time()) . '.' . $file->getClientOriginalExtension();
+        $file->move(public_path() . '/files/attachments/', $filename);
+
+        if ($old) {
+            @unlink(public_path($old));
+        }
+        return '/files/attachments/' . $filename;
+    }
     public function saveImage($file, $old = null, $name = null)
     {
 
@@ -31,7 +41,7 @@ class AdminController extends Controller
             return view('admin.admin.index');
         }
         if(auth('backend')->user()->type == User::PARTNER) {
-            return redirect('admin/submit');
+            return redirect('admin/partner/edit');
             return view('admin.partner.index');
         }
         if(auth('backend')->user()->type == User::REVIEWER) {

@@ -50,7 +50,7 @@ class HomeController extends AdminController
             'first_name.required' => 'Please enter first name',
             'last_name.required' => 'Please enter last name',
             'title.required' => 'Please enter title',
-            'affiliation.required' => 'Please enter ffiliation',
+            'affiliation.required' => 'Please enter affiliation',
         ]);
         $data = $request->all();
         \DB::beginTransaction();
