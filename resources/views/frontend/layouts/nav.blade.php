@@ -7,9 +7,12 @@
                         class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
             <a class="navbar-brand" href="{{url('/')}}"><img alt="" class="img-responsive" style="max-width: 110px"
                                                              src="/frontend/assets/img/logo2.png"></a>
+
         </div>
+
         <div class="navbar-collapse collapse sabbi-navbar-collapse  navbar-nav-hov_underline" id="navbar">
             <div class="nav-btn-wrap">
+                <a class="" href="{{url('/')}}"><img alt="" src="/assets/img/hnforum.png" style="margin-left: 5%"></a>
                 <a href="{{url('/admin/login')}}" class="btn btn-primary pull-right">Login</a>
                 <a href="{{url('/register')}}" class="btn btn-info pull-right"
                    style="margin-right:10px;background:#007f49;">Register</a>

@@ -71,20 +71,21 @@
                 @if($posts)
                     <div class="col-sm-4">
                         <article class="news-card sabbi-thumlinepost-card solitude-bg__x">
-                            <h2 class="stage-title">Latest Events</h2>
-                            <ul class="list-unstyled lst_news_list" tabindex="0">
-                                @foreach($posts as $post)
-                                    <li class="lst_news_item">
-                                        <h3 class="title mg_0"><a
-                                                    href="{{url('post').'/'.str_slug($post->title).'-'.$post->id}}">{{$post->title}}</a>
-                                        </h3>
-                                        <div>
-                                            <span class="date">{{$post->created_at->format('M d Y')}}</span>
-                                        </div>
-                                    </li>
-                                @endforeach
-                            </ul>
-                            <a href="events.html" class="btn btn-unsolemn btn-action read-more">VIEW ALL</a>
+                            <img src="/assets/img/latest_event_hnforum.png" style="width: 100%">
+                            {{--<h2 class="stage-title">Latest Events</h2>--}}
+                            {{--<ul class="list-unstyled lst_news_list" tabindex="0">--}}
+                                {{--@foreach($posts as $post)--}}
+                                    {{--<li class="lst_news_item">--}}
+                                        {{--<h3 class="title mg_0"><a--}}
+                                                    {{--href="{{url('post').'/'.str_slug($post->title).'-'.$post->id}}">{{$post->title}}</a>--}}
+                                        {{--</h3>--}}
+                                        {{--<div>--}}
+                                            {{--<span class="date">{{$post->created_at->format('M d Y')}}</span>--}}
+                                        {{--</div>--}}
+                                    {{--</li>--}}
+                                {{--@endforeach--}}
+                            {{--</ul>--}}
+                            {{--<a href="events.html" class="btn btn-unsolemn btn-action read-more">VIEW ALL</a>--}}
                         </article>
                     </div>
                 @endif
