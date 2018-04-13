@@ -19,7 +19,7 @@
                 <div class="row">
                     <div class="col-md-8 col-sm-5 col-md-offset-2 col-xs-12">
                         <div>
-                            <p align="center"><strong>Co-Chairs</strong></p>
+                            <p align="center"><strong>Chairman</strong></p>
 
                             <p><strong>NGUYEN Kim Son</strong><strong>,</strong> <strong>Assoc. Professor</strong></p>
 

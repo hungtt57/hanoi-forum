@@ -100,17 +100,20 @@ class PartnerController extends AdminController
             if ($request->file('file')) {
                 $data['file'] = $this->saveFile($request->file('file'));
             }
+            $userId = auth('backend')->user()->id;
+            $user = User::find($userId);
+
             if(isset($data['password']) and $data['password']) {
                 $data['password'] = Hash::make($data['password']);
+            }else {
+                $data['password'] = $user->password;
             }
             $data['type'] = User::PARTNER;
             $data['name'] = '';
-            $userId = auth('backend')->user()->id;
-            $user = User::find($userId);
             $user->update($data);
             return redirect()->back()->with('success', 'Success');
         } catch (\Exception $ex) {
-
+            dd($ex->getMessage());
             return redirect()->back()->with('error', 'Server error.Try again later')->withInput(Input::all());
         }
 

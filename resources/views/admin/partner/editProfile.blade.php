@@ -68,6 +68,7 @@
                 </div>
             </div>
 
+                {{--@php dd($user); @endphp--}}
             <div class="form-group">
                 <label class="control-label col-md-3">Gender</label>
                 <div class="col-md-6">
@@ -76,18 +77,18 @@
                     <label class="radio-inline"><input type="radio" name="gender" value="1"
                                                        @if(old('gender',@$user->gender) == 1) checked @endif>Female</label>
                     <label class="radio-inline"><input type="radio" name="gender" value="0"
-                                                       @if(empty(old('gender'))) checked @endif>Not
+                                                       @if(@$user->gender == 0) checked @endif>Not
                         specify</label>
                 </div>
             </div>
+
             <div class="form-group">
                 <label class="control-label col-md-3">Nationality</label>
                 <div class="col-md-6">
                     @php $nations = \App\Models\Country::orderBy('nicename','desc')->get(); @endphp
                     <select class="form-control select2" name="nationality" id="nationality">
                         @foreach($nations as $nation)
-                            <option value="{{$nation->iso}}"
-                                    @if($nation->iso == old('nationality',@$user->nationality)) checked @endif>{{$nation->nicename}}</option>
+                            <option value="{{$nation->iso}}" @if($nation->iso === $user->nationality) selected @endif>{{$nation->nicename}}</option>
                         @endforeach
                     </select>
                 </div>
@@ -99,7 +100,7 @@
                     <label class="radio-inline"><input type="radio" name="apply" value="1"
                                                        @if(old('apply',$user->apply) == 1) checked @endif>Yes</label>
                     <label class="radio-inline"><input type="radio" name="apply" value="0"
-                                                       @if(old('apply') == 0) checked @endif>No</label>
+                                                       @if(old('apply',$user->apply) == 0) checked @endif>No</label>
                 </div>
             </div>
 

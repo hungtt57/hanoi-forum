@@ -106,7 +106,7 @@
                                     <select class="form-control" name="nationality" id="nationality">
                                         @foreach($nations as $nation)
                                             <option value="{{$nation->iso}}"
-                                                    @if($nation->iso == old('nationality')) checked @endif>{{$nation->nicename}}</option>
+                                                    @if($nation->iso == old('nationality')) select2 @endif>{{$nation->nicename}}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -130,7 +130,7 @@
                                                class="form-control"
                                                value="{{old('link_cv')}}">
                                     </div>
-                                    <p>Or  upload a file</p>
+                                    <p>Or upload a file</p>
                                     <div class="controls">
                                         <input type="file" class="post-image form-control" name="file"
                                                rel="post_status_images">
