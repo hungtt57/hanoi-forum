@@ -47,6 +47,14 @@
                 <div class="col-md-6">
                     <input type="file" class="post-image form-control" name="file"
                            rel="post_status_images">
+                    @if(isset($participant) and $participant->file)
+                        <a class="btn btn-primary green start" href="{{$participantfile}}" download="{{$participant->file}}"
+                           style="float: left;margin-right: 10px;margin-top: 10px">
+                            <i class="fa fa-download"></i>
+                            <span>Download File</span>
+                            <div class="clearfix"></div>
+                        </a>
+                    @endif
                 </div>
             </div>
             @endif
