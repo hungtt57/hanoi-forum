@@ -12,7 +12,8 @@
 
         <div class="navbar-collapse collapse sabbi-navbar-collapse  navbar-nav-hov_underline" id="navbar">
             <div class="nav-btn-wrap">
-                <a class="" href="{{url('/')}}"><img alt="" src="/assets/img/hnforum.png" style="margin-left: 5%"></a>
+
+                <a class="" href="{{url('/')}}"><img alt="" src="/assets/img/hnforum.png" class="f-img"></a>
                 <a href="{{url('/admin/login')}}" class="btn btn-primary pull-right">Login</a>
                 <a href="{{url('/register')}}" class="btn btn-info pull-right"
                    style="margin-right:10px;background:#007f49;">Register</a>
@@ -98,3 +99,15 @@
         </div>
     </div>
 </nav><!-- /.navbar -->
+
+@push('styles')
+<style>
+
+    @media screen and (min-width: 992px) {
+        .f-img {
+            margin-left: 5%;
+        }
+    }
+
+</style>
+@endpush
