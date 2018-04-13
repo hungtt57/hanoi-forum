@@ -29,14 +29,14 @@
                     <label class="control-label col-md-3">Title of the paper*</label>
                     <div class="col-md-6">
                         <input type="text" name="title_of_paper"
-                               class="form-control"
+                               class="form-control" disabled
                                value="{{old('paper',$participant->title_of_paper)}}">
                     </div>
                 </div>
             <div class="form-group">
                 <label class="control-label col-md-3 " for="Name">Abstract*</label>
                 <div class="col-md-6">
-                    <textarea name="abstract" class="form-control" maxlength="250"
+                    <textarea name="abstract" class="form-control" maxlength="250" disabled
                                            rows="5">{{old('abstract',$participant->abstract)}}</textarea>
                 </div>
             </div>
