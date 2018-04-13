@@ -96,7 +96,7 @@
                         <div class="form-group">
                             <label class="col-md-3 control-label">Content</label>
                             <div class="col-md-6">
-                    <textarea class="form-control ckeditor" placeholder="Điền miêu tả"
+                    <textarea class="form-control ckeditor"  placeholder="Điền miêu tả"
                               name="content">{{old('content',@$post->content)}} </textarea>
                             </div>
                         </div>

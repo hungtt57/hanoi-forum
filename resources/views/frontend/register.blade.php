@@ -50,7 +50,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label ">Title*</label>
+                                <label class="control-label ">Title* (Prof., Dr., Mrs., Ms., Mr.,....)</label>
                                 <div class="controls">
                                     <input type="text" name="title" value="{{old('title')}}"
                                            class="form-control"
@@ -106,7 +106,7 @@
                                     <select class="form-control" name="nationality" id="nationality">
                                         @foreach($nations as $nation)
                                             <option value="{{$nation->iso}}"
-                                                    @if($nation->iso == old('nationality')) checked @endif>{{$nation->nicename}}</option>
+                                                    @if($nation->iso == old('nationality')) select2 @endif>{{$nation->nicename}}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -130,30 +130,12 @@
                                                class="form-control"
                                                value="{{old('link_cv')}}">
                                     </div>
-                                    <p>Or  upload a file</p>
+                                    <p>Or upload a file</p>
                                     <div class="controls">
                                         <input type="file" class="post-image form-control" name="file"
                                                rel="post_status_images">
                                     </div>
                                 </div>
-
-
-                                {{--<div class="form-group">--}}
-                                    {{--<label class="control-label ">Title of the paper</label>--}}
-                                    {{--<div class="controls">--}}
-                                        {{--<input type="text" name="paper"--}}
-                                               {{--class="form-control"--}}
-                                               {{--value="{{old('paper')}}">--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
-                                {{--<div class="form-group">--}}
-                                    {{--<label class="control-label ">Abstract</label>--}}
-                                    {{--<div class="controls">--}}
-                                    {{--<textarea name="abstract" class="form-control" maxlength="250"--}}
-                                              {{--rows="5">{{old('abstract')}}</textarea>--}}
-                                    {{--</div>--}}
-                                    {{--<p class="help-block">(Should not exceed 250 words)</p>--}}
-                                {{--</div>--}}
                             </div>
 
 

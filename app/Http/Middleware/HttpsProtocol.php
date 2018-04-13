@@ -16,7 +16,7 @@ class HttpsProtocol
     public function handle($request, Closure $next)
     {
         if (!$request->secure()) {
-            if(Request::getHost() != 'dev.hanoiforum.com')
+            if(Request::getHost() != 'dev.hanoiforum.com' && Request::getHost() != 'forum.fitme.vn' )
                 return redirect()->secure($request->getRequestUri());
         }
         return $next($request);

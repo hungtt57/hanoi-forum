@@ -24,11 +24,15 @@ class AdminController extends Controller
         return '/files/' . $filename;
     }
 
-    public function saveFile($file, $name = null)
+    public function saveFile($file,$old = null, $name = null)
     {
         $filename = $name . md5(time()) . '.' . $file->getClientOriginalExtension();
         $file->move(public_path() . '/files/attachments/', $filename);
 //        \Storage::put(public_path() . '/files/attachments/' . $filename, $file);
+
+        if ($old) {
+            @unlink(public_path($old));
+        }
         return '/files/attachments/' . $filename;
     }
 

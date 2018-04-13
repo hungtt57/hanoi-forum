@@ -53,7 +53,7 @@
 
                             <p dir="ltr"><span id="docs-internal-guid-b6c1a49f-4260-03d7-8a24-c3a030a1033d">Hanoi Forum 2018 features keynote speakers, panel discussion and two side events as policy dialogues on natural resources management in the Mekong Delta region and urbanization in the Red River Delta. Information on keynote and guest speakers will be updated by April 2018.</span></p>
 
-                            <p dir="ltr"><span id="docs-internal-guid-b6c1a49f-4260-03d7-8a24-c3a030a1033d">Hanoi Forum 2018 is calling for abstracts submission. Further information on registration and submission can be found at the Forum website: www.hanoiforum.vnu.edu.vn. </span></p>
+                            <p dir="ltr"><span id="docs-internal-guid-b6c1a49f-4260-03d7-8a24-c3a030a1033d">Hanoi Forum 2018 is calling for abstracts submission. Further information on registration and submission can be found at the Forum website:  https://hanoiforum.vnu.edu.vn. </span></p>
 
                         </div>
                     </div>
