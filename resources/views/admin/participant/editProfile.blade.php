@@ -17,10 +17,10 @@
 @endsection
 
 @section('content')
-    <h3>Profile </h3>
+    <h3>Edit profile </h3>
 
     @include('admin.flash_message')
-    <form action="{{url('admin/partner/edit')}}" class="form-horizontal" method="POST"
+    <form action="{{ route('Backend::participants@edit', ['id' => $user->id])}}" class="form-horizontal" method="POST"
           enctype="multipart/form-data">
 
         <div class="form-body">
@@ -120,17 +120,17 @@
                     <label class="control-label  col-md-3">Or upload a file</label>
                     <div class="controls col-md-6">
 
-                        <div class="clearfix"></div>
                         <input type="file" class="post-image form-control" id="file" name="file">
-                            <div class="clearfix"></div>
-                            @if(isset($user) and $user->file)
-                                <a class="btn btn-primary green start" href="{{$user->file}}" download="{{$user->file}}"
-                                   style="float: left;margin-right: 10px;margin-top: 10px">
-                                    <i class="fa fa-download"></i>
-                                    <span>Download File</span>
-                                    <div class="clearfix"></div>
-                                </a>
-                            @endif
+                        <div class="clearfix"></div>
+                        @if(isset($user) and $user->file)
+                            <a class="btn btn-primary green start" href="{{$user->file}}" download="{{$user->file}}"
+                               style="float: left;margin-right: 10px;margin-top: 10px">
+                                <i class="fa fa-download"></i>
+                                <span>Download File</span>
+                                <div class="clearfix"></div>
+                            </a>
+                        @endif
+
                     </div>
                 </div>
             </div>
@@ -151,6 +151,35 @@
                 </div>
             </div>
 
+
+            <div class="form-group">
+                <label class="control-label col-md-3 " for="Name">Abstract</label>
+                <div class="col-md-6">
+                    <textarea name="abstract" class="form-control" disabled maxlength="250"
+                              rows="5">{{$user->abstract}}</textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3">Title of the paper</label>
+                <div class="col-md-6">
+                    <input type="text" name="title_of_paper"
+                           class="form-control" disabled
+                           value="{{$user->title_of_paper}}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3">Paper</label>
+                <div class="col-md-6">
+                    @if(isset($user) and $user->paper)
+                        <a class="btn btn-primary green start" href="{{$user->paper}}" download="{{$user->paper}}"
+                           style="float: left;margin-right: 10px;margin-bottom: 10px">
+                            <i class="fa fa-download"></i>
+                            <span>Tải xuống</span>
+                            <div class="clearfix"></div>
+                        </a>
+                    @endif
+                </div>
+            </div>
         </div>
         <div class="form-actions">
             <div class="row" style="text-align: center">

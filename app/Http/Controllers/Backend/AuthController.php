@@ -29,9 +29,9 @@ class AuthController extends Controller
         }
         if (Hash::check($password, $account->password)) {
             auth('backend')->login($account, true);
-            return redirect($this->redirectUrl)->with('success', 'Đăng nhập thành công');
+            return redirect($this->redirectUrl)->with('success', 'Login success');
         } else {
-            return redirect()->back()->with('error', 'Sai mật khẩu');
+            return redirect()->back()->with('error', 'Wrong Password');
         }
 
     }
