@@ -113,7 +113,6 @@ class PartnerController extends AdminController
             $user->update($data);
             return redirect()->back()->with('success', 'Success');
         } catch (\Exception $ex) {
-            dd($ex->getMessage());
             return redirect()->back()->with('error', 'Server error.Try again later')->withInput(Input::all());
         }
 

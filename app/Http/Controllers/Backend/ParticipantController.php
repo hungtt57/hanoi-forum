@@ -26,15 +26,14 @@ class ParticipantController extends AdminController
                 return view('admin.participant.reviewer', compact('user', 'reviewers'))->render();
             })
             ->addColumn('action', function ($post) {
-//                $urlEdit = route('Backend::post@edit', ['id' => $post->id]);
-//
+                $urlEdit = route('Backend::participants@edit', ['id' => $post->id]);
+
                 $urlDelete = route('Backend::participants@delete', ['id' => $post->id]);
-//
+
                 $string = '';
-//
-//                $string .= '<a  href="' . $urlEdit . '" class="btn btn-info">Edit</a>';
-//
-//
+
+                $string .= '<a  href="' . $urlEdit . '" class="btn btn-info">Edit</a>';
+
                 $string .= '<a href="' . $urlDelete . '" class="btn btn-danger delete-btn">Delete</a>';
 
 
@@ -82,5 +81,53 @@ class ParticipantController extends AdminController
             'data' => null
         ], 200);
     }
+    public function editProfile(Request $request,$id) {
+        $user = User::find($id);
+        return view('admin.participant.editProfile',compact('user'));
+    }
+    public function updateProfile(Request $request,$id) {
+        $this->validate($request, [
+            'file' => 'max:5120',
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'title' => 'required',
+            'affiliation' => 'required',
+        ], [
+            'file.max' => 'Max file size 5MB',
+            'first_name.required' => 'Please enter first name',
+            'last_name.required' => 'Please enter last name',
+            'title.required' => 'Please enter title',
+            'affiliation.required' => 'Please enter affiliation',
+        ]);
+        $data = $request->all();
+        if(isset($data['password'])) {
+            $this->validate($request, [
+                'password' => 'min:6|confirmed',
 
+            ], [
+
+            ]);
+        }
+        try {
+
+            if ($request->file('file')) {
+                $data['file'] = $this->saveFile($request->file('file'));
+            }
+            $userId = auth('backend')->user()->id;
+            $user = User::find($userId);
+
+            if(isset($data['password']) and $data['password']) {
+                $data['password'] = Hash::make($data['password']);
+            }else {
+                $data['password'] = $user->password;
+            }
+            $data['type'] = User::PARTNER;
+            $data['name'] = '';
+            $user->update($data);
+            return redirect()->back()->with('success', 'Success');
+        } catch (\Exception $ex) {
+            return redirect()->back()->with('error', 'Server error.Try again later')->withInput(Input::all());
+        }
+
+    }
 }
