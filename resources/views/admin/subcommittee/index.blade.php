@@ -42,7 +42,6 @@
 
       var table;
 
-    $(document).on(ready,function () {
         table = $('#departments-table').DataTable({
           responsive: true,
           processing: true,
@@ -70,7 +69,6 @@
         });
 
 
-      });
 
     </script>
 @endpush
