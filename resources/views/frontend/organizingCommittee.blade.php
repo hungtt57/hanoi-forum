@@ -38,19 +38,20 @@
 
                             <p align="center"><strong>Commitee members</strong></p>
 
-                            <p><strong>TRAN Quoc Binh, PhD</strong></p>
-
-                            <p>Chief, Office of the President</p>
+                            <p><strong>NGUYEN Thi Anh Thu</strong><strong>, Ph.D</strong></p>
+                            <p>Director</p>
+                            <p>Cooperation and Development Department</p>
 
                             <p>Vietnam National University, Hanoi.</p>
 
                             <p>&nbsp;</p>
 
-                            <p><strong>DO Canh Duong, Assoc. Professor</strong></p>
 
-                            <p>General Director, General Department of Geology and Minerals</p>
+                            <p><strong>MAI Trong Nhuan, Professor</strong></p>
 
-                            <p>Ministry of Natural Resources and Environment.</p>
+                            <p>Chairman, Council for Education Quality Assurance</p>
+
+                            <p>Vietnam National University, Hanoi.</p>
 
                             <p>&nbsp;</p>
 
@@ -62,16 +63,17 @@
                             <p>Vietnam National University, Hanoi.</p>
 
                             <p>&nbsp;</p>
-
-                            <p><strong>KENSUKE Fukushi</strong><strong>,</strong> <strong>Professor</strong></p>
-
-                            <p>Professor, University of Tokyo.</p>
+                            <p><strong>PHAN Ngoc Minh, Professor</strong></p>
+                            <p>Vice Chair</p>
+                            <p>Vietnam Academy of Science and Technology.</p>
 
                             <p>&nbsp;</p>
 
-                            <p><strong>Mary LEE</strong></p>
-                            <p>Manager, International Academic Division</p>
-                            <p>Korea Foundation for Advanced Studies.</p>
+                            <p><strong>DO Canh Duong, Assoc. Professor</strong></p>
+
+                            <p>General Director, General Department of Geology and Minerals</p>
+
+                            <p>Ministry of Natural Resources and Environment.</p>
 
                             <p>&nbsp;</p>
 
@@ -82,42 +84,18 @@
 
                             <p>&nbsp;</p>
 
-                            <p><strong>NGUYEN Thi Hong Minh, PhD</strong></p>
 
-                            <p>Dean, School of Interdisciplinary Studies</p>
+                            <p><strong>KENSUKE Fukushi</strong><strong>,</strong> <strong>Professor</strong></p>
 
-                            <p>Vietnam National University, Hanoi.</p>
-
-                            <p>&nbsp;</p>
-                            <p><strong>PHAN Ngoc Minh, Professor</strong></p>
-                            <p>Vice Chair</p>
-                            <p>Vietnam Academy of Science and Technology.</p>
-
-                            <p>&nbsp;</p>
-
-                            <p><strong>MAI Trong Nhuan, Professor</strong></p>
-
-                            <p>Chairman, Council for Education Quality Assurance</p>
-
-                            <p>Vietnam National University, Hanoi.</p>
-
-                            <p>&nbsp;</p>
-
-
-                            <p><strong>NGUYEN Hoang Oanh, PhD</strong></p>
-                            <p>Vice President</p>
-                            <p>Vietnam Japan University</p>
-
-                            <p>Vietnam National University, Hanoi.</p>
+                            <p>Professor, University of Tokyo.</p>
 
                             <p>&nbsp;</p>
 
 
 
+                            <p><strong>TRAN Quoc Binh, PhD</strong></p>
 
-                            <p><strong>NGUYEN Thi Anh Thu</strong><strong>, Ph.D</strong></p>
-                            <p>Director</p>
-                            <p>Cooperation and Development Department</p>
+                            <p>Chief, Office of the President</p>
 
                             <p>Vietnam National University, Hanoi.</p>
 
@@ -129,6 +107,39 @@
                             <p>Department of Science and Technology</p>
                             <p> Vietnam National University, Hanoi.</p>
                             <p>&nbsp;</p>
+
+
+
+                            <p><strong>NGUYEN Hoang Oanh, PhD</strong></p>
+                            <p>Vice President</p>
+                            <p>Vietnam Japan University</p>
+
+                            <p>Vietnam National University, Hanoi.</p>
+
+                            <p>&nbsp;</p>
+
+                            <p><strong>NGUYEN Thi Hong Minh, PhD</strong></p>
+
+                            <p>Dean, School of Interdisciplinary Studies</p>
+
+                            <p>Vietnam National University, Hanoi.</p>
+
+                            <p>&nbsp;</p>
+
+
+
+                            <p><strong>Mary LEE</strong></p>
+                            <p>Manager</p>
+                            <p>International Academic Division</p>
+                            <p>Korea Foundation for Advanced Studies.</p>
+
+                            <p>&nbsp;</p>
+
+
+
+
+
+
 
 
 

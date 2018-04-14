@@ -56,7 +56,7 @@
                                         <li>Member of the National Steering Committee for International Integration of
                                             Education, Science, and Technology.
                                         </li>
-                                        <li>Chairman of the VNU Council for Education Quality Assurance.</li>
+                                        <li>Chairman, the VNU Council for Education Quality Assurance.</li>
                                     </ul>
                                     <p>Research areas: Earth science, Environment, Climate change, Sustainable
                                         development.</p>
@@ -88,15 +88,101 @@
                                 <p>Affiliation(s):</p>
 
                                 <ul>
-                                    <li>Chairman of VNU - Council for Science and Training.</li>
+                                    <li>Chairman, VNU Council for Science and Training.</li>
                                     <li>Chairman of Academic Advisory Committee, Asia Research Centre, VNU.</li>
                                     <li>Member of the National Council for Science and Technology.</li>
-                                    <li>Director, Master’s program on Climate Change, VNU School of Interdisciplinary Studies.</li>
+                                    <li>Director, Master’s program on Sustainability Science, VNU School of Interdisciplinary Studies.</li>
                                     <li>Director, Master’s program on Area Studies, Vietnam Japan University, VNU.</li>
                                     <li>Vice President, National Cultural Heritage Council.</li>
                                 </ul>
 
                                 <p>Research areas: Cultural studies and development, History, Vietnam studies, Area studies.</p>
+
+                                <div class="clearfix"></div>
+                            </div>
+
+                            <div class="col-md-12 content-human">
+
+                                <div class="image-human">
+                                    <img  src="/frontend/anh/diana.jpg" alt="">
+                                </div>
+
+                                <p><strong>Diana &Uuml;rge-Vorsatz, </strong>Professor</p>
+
+                                <p>Affiliation(s):</p>
+
+                                <ul>
+                                    <li>Professor, Dept. of Environmental Sciences and Policy, Central European University (CEU).
+                                    </li>
+                                    <li>Vice Chair of Working Group III, the Intergovernmental Panel on Climate
+                                        Change (IPCC).
+                                    </li>
+                                    <li>Leader, Scientific review of Sustainable Development Goal &ldquo;7&rdquo; in
+                                        the new UN Development goals development process (Ensure access to
+                                        affordable, reliable, sustainable, and modern energy for all&rdquo;), 2014.
+                                    </li>
+                                    <li>Member of the Scientific Committee of the high-level conference, &ldquo;Our
+                                        Common Future under Climate Change&rdquo;, Paris, 2015.&nbsp;
+                                    </li>
+                                    <li>Co-chair, Scientific Steering Committee, Cities and Climate Change Science conference, Edmonton, March 2018.</li>
+                                </ul>
+
+                                <p>Research areas<strong>:</strong> Environmental and Energy Studies.</p>
+
+
+                                <div class="clearfix"></div>
+                            </div>
+
+                            <div class="col-md-12 content-human">
+
+                                <div class="image-human">
+                                    <img  src="/frontend/anh/nils.jpg" alt="">
+                                </div>
+                                <p><strong>Nils Roar Salthun</strong><strong>, </strong>Emeritus Professor</p>
+
+                                <p>Affiliation(s): former Head of Department of Geosciences at the University of
+                                    Oslo, Norway.</p>
+
+                                <p>Research areas: Development and applications of hydrological models, Water
+                                    resources management, Impacts of climate change impacts on water resources,
+                                    Hydropower hydrology, Floods, Design flood estimation, Environmental information
+                                    systems.</p>
+
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="col-md-12 content-human">
+
+                                <div class="image-human">
+                                    <img  src="/frontend/anh/cuonglevan.jpg" alt="">
+                                </div>
+
+
+                                <p><strong>Cuong LE-Van</strong><strong>, </strong>Emeritus Professor</p>
+
+                                <p>Affiliation(s):</p>
+
+                                <ul>
+                                    <li>Paris School of Economics.</li>
+                                    <li>Emeritus Research Director, French National for Scientific Research (CNRS).</li>
+                                </ul>
+
+                                <p>Research areas: Quantitative Methods, Macroeconomics and asset accumulation,
+                                    Macroeconomics dynamics, General equilibrium.</p>
+
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="col-md-12 content-human">
+
+                                <div class="image-human">
+                                    <img  src="/frontend/anh/hoangvanthang.jpg" alt="">
+                                </div>
+                                <p><strong>HOANG Van Thang, </strong>Professor</p>
+
+                                <p>Affiliation(s): Director, VNU Centre Institute for Natural Resources and
+                                    Environmental Studies.</p>
+
+                                <p>Research areas: Management and conservation of wetlands, Environmental planning,
+                                    Biodiversity conservation, Sustainable development.</p>
 
                                 <div class="clearfix"></div>
                             </div>
@@ -124,27 +210,6 @@
                                 <div class="clearfix"></div>
                             </div>
 
-                            <div class="col-md-12 content-human">
-
-                                <div class="image-human">
-                                    <img  src="/frontend/anh/cuonglevan.jpg" alt="">
-                                </div>
-
-
-                                <p><strong>Cuong LE-Van</strong><strong>, </strong>Emeritus Professor</p>
-
-                                <p>Affiliation(s):</p>
-
-                                <ul>
-                                    <li>Paris School of Economics.</li>
-                                    <li>Emeritus Research Director, French National for Scientific Research (CNRS).</li>
-                                </ul>
-
-                                <p>Research areas: Quantitative Methods, Macroeconomics and asset accumulation,
-                                    Macroeconomics dynamics, General equilibrium.</p>
-
-                                <div class="clearfix"></div>
-                            </div>
 
                             <div class="col-md-12 content-human">
 
@@ -159,78 +224,6 @@
 
                                 <div class="clearfix"></div>
                             </div>
-
-                            <div class="col-md-12 content-human">
-
-                                <div class="image-human">
-                                    <img  src="/frontend/anh/hoangvanthang.jpg" alt="">
-                                </div>
-                                <p><strong>HOANG Van Thang, </strong>Professor</p>
-
-                                <p>Affiliation(s): Director, VNU Centre Institute for Natural Resources and
-                                    Environmental Studies.</p>
-
-                                <p>Research areas: Management and conservation of wetlands, Environmental planning,
-                                    Biodiversity conservation, Sustainable development.</p>
-
-                                <div class="clearfix"></div>
-                            </div>
-
-
-
-
-
-
-                            <div class="col-md-12 content-human">
-
-                                    <div class="image-human">
-                                        <img  src="/frontend/anh/nils.jpg" alt="">
-                                    </div>
-                                    <p><strong>Nils Roar Salthun</strong><strong>, </strong>Emeritus Professor</p>
-
-                                    <p>Affiliation(s): former Head of Department of Geosciences at the University of
-                                        Oslo, Norway.</p>
-
-                                    <p>Research areas: Development and applications of hydrological models, Water
-                                        resources management, impacts of climate change impacts on water resources,
-                                        Hydropower hydrology, Floods, design flood estimation, Environmental information
-                                        systems.</p>
-
-                                    <div class="clearfix"></div>
-                            </div>
-
-                            <div class="col-md-12 content-human">
-
-                                    <div class="image-human">
-                                        <img  src="/frontend/anh/diana.jpg" alt="">
-                                    </div>
-
-                                    <p><strong>Diana &Uuml;rge-Vorsatz, </strong>Professor</p>
-
-                                    <p>Affiliation(s):</p>
-
-                                    <ul>
-                                        <li>Professor, Dept. of Environmental Sciences and Policy, Central European University (CEU).
-                                        </li>
-                                        <li>Vice Chair of Working Group III, the Intergovernmental Panel on Climate
-                                            Change (IPCC).
-                                        </li>
-                                        <li>Leader, Scientific review of Sustainable Development Goal &ldquo;7&rdquo; in
-                                            the new UN Development goals development process (Ensure access to
-                                            affordable, reliable, sustainable, and modern energy for all&rdquo;), 2014.
-                                        </li>
-                                        <li>Member of the Scientific Committee of the high-level conference, &ldquo;Our
-                                            Common Future under Climate Change&rdquo;, Paris, 2015.&nbsp;
-                                        </li>
-                                        <li>Co-chair, Scientific Steering Committee, Cities and Climate Change Science conference, Edmonton, March 2018.</li>
-                                    </ul>
-
-                                    <p>Research areas<strong>:</strong> Environmental and Energy Studies.</p>
-
-
-                                <div class="clearfix"></div>
-                            </div>
-
 
 
 
