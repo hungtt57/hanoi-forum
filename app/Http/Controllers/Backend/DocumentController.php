@@ -58,7 +58,7 @@ class DocumentController extends AdminController
             ->addColumn('action', function ($post) {
 //                $urlEdit = route('Backend::post@edit', ['id' => $post->id]);
 //
-                $urlDelete = route('Backend::participants@delete', ['id' => $post->id]);
+                $urlDelete = route('Backend::document@delete', ['id' => $post->id]);
 //
                 $string = '';
 //
@@ -75,9 +75,9 @@ class DocumentController extends AdminController
 
     public function delete($id)
     {
-        $post = User::where('id', $id)->where('type', User::PARTNER)->first();
+        $post = Document::where('id',$id)->first();
         if (empty($post)) {
-            return redirect()->back()->with('error', 'Participant not exist!');
+            return redirect()->back()->with('error', 'Document not exist!');
         }
         $post->delete();
         return redirect()->back()->with('success', 'Success');
