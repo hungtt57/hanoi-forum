@@ -107,7 +107,7 @@ class AdminController extends Controller
     {
         $post = User::where('id', $id)->where('type', User::ADMIN)->first();
         if (empty($post)) {
-            return redirect()->back()->with('error', 'admin not exist!');
+            return redirect()->back()->with('error', 'Admin not exist!');
         }
         $post->delete();
         return redirect()->back()->with('success', 'Success');

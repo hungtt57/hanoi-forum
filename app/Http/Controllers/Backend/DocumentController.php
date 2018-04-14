@@ -92,7 +92,7 @@ class DocumentController extends AdminController
         if (empty($user)) {
             return response([
                 'status' => 0,
-                'message' => 'Participant not exist',
+                'message' => 'Delegate not exist',
                 'data' => null
             ], 200);
         }

@@ -1,7 +1,7 @@
 @extends('admin.layouts.master')
 
 @section('content')
-    <h3 class="inline">List document</h3>
+    <h3 class="inline">List abstract submission</h3>
 
     @include('admin.flash_message')
     <div class="col-md-12" style="margin-top: 20px">
@@ -14,7 +14,7 @@
                             <thead>
                             <tr>
                                 <th>Reviewer</th>
-                                <th>abstract</th>
+                                <th>Abstract</th>
                                 <th>Title of paper</th>
                                 <th>Paper</th>
                                 <th>Participant</th>

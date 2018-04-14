@@ -1,7 +1,7 @@
 @extends('admin.layouts.master')
 
 @section('content')
-    <h3 class="inline">List contact</h3>
+    <h3 class="inline">List online questions </h3>
 
     @include('admin.flash_message')
     <div class="col-md-12" style="margin-top: 20px">

@@ -1,7 +1,7 @@
 @extends('admin.layouts.master')
 
 @section('content')
-    <h3 class="inline">Manager Banner</h3>
+    <h3 class="inline">Manager Banners</h3>
 
     @include('admin.flash_message')
     <div class="col-md-12">

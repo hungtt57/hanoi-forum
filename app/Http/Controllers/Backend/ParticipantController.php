@@ -46,7 +46,7 @@ class ParticipantController extends AdminController
     {
         $post = User::where('id', $id)->where('type', User::PARTNER)->first();
         if (empty($post)) {
-            return redirect()->back()->with('error', 'Participant not exist!');
+            return redirect()->back()->with('error', 'Delegate not exist!');
         }
         $post->delete();
         return redirect()->back()->with('success', 'Success');
@@ -61,7 +61,7 @@ class ParticipantController extends AdminController
         if (empty($user)) {
             return response([
                 'status' => 0,
-                'message' => 'Participant not exist',
+                'message' => 'Delegate not exist',
                 'data' => null
             ], 200);
         }
