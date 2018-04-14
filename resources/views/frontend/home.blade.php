@@ -1,5 +1,22 @@
 @extends('frontend.layouts.master')
 @section('title','Home')
+
+@push('styles')
+
+<style>
+
+    @media (min-width: 320px) and (max-width: 480px) {
+
+        .seq-canvas > li {
+            filter: blur(5px) !important;
+            -webkit-filter: blur(5px) !important;
+        }
+
+    }
+</style>
+
+@endpush
+
 @section('content')
 
     <section class="sabbbi-section home-info mt_35">
@@ -71,7 +88,7 @@
                 @if($posts)
                     <div class="col-sm-4">
                         <article class="news-card sabbi-thumlinepost-card solitude-bg__x">
-                            <img src="/assets/img/latest_event_hnforum.png" style="width: 100%">
+                            <img src="/assets/img/hnforum.jpg" style="width: 100%">
                             {{--<h2 class="stage-title">Latest Events</h2>--}}
                             {{--<ul class="list-unstyled lst_news_list" tabindex="0">--}}
                                 {{--@foreach($posts as $post)--}}
