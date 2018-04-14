@@ -30,7 +30,10 @@
                             <div class="sabbi-thumlinepost-card-meta">
 
                                 <p class="entry-text">
-                                    Hanoi Forum is an international academic conference co-hosted by Vietnam National University, Hanoi (VNU) and Korea Foundation for Advanced Studies (KFAS). The general theme of Hanoi Forum is “Towards Sustainable Development”. Hanoi Forum aims at promoting the goal of inclusive and sustainable development for all.
+                                    Hanoi Forum is an international academic conference co-hosted by Vietnam National
+                                    University, Hanoi (VNU) and Korea Foundation for Advanced Studies (KFAS). The
+                                    general theme of Hanoi Forum is “Towards Sustainable Development”. Hanoi Forum aims
+                                    at promoting the goal of inclusive and sustainable development for all.
 
                                 </p>
                                 <div class="btn btn-unsolemn btn-action read-more" style="color: #32813E;">Read
@@ -41,14 +44,14 @@
                     </article>
                 </div>
                 {{--<div class="col-sm-4">--}}
-                    {{--<article class="sabbi-thumlinepost-card card-video solitude-bg__x">--}}
-                        {{--<figure class="sabbi-thumlinepost-card-figure">--}}
-                            {{--<a class="video-play" href="https://www.youtube.com/watch?v=qarc7AA4-wM"--}}
-                               {{--data-toggle="lightbox"><img src="/frontend/assets/img/thumbvideo.jpg" alt=""--}}
-                                                           {{--class="img-responsive img-thumpost"></a>--}}
-                            {{--<figcaption> Welcome message</figcaption>--}}
-                        {{--</figure>--}}
-                    {{--</article>--}}
+                {{--<article class="sabbi-thumlinepost-card card-video solitude-bg__x">--}}
+                {{--<figure class="sabbi-thumlinepost-card-figure">--}}
+                {{--<a class="video-play" href="https://www.youtube.com/watch?v=qarc7AA4-wM"--}}
+                {{--data-toggle="lightbox"><img src="/frontend/assets/img/thumbvideo.jpg" alt=""--}}
+                {{--class="img-responsive img-thumpost"></a>--}}
+                {{--<figcaption> Welcome message</figcaption>--}}
+                {{--</figure>--}}
+                {{--</article>--}}
                 {{--</div>--}}
                 <div class="col-sm-4">
                     <div class="education_timeline_wrap">
@@ -87,23 +90,81 @@
                 @php $posts = App\Models\Post::where('status',1)->orderBy('created_at','desc')->limit(5)->get(); @endphp
                 @if($posts)
                     <div class="col-sm-4">
-                        <article class="news-card sabbi-thumlinepost-card solitude-bg__x">
-                            <img src="/assets/img/hnforum.jpg" style="width: 100%">
-                            {{--<h2 class="stage-title">Latest Events</h2>--}}
-                            {{--<ul class="list-unstyled lst_news_list" tabindex="0">--}}
-                                {{--@foreach($posts as $post)--}}
-                                    {{--<li class="lst_news_item">--}}
-                                        {{--<h3 class="title mg_0"><a--}}
-                                                    {{--href="{{url('post').'/'.str_slug($post->title).'-'.$post->id}}">{{$post->title}}</a>--}}
-                                        {{--</h3>--}}
-                                        {{--<div>--}}
-                                            {{--<span class="date">{{$post->created_at->format('M d Y')}}</span>--}}
-                                        {{--</div>--}}
-                                    {{--</li>--}}
-                                {{--@endforeach--}}
-                            {{--</ul>--}}
-                            {{--<a href="events.html" class="btn btn-unsolemn btn-action read-more">VIEW ALL</a>--}}
-                        </article>
+                        <div class="row">
+
+                            <div class="col-sm-12">
+                                <h3 style="text-align: center; color: #0045D1; font-weight: bold">ORGANIZERS</h3>
+                                <div class="row">
+                                    <div class="col-sm-6" style="height: 150px">
+
+                                        <img src="/frontend/assets/img/vnu.png" style="max-width: 120px; position: relative; left: 19%">
+                                        <div style="margin-top: 10px">
+                                        <p style="color: #0045D1; font-weight: bold; text-align: center">Vietnam National University, Hanoi</p>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-sm-6" style="height: 150px">
+
+
+                                        <img src="/frontend/assets/img/kfas_logo.jpg" style="position: absolute; top: 20%;">
+
+                                        <p style="position: absolute; top: 70%; left: 18%; text-align: center; color: #0045D1; font-weight: bold" >Korea Foundation for Advanced Studies</p>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row" style="margin-top: 15px">
+                            <div class="col-sm-12">
+                                <h3 style="text-align: center; color: #0045D1; font-weight: bold">PARTNERS</h3>
+                                <div class="row">
+                                    <div class="col-sm-3">
+
+                                        <img src="/frontend/bkhvcn.png">
+
+                                        <p style="text-align: center; font-size: 12px; color: #0045D1; font-weight: bold">Ministry of Natural Resources and Environment</p>
+
+                                    </div>
+                                    <div class="col-sm-3">
+
+                                        <img src="/frontend/btnvmt.png">
+                                        <p style="text-align: center; font-size: 12px; color: #0045D1; font-weight: bold">Ministry of Science and Technology</p>
+                                    </div>
+                                    <div class="col-sm-3">
+
+                                        <img src="/frontend/hanoi.png">
+                                        <p style="text-align: center; font-size: 12px; color: #0045D1; font-weight: bold">Hanoi Municipal people's Committee</p>
+
+                                    </div>
+                                    <div class="col-sm-3">
+
+                                        <img src="http://smartindustry.vn/wp-content/uploads/logo/VAST.png" style="height: 100px">
+
+                                        <p style="text-align: center; font-size: 12px; color: #0045D1; font-weight: bold">VietNam Academy Of Science And Technology</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{--<article class="news-card sabbi-thumlinepost-card solitude-bg__x">--}}
+                        {{--<img src="/assets/img/hnforum.jpg" style="width: 100%">--}}
+                        {{--<h2 class="stage-title">Latest Events</h2>--}}
+                        {{--<ul class="list-unstyled lst_news_list" tabindex="0">--}}
+                        {{--@foreach($posts as $post)--}}
+                        {{--<li class="lst_news_item">--}}
+                        {{--<h3 class="title mg_0"><a--}}
+                        {{--href="{{url('post').'/'.str_slug($post->title).'-'.$post->id}}">{{$post->title}}</a>--}}
+                        {{--</h3>--}}
+                        {{--<div>--}}
+                        {{--<span class="date">{{$post->created_at->format('M d Y')}}</span>--}}
+                        {{--</div>--}}
+                        {{--</li>--}}
+                        {{--@endforeach--}}
+                        {{--</ul>--}}
+                        {{--<a href="events.html" class="btn btn-unsolemn btn-action read-more">VIEW ALL</a>--}}
+                        {{--</article>--}}
                     </div>
                 @endif
             </div>
