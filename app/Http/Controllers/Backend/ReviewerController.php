@@ -171,7 +171,7 @@ class ReviewerController extends AdminController
             $user->save();
             $userLogin = auth('backend')->user();
             $sub = $request->input('sub');
-            $document = Document::create([
+            Document::create([
                 'user_id' => $user->id,
                 'subcommittee_id' => $sub,
                 'reviewer_id' =>$userLogin->id,

@@ -184,7 +184,7 @@ Route::group([
 //            Route::post('/store', ['as' => 'store', 'uses' => 'DocumentController@store']);
 //            Route::post('/update/{id}', ['as' => 'update', 'uses' => 'DocumentController@update']);
 //            Route::get('/edit/{id}', ['as' => 'edit', 'uses' => 'DocumentController@edit']);
-//            Route::get('/delete/{id}', ['as' => 'delete', 'uses' => 'DocumentController@delete']);
+            Route::get('/delete/{id}', ['as' => 'delete', 'uses' => 'DocumentController@delete']);
         });
         Route::group([
             'prefix' => 'subcommittee',

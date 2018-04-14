@@ -12,6 +12,7 @@ use App\Models\EmailLog;
 use App\Mail\SubmitAbstract;
 use Illuminate\Support\Facades\Input;
 use App\Models\User;
+
 class PartnerController extends AdminController
 {
     public function submit(Request $request)
@@ -28,7 +29,7 @@ class PartnerController extends AdminController
             $this->validate($request, [
                 'abstract' => 'required',
                 'title_of_paper' => 'required'
-            ],[
+            ], [
                 'title_of_paper.required' => 'Title of paper is required'
             ]);
             \DB::beginTransaction();
@@ -36,6 +37,7 @@ class PartnerController extends AdminController
 
                 $user->abstract = $request->input('abstract');
                 $user->title_of_paper = $request->input('title_of_paper');
+                $user->reject_abstract = null;
                 $user->save();
                 Mail::to($user->email)->send(new SubmitAbstract($user));
                 EmailLog::create([
@@ -56,23 +58,46 @@ class PartnerController extends AdminController
             $this->validate($request, [
                 'paper' => 'required'
             ]);
+            \DB::beginTransaction();
+            try {
 
+                if ($request->file('paper')) {
+                    $data['paper'] = $this->saveFile($request->file('paper'));
+                }
 
+                $user->reject_paper = null;
+                $user->save();
+                Mail::to($user->email)->send(new SubmitAbstract($user));
+                EmailLog::create([
+                    'to' => $user->email,
+                    'event' => 'submitPaper',
+                    'data' => $user->toArray()
+                ]);
+                DB::commit();
 
-
-
+                return redirect('/admin/submit/success');
+            } catch (\Exception $ex) {
+                DB::rollback();
+                return redirect()->back()->with('success', 'Server error.Try again later')->withInput(Input::all());
+            }
         }
 
     }
-    public function submitSuccess(Request $request) {
+
+    public function submitSuccess(Request $request)
+    {
         $user = auth('backend')->user();
-        return view('admin.partner.submitSuccess',compact('user'));
+        return view('admin.partner.submitSuccess', compact('user'));
     }
-    public function editProfile(Request $request) {
+
+    public function editProfile(Request $request)
+    {
         $user = auth('backend')->user();
-        return view('admin.partner.editProfile',compact('user'));
+        return view('admin.partner.editProfile', compact('user'));
     }
-    public function updateProfile(Request $request) {
+
+    public function updateProfile(Request $request)
+    {
         $this->validate($request, [
             'file' => 'max:5120',
             'first_name' => 'required',
@@ -87,7 +112,7 @@ class PartnerController extends AdminController
             'affiliation.required' => 'Please enter affiliation',
         ]);
         $data = $request->all();
-        if(isset($data['password'])) {
+        if (isset($data['password'])) {
             $this->validate($request, [
                 'password' => 'min:6|confirmed',
 
@@ -103,9 +128,9 @@ class PartnerController extends AdminController
             $userId = auth('backend')->user()->id;
             $user = User::find($userId);
 
-            if(isset($data['password']) and $data['password']) {
+            if (isset($data['password']) and $data['password']) {
                 $data['password'] = Hash::make($data['password']);
-            }else {
+            } else {
                 $data['password'] = $user->password;
             }
             $data['type'] = User::PARTNER;

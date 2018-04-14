@@ -28,6 +28,8 @@ class SubmitPaper extends Mailable
      */
     public function build()
     {
-        return $this->view('view.name');
+        return $this->from(['address' => 'no-reply@hanoiforum.vnu.edu.vn', 'name' => 'Hanoi forum 2018'])
+            ->subject('Confirmation of Paper Submission')
+            ->view('email.submitPaper')->with(['user' => $this->user]);
     }
 }

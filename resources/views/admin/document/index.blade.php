@@ -88,7 +88,7 @@
             {data: 'participant', name: 'participant',orderable:false},
 
             {data: 'subcommittee', name: 'subcommittee',orderable:false},
-           {data: 'action', name: 'action'},
+           {data: 'action', name: 'action',orderable:false},
           ],
 
 //          initComplete: function () {
