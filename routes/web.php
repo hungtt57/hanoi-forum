@@ -92,7 +92,15 @@ Route::group([
         'as' => 'admin',
         'uses' => 'AdminController@index'
     ]);
+    Route::group([
+        'prefix' => 'review-partner',
+        'as' => 'reviewPartner@'
+    ], function () {
+        Route::post('confirm', ['as' => 'confirm', 'uses' => 'ReviewerController@confirm']);
+        Route::post('reject', ['as' => 'reject', 'uses' => 'ReviewerController@reject']);
 
+
+    });
 
     Route::group(['middleware' => 'ADMIN'], function () {
         Route::group([
@@ -172,11 +180,11 @@ Route::group([
         ], function () {
             Route::get('/', ['as' => 'index', 'uses' => 'DocumentController@index']);
             Route::get('/datatables', ['as' => 'datatables', 'uses' => 'DocumentController@datatables']);
-            Route::get('/add', ['as' => 'add', 'uses' => 'DocumentController@create']);
-            Route::post('/store', ['as' => 'store', 'uses' => 'DocumentController@store']);
-            Route::post('/update/{id}', ['as' => 'update', 'uses' => 'DocumentController@update']);
-            Route::get('/edit/{id}', ['as' => 'edit', 'uses' => 'DocumentController@edit']);
-            Route::get('/delete/{id}', ['as' => 'delete', 'uses' => 'DocumentController@delete']);
+//            Route::get('/add', ['as' => 'add', 'uses' => 'DocumentController@create']);
+//            Route::post('/store', ['as' => 'store', 'uses' => 'DocumentController@store']);
+//            Route::post('/update/{id}', ['as' => 'update', 'uses' => 'DocumentController@update']);
+//            Route::get('/edit/{id}', ['as' => 'edit', 'uses' => 'DocumentController@edit']);
+//            Route::get('/delete/{id}', ['as' => 'delete', 'uses' => 'DocumentController@delete']);
         });
         Route::group([
             'prefix' => 'subcommittee',
@@ -200,8 +208,7 @@ Route::group([
             Route::get('/', ['as' => 'index', 'uses' => 'ReviewerController@reviewParticipants']);
             Route::get('/datatables', ['as' => 'datatables', 'uses' => 'ReviewerController@reviewParticipantsDatatables']);
             Route::get('/review/{id}/participant', ['as' => 'review', 'uses' => 'ReviewerController@review']);
-//            Route::get('/delete/{id}', ['as' => 'delete', 'uses' => 'ParticipantController@delete']);
-//            Route::post('select-reviewer', ['as' => 'select', 'uses' => 'ParticipantController@select']);
+
         });
     });
     Route::group(['middleware' => 'PARTNER'], function () {
@@ -211,7 +218,7 @@ Route::group([
             'uses' => 'PartnerController@editProfile'
         ]);
         Route::post('partner/edit', [
-            'as' => 'editPròile',
+            'as' => 'editProfile',
             'uses' => 'PartnerController@updateProfile'
         ]);
         Route::get('/submit', [

@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Datatables;
 use Hash;
-
+use App\Models\Document;
 class ReviewerController extends AdminController
 {
     public function index()
@@ -114,7 +114,6 @@ class ReviewerController extends AdminController
     public function reviewParticipantsDatatables(Request $request) {
         $user = auth('backend')->user();
         $contacts = User::select('*')->where('type', User::PARTNER)->where('reviewer_id',$user->id);
-
         return \Datatables::eloquent($contacts)
 
             ->addColumn('action', function ($post) {
@@ -122,11 +121,14 @@ class ReviewerController extends AdminController
                 $urlDelete = route('Backend::reviewParticipants@review', ['id' => $post->id]);
 
                 $string = '';
-                if($post->abstract || $post->paper) {
-                    $string .= '<a href="' . $urlDelete . '" class="btn btn-primary">Review</a>';
-
+                if($post->abstract and !$post->confirm_abstract) {
+                    $string .= '<a href="' . $urlDelete . '" class="btn btn-primary">Review abstract</a>';
+                    return $string;
                 }
-
+                if($post->paper and $post->confirm_paper == 0) {
+                    $string .= '<a href="' . $urlDelete . '" class="btn btn-primary">Review paper</a>';
+                    return $string;
+                }
 
                 return $string;
 
@@ -136,5 +138,47 @@ class ReviewerController extends AdminController
         $user = auth('backend')->user();
         $participant =  User::select('*')->where('type', User::PARTNER)->where('reviewer_id',$user->id)->where('id',$id)->first();
         return view('admin.review_partner.review',compact('participant'));
+    }
+
+
+
+    //confirm
+    public function confirm(Request $request) {
+        $this->validate($request,[
+            'id' => 'required'
+        ]);
+        $id = $request->input('id');
+        $user = User::find($id);
+        if(!$user->confirm_abstract) {
+            $user->comment_abstract = $request->input('comment');
+            $user->confirm_abstract = 1;
+            $user->save();
+            $userLogin = auth('backend')->user();
+            $sub = $request->input('sub');
+//            $document = Document::firstOrCreate(['user_id' => $user->id]);
+            Document::create([
+                'user_id' => $user->id,
+               'subcommittee_id' => $sub,
+               'reviewer_id' =>$userLogin->id,
+                'abstract' => $user->abstract,
+                'title_of_paper' => $user->title_of_paper
+            ]);
+            return redirect('admin/review-participants')->with('success','Review success');
+        }
+        if($user->confirm_abstract and !$user->confirm_paper) {
+            $user->comment_paper = $request->input('comment');
+            $user->confirm_paper = 1;
+            $user->save();
+            $userLogin = auth('backend')->user();
+            $sub = $request->input('sub');
+            $document = Document::create([
+                'user_id' => $user->id,
+                'subcommittee_id' => $sub,
+                'reviewer_id' =>$userLogin->id,
+                'paper' => $user->paper,
+            ]);
+            return redirect('admin/review-participants')->with('success','Review success');
+        }
+        return redirect('admin/review-participants')->with('success','Review success');
     }
 }
