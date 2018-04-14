@@ -24,14 +24,13 @@
 
         <div class="form-body">
             {{ csrf_field() }}
-            @if($user->reject_abstract)
+
+
+            @if(!$user->confirm_abstract)
+              @if($user->reject_abstract)
                 <div class="alert alert-danger">{{$user->reject_abstract}}</div>
 
             @endif
-            @if($user->reject_paper)
-                <div class="alert alert-danger">{{$user->reject_paper}}</div>
-            @endif
-            @if(!$user->confirm_abstract)
                 <div class="form-group">
                     <label class="control-label col-md-3">Title of the paper*</label>
                     <div class="col-md-6">
@@ -49,6 +48,9 @@
             </div>
             @endif
             @if($user->confirm_abstract and $user->confirm_paper == 0)
+              @if($user->reject_paper)
+                <div class="alert alert-danger">{{$user->reject_paper}}</div>
+            @endif
             <div class="form-group">
                 <label class="control-label col-md-3 " for="Name">Paper*</label>
                 <div class="col-md-6">
