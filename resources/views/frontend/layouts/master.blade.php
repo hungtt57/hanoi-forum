@@ -256,21 +256,13 @@
 <script src="/frontend/assets/js/main.js"></script> <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 @stack('scripts')
 
-{{--<script>--}}
-    {{--function resizeHeaderOnScroll() {--}}
-        {{--const distanceY = window.pageYOffset || document.documentElement.scrollTop,--}}
-            {{--shrinkOn = 200,--}}
-            {{--headerEl = document.getElementById('js-header');--}}
+<script>
+    function resizeHeaderOnScroll() {
 
-        {{--if (distanceY > shrinkOn) {--}}
-            {{--headerEl.classList.add("smaller");--}}
-        {{--} else {--}}
-            {{--headerEl.classList.remove("smaller");--}}
-        {{--}--}}
-    {{--}--}}
+    }
 
-    {{--window.addEventListener('scroll', resizeHeaderOnScroll);--}}
-{{--</script>--}}
+    window.addEventListener('scroll', resizeHeaderOnScroll);
+</script>
 </body>
 
 
