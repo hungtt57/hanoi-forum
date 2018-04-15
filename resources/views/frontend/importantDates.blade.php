@@ -21,7 +21,7 @@
                                         <p>Deadline for abstracts:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</p>
                                     </td>
                                     <td style="width:255px;">
-                                        <p>30 May 2018</p>
+                                        <p>30 June 2018</p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -29,7 +29,7 @@
                                         <p>Notification of abstract review results:</p>
                                     </td>
                                     <td style="width:255px;">
-                                        <p>15 June 2018</p>
+                                        <p>15 July 2018</p>
                                     </td>
                                 </tr>
                                 <tr>

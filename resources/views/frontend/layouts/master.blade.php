@@ -46,6 +46,11 @@
             }
         }
 
+        #menu-main-nav {
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 14px;
+        }
     </style>
 
 
@@ -85,7 +90,7 @@
 <footer class="section-footer mt_25">
     <div class="container">
         <div class="row">
-            <div class="col-sm-3">
+            <div class="col-sm-6">
                 <div class="footer-site-info">
                     <header>
 
@@ -96,14 +101,28 @@
                     </header>
                     <address>
                         <h3 class="entry-title">Contact Information</h3>
-                        <div class="address-entry">
-                            <p class="__adtext">Hanoi Forum Secretariat</p>
-                            <p class="__ad-num">R1006, Administration Building</p>
-                            <p class="__ad-num">Vietnam National University, Hanoi</p>
-                            <p class="__ad-num">144 Xuan Thuy, Cau Giay</p>
-                            <p class="__ad-num">Tel: (84) 24 37547670 - Ext: 723</p>
-                            <p class="__ad-num">Email: hanoiforum@vnu.edu.vn</p>
+                        <div class="row">
+                            <div class="col-sm-6"><div class="address-entry">
+                                    <p class="__adtext">Hanoi Forum Secretariat</p>
+                                    <p class="__ad-num">R1006, Administration Building</p>
+                                    <p class="__ad-num">Vietnam National University, Hanoi</p>
+                                    <p class="__ad-num">144 Xuan Thuy, Cau Giay</p>
+                                    {{--<p class="__ad-num">Tel: (84) 24 37547670 - Ext: 723</p>--}}
+                                    {{--<p class="__ad-num">Email: hanoiforum@vnu.edu.vn</p>--}}
+                                </div></div>
+                            <div class="col-sm-6">
+                                <div class="address-entry">
+                                    {{--<p class="__adtext">Hanoi Forum Secretariat</p>--}}
+                                    {{--<p class="__ad-num">R1006, Administration Building</p>--}}
+                                    {{--<p class="__ad-num">Vietnam National University, Hanoi</p>--}}
+                                    {{--<p class="__ad-num">144 Xuan Thuy, Cau Giay</p>--}}
+                                    <p class="__ad-num">Tel: (84) 24 37547670 - Ext: 723</p>
+                                    <p class="__ad-num">Email: hanoiforum@vnu.edu.vn</p>
+                                </div>
+                            </div>
                         </div>
+
+
                     </address>
                     {{--<footer class="contact-info">--}}
                     {{--<h3 class="entry-title">Contact Information</h3>--}}
@@ -112,67 +131,89 @@
                     {{--</footer>--}}
                 </div>
             </div>
-            <div class="col-sm-9">
-                <div class="row">
-                    <div class="footer-site-info col-xs-12">
-                        <h3 class="entry-title">Co-hosts</h3>
-                        <div class="row pull-left hidden-xs">
-                            <a href="https://www.vnu.edu.vn/home/" target="_blank">
-                                <img style="max-width: 90px" src="/frontend/assets/img/vnu.png" alt="">
-                            </a>
-                            <a href="http://kfas.or.kr/" target="_blank">
-                                <img style="max-width: 360px;margin-left:10px" src="/frontend/assets/img/kfas_logo.jpg"
-                                     alt="">
-                            </a>
 
-                        </div>
-                        <div class="row  hidden-sm hidden-md hidden-lg " style="text-align: center">
-                            <a href="https://www.vnu.edu.vn/home/" target="_blank">
-                                <img style="max-width: 70px" src="/frontend/assets/img/vnu.png" alt="">
-                            </a>
+            {{--<div class="col-sm-3">--}}
+                {{--<div class="footer-site-info">--}}
+                    {{--<header>--}}
 
-                            <a href="http://kfas.or.kr/" target="_blank">
-                                <img style="max-width: 140px;margin-left:20px" src="/frontend/assets/img/kfas_logo.jpg"
-                                     alt=""></a>
+                        {{--<a class="footer-brand" href="http://vnu.edu.vn/home/"><img alt="" class="img-responsive"--}}
+                        {{--style="max-width: 90px"--}}
+                        {{--src="/frontend/assets/img/site-logo.png"></a>--}}
 
-                        </div>
-                    </div>
-                </div>
-                <div class="row " id="partner">
-                    <div class="footer-site-info col-xs-12">
-                        <h3 class="entry-title">Partners</h3>
-                        <div class="row pull-left hidden-xs" id="partner">
-                            <a href="https://www.most.gov.vn/vn/Pages/Trangchu.aspx" target="_blank">
-                                <img style="max-width: 90px" src="/frontend/bkhvcn.png" alt="">
-                            </a>
-                            <a href="http://www.monre.gov.vn" target="_blank">
-                                <img style="max-width: 90px" src="/frontend/btnvmt.png" alt=""></a>
-                            <a href="http://hanoi.gov.vn/home" target="_blank">
-                                <img style="max-width: 90px" src="/frontend/hanoi.png" alt=""></a>
-                            <a href="http://www.vast.ac.vn/en/" target="_blank">
-                                <img style="max-width: 200px" src="/frontend/vastlogo.png" alt="">
-                            </a>
+                    {{--</header>--}}
+                    {{--<address>--}}
+                        {{--<h3 class="entry-title">Phone and Email</h3>--}}
 
-                        </div>
-                        <div class="row  hidden-sm hidden-md hidden-lg " style="text-align: center" id="partner">
-                            <a href="https://www.most.gov.vn/vn/Pages/Trangchu.aspx" target="_blank" class="partner-footer">
-                                <img style="max-width: 70px" src="/frontend/bkhvcn.png" alt="">
-                            </a>
+                    {{--</address>--}}
+                    {{--<footer class="contact-info">--}}
+                    {{--<h3 class="entry-title">Contact Information</h3>--}}
+                    {{--<p class="__ci_num">Call: <span>+61(07)373 53921</span></p>--}}
+                    {{--<p class="__ci_num">Email: <span>rushmore@mail.com</span></p>--}}
+                    {{--</footer>--}}
+                {{--</div>--}}
+            {{--</div>--}}
 
-                            <a href="http://www.monre.gov.vn" target="_blank"   class="partner-footer">
-                                <img style="max-width: 70px" src="/frontend/btnvmt.png" alt=""></a>
-                            <a href="http://hanoi.gov.vn/home" target="_blank"   class="partner-footer">
-                                <img style="max-width: 70px" src="/frontend/hanoi.png" alt=""></a>
-                            <a href="http://www.vast.ac.vn/en/" target="_blank"  class="partner-footer">
-                                <img style="max-width: 120px" src="/frontend/vastlogo.png" alt="">
-                            </a>
+            {{--<div class="col-sm-9">--}}
+                {{--<div class="row">--}}
+                    {{--<div class="footer-site-info col-xs-12">--}}
+                        {{--<h3 class="entry-title">Co-hosts</h3>--}}
+                        {{--<div class="row pull-left hidden-xs">--}}
+                            {{--<a href="https://www.vnu.edu.vn/home/" target="_blank">--}}
+                                {{--<img style="max-width: 90px" src="/frontend/assets/img/vnu.png" alt="">--}}
+                            {{--</a>--}}
+                            {{--<a href="http://kfas.or.kr/" target="_blank">--}}
+                                {{--<img style="max-width: 360px;margin-left:10px" src="/frontend/assets/img/kfas_logo.jpg"--}}
+                                     {{--alt="">--}}
+                            {{--</a>--}}
 
-                        </div>
-                    </div>
-                </div>
+                        {{--</div>--}}
+                        {{--<div class="row  hidden-sm hidden-md hidden-lg " style="text-align: center">--}}
+                            {{--<a href="https://www.vnu.edu.vn/home/" target="_blank">--}}
+                                {{--<img style="max-width: 70px" src="/frontend/assets/img/vnu.png" alt="">--}}
+                            {{--</a>--}}
+
+                            {{--<a href="http://kfas.or.kr/" target="_blank">--}}
+                                {{--<img style="max-width: 140px;margin-left:20px" src="/frontend/assets/img/kfas_logo.jpg"--}}
+                                     {{--alt=""></a>--}}
+
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<div class="row " id="partner">--}}
+                    {{--<div class="footer-site-info col-xs-12">--}}
+                        {{--<h3 class="entry-title">Partners</h3>--}}
+                        {{--<div class="row pull-left hidden-xs" id="partner">--}}
+                            {{--<a href="https://www.most.gov.vn/vn/Pages/Trangchu.aspx" target="_blank">--}}
+                                {{--<img style="max-width: 90px" src="/frontend/bkhvcn.png" alt="">--}}
+                            {{--</a>--}}
+                            {{--<a href="http://www.monre.gov.vn" target="_blank">--}}
+                                {{--<img style="max-width: 90px" src="/frontend/btnvmt.png" alt=""></a>--}}
+                            {{--<a href="http://hanoi.gov.vn/home" target="_blank">--}}
+                                {{--<img style="max-width: 90px" src="/frontend/hanoi.png" alt=""></a>--}}
+                            {{--<a href="http://www.vast.ac.vn/en/" target="_blank">--}}
+                                {{--<img style="max-width: 200px" src="/frontend/vastlogo.png" alt="">--}}
+                            {{--</a>--}}
+
+                        {{--</div>--}}
+                        {{--<div class="row  hidden-sm hidden-md hidden-lg " style="text-align: center" id="partner">--}}
+                            {{--<a href="https://www.most.gov.vn/vn/Pages/Trangchu.aspx" target="_blank" class="partner-footer">--}}
+                                {{--<img style="max-width: 70px" src="/frontend/bkhvcn.png" alt="">--}}
+                            {{--</a>--}}
+
+                            {{--<a href="http://www.monre.gov.vn" target="_blank"   class="partner-footer">--}}
+                                {{--<img style="max-width: 70px" src="/frontend/btnvmt.png" alt=""></a>--}}
+                            {{--<a href="http://hanoi.gov.vn/home" target="_blank"   class="partner-footer">--}}
+                                {{--<img style="max-width: 70px" src="/frontend/hanoi.png" alt=""></a>--}}
+                            {{--<a href="http://www.vast.ac.vn/en/" target="_blank"  class="partner-footer">--}}
+                                {{--<img style="max-width: 120px" src="/frontend/vastlogo.png" alt="">--}}
+                            {{--</a>--}}
+
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
 
 
-            </div>
+            {{--</div>--}}
         </div>
         <div id="site-footer-bar" class="footer-bar mt_30">
             <div class="container">

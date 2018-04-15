@@ -20,6 +20,7 @@ email:hello@authlab.io;
 /* General
 /*-------------------------------------------------------*/
 @import 'ionicons.min.css';
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
 
 /* THE ULTIMATE PX/REM MIXIN
 *url:http://codepen.io/thejameskyle/pen/JmBjc
@@ -142,7 +143,8 @@ html {
 
 body {
     font-size: 1rem;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+    /*font-family: "Open Sans", sans-serif;*/
     color: #000000;
     background-color: #ffffff;
     line-height: 1.788;
@@ -151,7 +153,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Montserrat";
+    /*font-family: "Montserrat";*/
+    font-family: 'Noto Sans';
     line-height: 1.41398;
     font-weight: 700;
 }

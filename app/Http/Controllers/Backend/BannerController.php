@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Models\Banner;
+use Faker\Provider\UserAgent;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Datatables;
+use Jenssegers\Agent\Agent;
 
 class BannerController extends AdminController
 {
@@ -32,7 +34,7 @@ class BannerController extends AdminController
         $data = $request->all();
 
         if($request->file('image')) {
-            $data['image'] = $this->saveImage($request->file('image'));
+            $data['image'] = $this->saveImageAndBlur($request->file('image'));
         }
 
 
@@ -97,7 +99,7 @@ class BannerController extends AdminController
         $banner = Banner::findOrFail($id);
         $data['status'] = ($request->input('status') == 'on') ? 1 : 0;
         if ($request->file('image')) {
-            $data['image'] = $this->saveImage($request->file('image'));
+            $data['image'] = $this->saveImageAndBlur($request->file('image'));
         }
         $banner->update($data);
         cache()->forget('banners');

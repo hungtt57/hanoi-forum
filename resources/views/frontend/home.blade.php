@@ -5,12 +5,80 @@
 
 <style>
 
+
+    .img-partners {
+        max-width: 80px;
+    }
+
+    .box-partner {
+        height: 210px;
+    }
+    .text-banner {
+        text-align: center; font-size: 12px; color: #0045D1; font-weight: bold
+    }
+    .text-banner-top {
+        color: #0045D1; font-weight: bold; text-align: center; font-size: 12px;
+    }
+    .img-t-2 {
+        position: relative; margin-top: 9%;
+    }
+
+    @media (min-width: 1025px) and (max-width: 1280px) {
+
+        .img-logo {
+            max-width: 80%;
+        }
+
+        .img-partners {
+            max-width: 80px;
+        }
+
+        #left, #right {
+            height: 320px;
+        }
+
+        .img2 {
+            height: 80px;
+        }
+
+        .img-s {
+            margin-top: 15px;
+        }
+
+        .text-s {
+            margin-top: 14px;
+        }
+
+    }
+
     @media (min-width: 320px) and (max-width: 480px) {
 
-        .seq-canvas > li {
-            filter: blur(5px) !important;
-            -webkit-filter: blur(5px) !important;
+        .img-partners {
+            max-width: 158px;
         }
+
+        .text-banner {
+            text-align: center; font-size: 15px; color: #0045D1; font-weight: bold
+        }
+
+        .text-banner-top {
+            color: #0045D1; font-weight: bold; text-align: center; font-size: 15px;
+        }
+
+
+        .box-t-1{
+            margin-bottom: 15px;
+        }
+
+        .box-partner {
+            height: 200px;
+            margin-bottom: 15px;
+        }
+
+        /*.seq-canvas > li {*/
+            /*filter: blur(5px) !important;*/
+            /*-webkit-filter: blur(5px) !important;*/
+        /*}*/
 
     }
 </style>
@@ -21,10 +89,10 @@
 
     <section class="sabbbi-section home-info mt_35">
         <div class="container">
-            <div class="row mt_30">
+            <div class="row mt_30" style="display: flex">
 
-                <div class="col-sm-4">
-                    <article class="sabbi-thumlinepost-card solitude-bg__x">
+                <div class="col-sm-4" >
+                    <article class="sabbi-thumlinepost-card solitude-bg__x" id="left">
                         <a href="{{url('hanoi-forum')}}" style="color:inherit"><h2 class="entry-title ht-4">About Hanoi
                                 Forum</h2>
                             <div class="sabbi-thumlinepost-card-meta">
@@ -89,84 +157,127 @@
                 </div>
                 @php $posts = App\Models\Post::where('status',1)->orderBy('created_at','desc')->limit(5)->get(); @endphp
                 @if($posts)
-                    <div class="col-sm-4">
-                        <div class="row">
+                    <div class="col-sm-4" >
 
-                            <div class="col-sm-12">
-                                <h3 style="text-align: center; color: #0045D1; font-weight: bold">ORGANIZERS</h3>
-                                <div class="row">
-                                    <div class="col-sm-6" style="height: 150px">
-
-                                        <img src="/frontend/assets/img/vnu.png" style="max-width: 120px; position: relative; left: 19%">
-                                        <div style="margin-top: 10px">
-                                        <p style="color: #0045D1; font-weight: bold; text-align: center">Vietnam National University, Hanoi</p>
-                                        </div>
-
-                                    </div>
-                                    <div class="col-sm-6" style="height: 150px">
-
-
-                                        <img src="/frontend/assets/img/kfas_logo.jpg" style="position: absolute; top: 20%;">
-
-                                        <p style="position: absolute; top: 70%; left: 18%; text-align: center; color: #0045D1; font-weight: bold" >Korea Foundation for Advanced Studies</p>
-
-
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="row" style="margin-top: 15px">
-                            <div class="col-sm-12">
-                                <h3 style="text-align: center; color: #0045D1; font-weight: bold">PARTNERS</h3>
-                                <div class="row">
-                                    <div class="col-sm-3">
-
-                                        <img src="/frontend/bkhvcn.png">
-
-                                        <p style="text-align: center; font-size: 12px; color: #0045D1; font-weight: bold">Ministry of Natural Resources and Environment</p>
-
-                                    </div>
-                                    <div class="col-sm-3">
-
-                                        <img src="/frontend/btnvmt.png">
-                                        <p style="text-align: center; font-size: 12px; color: #0045D1; font-weight: bold">Ministry of Science and Technology</p>
-                                    </div>
-                                    <div class="col-sm-3">
-
-                                        <img src="/frontend/hanoi.png">
-                                        <p style="text-align: center; font-size: 12px; color: #0045D1; font-weight: bold">Hanoi Municipal people's Committee</p>
-
-                                    </div>
-                                    <div class="col-sm-3">
-
-                                        <img src="http://smartindustry.vn/wp-content/uploads/logo/VAST.png" style="height: 100px">
-
-                                        <p style="text-align: center; font-size: 12px; color: #0045D1; font-weight: bold">VietNam Academy Of Science And Technology</p>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        {{--<article class="news-card sabbi-thumlinepost-card solitude-bg__x">--}}
+                        <article class="news-card sabbi-thumlinepost-card solitude-bg__x" id="right">
                         {{--<img src="/assets/img/hnforum.jpg" style="width: 100%">--}}
-                        {{--<h2 class="stage-title">Latest Events</h2>--}}
-                        {{--<ul class="list-unstyled lst_news_list" tabindex="0">--}}
-                        {{--@foreach($posts as $post)--}}
-                        {{--<li class="lst_news_item">--}}
-                        {{--<h3 class="title mg_0"><a--}}
-                        {{--href="{{url('post').'/'.str_slug($post->title).'-'.$post->id}}">{{$post->title}}</a>--}}
-                        {{--</h3>--}}
-                        {{--<div>--}}
-                        {{--<span class="date">{{$post->created_at->format('M d Y')}}</span>--}}
-                        {{--</div>--}}
-                        {{--</li>--}}
-                        {{--@endforeach--}}
-                        {{--</ul>--}}
+                        <h2 class="stage-title">Latest Events</h2>
+                        <ul class="list-unstyled lst_news_list" tabindex="0">
+                        @foreach($posts as $post)
+                        <li class="lst_news_item">
+                        <h3 class="title mg_0"><a
+                        href="{{url('post').'/'.str_slug($post->title).'-'.$post->id}}">{{$post->title}}</a>
+                        </h3>
+                        <div>
+                        <span class="date">{{$post->created_at->format('M d Y')}}</span>
+                        </div>
+                        </li>
+                        @endforeach
+                        </ul>
                         {{--<a href="events.html" class="btn btn-unsolemn btn-action read-more">VIEW ALL</a>--}}
-                        {{--</article>--}}
+                        </article>
                     </div>
                 @endif
+            </div>
+            <div class="row mt_30">
+                <div class="row">
+
+                    <div class="col-sm-12">
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="row">
+                                    <h4 style="text-align: center; color: #0045D1; font-weight: bold">ORGANIZERS</h4>
+
+                                    <div class="col-sm-6">
+
+                                        <img src="/frontend/assets/img/vnu.png" style="max-width: 80px" class="img-responsive center-block">
+                                        <div style="margin-top: 10px">
+                                            <p class="text-banner-top">Vietnam National University, Hanoi</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+
+                                        <img src="/frontend/assets/img/kfas_logo.jpg" style="" class="img-responsive center-block img-s">
+
+                                        <p class="text-banner-top text-s" style="" >Korea Foundation for Advanced Studies</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="row">
+                                    <h4 style="text-align: center; color: #0045D1; font-weight: bold">PARTNERS</h4>
+
+                                        <div class="col-sm-3 box-partner">
+
+                                            <img src="/frontend/bkhvcn.png" class="img-responsive center-block img-partners ">
+
+                                            <p class="text-banner">Ministry of Science and Technology</p>
+
+                                        </div>
+                                        <div class="col-sm-3 box-partner">
+
+                                            <img src="/frontend/btnvmt.png" class="img-responsive center-block img-partners ">
+                                            <p class="text-banner"> Ministry of Natural Resources and Environment</p>
+                                        </div>
+                                        <div class="col-sm-3 box-partner">
+
+                                            <img src="/frontend/hanoi.png" class="img-responsive center-block img-partners ">
+                                            <p class="text-banner">Hanoi Municipal People's Committee</p>
+
+                                        </div>
+                                        <div class="col-sm-3 box-partner" >
+
+                                            <img src="http://smartindustry.vn/wp-content/uploads/logo/VAST.png" class="img-responsive center-block img2" style="max-height: 80px">
+
+                                            <p class="text-banner">Vietnam Academy Of Science And Technology</p>
+
+                                        </div>
+
+
+                                </div>
+
+
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                {{--<div class="row" style="margin-top: 15px">--}}
+                    {{--<div class="col-sm-12">--}}
+                        {{--<h3 style="text-align: center; color: #0045D1; font-weight: bold">PARTNERS</h3>--}}
+                        {{--<div class="row">--}}
+                            {{--<div class="col-sm-3 box-partner">--}}
+
+                                {{--<img src="/frontend/bkhvcn.png" class="img-responsive center-block img-partners ">--}}
+
+                                {{--<p class="text-banner">Ministry of Science and Technology</p>--}}
+
+                            {{--</div>--}}
+                            {{--<div class="col-sm-3 box-partner">--}}
+
+                                {{--<img src="/frontend/btnvmt.png" class="img-responsive center-block img-partners ">--}}
+                                {{--<p class="text-banner"> Ministry of Natural Resources and Environment</p>--}}
+                            {{--</div>--}}
+                            {{--<div class="col-sm-3 box-partner">--}}
+
+                                {{--<img src="/frontend/hanoi.png" class="img-responsive center-block img-partners ">--}}
+                                {{--<p class="text-banner">Hanoi Municipal People's Committee</p>--}}
+
+                            {{--</div>--}}
+                            {{--<div class="col-sm-3 box-partner" >--}}
+
+                                {{--<img src="http://smartindustry.vn/wp-content/uploads/logo/VAST.png" class="img-responsive center-block">--}}
+
+                                {{--<p class="text-banner" style="position: relative; bottom: -19px">VietNam Academy Of Science And Technology</p>--}}
+
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
             </div>
             @include('frontend.panels')
 
