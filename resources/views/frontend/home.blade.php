@@ -25,9 +25,6 @@
 
     @media (min-width: 1025px) and (max-width: 1280px) {
 
-        .img-logo {
-            max-width: 80%;
-        }
 
         .img-partners {
             max-width: 80px;

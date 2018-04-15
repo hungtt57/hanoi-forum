@@ -34,6 +34,14 @@
 
 
     <style>
+        @media (min-width: 1025px) and (max-width: 1280px) {
+            .img-logo {
+                width: 60%;
+            }
+            #menu-main-nav{
+                font-size: 9px !important;
+            }
+        }
         @media (min-width: 1400px) {
             .container {
                 width: 1600px;
@@ -248,6 +256,21 @@
 <script src="/frontend/assets/js/main.js"></script> <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 @stack('scripts')
 
+{{--<script>--}}
+    {{--function resizeHeaderOnScroll() {--}}
+        {{--const distanceY = window.pageYOffset || document.documentElement.scrollTop,--}}
+            {{--shrinkOn = 200,--}}
+            {{--headerEl = document.getElementById('js-header');--}}
+
+        {{--if (distanceY > shrinkOn) {--}}
+            {{--headerEl.classList.add("smaller");--}}
+        {{--} else {--}}
+            {{--headerEl.classList.remove("smaller");--}}
+        {{--}--}}
+    {{--}--}}
+
+    {{--window.addEventListener('scroll', resizeHeaderOnScroll);--}}
+{{--</script>--}}
 </body>
 
 
