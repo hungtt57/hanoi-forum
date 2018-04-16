@@ -115,19 +115,19 @@
                                     <p class="__ad-num">R1006, Administration Building</p>
                                     <p class="__ad-num">Vietnam National University, Hanoi</p>
                                     <p class="__ad-num">144 Xuan Thuy, Cau Giay</p>
-                                    {{--<p class="__ad-num">Tel: (84) 24 37547670 - Ext: 723</p>--}}
-                                    {{--<p class="__ad-num">Email: hanoiforum@vnu.edu.vn</p>--}}
+                                    <p class="__ad-num">Tel: (84) 24 37547670 - Ext: 723</p>
+                                    <p class="__ad-num">Email: hanoiforum@vnu.edu.vn</p>
                                 </div></div>
-                            <div class="col-sm-6">
-                                <div class="address-entry">
+                            {{--<div class="col-sm-6">--}}
+                                {{--<div class="address-entry">--}}
                                     {{--<p class="__adtext">Hanoi Forum Secretariat</p>--}}
                                     {{--<p class="__ad-num">R1006, Administration Building</p>--}}
                                     {{--<p class="__ad-num">Vietnam National University, Hanoi</p>--}}
                                     {{--<p class="__ad-num">144 Xuan Thuy, Cau Giay</p>--}}
-                                    <p class="__ad-num">Tel: (84) 24 37547670 - Ext: 723</p>
-                                    <p class="__ad-num">Email: hanoiforum@vnu.edu.vn</p>
-                                </div>
-                            </div>
+                                    {{--<p class="__ad-num">Tel: (84) 24 37547670 - Ext: 723</p>--}}
+                                    {{--<p class="__ad-num">Email: hanoiforum@vnu.edu.vn</p>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
                         </div>
 
 

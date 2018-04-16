@@ -14,10 +14,10 @@
         height: 210px;
     }
     .text-banner {
-        text-align: center; font-size: 12px; color: #0045D1; font-weight: bold
+        text-align: center; font-size: 12px; font-weight: bold
     }
     .text-banner-top {
-        color: #0045D1; font-weight: bold; text-align: center; font-size: 12px;
+        font-weight: bold; text-align: center; font-size: 12px;
     }
     .img-t-2 {
         position: relative; margin-top: 9%;
@@ -25,6 +25,16 @@
     .ol-timeline {
         margin-top: 50px !important;
     }
+
+
+    /*@media (min-width: 1281px) and (max-width: 1601px) {*/
+
+
+       /*.seq-canvas > li {*/
+           /*height: 80% !important;*/
+       /*}*/
+
+    /*}*/
 
     @media (min-width: 1025px) and (max-width: 1280px) {
 
