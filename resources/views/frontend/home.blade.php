@@ -22,6 +22,9 @@
     .img-t-2 {
         position: relative; margin-top: 9%;
     }
+    .ol-timeline {
+        margin-top: 50px !important;
+    }
 
     @media (min-width: 1025px) and (max-width: 1280px) {
 
@@ -51,7 +54,19 @@
     @media (min-width: 320px) and (max-width: 480px) {
 
         .img-partners {
-            max-width: 158px;
+            max-width: 100px;
+        }
+
+        #left-b {
+            margin-bottom: 10px;
+        }
+
+        .ol-timeline {
+            margin-top: 80px !important;
+        }
+
+        .img-s-2 {
+            max-width: 100px !important;
         }
 
         .text-banner {
@@ -68,8 +83,8 @@
         }
 
         .box-partner {
-            height: 200px;
-            margin-bottom: 15px;
+            height: 150px;
+            margin-bottom: 8px;
         }
 
         /*.seq-canvas > li {*/
@@ -86,9 +101,9 @@
 
     <section class="sabbbi-section home-info mt_35">
         <div class="container">
-            <div class="row mt_30" style="display: flex">
+            <div class="row mt_30">
 
-                <div class="col-sm-4" >
+                <div class="col-sm-4" id="left-b">
                     <article class="sabbi-thumlinepost-card solitude-bg__x" id="left">
                         <a href="{{url('hanoi-forum')}}" style="color:inherit"><h2 class="entry-title ht-4">About Hanoi
                                 Forum</h2>
@@ -120,7 +135,7 @@
                 {{--</div>--}}
                 <div class="col-sm-4">
                     <div class="education_timeline_wrap">
-                        <ol class="ol-timeline" style="margin-top: 50px !important;">
+                        <ol class="ol-timeline">
 
 
                             <li class="tl-item with-icon">
@@ -188,7 +203,7 @@
 
                                     <div class="col-sm-6">
 
-                                        <img src="/frontend/assets/img/vnu.png" style="max-width: 80px" class="img-responsive center-block">
+                                        <img src="/frontend/assets/img/vnu.png" style="max-width: 80px" class="img-responsive center-block img-s-2">
                                         <div style="margin-top: 10px">
                                             <p class="text-banner-top">Vietnam National University, Hanoi</p>
                                         </div>
