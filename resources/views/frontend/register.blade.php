@@ -111,17 +111,18 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="form-group">
+                            {{--<div class="form-group">--}}
 
-                                <label class="control-label"> Do you wish to submit an abstract and present at the Forum?</label>
-                                <div class="controls">
-                                    <label class="radio-inline"><input type="radio" name="apply" value="1"
-                                                                       @if(old('apply') == 1) checked @endif>Yes</label>
-                                    <label class="radio-inline"><input type="radio" name="apply" value="0"
-                                                                       @if(old('apply') == 0) checked @endif>No</label>
-                                </div>
-                            </div>
-                            <div class="applyContainer  @if(old('apply') != 1)hide @endif">
+                                {{--<label class="control-label"> Do you wish to submit an abstract and present at the Forum?</label>--}}
+                                {{--<div class="controls">--}}
+                                    {{--<label class="radio-inline"><input type="radio" name="apply" value="1"--}}
+                                                                       {{--@if(old('apply') == 1) checked @endif>Yes</label>--}}
+                                    {{--<label class="radio-inline"><input type="radio" name="apply" value="0"--}}
+                                                                       {{--@if(old('apply') == 0) checked @endif>No</label>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                            <input type="hidden" name="apply" value="1">
+                            <div class="applyContainer">
                                 <div class="form-group">
                                     <label class="control-label ">Resume/CV </label>
                                     <p class="control-label " >Paste the link to your online CV here (preferably LinkedIN if available) </p>

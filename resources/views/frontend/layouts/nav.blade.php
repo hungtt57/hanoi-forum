@@ -24,6 +24,9 @@
                 <li class="hidden-sm hidden-md hidden-lg {{Request::is('/register') ? 'active' : ''}}">
                     <a href="{{url('/register')}}" title="Register">Register</a>
                 </li>
+                <li class=" {{Request::is('/') ? 'active' : ''}}">
+                    <a href="{{url('/')}}" title="Register">Home</a>
+                </li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" title="About" data-hover="dropdown"
                        data-animations="zoomIn">About <span class="caret"></span></a>
