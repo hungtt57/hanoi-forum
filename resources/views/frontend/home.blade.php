@@ -11,7 +11,7 @@
     }
 
     .box-partner {
-        height: 210px;
+        height: 160px;
     }
     .text-banner {
         text-align: center; font-size: 12px; font-weight: bold
@@ -119,7 +119,7 @@
                                 Forum</h2>
                             <div class="sabbi-thumlinepost-card-meta">
 
-                                <p class="entry-text">
+                                <p class="entry-text" style="text-align: justify">
                                     Hanoi Forum is an international academic conference co-hosted by Vietnam National
                                     University, Hanoi (VNU) and Korea Foundation for Advanced Studies (KFAS). The
                                     general theme of Hanoi Forum is “Towards Sustainable Development”. Hanoi Forum aims
@@ -301,6 +301,7 @@
                     {{--</div>--}}
                 {{--</div>--}}
             </div>
+            <hr>
             @include('frontend.panels')
 
 

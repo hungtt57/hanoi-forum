@@ -5,8 +5,8 @@
             <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar"
                     data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span> <span
                         class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
-            <a class="navbar-brand" href="{{url('/')}}"><img alt="" class="img-responsive img-logo" style=""
-                                                             src="/frontend/hnforum_logo2.png"></a>
+            <a class="navbar-brand" href="{{url('/')}}"><img alt="" class="img-responsive img-logo" style="max-width: 320px"
+                                                             src="/frontend/hnforum_logo.png"></a>
 
         </div>
 
@@ -23,6 +23,9 @@
                 </li>
                 <li class="hidden-sm hidden-md hidden-lg {{Request::is('/register') ? 'active' : ''}}">
                     <a href="{{url('/register')}}" title="Register">Register</a>
+                </li>
+                <li>
+                    <a href="{{url('/')}}" title="Home">Home</a>
                 </li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" title="About" data-hover="dropdown"

@@ -35,11 +35,11 @@
 
     <style>
         @media (min-width: 1025px) and (max-width: 1280px) {
-            .img-logo {
-                width: 60%;
-            }
+            /*.img-logo {*/
+                /*width: 60%;*/
+            /*}*/
             #menu-main-nav{
-                font-size: 9px !important;
+                font-size: 11px !important;
             }
         }
         @media (min-width: 1400px) {
