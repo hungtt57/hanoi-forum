@@ -111,18 +111,18 @@
                                     </select>
                                 </div>
                             </div>
-                            {{--<div class="form-group">--}}
+                            <div class="form-group">
 
-                                {{--<label class="control-label"> Do you wish to submit an abstract and present at the Forum?</label>--}}
-                                {{--<div class="controls">--}}
-                                    {{--<label class="radio-inline"><input type="radio" name="apply" value="1"--}}
-                                                                       {{--@if(old('apply') == 1) checked @endif>Yes</label>--}}
-                                    {{--<label class="radio-inline"><input type="radio" name="apply" value="0"--}}
-                                                                       {{--@if(old('apply') == 0) checked @endif>No</label>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-                            <input type="hidden" name="apply" value="1">
-                            <div class="applyContainer">
+                                <label class="control-label"> Do you wish to submit an abstract and present at the Forum?</label>
+                                <div class="controls">
+                                    <label class="radio-inline"><input type="radio" name="apply" value="1"
+                                                                       @if(old('apply') == 1) checked @endif  @if(empty(old('apply'))) checked @endif>Yes</label>
+                                    <label class="radio-inline"><input type="radio" name="apply" value="0"
+                                                                       @if(old('apply') == 0 and !empty(old('apply'))) checked @endif>No</label>
+                                </div>
+                            </div>
+                            {{--<input type="hidden" name="apply" value="1">--}}
+                            <div class="applyContainer @if(old('apply') == 0 and !empty(old('apply'))) hide @endif" >
                                 <div class="form-group">
                                     <label class="control-label ">Resume/CV </label>
                                     <p class="control-label " >Paste the link to your online CV here (preferably LinkedIN if available) </p>
@@ -141,7 +141,16 @@
 
 
 
+                            <div class="form-group">
 
+                                <label class="control-label">  For the sake of networking, we wish to share the information given above and/or Linkedin profiles among the delegates. Do you agree to us sharing this information with the other delegates?</label>
+                                <div class="controls">
+                                    <label class="radio-inline"><input type="radio" name="share_info" value="1"
+                                                                       @if(old('share_info') == 1) checked @endif >Yes</label>
+                                    <label class="radio-inline"><input type="radio" name="share_info" value="0"
+                                                                       @if(old('share_info') == 0 ) checked @endif>No</label>
+                                </div>
+                            </div>
 
                             <div class="form-group">
                                 <div class="row">

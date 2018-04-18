@@ -127,12 +127,18 @@
                             <p class="__ad-num">144 Xuan Thuy Rd., Cau Giay dist.</p>
                         </div>
                     </address>
-                    <footer class="contact-info">
+                    <address>
                         <h3 class="entry-title">Contact Information</h3>
-
-                        <p class="__ad-num">Tel: (84) 24 37547670 - Ext: 723</p>
-                        <p class="__ad-num">Email: hanoiforum@vnu.edu.vn</p>
-                    </footer>
+                        <div class="address-entry">
+                            <p class="__ad-num">Tel: (84) 24 37547670 - Ext: 723</p>
+                            <p class="__ad-num">Email: hanoiforum@vnu.edu.vn</p>
+                        </div>
+                    </address>
+                    {{--<footer class="contact-info">--}}
+                        {{--<h3 class="entry-title">Contact Information</h3>--}}
+                        {{--<p class="__ad-num">Tel: (84) 24 37547670 - Ext: 723</p>--}}
+                        {{--<p class="__ad-num">Email: hanoiforum@vnu.edu.vn</p>--}}
+                    {{--</footer>--}}
                 </div>
             </div>
             <div class="col-sm-3">
@@ -141,8 +147,8 @@
                     <div class="widget-main">
                         <h2 class="widget-title">About</h2>
                         <ul class="list list-unstyled list-footer-nav">
-                            <li><a href="{{url('hanoi-forum')}}">Hanoi forum</a></li>
-                            <li><a href="{{url('hanoi-forum-2018')}}">Hanoi forum 2018</a></li>
+                            <li><a href="{{url('hanoi-forum')}}">Hanoi Forum</a></li>
+                            <li><a href="{{url('hanoi-forum-2018')}}">Hanoi Forum 2018</a></li>
 
                         </ul>
                     </div>

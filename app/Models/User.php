@@ -20,11 +20,17 @@ class User extends Authenticatable
     const MALE = 2;
     const FEMALE = 1;
     const NOT_SPECIFY = 0;
+
+    const WAIVED = 2;
+    const PAID = 1;
+    const UNPAID = 0;
+
     protected $fillable = [
         'name', 'email', 'password', 'type', 'phone','file',
         'first_name','last_name','title','affiliation','gender','nationality','link_cv','abstract','paper',
         'status','apply','code','reviewer_id','title_of_paper',
-        'confirm_abstract','confirm_paper','reject_abstract','reject_paper','comment_abstract','comment_paper'
+        'confirm_abstract','confirm_paper','reject_abstract','reject_paper','comment_abstract','comment_paper',
+        'share_info','payment_status'
     ];
 
     /**
