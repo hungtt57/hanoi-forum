@@ -146,9 +146,9 @@
                                 <label class="control-label">  For the sake of networking, we wish to share the information given above and/or Linkedin profiles among the delegates. Do you agree to us sharing this information with the other delegates?</label>
                                 <div class="controls">
                                     <label class="radio-inline"><input type="radio" name="share_info" value="1"
-                                                                       @if(old('share_info') == 1) checked @endif >Yes</label>
+                                                                       @if(old('share_info') == 1) checked @endif  @if(empty(old('share_info'))) checked @endif >Yes</label>
                                     <label class="radio-inline"><input type="radio" name="share_info" value="0"
-                                                                       @if(old('share_info') == 0 ) checked @endif>No</label>
+                                                                       @if(old('share_info') == 0 and !empty(old('share_info'))) checked @endif>No</label>
                                 </div>
                             </div>
 

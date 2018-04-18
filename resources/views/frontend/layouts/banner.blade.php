@@ -35,7 +35,7 @@ $agent = new \Jenssegers\Agent\Agent();
                                             {{--<div class="seq-meta" data-seq="">--}}
                                                 {{--<p class="seq-meta-text">Congratulations Dr Rushmore : his research to develop a new detection strategy for cancer has received a new National Health and Medical Research Council </p>--}}
                                             {{--</div>--}}
-                                            <p  class="btn-link btn-more" style="border-bottom: none !important;">READ MORE</p>
+                                            <p  class="btn-link btn-more" >READ MORE</p>
                                             </a>
                                         </div>
                                             @endif
@@ -52,7 +52,7 @@ $agent = new \Jenssegers\Agent\Agent();
                                         <div class="seq-meta" data-seq="">
                                             {{--<p class="seq-meta-text">HANOI, Vietnam – Vietnam National University, Hanoi (VNU) and Korea Foundation for Advanced Studies (KFAS) will co-host Hanoi Forum 2018, an international academic conference on climate change response and sustainable development, on November 8- 10, 2018 in Hanoi, Vietnam.</p>--}}
                                         </div>
-                                        <p  class="btn-link btn-more" style="border-bottom: none !important;">READ MORE</p>
+                                        <p  class="btn-link btn-more" >READ MORE</p>
                                         </a>
                                     </div>
                                             @endif
