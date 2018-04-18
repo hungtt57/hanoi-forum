@@ -67,18 +67,18 @@ $agent = new \Jenssegers\Agent\Agent();
                         <button type="button" class="seq-prev" style="background-color: transparent"></button>
                     </div>
 
-                    <ul role="navigation" aria-label="Pagination" class="seq-pagination">
-                        @foreach($banners as $banner)
+                    {{--<ul role="navigation" aria-label="Pagination" class="seq-pagination">--}}
+                        {{--@foreach($banners as $banner)--}}
 
-                            @if(!$agent->isMobile())
-                        <li class="seq-current">
-                            <a href="#step{{$banner->id}}" rel="step{{$banner->id}}" >
+                            {{--@if(!$agent->isMobile())--}}
+                        {{--<li class="seq-current">--}}
+                            {{--<a href="#step{{$banner->id}}" rel="step{{$banner->id}}" >--}}
 
-                            </a>
-                        </li>
-                            @endif
-                        @endforeach
-                    </ul>
+                            {{--</a>--}}
+                        {{--</li>--}}
+                            {{--@endif--}}
+                        {{--@endforeach--}}
+                    {{--</ul>--}}
                 </div>
             </div>
         </div>
