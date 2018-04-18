@@ -29,15 +29,15 @@ $agent = new \Jenssegers\Agent\Agent();
                                 @if($loop->index == 0)
                                     @if($posts)
                                         @if($posts->first())
-                                <div class="seq-content" >
-                                    <a href="{{url('post').'/'.str_slug($posts->first()->title).'-'.$posts->first()->id}}" style="border-bottom: none !important;" class="btn-link btn-more">
-                                    <h3 style="font-size: 25px;border-bottom: none !important;" class="seq-title font-2 tt_up" data-seq="">{{ $posts->first()->title }}</h3>
-                                    {{--<div class="seq-meta" data-seq="">--}}
-                                        {{--<p class="seq-meta-text">Congratulations Dr Rushmore : his research to develop a new detection strategy for cancer has received a new National Health and Medical Research Council </p>--}}
-                                    {{--</div>--}}
-                                    <p  class="btn-link btn-more" style="border-bottom: none !important;">READ MORE</p>
-                                    </a>
-                                </div>
+                                        <div class="seq-content" >
+                                            <a href="{{url('post').'/'.str_slug($posts->first()->title).'-'.$posts->first()->id}}" style="border-bottom: none !important;" class="btn-link btn-more">
+                                            <h3 style="font-size: 25px;border-bottom: none !important;" class="seq-title font-2 tt_up" data-seq="">{{ $posts->first()->title }}</h3>
+                                            {{--<div class="seq-meta" data-seq="">--}}
+                                                {{--<p class="seq-meta-text">Congratulations Dr Rushmore : his research to develop a new detection strategy for cancer has received a new National Health and Medical Research Council </p>--}}
+                                            {{--</div>--}}
+                                            <p  class="btn-link btn-more" style="border-bottom: none !important;">READ MORE</p>
+                                            </a>
+                                        </div>
                                             @endif
                                         @endif
                                     @endif
@@ -66,6 +66,19 @@ $agent = new \Jenssegers\Agent\Agent();
                         <button type="button" class="seq-next" style="background-color: transparent"></button>
                         <button type="button" class="seq-prev" style="background-color: transparent"></button>
                     </div>
+
+                    <ul role="navigation" aria-label="Pagination" class="seq-pagination">
+                        @foreach($banners as $banner)
+
+                            @if(!$agent->isMobile())
+                        <li class="seq-current">
+                            <a href="#step{{$banner->id}}" rel="step{{$banner->id}}" >
+
+                            </a>
+                        </li>
+                            @endif
+                        @endforeach
+                    </ul>
                 </div>
             </div>
         </div>
