@@ -14,7 +14,7 @@
                 <div class="row">
                     <div class="col-md-8 col-sm-5 col-md-offset-2 col-xs-12">
 
-                        <div class="">
+                        <div class="content-page">
                             <p>Hanoi Forum is an international academic conference co-hosted by Vietnam National
                                 University, Hanoi (VNU) and Korea Foundation for Advanced Studies (KFAS).</p>
 

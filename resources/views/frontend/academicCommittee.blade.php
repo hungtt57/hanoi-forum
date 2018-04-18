@@ -72,7 +72,7 @@
                                 <p>Affiliation(s): President, Korean Foundation for Advanced Studies (KFAS)
                                 </p>
 
-                                <p>Research areas:</p>
+                                <p>Research areas: Chinese language, literature and law</p>
                                 <div class="clearfix"></div>
                             </div>
 

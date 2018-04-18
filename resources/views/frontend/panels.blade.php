@@ -25,7 +25,7 @@
 
             <div class="sabbi-thumlinepost-card-meta">
                 <a href="{{url('climate-change-evidence-and-security')}}" style="color:inherit">
-                    <h2 class="meta-title ht-5">Climate change evidence and security</h2></a>
+                    <h2 class="meta-title ht-5">Panel 1: Climate change evidence and security</h2></a>
                 <p class="meta-text"></p>
                 <a href="{{url('climate-change-evidence-and-security')}}"
                    class="btn btn-unsolemn btn-action read-more">Read More</a>
@@ -43,7 +43,7 @@
             </a>
             <div class="sabbi-thumlinepost-card-meta">
                 <a href="{{url('humans-impact-climate')}}" style="color:inherit"><h2
-                            class="meta-title ht-5">Human impacts on climate</h2></a>
+                            class="meta-title ht-5">Panel 2: Human impacts on climate</h2></a>
 
                 <p class="meta-text"></p>
                 <a href="{{url('humans-impact-climate')}}" class="btn btn-unsolemn btn-action read-more">Read
@@ -61,7 +61,7 @@
             </a>
             <div class="sabbi-thumlinepost-card-meta">
                 <a href="{{url('climate-change-response')}}" style="color:inherit">
-                    <h2 class="meta-title ht-5">Climate change response</h2>
+                    <h2 class="meta-title ht-5">Panel 3: Climate change response</h2>
                 </a>
                 <p class="meta-text"></p>
                 <a href="{{url('climate-change-response')}}" class="btn btn-unsolemn btn-action read-more">Read
@@ -81,7 +81,7 @@
             <div class="sabbi-thumlinepost-card-meta">
                 <a href="{{url('policy-and-governance-of-climate-change-response-and-sustainability')}}"
                    style="color:inherit">
-                    <h2 class="meta-title ht-5">Policy and governance of climate change response and
+                    <h2 class="meta-title ht-5">Panel 4: Policy and governance of climate change response and
                         sustainability</h2>
                 </a>
                 <p class="meta-text"></p>
@@ -107,7 +107,7 @@
             <div class="sabbi-thumlinepost-card-meta">
                 <a href="{{url('science-technology-and-education-for-climate-change-response-and-sustainability')}}"
                    style="color:inherit">
-                    <h2 class="meta-title ht-5">Science, technology and education for climate change
+                    <h2 class="meta-title ht-5">Panel 5: Science, technology and education for climate change
                         response and sustainability</h2>
                 </a>
                 <p class="meta-text"></p>
@@ -129,7 +129,7 @@
 
             <div class="sabbi-thumlinepost-card-meta">
                 <a href="#" style="color:inherit">
-                    <h2 class="meta-title ht-5">Resources Management in Mekong Delta Region: An Institution
+                    <h2 class="meta-title ht-5"> Policy Dialogue 1: Resources Management in Mekong Delta Region: An Institution
                         Perspective
                     </h2>
                 </a>
@@ -153,7 +153,7 @@
 
             <div class="sabbi-thumlinepost-card-meta">
                 <a href="#" style="color:inherit">
-                    <h2 class="meta-title ht-5">Building Resilient and Safe City for Sustainable Development
+                    <h2 class="meta-title ht-5"> Policy Dialogue 2: Building Resilient and Safe City for Sustainable Development
                         in the Red
                         River Delta
                     </h2>

@@ -48,9 +48,6 @@
                         <p dir="ltr"><span id="docs-internal-guid-d256cacd-424c-5843-0204-ead9e8d81452"><b>4) Policy and governance of climate change response and sustainability:</b> Policies in response to climate change; International politics of climate change; International agreements on climate change policy; Strategies for sustainability; Human adaptive strategies.</span></p>
 
                         <p dir="ltr"><span id="docs-internal-guid-d256cacd-424c-5843-0204-ead9e8d81452"><b>5) Science, technology and education for climate change response and sustainability:</b> Education and awareness for management of global climate change; Higher education on climate change response; Alternative and renewable energy sources: technologies, policies, and strategies; Technologies of mitigation: carbon dioxide sequestration, solar shades, and other processes; Low carbon and green technology for climate change response and sustainable development.</span></p>
-                        &nbsp;
-
-
 
                     </div>
 

@@ -42,11 +42,13 @@
         <div class="container">
             <section class="bio__holder">
                 <div class="row">
+                    <div class="content-page">
                     <div class="col-md-8 col-sm-5 col-md-offset-2 col-xs-12">
                         <p class="title-text">Co-Chairs</p>
                         <p><strong>Assoc. Prof. Nguyen Kim Son, VNU, Vietnam</strong></p>
-                        <p><strong>Dr. Park In Kook, KFAS, South Korea</strong></p>
+                        <p><strong>Mr. Park In Kook, KFAS, South Korea</strong></p>
 
+                    </div>
                     </div>
 
                 </div>

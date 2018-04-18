@@ -13,7 +13,7 @@
             <section class="bio__holder">
                 <div class="row">
                     <div class="col-md-8 col-sm-5 col-md-offset-2 col-xs-12">
-                        <div>
+                        <div class="content-page">
                             <br />
                             <meta charset="utf-8" />
                             <p dir="ltr"><b id="docs-internal-guid-b6c1a49f-4260-03d7-8a24-c3a030a1033d">NEWS RELEASE </b></p>

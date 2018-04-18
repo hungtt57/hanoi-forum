@@ -49,7 +49,7 @@ $agent = new \Jenssegers\Agent\Agent();
 
                                         <h3 style="font-size: 25px" class="seq-title font-2 tt_up" data-seq="">Announcing Hanoi Forum 2018</h3>
                                         <div class="seq-meta" data-seq="">
-                                            <p class="seq-meta-text">HANOI, Vietnam – Vietnam National University, Hanoi (VNU) and Korea Foundation for Advanced Studies (KFAS) will co-host Hanoi Forum 2018, an international academic conference on climate change response and sustainable development, on November 8- 10, 2018 in Hanoi, Vietnam.</p>
+                                            {{--<p class="seq-meta-text">HANOI, Vietnam – Vietnam National University, Hanoi (VNU) and Korea Foundation for Advanced Studies (KFAS) will co-host Hanoi Forum 2018, an international academic conference on climate change response and sustainable development, on November 8- 10, 2018 in Hanoi, Vietnam.</p>--}}
                                         </div>
                                         <a href="{{url('post').'/'.str_slug($posts[1]->title).'-'.$posts[1]->id}}" class="btn-link btn-more">READ MORE</a>
                                     </div>

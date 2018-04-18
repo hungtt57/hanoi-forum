@@ -18,7 +18,7 @@
             <section class="bio__holder">
                 <div class="row">
                     <div class="col-md-8 col-sm-5 col-md-offset-2 col-xs-12">
-                        <div>
+                        <div class="content-page">
                             <p align="center"><strong>Chairman</strong></p>
 
                             <p><strong>NGUYEN Kim Son</strong><strong>,</strong> <strong>Assoc. Professor</strong></p>

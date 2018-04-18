@@ -30,6 +30,7 @@
     <link href="/frontend/assets/css/main.css" rel="stylesheet">
     <link href="/frontend/assets/css/style.css" rel="stylesheet">
     <script src="/frontend/assets/js/vendor/modernizr-2.8.3.min.js"></script>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     @stack('styles')
 
 
@@ -60,6 +61,9 @@
             text-transform: uppercase;
             font-weight: bold;
             font-size: 14px;
+        }
+        .content-page {
+            text-align: justify;
         }
     </style>
 
@@ -139,8 +143,8 @@
                     <div class="widget-main">
                         <h2 class="widget-title">About</h2>
                         <ul class="list list-unstyled list-footer-nav">
-                            <li><a href="{{url('hanoi-forum')}}">HANOI FORUM</a></li>
-                            <li><a href="{{url('hanoi-forum-2018')}}">HANOI FORUM 2018</a></li>
+                            <li><a href="{{url('hanoi-forum')}}">Hanoi forum</a></li>
+                            <li><a href="{{url('hanoi-forum-2018')}}">Hanoi forum 2018</a></li>
 
                         </ul>
                     </div>
@@ -149,9 +153,9 @@
                     <div class="widget-main">
                         <h2 class="widget-title">PROGRAM</h2>
                         <ul class="list list-unstyled list-footer-nav">
-                            <li><a href="{{url('important-dates')}}">IMPORTANT DATES</a></li>
-                            <li><a href="{{url('forum-program')}}">FORUM PROGRAM</a></li>
-                            <li><a href="{{url('keynote-speakers')}}">KEYNOTE SPEAKERS</a></li>
+                            <li><a href="{{url('important-dates')}}">Important dates</a></li>
+                            <li><a href="{{url('forum-program')}}">Forum program</a></li>
+                            <li><a href="{{url('keynote-speakers')}}">Keynote speakers</a></li>
 
                         </ul>
                     </div>
@@ -221,6 +225,63 @@
         </div>
     </div>
 </footer><!-- /.section-footer -->
+
+
+<style>
+    #return-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.7);
+        width: 50px;
+        height: 50px;
+        display: block;
+        text-decoration: none;
+        -webkit-border-radius: 35px;
+        -moz-border-radius: 35px;
+        border-radius: 35px;
+        display: none;
+        -webkit-transition: all 0.3s linear;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+    #return-to-top i {
+        color: #fff;
+        margin: 0;
+        position: relative;
+        left: 16px;
+        top: 13px;
+        font-size: 19px;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+    #return-to-top:hover {
+        background: rgba(0, 0, 0, 0.9);
+    }
+    #return-to-top:hover i {
+        color: #fff;
+        top: 5px;
+    }
+
+
+</style>
+
+<a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+
+
+
+
+
+
+
+
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script>
   window.jQuery || document.write('<script src="/frontend/assets/js/vendor/jquery-1.11.2.min.js"><\/script>')
@@ -244,6 +305,22 @@
   }
 
   window.addEventListener('scroll', resizeHeaderOnScroll);
+
+</script>
+<script>
+  // ===== Scroll to Top ====
+  $(window).scroll(function() {
+    if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+      $('#return-to-top').fadeIn(200);    // Fade in the arrow
+    } else {
+      $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+    }
+  });
+  $('#return-to-top').click(function() {      // When arrow is clicked
+    $('body,html').animate({
+      scrollTop : 0                       // Scroll to top of body
+    }, 300);
+  });
 </script>
 </body>
 

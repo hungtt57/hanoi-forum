@@ -13,8 +13,7 @@
             <section class="bio__holder">
                 <div class="row">
                     <div class="col-md-8 col-sm-5 col-md-offset-2 col-xs-12">
-
-                    <div>
+                        <div class="content-page">
                         <p>Hanoi Forum 2018 focuses on the study of human ecology, climate change response and governance of natural resources, thus titled &ldquo;Climate Change Response for Sustainability and Security&rdquo;. The Forum facilitates inter-national academic exchange and discussion in order to increase the effectiveness of climate change response and contribute to realize the goal of sustainable development at the global, regional and national levels. It aims to bring together scientists, policy makers, managers, and entrepreneurs from all over the world to engage in interdisciplinary conversations of natural resources management, energy, infrastructure, economics, and science and technology, to name a few, in order to:</p>
 
                         <p>- Identify and analyze evidence, best practices, successful factors and lessons learned from climate change response for sustainable development;</p>

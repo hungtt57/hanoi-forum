@@ -13,7 +13,7 @@
             <section class="bio__holder">
                 <div class="row">
                     <div class="col-md-8 col-sm-5 col-md-offset-2 col-xs-12">
-                        <div>
+                        <div class="content-page">
                             <h1 dir="ltr"><b id="docs-internal-guid-d256cacd-424c-5843-0204-ead9e8d81452">ORGANIZERS</b></h1>
 
                             <h2 dir="ltr"><span id="docs-internal-guid-d256cacd-424c-5843-0204-ead9e8d81452">Steering Committee</span></h2>

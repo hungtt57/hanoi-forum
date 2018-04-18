@@ -12,6 +12,7 @@
         <div class="container">
             <section class="bio__holder">
                 <div class="row">
+                    <div class="content-page">
                     <div class="col-md-8 col-sm-5 col-md-offset-2 col-xs-12">
                         <br />
                         <meta charset="utf-8" />
@@ -155,6 +156,8 @@
                         <p dir="ltr"><b id="docs-internal-guid-d256cacd-4251-d339-43fc-a41e9f05f834"></b></p>
 
                     </div>
+                    </div>
+
 
                 </div>
             </section><!-- /.bio__holder -->
