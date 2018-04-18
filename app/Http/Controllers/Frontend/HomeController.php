@@ -123,11 +123,13 @@ class HomeController extends AdminController
     public function vefiryEmail(Request $request)
     {
         $code = $request->input('code');
+        $user= null;
         if ($code) {
-            $user = User::where('code', $code)->update(['status' => 1]);
+            $user = User::where('code', $code)->first();
+            $user->update(['status' => 1]);
         }
 
-        return view('frontend.verifyEmail');
+        return view('frontend.verifyEmail',compact('user'));
     }
 
     public function about()

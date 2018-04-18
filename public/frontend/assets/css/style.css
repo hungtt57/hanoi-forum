@@ -1491,11 +1491,11 @@ body .mb_100 {
 }
 
 .ol-timeline li.tl-item:nth-child(4) .item-section:after {
-    background-color: #6597db;
+    background-color: #184daa;
 }
 
 .ol-timeline li.tl-item:nth-child(4) .title {
-    color: #6597db;
+    color: #184daa;
 }
 
 .ol-timeline .item-section {
@@ -2780,8 +2780,8 @@ a.link-with-icon i.fa {
 
 .section-footer .widget-title {
     margin: 15px 0;
-    font-size: 16px;
-    font-size: 1.14286rem;
+    font-size: 14px;
+    /*font-size: 1.14286rem;*/
 }
 
 .section-footer .footer-bar {

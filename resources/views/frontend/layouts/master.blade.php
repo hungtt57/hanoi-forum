@@ -65,6 +65,9 @@
         .content-page {
             text-align: justify;
         }
+        .footer-c3 {
+            margin-left: 10px;
+        }
     </style>
 
 
@@ -143,16 +146,16 @@
             </div>
             <div class="col-sm-3">
 
-                <section class="widget widget_sec">
-                    <div class="widget-main">
-                        <h2 class="widget-title">About</h2>
-                        <ul class="list list-unstyled list-footer-nav">
-                            <li><a href="{{url('hanoi-forum')}}">Hanoi Forum</a></li>
-                            <li><a href="{{url('hanoi-forum-2018')}}">Hanoi Forum 2018</a></li>
+                {{--<section class="widget widget_sec">--}}
+                    {{--<div class="widget-main">--}}
+                        {{--<h2 class="widget-title">About</h2>--}}
+                        {{--<ul class="list list-unstyled list-footer-nav">--}}
+                            {{--<li><a href="{{url('hanoi-forum')}}">Hanoi Forum</a></li>--}}
+                            {{--<li><a href="{{url('hanoi-forum-2018')}}">Hanoi Forum 2018</a></li>--}}
 
-                        </ul>
-                    </div>
-                </section>
+                        {{--</ul>--}}
+                    {{--</div>--}}
+                {{--</section>--}}
                 <section class="widget widget_sec">
                     <div class="widget-main">
                         <h2 class="widget-title">PROGRAM</h2>
@@ -164,6 +167,32 @@
                         </ul>
                     </div>
                 </section>
+                <section class="widget widget_sec">
+                    <div class="widget-main">
+                        <h2 class="widget-title"><a href="{{url('/')}}"> FAQ </a></h2>
+
+                    </div>
+                </section>
+
+                <section class="widget widget_sec">
+                    <div class="widget-main">
+                        <h2 class="widget-title"><a href="{{url('/')}}"> Contact Us </a></h2>
+
+                    </div>
+                </section>
+                {{--<section class="widget widget_sec">--}}
+                    {{--<div class="widget-main">--}}
+                        {{--<h2 class="widget-title"><a href="{{url('publication')}}">PUBLICATION </a></h2>--}}
+
+                    {{--</div>--}}
+                {{--</section>--}}
+                {{--<section class="widget widget_sec">--}}
+                    {{--<div class="widget-main">--}}
+                        {{--<h2 class="widget-title"><a href="{{url('news')}}"> News</a></h2>--}}
+
+                    {{--</div>--}}
+                {{--</section>--}}
+
 
             </div>
             <div class="col-sm-3">
@@ -174,43 +203,70 @@
                             <li><a href="{{url('steering-committee')}}">Steering Committee</a></li>
                             <li><a href="{{url('organizing-committee')}}">Organizing Committee</a></li>
                             <li><a href="{{url('academic-committee')}}">Academic Committee</a></li>
-                            <li><a href="{{url('sponsors')}}">Sponsors</a></li>
+                            {{--<li><a href="{{url('sponsors')}}">Sponsors</a></li>--}}
                         </ul>
                     </div>
                 </section>
+
+                <section class="widget widget_sec">
+                    <div class="widget-main">
+                        <h2 class="widget-title">Visa to Vietnam</h2>
+                        <ul class="list list-unstyled list-footer-nav">
+                            <li><a href="">Visa exemption</a></li>
+                            <li><a href="">Visa on arrival</a></li>
+                            <li><a href="">Application for visa</a></li>
+
+                        </ul>
+                    </div>
+                </section>
+
+                {{--<section class="widget widget_sec">--}}
+                    {{--<div class="widget-main">--}}
+                        {{--<h2 class="widget-title"><a href="{{url('/')}}">Multimedia</a></h2>--}}
+
+                    {{--</div>--}}
+                {{--</section>--}}
+
+
 
             </div>
             <div class="col-sm-3">
                 <section class="widget widget_sec">
                     <div class="widget-main">
-                        <h2 class="widget-title"><a href="{{url('publication')}}">PUBLICATION </a></h2>
-
+                        <h2 class="widget-title">Transportation</h2>
+                        <ul class="list list-unstyled list-footer-nav">
+                            <li><a href="">From-and-to Noi Bai airport</a></li>
+                            {{--<li class="footer-c3"><a href="">Door-to-door pickup</a></li>--}}
+                            {{--<li class="footer-c3"><a href="">Shuttle bus</a></li>--}}
+                            <li><a href="">Around Hanoi city</a></li>
+                            {{--<li class="footer-c3"><a href="">Public transportation</a></li>--}}
+                            {{--<li class="footer-c3"><a href="">Taxi</a></li>--}}
+                            {{--<li class="footer-c3"><a href="">GrabCar</a></li>--}}
+                        </ul>
                     </div>
                 </section>
                 <section class="widget widget_sec">
                     <div class="widget-main">
-                        <h2 class="widget-title"><a href="{{url('news')}}"> News</a></h2>
-
+                        <h2 class="widget-title"><a href=""> Accommodation </a></h2>
                     </div>
                 </section>
                 <section class="widget widget_sec">
                     <div class="widget-main">
-                        <h2 class="widget-title"><a href="{{url('/')}}">Multimedia</a></h2>
-
+                        <h2 class="widget-title"><a href=""> Venue </a></h2>
                     </div>
                 </section>
                 <section class="widget widget_sec">
                     <div class="widget-main">
-                        <h2 class="widget-title"><a href="{{url('/')}}"> FAQ </a></h2>
-
+                        <h2 class="widget-title">Visiting Hanoi city</h2>
+                        <ul class="list list-unstyled list-footer-nav">
+                            <li><a href="">Tourist Attractions</a></li>
+                            <li><a href="">Weather</a></li>
+                        </ul>
                     </div>
                 </section>
-                <section class="widget widget_sec">
-                    <div class="widget-main">
-                        <h2 class="widget-title"><a href="{{url('/')}}"> Contact Us </a></h2>
 
-                    </div>
-                </section>
+
+
             </div>
         </div>
         <div id="site-footer-bar" class="footer-bar mt_30">
