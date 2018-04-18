@@ -209,7 +209,7 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="row">
-                                    <h4 style="text-align: center; color: #0045D1; font-weight: bold">ORGANIZERS</h4>
+                                    <h4 style="text-align: center; font-weight: bold">ORGANIZERS</h4>
 
                                     <div class="col-sm-6">
 
@@ -229,7 +229,7 @@
                             </div>
                             <div class="col-sm-6">
                                 <div class="row">
-                                    <h4 style="text-align: center; color: #0045D1; font-weight: bold">PARTNERS</h4>
+                                    <h4 style="text-align: center; font-weight: bold">PARTNERS</h4>
 
                                         <div class="col-sm-3 box-partner">
 

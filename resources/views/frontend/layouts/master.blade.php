@@ -113,28 +113,26 @@
 <footer class="section-footer mt_25">
     <div class="container">
         <div class="row">
-
             <div class="col-sm-3">
                 <div class="footer-site-info">
                     {{--<header>--}}
-                    {{--<a class="footer-brand" href="index.html"><img alt="" class="img-responsive" src="assets/img/site-logo.png"></a>--}}
+                        {{--<a class="footer-brand" href="index.html"><img alt="" class="img-responsive" src="assets/img/site-logo.png"></a>--}}
                     {{--</header>--}}
                     <address>
-                        <h3 class="entry-title">Contact Information</h3>
+                        <h3 class="entry-title">Address</h3>
                         <div class="address-entry">
                             <p class="__adtext">Hanoi Forum Secretariat</p>
                             <p class="__ad-num">R1006, Administration Building</p>
                             <p class="__ad-num">Vietnam National University, Hanoi</p>
-                            <p class="__ad-num">144 Xuan Thuy, Cau Giay</p>
-                            <p class="__ad-num">Tel: (84) 24 37547670 - Ext: 723</p>
-                            <p class="__ad-num">Email: hanoiforum@vnu.edu.vn</p>
+                            <p class="__ad-num">144 Xuan Thuy Rd., Cau Giay dist.</p>
                         </div>
                     </address>
-                    {{--<footer class="contact-info">--}}
-                    {{--<h3 class="entry-title">Contact Information</h3>--}}
-                    {{--<p class="__ci_num">Call: <span>+61(07)373 53921</span></p>--}}
-                    {{--<p class="__ci_num">Email: <span>rushmore@mail.com</span></p>--}}
-                    {{--</footer>--}}
+                    <footer class="contact-info">
+                        <h3 class="entry-title">Contact Information</h3>
+
+                        <p class="__ad-num">Tel: (84) 24 37547670 - Ext: 723</p>
+                        <p class="__ad-num">Email: hanoiforum@vnu.edu.vn</p>
+                    </footer>
                 </div>
             </div>
             <div class="col-sm-3">

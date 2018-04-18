@@ -30,12 +30,13 @@ $agent = new \Jenssegers\Agent\Agent();
                                     @if($posts)
                                         @if($posts->first())
                                 <div class="seq-content" >
-
-                                    <h3 style="font-size: 25px" class="seq-title font-2 tt_up" data-seq="">{{ $posts->first()->title }}</h3>
+                                    <a href="{{url('post').'/'.str_slug($posts->first()->title).'-'.$posts->first()->id}}" style="border-bottom: none !important;" class="btn-link btn-more">
+                                    <h3 style="font-size: 25px;border-bottom: none !important;" class="seq-title font-2 tt_up" data-seq="">{{ $posts->first()->title }}</h3>
                                     {{--<div class="seq-meta" data-seq="">--}}
                                         {{--<p class="seq-meta-text">Congratulations Dr Rushmore : his research to develop a new detection strategy for cancer has received a new National Health and Medical Research Council </p>--}}
                                     {{--</div>--}}
-                                    <a href="{{url('post').'/'.str_slug($posts->first()->title).'-'.$posts->first()->id}}" class="btn-link btn-more">READ MORE</a>
+                                    <p  class="btn-link btn-more" style="border-bottom: none !important;">READ MORE</p>
+                                    </a>
                                 </div>
                                             @endif
                                         @endif
@@ -46,12 +47,13 @@ $agent = new \Jenssegers\Agent\Agent();
                                         @if($posts[1])
 
                                     <div class="seq-content" >
-
-                                        <h3 style="font-size: 25px" class="seq-title font-2 tt_up" data-seq="">Announcing Hanoi Forum 2018</h3>
+                                        <a href="{{url('post').'/'.str_slug($posts[1]->title).'-'.$posts[1]->id}}"  style="border-bottom: none !important;"  class="btn-link btn-more">
+                                        <h3 style="font-size: 25px;border-bottom: none !important;" class="seq-title font-2 tt_up" data-seq="">Announcing Hanoi Forum 2018</h3>
                                         <div class="seq-meta" data-seq="">
                                             {{--<p class="seq-meta-text">HANOI, Vietnam – Vietnam National University, Hanoi (VNU) and Korea Foundation for Advanced Studies (KFAS) will co-host Hanoi Forum 2018, an international academic conference on climate change response and sustainable development, on November 8- 10, 2018 in Hanoi, Vietnam.</p>--}}
                                         </div>
-                                        <a href="{{url('post').'/'.str_slug($posts[1]->title).'-'.$posts[1]->id}}" class="btn-link btn-more">READ MORE</a>
+                                        <p  class="btn-link btn-more" style="border-bottom: none !important;">READ MORE</p>
+                                        </a>
                                     </div>
                                             @endif
                                             @endif

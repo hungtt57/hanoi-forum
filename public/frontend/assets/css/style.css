@@ -143,8 +143,8 @@ html {
 
 body {
     font-size: 1rem;
-    font-family: 'Noto Sans', sans-serif;
-    /*font-family: "Open Sans", sans-serif;*/
+    /*font-family: 'Noto Sans', sans-serif;*/
+    font-family: "Open Sans", sans-serif;
     color: #000000;
     background-color: #ffffff;
     line-height: 1.788;
@@ -1475,19 +1475,19 @@ body .mb_100 {
 }
 
 .ol-timeline li.tl-item:nth-child(2) .item-section:after {
-    background-color: #ffbf13;
+    background-color: #f9d500;
 }
 
 .ol-timeline li.tl-item:nth-child(2) .title {
-    color: #ffbf13;
+    color:  #f9d500;
 }
 
 .ol-timeline li.tl-item:nth-child(3) .item-section:after {
-    background-color: #ff8080;
+    background-color:  #d82e12 ;
 }
 
 .ol-timeline li.tl-item:nth-child(3) .title {
-    color: #ff8080;
+    color: #d82e12  ;
 }
 
 .ol-timeline li.tl-item:nth-child(4) .item-section:after {
