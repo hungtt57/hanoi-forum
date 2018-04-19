@@ -1,6 +1,7 @@
 @extends('frontend.layouts.master')
 @section('title','Home')
 @section('content')
+    
     <header class="sabbi-page-header page-header-lg"
             style="background-image: url('{{url('frontend/anhbaiviet/faq.png')}}');
     background-size: cover;
