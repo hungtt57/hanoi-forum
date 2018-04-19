@@ -87,11 +87,13 @@ class HomeController extends AdminController
 <p>After the verification, you can log into your account and submit your abstract.</p><p>Registration fee is USD100 and includes access to all sessions and side events, welcome dinner, refreshments during the conference and conference materials. Registration fee will automatically be waived to delegates with accepted abstracts.</p>
 ')->with('hideform','yes');
             } else {
-                return redirect()->back()->with('success', '<p>Thank you for your registration. An automatic confirmation has been sent to your email address. You should check your junk mail in case you do not receive this email. Please click on the provided link in the email to activate your account. Please contact us directly at hanoiforum@vnu.edu.vn if you do not receive a confirmation within 24 hours.</p>
+                return redirect()->back()->with('success', '
+<p>Thank you for your registration. An automatic confirmation has been sent to your email address. You should check your junk mail in case you do not receive this email. Please click on the provided link in the email to activate your account. Please contact us directly at hanoiforum@vnu.edu.vn if you do not receive a confirmation within 24 hours.</p>
 
 <p>After the verification, you can log into your account, and manage your information and setting.</p>
 
 <p>You can pay the registration fee until October 20, 2018 by logging onto your account. The registration fee is USD100 and includes access to all sessions and side events, welcome dinner, refreshments during the event, and the event materials.</p>
+<p>Limited financial support for registration is available and on a first come first served basis.</p>
 ')->with('hideform','yes');
             }
 
