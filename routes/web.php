@@ -138,6 +138,18 @@ Route::group([
             Route::get('/delete/{id}', ['as' => 'delete', 'uses' => 'PostController@delete']);
         });
         Route::group([
+            'prefix' => 'articles',
+            'as' => 'article@'
+        ], function () {
+            Route::get('/', ['as' => 'index', 'uses' => 'ArticleController@index']);
+            Route::get('/datatables', ['as' => 'datatables', 'uses' => 'ArticleController@datatables']);
+            Route::get('/add', ['as' => 'add', 'uses' => 'ArticleController@create']);
+            Route::post('/store', ['as' => 'store', 'uses' => 'ArticleController@store']);
+            Route::post('/update/{id}', ['as' => 'update', 'uses' => 'ArticleController@update']);
+            Route::get('/edit/{id}', ['as' => 'edit', 'uses' => 'ArticleController@edit']);
+            Route::get('/delete/{id}', ['as' => 'delete', 'uses' => 'ArticleController@delete']);
+        });
+        Route::group([
             'prefix' => 'banners',
             'as' => 'banner@'
         ], function () {

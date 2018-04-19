@@ -36,6 +36,22 @@
                         </li>
                     </ul>
                 </li>
+
+                <li class=" treeview {{ (Request::is('admin/articles/*') ||  Request::is('admin/articles')) ? 'active' : '' }}">
+                    <a href="#">
+                        <i class="fa fa-dashboard"></i> <span>Manager Articles</span>
+                        <span class="pull-right-container">
+                                 <i class="fa fa-angle-left pull-right"></i>
+                         </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li class="{{ (Request::is('admin/articles')) ? 'active' : '' }}"><a href="{{url('admin/articles')}}"><i
+                                        class="fa fa-circle-o"></i> List Articles</a></li>
+                        <li class="{{ (Request::is('admin/articles/add')) ? 'active' : '' }}"><a
+                                    href="{{url('admin/articles/add')}}"><i class="fa fa-circle-o"></i> Add New Article</a>
+                        </li>
+                    </ul>
+                </li>
                 <li class=" treeview {{ (Request::is('admin/reviewer/*') ||  Request::is('admin/reviewer')) ? 'active' : '' }}">
                     <a href="#">
                         <i class="fa fa-dashboard"></i> <span>Manager Reviewers</span>
