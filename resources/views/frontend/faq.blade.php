@@ -7,7 +7,7 @@
     background-repeat: no-repeat;">
         <div class="page-header-content conternt-center">
             <div class="header-title-block">
-                <h1 class="page-title">FAQ</h1>
+                <h1 class="page-title">FAQs</h1>
             </div>
         </div>
     </header>
