@@ -56,14 +56,18 @@
 
                                 <p>We encourage research that approach the Forum&rsquo;s theme from a variety of perspectives, and submission of other topics for consideration is welcome. Abstracts can be submitted through the Forum website at <a href="{{url('/')}}">{{url('/')}}</a>.</p>
 
-                                <ol style="list-style-type:circle;">
+                                <ol >
                                     <li value="7">Can I apply for financial support for accommodation?</li>
-                                    <li>of accepted papers can be provided with accommodation. Affordable options for short-term stay are also available nearby Hanoi Forum&rsquo;s venue. You can find further information <a href="#">here</a> on the website.</li>
-                                    <li value="8">Where can I stay during the Forum?</li>
+
+
                                 </ol>
+                                <p>Author of accepted papers can be provided with accommodation. Affordable options for short-term stay are also available nearby Hanoi Forum&rsquo;s venue. You can find further information <a href="#">here</a> on the website.</p>
+                                    <ol>
+                                        <li value="8">Where can I stay during the Forum?</li>
+
+                                    </ol>
 
                                 <p>There are several high quality and beautiful hotels nearby the Forum venue. You can find further information <a href="#">here</a> on the website.</p>
-
                                 <ol>
                                     <li value="9">I am an invited speaker at Hanoi Forum 2018. Can I bring an accompanying person?</li>
                                 </ol>
