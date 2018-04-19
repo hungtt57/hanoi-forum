@@ -1,5 +1,5 @@
 @php $banners =  Cache::rememberForever('banners', function() {
-                        return  \App\Models\Banner::orderBy('order', 'DESC')->limit(2)->get();
+                        return  \App\Models\Banner::orderBy('order', 'DESC')->get();
                      });
 $agent = new \Jenssegers\Agent\Agent();
 
