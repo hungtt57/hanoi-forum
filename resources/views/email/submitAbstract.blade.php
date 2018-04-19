@@ -7,8 +7,7 @@
 <p>Dear {{ucfirst($user->title)}}. {{ucfirst ($user->last_name)}},</p>
 <p>This email is to confirm that we have received your abstract. A copy of your submission is as follows:</p>
 <p>{!! $user->abstract !!}</p>
-<p>Your abstract will be reviewed by the Academic Committee. Notification of the result will be announced by June 8,
-    2018.
+<p>Your abstract will be reviewed by the Academic Committee. Notification of the result will be announced by July 15, 2018.
 </p>
 <p> Thank you for your interest in Hanoi Forum 2018.</p>
 <p> Regards,</p>
