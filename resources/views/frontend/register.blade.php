@@ -29,7 +29,7 @@
 
                     <div class="col-md-8 col-sm-5 col-md-offset-2 col-xs-12">
                         @include('admin.flash_message')
-
+                        @if(!session()->has('hideform'))
                         <form id="login-form" action="{{route('Frontend::postRegister')}}" method="post" role="form"
                               enctype="multipart/form-data">
                             {{ csrf_field() }}
@@ -163,6 +163,7 @@
                             </div>
 
                         </form>
+                            @endif
                     </div>
 
                 </div>

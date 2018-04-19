@@ -67,6 +67,8 @@ class HomeController extends AdminController
             $data['status'] = 0;
             $code = '';
             $count = 1;
+            $data['title'] = rtrim($data['title'],'.');
+            $data['title'] = rtrim($data['title'],',');
             do {
                 $code = str_random(5);
                 $count = User::where('code', $code)->count();
@@ -83,14 +85,14 @@ class HomeController extends AdminController
             if ($data['apply'] == 1) {
                 return redirect()->back()->with('success', '<p>Thank you for your registration. An automatic confirmation has been sent to your email address. You should check your junk mail in case you do not receive it. Please click on the provided link in the email to activate your account. Please contact us directly at hanoiforum@vnu.edu.vn if you do not receive a confirmation within 24 hours.</p>
 <p>After the verification, you can log into your account and submit your abstract.</p><p>Registration fee is USD100 and includes access to all sessions and side events, welcome dinner, refreshments during the conference and conference materials. Registration fee will automatically be waived to delegates with accepted abstracts.</p>
-');
+')->with('hideform','yes');
             } else {
                 return redirect()->back()->with('success', '<p>Thank you for your registration. An automatic confirmation has been sent to your email address. You should check your junk mail in case you do not receive this email. Please click on the provided link in the email to activate your account. Please contact us directly at hanoiforum@vnu.edu.vn if you do not receive a confirmation within 24 hours.</p>
 
 <p>After the verification, you can log into your account, and manage your information and setting.</p>
 
 <p>You can pay the registration fee until October 20, 2018 by logging onto your account. The registration fee is USD100 and includes access to all sessions and side events, welcome dinner, refreshments during the event, and the event materials.</p>
-');
+')->with('hideform','yes');
             }
 
         } catch (\Exception $ex) {
