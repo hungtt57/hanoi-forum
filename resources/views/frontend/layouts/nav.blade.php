@@ -91,7 +91,7 @@
                     <a href="{{url('/')}}" title="Multimedia">Multimedia</a>
                 </li>
                 <li>
-                    <a href="{{url('/')}}" title="FAQ">FAQ</a>
+                    <a href="{{url('/faq')}}" title="FAQ">FAQ</a>
                 </li>
                 <li>
                     <a href="{{url('/contact-us')}}" title="Contact Us">Contact Us</a>

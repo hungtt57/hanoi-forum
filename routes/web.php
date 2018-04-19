@@ -56,6 +56,7 @@ Route::group([
     Route::get('sponsors', 'HomeController@sponsor');
 
     Route::get('news', 'HomeController@news');
+    Route::get('faq', 'HomeController@faq');
 
     //panel
     Route::get('climate-change-evidence-and-security', 'HomeController@climateChangeEvidenceAndSecurity');
