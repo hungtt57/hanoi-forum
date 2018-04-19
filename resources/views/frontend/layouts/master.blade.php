@@ -169,7 +169,7 @@
                 </section>
                 <section class="widget widget_sec">
                     <div class="widget-main">
-                        <h2 class="widget-title"><a href="{{url('/faq')}}"> FAQ </a></h2>
+                        <h2 class="widget-title"><a href="{{url('/faq')}}"> FAQs </a></h2>
 
                     </div>
                 </section>

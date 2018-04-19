@@ -10,7 +10,7 @@ class Article extends Model
     public $table = 'articles';
 
     public static $typeText = [
-        'faq' => 'FAQ',
+        'faq' => 'FAQs',
 //      'hanoi-forum' => 'Hanoi forum',
 //        'hanoi-forum-2018' => 'Hanoi forum 2018',
 

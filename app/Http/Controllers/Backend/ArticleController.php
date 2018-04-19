@@ -80,11 +80,10 @@ class ArticleController extends AdminController
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'title' => 'required',
+
             'content' => 'required',
 
         ], [
-            'title.required' => 'Please enter title',
             'content.required' => 'Please enter content',
         ]);
         $data = $request->all();
