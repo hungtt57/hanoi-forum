@@ -251,7 +251,7 @@
                                         </div>
                                         <div class="col-sm-3 box-partner" >
 
-                                            <img src="http://smartindustry.vn/wp-content/uploads/logo/VAST.png" class="img-responsive center-block img2" style="max-height: 80px">
+                                            <img src="/frontend/VAST_1.png" class="img-responsive center-block img2" style="max-height: 80px">
 
                                             <p class="text-banner">Vietnam Academy Of Science And Technology</p>
 
