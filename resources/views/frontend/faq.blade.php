@@ -30,7 +30,7 @@
                                     <li value="2">Can I attend the Forum without registration?</li>
                                 </ol>
 
-                                <p>We want to make sure that you will get the best service possible. To help us do so, registration is required. You can register <a href="https://hanoiforum.vnu.edu.vn/">here</a> (link với Register) on our website.</p>
+                                <p>We want to make sure that you will get the best service possible. To help us do so, registration is required. You can register <a href="{{url('register')}}">here</a> on our website.</p>
 
                                 <ol>
                                     <li value="3">Can I get financial support for registration?</li>
@@ -54,15 +54,15 @@
                                     <li value="6">I am not sure whether my research fits the Forum, should I submit an abstract?</li>
                                 </ol>
 
-                                <p>We encourage research that approach the Forum&rsquo;s theme from a variety of perspectives, and submission of other topics for consideration is welcome. Abstracts can be submitted through the Forum website at <a href="https://hanoiforum.vnu.edu.vn">https://hanoiforum.vnu.edu.vn</a>.</p>
+                                <p>We encourage research that approach the Forum&rsquo;s theme from a variety of perspectives, and submission of other topics for consideration is welcome. Abstracts can be submitted through the Forum website at <a href="{{url('/')}}">{{url('/')}}</a>.</p>
 
                                 <ol style="list-style-type:circle;">
                                     <li value="7">Can I apply for financial support for accommodation?</li>
-                                    <li>of accepted papers can be provided with accommodation. Affordable options for short-term stay are also available nearby Hanoi Forum&rsquo;s venue. You can find further information <a href="https://www.booking.com">here</a> (link với Accommodation) on the website.</li>
+                                    <li>of accepted papers can be provided with accommodation. Affordable options for short-term stay are also available nearby Hanoi Forum&rsquo;s venue. You can find further information <a href="#">here</a> on the website.</li>
                                     <li value="8">Where can I stay during the Forum?</li>
                                 </ol>
 
-                                <p>There are several high quality and beautiful hotels nearby the Forum venue. You can find further information <a href="https://www.booking.com">here</a> (link với Accommodation) on the website.</p>
+                                <p>There are several high quality and beautiful hotels nearby the Forum venue. You can find further information <a href="#">here</a> on the website.</p>
 
                                 <ol>
                                     <li value="9">I am an invited speaker at Hanoi Forum 2018. Can I bring an accompanying person?</li>
@@ -74,7 +74,7 @@
                                     <li value="10">Will the Forum offer pick-up service at the airport?</li>
                                 </ol>
 
-                                <p>Due to limited resources, we are unable to provide airport pick-up service to all delegates. You can conveniently get a taxi or a bus from Noi Bai international airport to Hanoi city center. Further information about transportation can be found <a href="https://www.vietnamonline.com/transport/taxi-from-hanoi-airport-noi-bai-to-city-center.html">here</a> (link với Transportation) on the website.</p>
+                                <p>Due to limited resources, we are unable to provide airport pick-up service to all delegates. You can conveniently get a taxi or a bus from Noi Bai international airport to Hanoi city center. Further information about transportation can be found <a href="#">here</a> on the website.</p>
 
                             </div>
                         </div>
