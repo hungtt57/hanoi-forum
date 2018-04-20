@@ -82,7 +82,7 @@
 
 
                 <li class="{{Request::is('publication') ? 'active' : ''}}">
-                    <a href="{{url('/publication')}}" title="Publication">Publication</a>
+                    <a href="{{url('/publication')}}" title="Publication">Publications</a>
                 </li>
                 <li class="{{Request::is('news') ? 'active' : ''}}">
                     <a href="{{url('/news')}}" title="News">News</a>

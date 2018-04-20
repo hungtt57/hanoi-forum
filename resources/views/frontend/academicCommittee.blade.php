@@ -210,6 +210,28 @@
                                 <div class="clearfix"></div>
                             </div>
 
+                            <div class="col-md-12 content-human">
+
+                                <div class="image-human">
+                                    <img  src="/frontend/anh/jungtaeyong.jpg" alt="">
+                                </div>
+                                <p><strong>JUNG Tae Yong, </strong>Professor</p>
+
+                                <p>Affiliation(s):</p>
+
+                                <ul>
+                                    <li>Professor, Yonsei University GSIS.
+                                    </li>
+                                    <li>Global Green Growth Institute, Asian Development Bank, World Bank.</li>
+                                    <li>Director, Energy Modelling Division, Korea Energy Economics Institute.</li>
+                                    <li>Institute for Global Environmental Strategies of Japan.</li>
+                                </ul>
+
+                                <p>Research areas: Sustainable development; Environment and Environmental policy; Energy; Climate change.</p>
+
+                                <div class="clearfix"></div>
+                            </div>
+
 
                             <div class="col-md-12 content-human">
 

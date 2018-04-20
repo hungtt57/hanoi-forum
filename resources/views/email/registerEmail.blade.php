@@ -4,7 +4,8 @@
 @if($user->apply)
 <p>Dear {{ucfirst($user->title)}}. {{ucfirst ($user->last_name)}},</p>
 <p>Welcome to Hanoi Forum 2018!</p>
-<p>We&rsquo;re ready to activate your account. Once your account is activated, you can log in to your account on Hanoi Forum website to manage your setting, submit your abstract, and get the most updated information from the Forum.</p>
+<p>Please click on the button <strong>Verify</strong> below to activate your account.</p>
+<p>Once your account is activated, you can log in on Hanoi Forum website to manage your setting, submit your abstract, and get the most updated information from the Forum. </p>
 <p>Your unique registration ID is <b>{{$user->code}}</b>. Please include it in all communication with Hanoi Forum staff.</p>
 <p>We look forward to welcoming you in Hanoi this November.</p>
 <p align="center">
@@ -47,8 +48,10 @@
 @else
     <p>Dear {{ucfirst($user->title)}}. {{ucfirst ($user->last_name)}},</p>
     <p>Welcome to Hanoi Forum 2018!</p>
-    <p>We&rsquo;re ready to activate your account. Once your account is activated, you can log in on Hanoi Forum website.</p>
-    <p>Your unique registration ID is <b>{{$user->code}}</b>. Please include it when you pay registration fee and in all communication with Hanoi Forum staff.</p>
+    <p>Please click on the button <strong>Verify</strong> below to activate your account.</p>
+    <p>Once your account is activated, you can log in on Hanoi Forum website to manage your setting, get the most updated information from the Forum, and pay the registration fee.</p>
+    <p>Your unique registration ID is <b>{{$user->code}}</b>. Please include it when you pay registration fee and in all communication with Hanoi Forum staff. </p>
+
     <p>If you wish to apply for financial support for registration, please contact us <a href="{{url('contact-us')}}">here</a>.</p>
     <p>We look forward to welcoming you in Hanoi this November.</p>
     <p>Please click verify to active account.</p>
