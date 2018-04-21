@@ -15,7 +15,7 @@
     </style>
 @endsection
 @section('content')
-    <h3>Submit Abstract/Paper</h3>
+    <h3>Submit Abstract</h3>
 
     @include('admin.flash_message')
 
@@ -42,23 +42,23 @@
             <div class="form-group">
                 <label class="control-label col-md-3 " for="Name">Abstract*</label>
                 <div class="col-md-6">
-                    <textarea name="abstract" class="form-control" maxlength="250"
+                    <textarea name="abstract" class="form-control"
                                            rows="5">{{old('abstract',$user->abstract)}}</textarea>
                 </div>
             </div>
             @endif
-            @if($user->confirm_abstract and $user->confirm_paper == 0)
-              @if($user->reject_paper)
-                <div class="alert alert-danger">{{$user->reject_paper}}</div>
-            @endif
-            <div class="form-group">
-                <label class="control-label col-md-3 " for="Name">Paper*</label>
-                <div class="col-md-6">
-                    <input type="file" class="post-image form-control" name="paper"
-                           rel="post_status_images">
-                </div>
-            </div>
-            @endif
+            {{--@if($user->confirm_abstract and $user->confirm_paper == 0)--}}
+              {{--@if($user->reject_paper)--}}
+                {{--<div class="alert alert-danger">{{$user->reject_paper}}</div>--}}
+            {{--@endif--}}
+            {{--<div class="form-group">--}}
+                {{--<label class="control-label col-md-3 " for="Name">Paper*</label>--}}
+                {{--<div class="col-md-6">--}}
+                    {{--<input type="file" class="post-image form-control" name="paper"--}}
+                           {{--rel="post_status_images">--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--@endif--}}
         </div>
         @if(!$user->confirm_abstract || !$user->confirm_paper)
         <div class="form-actions">

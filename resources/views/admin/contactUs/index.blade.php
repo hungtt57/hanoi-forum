@@ -106,7 +106,7 @@
             {data: 'subject', name: 'subject',orderable : false},
             {data: 'question', name: 'question',orderable : false},
             {data: 'created_at', name: 'created_at',orderable : false},
-            {data: 'status', name: 'status'},
+            {data: 'status', name: 'status',orderable:false},
 
             {data: 'action', name: 'action'},
           ],

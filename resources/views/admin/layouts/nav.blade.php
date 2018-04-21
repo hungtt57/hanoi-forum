@@ -120,10 +120,13 @@
             @if(auth('backend')->user()->type == \App\Models\User::PARTNER)
                     <li class="{{ (Request::is('admin/partner/edit')) ? 'active' : '' }}"><a
                                 href="{{url('admin/partner/edit')}}"><i class="fa  fa-user-plus"></i>
-                            <span>Profile</span></a></li>
+                            <span>Manage your profile</span></a></li>
                     <li class="{{ (Request::is('admin/submit')) ? 'active' : '' }}"><a
                                 href="{{url('admin/submit')}}"><i class="fa  fa-user-plus"></i>
-                            <span>Submit abstract/paper</span></a></li>
+                            <span>Submit abstract</span></a></li>
+                    <li class=""><a
+                                href="{{url('contact-us')}}"><i class="fa  fa-user-plus"></i>
+                            <span>Contact us</span></a></li>
             @endif
         </ul>
     </section>

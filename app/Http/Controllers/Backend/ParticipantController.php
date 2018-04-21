@@ -25,6 +25,11 @@ class ParticipantController extends AdminController
 
                 return view('admin.participant.reviewer', compact('user', 'reviewers'))->render();
             })
+            ->editColumn('payment_status', function ($user) {
+
+//                return User::$paymentText[$post->payment_status];
+                return view('admin.participant.payment', compact('user'))->render();
+            })
             ->addColumn('action', function ($post) {
                 $urlEdit = route('Backend::participants@edit', ['id' => $post->id]);
 
@@ -74,6 +79,25 @@ class ParticipantController extends AdminController
             ], 200);
         }
         $user->reviewer_id = $reviewId;
+        $user->save();
+        return response([
+            'status' => 1,
+            'message' => 'Success',
+            'data' => null
+        ], 200);
+    }
+    public function selectPayment(Request $request) {
+        $id = $request->input('id');
+        $status = $request->input('payment_status');
+        $user = User::where('id', $id)->where('type', User::PARTNER)->first();
+        if (empty($user)) {
+            return response([
+                'status' => 0,
+                'message' => 'Delegate not exist',
+                'data' => null
+            ], 200);
+        }
+        $user->payment_status = $status;
         $user->save();
         return response([
             'status' => 1,

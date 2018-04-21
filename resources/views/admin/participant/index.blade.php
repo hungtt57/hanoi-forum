@@ -21,6 +21,7 @@
                                 <th>Gender</th>
                                 <th>Nationality</th>
                                 <th>Reviewer</th>
+                                <th style="width: 105px;">Payment Status</th>
                                 <th>Created at</th>
                                 <th>Action</th>
                             </tr>
@@ -73,6 +74,34 @@
             }
           });
         });
+
+
+        $(document).on('change', '.select-payment', function () {
+          var val = $(this).val();
+
+          var id = $(this).attr('data-id');
+          $.ajax({
+            url: '{{ route('Backend::participants@selectPayment') }}',
+            type: 'post',
+            data: {
+              payment_status: val,
+              id: id
+            },
+            dataType: 'json',
+
+            success: function (response) {
+              if (response.status == 1) {
+
+                swal(response.message, '', 'success');
+
+              } else {
+                swal(response.message, '', 'error');
+              }
+            }, error: function (error) {
+              swal('Error,Try again later', '', 'error');
+            }
+          });
+        });
         table = $('#departments-table').DataTable({
           responsive: true,
           processing: true,
@@ -90,9 +119,10 @@
             {data: 'gender', name: 'gender'},
             {data: 'nationality', name: 'nationality'},
             {data: 'reviewer', name: 'reviewer'},
+            {data: 'payment_status', name: 'payment_status', orderable: false, searchable: false},
             {data: 'created_at', name: 'created_at'},
 
-           {data: 'action', name: 'action'},
+            {data: 'action', name: 'action'},
           ],
 
           initComplete: function () {

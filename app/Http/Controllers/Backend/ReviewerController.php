@@ -119,6 +119,18 @@ class ReviewerController extends AdminController
         $user = auth('backend')->user();
         $contacts = User::select('*')->where('type', User::PARTNER)->where('reviewer_id', $user->id);
         return \Datatables::eloquent($contacts)
+            ->editColumn('paper',function ($post) {
+                if($post->paper) {
+                    return   '<a class="btn btn-primary green start" href="'.$post->paper.'"
+                               download="'.$post->paper.'"
+                               style="float: left;margin-right: 10px;margin-top: 10px">
+                                <i class="fa fa-download"></i>
+                                <span>Download File</span>
+                                <div class="clearfix"></div>
+                            </a>';
+                }
+                return '';
+            })
             ->addColumn('action', function ($post) {
 
                 $urlDelete = route('Backend::reviewParticipants@review', ['id' => $post->id]);
@@ -157,6 +169,7 @@ class ReviewerController extends AdminController
         if (!$user->confirm_abstract) {
             $user->comment_abstract = $request->input('comment');
             $user->confirm_abstract = 1;
+            $user->payment_status = User::WAIVED;
             $user->save();
             $userLogin = auth('backend')->user();
             $sub = $request->input('sub');
@@ -170,6 +183,8 @@ class ReviewerController extends AdminController
             ]);
             return redirect('admin/review-participants')->with('success', 'Review success');
         }
+
+
         if ($user->confirm_abstract and !$user->confirm_paper) {
             $user->comment_paper = $request->input('comment');
             $user->confirm_paper = 1;

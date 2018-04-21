@@ -24,7 +24,11 @@ class User extends Authenticatable
     const WAIVED = 2;
     const PAID = 1;
     const UNPAID = 0;
-
+    public static $paymentText  = [
+        0 => 'Unpaid',
+        1 => 'Paid',
+        2 => 'Waived',
+    ];
     protected $fillable = [
         'name', 'email', 'password', 'type', 'phone','file',
         'first_name','last_name','title','affiliation','gender','nationality','link_cv','abstract','paper',
