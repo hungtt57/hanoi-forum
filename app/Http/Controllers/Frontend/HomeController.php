@@ -128,7 +128,7 @@ class HomeController extends AdminController
             Mail::to('hanoiforum@vnu.edu.vn')->send(new SendContactEmail($contact));
             EmailLog::create([
                 'to' => 'hanoiforum@vnu.edu.vn',
-                'event' => 'register',
+                'event' => 'contactUs',
                 'data' => $contact->toArray()
             ]);
             DB::commit();

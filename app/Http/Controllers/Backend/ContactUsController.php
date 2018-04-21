@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers\Backend;
 
+use App\Mail\SendContactEmail;
 use App\Models\Contact;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Datatables;
-
+use Mail;
+use App\Models\EmailLog;
+use DB;
 class ContactUsController extends AdminController
 {
     public function index()
@@ -22,22 +25,59 @@ class ContactUsController extends AdminController
             ->editColumn('status',function ($contact) {
                 return ($contact->status) ? 'Processed' : 'Not Process';
             })
-            ->addColumn('action', function ($post) {
-//                $urlEdit = route('Backend::post@edit', ['id' => $post->id]);
+            ->addColumn('action', function ($contact) {
 //
-//                $urlDelete = route('Backend::post@delete', ['id' => $post->id]);
-//
-//                $string = '';
-//
-//                $string .= '<a  href="' . $urlEdit . '" class="btn btn-info">Edit</a>';
-//
-//
-//                $string .= '<a href="' . $urlDelete . '" class="btn btn-danger delete-btn">Delete</a>';
-
-              
-                return $string;
+                if($contact->status == 0) {
+                    $string = '<button type="button" class="btn btn-info answer-question" data-toggle="modal" data-id="'.$contact->id.'" data-target="#answer-modal">Answer</button>';
+                    return $string;
+                }
+                return '';
 
             })->make(true);
     }
+    public function answer(Request $request) {
+//        $data = $request->all();
+        $content = $request->input('answer');
+        $id = $request->input('id');
+        if(empty($content)) {
+            return response([
+                'status' => 0,
+                'message' => ' Please enter content',
+                'data' => null
+            ],200);
+        }
+        \DB::beginTransaction();
+        try {
+            $contact = Contact::find($id);
+            if(empty($contact)) {
+                return response([
+                    'status' => 0,
+                    'message' => 'Online question not exist',
+                    'data' => null
+                ],200);
+            }
+            $contact->status = 1;
+            $contact->answer = $content;
+            $contact->save();
+            Mail::to($contact->email)->send(new SendContactEmail($contact));
+            EmailLog::create([
+                'to' => '$contact->email',
+                'event' => 'contactUs',
+                'data' => $contact->toArray()
+            ]);
+            DB::commit();
+            return response([
+                'status' => 1,
+                'message' => 'Success',
+                'data' => null
+            ],200);
+        }catch (\Exception $ex) {
+            return response([
+                'status' => 0,
+                'message' => 'Server error',
+                'data' => null
+            ],200);
+        }
 
+    }
 }

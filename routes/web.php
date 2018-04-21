@@ -110,7 +110,7 @@ Route::group([
         ], function () {
             Route::get('/', ['as' => 'index', 'uses' => 'ContactUsController@index']);
             Route::get('/datatables', ['as' => 'datatables', 'uses' => 'ContactUsController@datatables']);
-
+            Route::post('/answer', ['as' => 'answer', 'uses' => 'ContactUsController@answer']);
         });
         Route::group([
             'prefix' => '',
