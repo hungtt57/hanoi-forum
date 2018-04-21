@@ -169,6 +169,11 @@
                 </section>
                 <section class="widget widget_sec">
                     <div class="widget-main">
+                        <h2 class="widget-title"><a href=""> Venue </a></h2>
+                    </div>
+                </section>
+                <section class="widget widget_sec">
+                    <div class="widget-main">
                         <h2 class="widget-title"><a href="{{url('/faq')}}"> FAQ</a><span style="text-transform: none !important;">s</span></h2>
 
                     </div>
@@ -250,11 +255,7 @@
                         <h2 class="widget-title"><a href=""> Accommodation </a></h2>
                     </div>
                 </section>
-                <section class="widget widget_sec">
-                    <div class="widget-main">
-                        <h2 class="widget-title"><a href=""> Venue </a></h2>
-                    </div>
-                </section>
+
                 <section class="widget widget_sec">
                     <div class="widget-main">
                         <h2 class="widget-title">Visiting Hanoi city</h2>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Mail\RegisterEmail;
+use App\Mail\SendContactEmail;
 use App\Models\Contact;
 use App\Models\EmailLog;
 use App\Models\Post;
@@ -99,7 +100,7 @@ class HomeController extends AdminController
 
         } catch (\Exception $ex) {
             DB::rollback();
-            return redirect()->back()->with('success', 'Server error.Try again later')->withInput(Input::all());
+            return redirect()->back()->with('error', 'Server error.Try again later')->withInput(Input::all());
         }
 
 
@@ -112,16 +113,31 @@ class HomeController extends AdminController
 
     public function postContactUs(Request $request)
     {
-        $this->validate($request, [
-            'email' => 'required|email|max:255',
-            'first_name' => 'required',
-            'sur_name' => 'required',
-            'title' => 'required',
-        ]);
-        $data = $request->all();
+        \DB::beginTransaction();
+        try {
+            $this->validate($request, [
+                'email' => 'required|email|max:255',
+                'first_name' => 'required',
+                'sur_name' => 'required',
+                'title' => 'required',
+            ]);
+            $data = $request->all();
 
-        Contact::create($data);
-        return redirect()->back()->with('success', 'Thank you for contacting us. Your request has been recorded. We will try to get back to you as soon as we can. ');
+            $contact = Contact::create($data);
+
+            Mail::to('hanoiforum@vnu.edu.vn')->send(new SendContactEmail($contact));
+            EmailLog::create([
+                'to' => 'hanoiforum@vnu.edu.vn',
+                'event' => 'register',
+                'data' => $contact->toArray()
+            ]);
+            DB::commit();
+            return redirect()->back()->with('success', 'Thank you for contacting us. Your request has been recorded. We will try to get back to you as soon as we can. ');
+        }catch (\Exception $ex) {
+            DB::rollback();
+            return redirect()->back()->with('error', 'Server error.Try again later')->withInput(Input::all());
+        }
+
     }
 
     public function vefiryEmail(Request $request)

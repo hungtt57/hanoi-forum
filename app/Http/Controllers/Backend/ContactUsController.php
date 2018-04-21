@@ -19,7 +19,9 @@ class ContactUsController extends AdminController
     {
         $contacs = Contact::select('*');
         return \Datatables::eloquent($contacs)
-
+            ->editColumn('status',function ($contact) {
+                return ($contact->status) ? 'Processed' : 'Not Process';
+            })
             ->addColumn('action', function ($post) {
 //                $urlEdit = route('Backend::post@edit', ['id' => $post->id]);
 //
@@ -32,7 +34,7 @@ class ContactUsController extends AdminController
 //
 //                $string .= '<a href="' . $urlDelete . '" class="btn btn-danger delete-btn">Delete</a>';
 
-                $string = '';
+              
                 return $string;
 
             })->make(true);

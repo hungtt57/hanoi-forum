@@ -22,6 +22,7 @@
                                 <th>Subject</th>
                                 <th>Question</th>
                                 <th>Created at</th>
+                                <th>Status</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
@@ -65,6 +66,7 @@
             {data: 'subject', name: 'subject'},
             {data: 'question', name: 'question'},
             {data: 'created_at', name: 'created_at'},
+            {data: 'status', name: 'status'},
 
             {data: 'action', name: 'action'},
           ],
