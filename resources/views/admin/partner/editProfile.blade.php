@@ -26,6 +26,12 @@
         <div class="form-body">
             {{ csrf_field() }}
             <div class="form-group">
+                <label class="col-md-3 control-label">Avatar</label>
+                <div class="col-md-6">
+                    <input type="file" class="post-image form-control" id="image" name="image">
+                </div>
+            </div>
+            <div class="form-group">
                 <label class="col-md-3 control-label">First name*</label>
                 <div class="col-md-6">
                     <input type="text" name="first_name" class="form-control"
@@ -192,6 +198,19 @@
           'previewFileType': 'any',
           'showCaption': false,
           'showUploadedThumbs': false,
+        });
+        $("#image").fileinput({
+            @if(isset($user) and $user->image)
+            'initialPreview': [
+              '<img src="{{ $user->image }}" class="kv-preview-data file-preview-image" style="width:auto;height:160px;">'
+            ],
+            @endif
+            'showUpload': false,
+          'showRemove': false,
+          'previewFileType': 'any',
+          'showCaption': false,
+          'showUploadedThumbs': false,
+          'allowedFileTypes': ['image']
         });
 
       });

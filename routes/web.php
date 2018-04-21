@@ -226,7 +226,10 @@ Route::group([
         });
     });
     Route::group(['middleware' => 'PARTNER'], function () {
-
+        Route::get('dashboard', [
+            'as' => 'dashboard',
+            'uses' => 'PartnerController@dashboard'
+        ]);
         Route::get('partner/edit', [
             'as' => 'edit',
             'uses' => 'PartnerController@editProfile'

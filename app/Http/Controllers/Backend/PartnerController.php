@@ -15,6 +15,12 @@ use App\Models\User;
 
 class PartnerController extends AdminController
 {
+    public function dashboard()
+    {
+        $user = auth('backend')->user();
+        return view('admin.partner.dashboard', compact('user'));
+    }
+
     public function submit(Request $request)
     {
         $user = auth('backend')->user();
@@ -121,12 +127,16 @@ class PartnerController extends AdminController
             ]);
         }
         try {
-
-            if ($request->file('file')) {
-                $data['file'] = $this->saveFile($request->file('file'));
-            }
             $userId = auth('backend')->user()->id;
             $user = User::find($userId);
+            if ($request->file('file')) {
+                $data['file'] = $this->saveFile($request->file('file'),$user->file);
+            }
+            if($request->file('image')) {
+                $data['image'] = $this->saveImage($request->file('image'),$user->image);
+            }
+
+
 
             if (isset($data['password']) and $data['password']) {
                 $data['password'] = Hash::make($data['password']);
