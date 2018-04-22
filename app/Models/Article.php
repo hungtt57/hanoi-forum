@@ -11,6 +11,7 @@ class Article extends Model
 
     public static $typeText = [
         'faq' => 'FAQs',
+        'forum-program' => 'Forum Program',
 //      'hanoi-forum' => 'Hanoi forum',
 //        'hanoi-forum-2018' => 'Hanoi forum 2018',
 
