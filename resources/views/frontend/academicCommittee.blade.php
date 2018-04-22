@@ -220,14 +220,13 @@
                                 <p>Affiliation(s):</p>
 
                                 <ul>
-                                    <li>Professor, Yonsei University GSIS.
-                                    </li>
-                                    <li>Global Green Growth Institute, Asian Development Bank, World Bank.</li>
-                                    <li>Director, Energy Modelling Division, Korea Energy Economics Institute.</li>
+                                    <li>Professor of Sustainable Development, Graduate School of International Studies, Yonsei University.</li>
+                                    <li>Former Director, Energy Modelling Division, Korea Energy Economics Institute.</li>
+                                    <li>Former Project Leader in Climate Policy Project, Institute for Global Environmental Strategies of Japan.</li>
                                     <li>Institute for Global Environmental Strategies of Japan.</li>
                                 </ul>
 
-                                <p>Research areas: Sustainable development; Environment and Environmental policy; Energy; Climate change.</p>
+                                <p>Research areas: Sustainable development, Environment and Environmental policy, Energy, Climate change.</p>
 
                                 <div class="clearfix"></div>
                             </div>
@@ -249,7 +248,7 @@
 
 
 
-
+                            <p><em> To be continued</em></p>
                         </div>
                     </div>
 
