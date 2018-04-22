@@ -56,7 +56,7 @@ class AdminController extends Controller
             return view('admin.admin.index');
         }
         if (auth('backend')->user()->type == User::PARTNER) {
-            return redirect('admin/dashboard');
+            return redirect('admin/dashboard')->with('welcome','true');
 //            return redirect('admin/paert');
 //            return view('admin.partner.index');
         }

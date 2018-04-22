@@ -55,6 +55,9 @@
         #departments-table {
             width: 100% !important;
         }
+        .profile-user-img {
+            height: 100px;
+        }
     </style>
 
 
