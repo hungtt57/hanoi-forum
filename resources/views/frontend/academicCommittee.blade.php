@@ -220,10 +220,9 @@
                                 <p>Affiliation(s):</p>
 
                                 <ul>
-                                    <li>Professor of Sustainable Development, Graduate School of International Studies, Yonsei University.</li>
-                                    <li>Former Director, Energy Modelling Division, Korea Energy Economics Institute.</li>
-                                    <li>Former Project Leader in Climate Policy Project, Institute for Global Environmental Strategies of Japan.</li>
-                                    <li>Institute for Global Environmental Strategies of Japan.</li>
+                                    <li>Professor of Sustainable Development, Graduate School of International Studies, and Director, Center for Global Sustainability, Yonsei University, Republic of Korea.</li>
+                                    <li>Principal Climate Change Specialist, East Asia Regional Department, Asian Development Bank (ADB), Philippines.</li>
+                                    <li>Deputy Executive Director, Global Green Growth Institute (GGGI), Republic of Korea.</li>
                                 </ul>
 
                                 <p>Research areas: Sustainable development, Environment and Environmental policy, Energy, Climate change.</p>
