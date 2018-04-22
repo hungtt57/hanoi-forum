@@ -8,7 +8,7 @@
             @if(auth('backend')->user()->type == \App\Models\User::ADMIN)
                 <li class=" treeview {{ (Request::is('admin') ||  Request::is('admin/add')) ? 'active' : '' }}">
                     <a href="#">
-                        <i class="fa fa-dashboard"></i> <span>Manager Admins</span>
+                        <i class="fa fa-dashboard"></i> <span>Manage Admins</span>
                         <span class="pull-right-container">
                                  <i class="fa fa-angle-left pull-right"></i>
                          </span>
@@ -23,7 +23,7 @@
                 </li>
                 <li class=" treeview {{ (Request::is('admin/posts/*') ||  Request::is('admin/posts')) ? 'active' : '' }}">
                     <a href="#">
-                        <i class="fa fa-newspaper-o"></i> <span>Manager Posts</span>
+                        <i class="fa fa-newspaper-o"></i> <span>Manage Posts</span>
                         <span class="pull-right-container">
                                  <i class="fa fa-angle-left pull-right"></i>
                          </span>
@@ -39,7 +39,7 @@
 
                 <li class=" treeview {{ (Request::is('admin/articles/*') ||  Request::is('admin/articles')) ? 'active' : '' }}">
                     <a href="#">
-                        <i class="fa fa-newspaper-o"></i> <span>Manager Articles</span>
+                        <i class="fa fa-newspaper-o"></i> <span>Manage Articles</span>
                         <span class="pull-right-container">
                                  <i class="fa fa-angle-left pull-right"></i>
                          </span>
@@ -54,7 +54,7 @@
                 </li>
                 <li class=" treeview {{ (Request::is('admin/reviewer/*') ||  Request::is('admin/reviewer')) ? 'active' : '' }}">
                     <a href="#">
-                        <i class="fa fa-user-times"></i> <span>Manager Reviewers</span>
+                        <i class="fa fa-user-times"></i> <span>Manage Reviewers</span>
                         <span class="pull-right-container">
                                  <i class="fa fa-angle-left pull-right"></i>
                          </span>
@@ -70,7 +70,7 @@
                 </li>
                 <li class=" treeview {{ (Request::is('admin/banners/*') ||  Request::is('admin/banners')) ? 'active' : '' }}">
                     <a href="#">
-                        <i class="fa fa-image"></i> <span>Manager Banners</span>
+                        <i class="fa fa-image"></i> <span>Manage Banners</span>
                         <span class="pull-right-container">
                                  <i class="fa fa-angle-left pull-right"></i>
                          </span>
@@ -85,7 +85,7 @@
                 </li>
                 <li class=" treeview {{ (Request::is('admin/subcommittee/*') ||  Request::is('admin/subcommittee')) ? 'active' : '' }}">
                     <a href="#">
-                        <i class="fa fa-dashboard"></i> <span>Manager Subcommittee</span>
+                        <i class="fa fa-dashboard"></i> <span>Manage Subcommittee</span>
                         <span class="pull-right-container">
                                  <i class="fa fa-angle-left pull-right"></i>
                          </span>
