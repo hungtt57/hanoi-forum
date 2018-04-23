@@ -16,10 +16,10 @@
                                 <th>Email</th>
                                 <th>First name</th>
                                 <th>Last name</th>
-                                <th>Title</th>
-                                <th>Affiliation</th>
-                                <th>Gender</th>
-                                <th>Nationality</th>
+                                <th>Abstract</th>
+                                <th>Title of paper</th>
+                                <th>Paper</th>
+                                <th>Status submit</th>
                                 <th>Reviewer</th>
                                 <th style="width: 105px;">Payment Status</th>
                                 <th>Created at</th>
@@ -113,11 +113,11 @@
             {data: 'email', name: 'email'},
             {data: 'first_name', name: 'first_name'},
             {data: 'last_name', name: 'sur_name'},
-            {data: 'title', name: 'title'},
-            {data: 'affiliation', name: 'affiliation'},
+            {data: 'abstract', name: 'abstract'},
+            {data: 'title_of_paper', name: 'title_of_paper'},
 
-            {data: 'gender', name: 'gender'},
-            {data: 'nationality', name: 'nationality'},
+            {data: 'paper', name: 'paper',searchable : false,orderable : false},
+            {data: 'status_submit', name: 'status_submit',searchable : false,orderable : false},
             {data: 'reviewer', name: 'reviewer'},
             {data: 'payment_status', name: 'payment_status', orderable: false, searchable: false},
             {data: 'created_at', name: 'created_at'},

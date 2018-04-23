@@ -30,6 +30,34 @@ class ParticipantController extends AdminController
 //                return User::$paymentText[$post->payment_status];
                 return view('admin.participant.payment', compact('user'))->render();
             })
+            ->addColumn('status_submit',function ($user) {
+                $string = '';
+                if ($user->abstract and !$user->confirm_abstract) {
+                    $string = 'submitted abstract';
+                }
+                if($user->reject_abstract) {
+                    $string = 'reject abstract';
+                }
+                if ($user->paper and $user->confirm_paper == 0) {
+                    $string = 'submitted paper';
+                }
+                if ($user->confirm_paper == 1) {
+                    $string = 'Finsh';
+                }
+                return $string;
+            })
+            ->editColumn('paper',function ($post) {
+                if($post->paper) {
+                    return   '<a class="btn btn-primary green start" href="'.$post->paper.'"
+                               download="'.$post->paper.'"
+                               style="float: left;margin-right: 10px;margin-top: 10px">
+                                <i class="fa fa-download"></i>
+                                <span>Download File</span>
+                                <div class="clearfix"></div>
+                            </a>';
+                }
+                return '';
+            })
             ->addColumn('action', function ($post) {
                 $urlEdit = route('Backend::participants@edit', ['id' => $post->id]);
 
