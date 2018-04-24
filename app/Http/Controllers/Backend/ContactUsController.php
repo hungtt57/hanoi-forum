@@ -61,7 +61,7 @@ class ContactUsController extends AdminController
             $contact->save();
             Mail::to($contact->email)->send(new SendContactEmail($contact));
             EmailLog::create([
-                'to' => '$contact->email',
+                'to' => $contact->email,
                 'event' => 'contactUs',
                 'data' => $contact->toArray()
             ]);

@@ -165,9 +165,11 @@ class ParticipantController extends AdminController
             if ($request->file('file')) {
                 $data['paper'] = $this->saveFile($request->file('file'));
             }
-            $userId = auth('backend')->user()->id;
+            $userId = $id;
             $user = User::find($userId);
-
+            if($user->type != User::PARTNER) {
+                return redirect()->back()->with('error', 'You can only edit delegate')->withInput(Input::all());
+            }
             if(isset($data['password']) and $data['password']) {
                 $data['password'] = Hash::make($data['password']);
             }else {

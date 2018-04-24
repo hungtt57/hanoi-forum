@@ -26,7 +26,7 @@
         <div class="container">
             <section class="bio__holder">
                 <div class="row">
-
+                    @php  $user  = auth('backend')->user(); @endphp
                     <div class="col-md-8 col-sm-5 col-md-offset-2 col-xs-12">
                         @include('admin.flash_message')
 
@@ -36,7 +36,7 @@
                             <div class="form-group">
                                 <label class="control-label ">First name*</label>
                                 <div class="controls">
-                                    <input type="text" name="first_name" value="{{old('first_name')}}" tabindex="2"
+                                    <input type="text" name="first_name" value="{{($user) ? $user->first_name : ''}}" tabindex="2"
                                            class="form-control"
                                     >
                                 </div>
@@ -44,7 +44,7 @@
                             <div class="form-group">
                                 <label class="control-label ">Surname*</label>
                                 <div class="controls">
-                                    <input type="text" name="sur_name" value="{{old('sur_name')}}" tabindex="2"
+                                    <input type="text" name="sur_name" value="{{($user) ? $user->last_name : ''}}"  tabindex="2"
                                            class="form-control"
                                     >
                                 </div>
@@ -52,7 +52,7 @@
                             <div class="form-group">
                                 <label class="control-label ">Title*</label>
                                 <div class="controls">
-                                    <input type="text" name="title" value="{{old('title')}}" tabindex="2"
+                                    <input type="text" name="title" value="{{($user) ? $user->title : ''}}" tabindex="2"
                                            class="form-control"
                                     >
                                 </div>
@@ -60,8 +60,8 @@
                             <div class="form-group">
                                 <label class="control-label " for="Name">Email *</label>
                                 <div class="controls">
-                                    <input type="email" name="email" tabindex="1" class="form-control"
-                                           value="{{old('email')}}">
+                                    <input type="email" name="email"  value="{{($user) ? $user->email : ''}}" tabindex="1" class="form-control"
+                                         >
                                 </div>
                             </div>
 
@@ -70,7 +70,7 @@
                                 <div class="controls">
                                     <input type="text" name="code"
                                            class="form-control"
-                                           value="{{old('code')}}">
+                                           v value="{{($user) ? $user->code : ''}}" >
                                 </div>
                             </div>
 
