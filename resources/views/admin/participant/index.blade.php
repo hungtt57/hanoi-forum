@@ -13,7 +13,7 @@
                         <table class="table table-bordered table-hover" id="departments-table">
                             <thead>
                             <tr>
-                                <th>Email</th>
+                                {{--<th>Email</th>--}}
                                 <th>First name</th>
                                 <th>Last name</th>
                                 <th>Title</th>
@@ -112,7 +112,7 @@
           orders: [[8, 'desc']],
           ajax: '{{route('Backend::participants@datatables')}}',
           columns: [
-            {data: 'email', name: 'email'},
+            // {data: 'email', name: 'email'},
             {data: 'first_name', name: 'first_name'},
             {data: 'last_name', name: 'sur_name'},
             {data: 'title', name: 'title'},
