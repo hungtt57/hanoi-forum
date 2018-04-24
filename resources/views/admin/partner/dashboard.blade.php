@@ -60,7 +60,7 @@
                     @if(!$user->abstract)
                         <p class="text-black">Submission status: You have not yet submitted an abstract. </p>
                         @else
-                        <p class="text-black">You have submitted an abstract. Notification of the result will be announced by July 15, 2018. </p>
+                        <p class="text-black">Submission status: You have submitted an abstract. Notification of the result will be announced by July 15, 2018. </p>
                     @endif
                     @if($user->reject_abstract)
                         <p class="text-red">{{$user->reject_abstract}}</p>
