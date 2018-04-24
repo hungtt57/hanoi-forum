@@ -36,7 +36,7 @@
                             <div class="form-group">
                                 <label class="control-label ">First name*</label>
                                 <div class="controls">
-                                    <input type="text" name="first_name" value="{{($user) ? $user->first_name : ''}}" tabindex="2"
+                                    <input type="text" name="first_name" value="{{($user) ? $user->first_name : ''}}"
                                            class="form-control"
                                     >
                                 </div>
@@ -44,7 +44,7 @@
                             <div class="form-group">
                                 <label class="control-label ">Surname*</label>
                                 <div class="controls">
-                                    <input type="text" name="sur_name" value="{{($user) ? $user->last_name : ''}}"  tabindex="2"
+                                    <input type="text" name="sur_name" value="{{($user) ? $user->last_name : ''}}"
                                            class="form-control"
                                     >
                                 </div>
@@ -52,7 +52,7 @@
                             <div class="form-group">
                                 <label class="control-label ">Title*</label>
                                 <div class="controls">
-                                    <input type="text" name="title" value="{{($user) ? $user->title : ''}}" tabindex="2"
+                                    <input type="text" name="title" value="{{($user) ? $user->title : ''}}"
                                            class="form-control"
                                     >
                                 </div>
@@ -60,8 +60,7 @@
                             <div class="form-group">
                                 <label class="control-label " for="Name">Email *</label>
                                 <div class="controls">
-                                    <input type="email" name="email"  value="{{($user) ? $user->email : ''}}" tabindex="1" class="form-control"
-                                         >
+                                    <input type="email" name="email"  value="{{($user) ? $user->email : ''}}"  class="form-control">
                                 </div>
                             </div>
 
@@ -92,7 +91,7 @@
                             <div class="form-group">
                                 <label class="control-label " for="Name">Subject</label>
                                 <div class="controls">
-                                    <input type="text" name="subject" tabindex="1" class="form-control"
+                                    <input type="text" name="subject"  class="form-control"
                                            value="{{old('subject')}}">
                                 </div>
                             </div>
