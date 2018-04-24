@@ -127,6 +127,13 @@
                     <li class="{{ (Request::is('admin/submit')) ? 'active' : '' }}"><a
                                 href="{{url('admin/submit')}}"><i class="fa   fa-cloud-upload"></i>
                             <span>Submit abstract</span></a></li>
+
+
+                    <li class="{{ (Request::is('admin/list-delegates')) ? 'active' : '' }}"><a
+                                href="{{url('admin/list-delegates')}}"><i class="fa  fa-user-plus"></i>
+                            <span>List Delegates  </span></a></li>
+
+
                     <li class=""><a
                                 href="{{url('contact-us')}}"><i class="fa  fa-question-circle"></i>
                             <span>Contact us</span></a></li>

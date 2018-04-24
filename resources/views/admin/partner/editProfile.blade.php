@@ -142,6 +142,20 @@
             </div>
 
             <div class="form-group">
+
+                <label class="control-label col-md-6 col-md-offset-3" style="text-align: left">
+                    For the sake of networking, we wish to share the information given above and/or Linkedin profiles among the delegates.
+                    <br>
+                    Do you agree to us sharing this information with the other delegates?</label>
+                <div class="controls col-md-6 col-md-offset-3">
+                    <label class="radio-inline"><input type="radio" name="share_info" value="1"
+                                                       @if(old('share_info',$user->share_info) == 1) checked @endif >Yes</label>
+                    <label class="radio-inline"><input type="radio" name="share_info" value="0"
+                                                       @if(old('share_info',$user->share_info) == 0 ) checked @endif>No</label>
+                </div>
+            </div>
+
+            <div class="form-group">
                 <label class="control-label col-md-3 " for="Name">Password</label>
                 <div class="col-md-6">
                     <input type="password" name="password" tabindex="2" class="form-control"

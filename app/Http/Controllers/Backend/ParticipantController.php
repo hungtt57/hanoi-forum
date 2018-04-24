@@ -163,7 +163,7 @@ class ParticipantController extends AdminController
         try {
 
             if ($request->file('file')) {
-                $data['paper'] = $this->saveFile($request->file('file'));
+                $data['file'] = $this->saveFile($request->file('file'));
             }
             $userId = $id;
             $user = User::find($userId);

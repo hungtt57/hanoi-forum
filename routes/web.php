@@ -246,6 +246,14 @@ Route::group([
             'as' => 'submitSuccess',
             'uses' => 'PartnerController@submitSuccess'
         ]);
+        Route::get('/list-delegates', [
+            'as' => 'listDelegates',
+            'uses' => 'PartnerController@listDelegates'
+        ]);
+        Route::get('/list-delegates.data', [
+            'as' => 'listDelegates.data',
+            'uses' => 'PartnerController@listDelegatesData'
+        ]);
         Route::post('/submit', [
             'as' => 'postSubmit',
             'uses' => 'PartnerController@postSubmit'

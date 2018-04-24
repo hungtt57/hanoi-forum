@@ -152,4 +152,26 @@ class PartnerController extends AdminController
         }
 
     }
+    public function listDelegates(Request $request) {
+        return view('admin.partner.listDelegates');
+    }
+    public function listDelegatesData(Request $request)
+    {
+        $contacts = User::select('*')->where('type', User::PARTNER)->where('share_info',1);
+        return \Datatables::eloquent($contacts)
+
+            ->editColumn('paper',function ($post) {
+                if($post->paper) {
+                    return   '<a class="btn btn-primary green start" href="'.$post->paper.'"
+                               download="'.$post->paper.'"
+                               style="float: left;margin-right: 10px;margin-top: 10px">
+                                <i class="fa fa-download"></i>
+                                <span>Download File</span>
+                                <div class="clearfix"></div>
+                            </a>';
+                }
+                return '';
+            })
+          ->make(true);
+    }
 }
