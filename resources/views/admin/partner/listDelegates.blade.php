@@ -19,10 +19,8 @@
                                 <th>Title</th>
                                 <th>Affiliations</th>
                                 <th>Email</th>
-                                <th>Link</th>
-                                <th>Abstract</th>
-                                <th>Title of paper</th>
-                                <th>Paper</th>
+                                <th>LinkedIn Profile </th>
+                                <th>Resume</th>
 
                             </tr>
                             </thead>
@@ -66,10 +64,7 @@
             {data: 'email', name: 'email'},
             {data: 'link_cv', name: 'link_cv'},
 
-            {data: 'abstract', name: 'abstract'},
-            {data: 'title_of_paper', name: 'title_of_paper'},
-
-            {data: 'paper', name: 'paper',searchable : false,orderable : false},
+            {data: 'cv', name: 'cv',searchable : false,orderable : false},
           ],
 
           // initComplete: function () {
