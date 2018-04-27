@@ -170,6 +170,7 @@ Route::group([
             Route::get('/delete/{id}', ['as' => 'delete', 'uses' => 'ParticipantController@delete']);
             Route::post('select-reviewer', ['as' => 'select', 'uses' => 'ParticipantController@select']);
             Route::post('select-payment', ['as' => 'selectPayment', 'uses' => 'ParticipantController@selectPayment']);
+            Route::post('export', ['as' => 'export', 'uses' => 'ParticipantController@export']);
 
             Route::get('/{id}/edit', ['as' => 'edit', 'uses' => 'ParticipantController@editProfile']);
             Route::post('/{id}/edit', ['as' => 'update', 'uses' => 'ParticipantController@updateProfile']);

@@ -5,10 +5,11 @@ namespace App\Http\Controllers\Backend;
 use App\Models\Contact;
 use App\Models\Post;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Datatables;
-
+use Maatwebsite\Excel\Facades\Excel;
 class ParticipantController extends AdminController
 {
     public function index()
@@ -30,12 +31,12 @@ class ParticipantController extends AdminController
 //                return User::$paymentText[$post->payment_status];
                 return view('admin.participant.payment', compact('user'))->render();
             })
-            ->addColumn('status_submit',function ($user) {
+            ->addColumn('status_submit', function ($user) {
                 $string = '';
                 if ($user->abstract and !$user->confirm_abstract) {
                     $string = 'submitted abstract';
                 }
-                if($user->reject_abstract) {
+                if ($user->reject_abstract) {
                     $string = 'reject abstract';
                 }
                 if ($user->paper and $user->confirm_paper == 0) {
@@ -46,14 +47,14 @@ class ParticipantController extends AdminController
                 }
                 return $string;
             })
-            ->editColumn('link_cv',function ($post) {
-                $string= '';
-                if($post->link_cv) {
-                    $string .= '<a target="_blank" href="'.$post->link_cv.'">'.$post->link_cv.'</a>';
+            ->editColumn('link_cv', function ($post) {
+                $string = '';
+                if ($post->link_cv) {
+                    $string .= '<a target="_blank" href="' . $post->link_cv . '">' . $post->link_cv . '</a>';
                 }
-                if($post->file) {
-                    $string .=   '<a class="btn btn-primary green start" href="'.$post->file.'"
-                               download="'.$post->file.'"
+                if ($post->file) {
+                    $string .= '<a class="btn btn-primary green start" href="' . $post->file . '"
+                               download="' . $post->file . '"
                                style="float: left;margin-right: 10px;margin-top: 10px">
                                 <i class="fa fa-download"></i>
                                 <span>Download File</span>
@@ -63,10 +64,10 @@ class ParticipantController extends AdminController
 
                 return $string;
             })
-            ->editColumn('paper',function ($post) {
-                if($post->paper) {
-                    return   '<a class="btn btn-primary green start" href="'.$post->paper.'"
-                               download="'.$post->paper.'"
+            ->editColumn('paper', function ($post) {
+                if ($post->paper) {
+                    return '<a class="btn btn-primary green start" href="' . $post->paper . '"
+                               download="' . $post->paper . '"
                                style="float: left;margin-right: 10px;margin-top: 10px">
                                 <i class="fa fa-download"></i>
                                 <span>Download File</span>
@@ -131,7 +132,9 @@ class ParticipantController extends AdminController
             'data' => null
         ], 200);
     }
-    public function selectPayment(Request $request) {
+
+    public function selectPayment(Request $request)
+    {
         $id = $request->input('id');
         $status = $request->input('payment_status');
         $user = User::where('id', $id)->where('type', User::PARTNER)->first();
@@ -150,11 +153,15 @@ class ParticipantController extends AdminController
             'data' => null
         ], 200);
     }
-    public function editProfile(Request $request,$id) {
+
+    public function editProfile(Request $request, $id)
+    {
         $user = User::find($id);
-        return view('admin.participant.editProfile',compact('user'));
+        return view('admin.participant.editProfile', compact('user'));
     }
-    public function updateProfile(Request $request,$id) {
+
+    public function updateProfile(Request $request, $id)
+    {
         $this->validate($request, [
             'file' => 'max:5120',
             'first_name' => 'required',
@@ -169,7 +176,7 @@ class ParticipantController extends AdminController
             'affiliation.required' => 'Please enter affiliation',
         ]);
         $data = $request->all();
-        if(isset($data['password'])) {
+        if (isset($data['password'])) {
             $this->validate($request, [
                 'password' => 'min:6|confirmed',
 
@@ -184,12 +191,12 @@ class ParticipantController extends AdminController
             }
             $userId = $id;
             $user = User::find($userId);
-            if($user->type != User::PARTNER) {
+            if ($user->type != User::PARTNER) {
                 return redirect()->back()->with('error', 'You can only edit delegate')->withInput(Input::all());
             }
-            if(isset($data['password']) and $data['password']) {
+            if (isset($data['password']) and $data['password']) {
                 $data['password'] = Hash::make($data['password']);
-            }else {
+            } else {
                 $data['password'] = $user->password;
             }
             $data['type'] = User::PARTNER;
@@ -200,5 +207,38 @@ class ParticipantController extends AdminController
             return redirect()->back()->with('error', 'Server error.Try again later')->withInput(Input::all());
         }
 
+    }
+
+    public function export(Request $request)
+    {
+        $data = $request->all();
+        $model = new User();
+
+        $data = array_only($request->all(), $model->getFillable());
+        $keys = array_keys($data);
+
+        $user = User::select($keys)->where('type',User::PARTNER)->get()->toArray();
+        if(count($user)) {
+            foreach ($user as $key => $value) {
+                if(isset($value['gender'])) {
+                    $user[$key]['gender'] = ($value['gender'] == User::FEMALE) ? 'female' : 'male';
+                }
+                if(isset($value['paper'])) {
+                    $user[$key]['paper'] = ($value['paper']) ? url($value['paper']) : '';
+                }
+            }
+        }
+
+
+        Excel::create('list-delegates-' . Carbon::now()->toDateString(), function ($excel) use ($user) {
+
+            $excel->sheet('sheet', function ($sheet) use ($user) {
+
+                $sheet->fromArray($user);
+
+            });
+
+        })->download('xls');
+        return redirect(route('Backend::participants@index'))->with('success','Export Success');
     }
 }
