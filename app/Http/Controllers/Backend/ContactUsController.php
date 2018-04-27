@@ -61,15 +61,18 @@ class ContactUsController extends AdminController
             $contact->save();
             Mail::to($contact->email)->send(new SendContactEmail($contact));
             EmailLog::create([
-                'to' => '$contact->email',
+                'to' => $contact->email,
                 'event' => 'contactUs',
                 'data' => $contact->toArray()
             ]);
             DB::commit();
+            $count  = Contact::where('status',0)->count();
             return response([
                 'status' => 1,
                 'message' => 'Success',
-                'data' => null
+                'data' => [
+                    'count' => $count
+                ]
             ],200);
         }catch (\Exception $ex) {
             return response([

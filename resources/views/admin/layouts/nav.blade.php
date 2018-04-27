@@ -104,7 +104,8 @@
                         <span> Abstract submission  </span></a></li>
                 <li class="{{ (Request::is('admin/contact-us')) ? 'active' : '' }}"><a
                             href="{{url('admin/contact-us')}}"><i class="fa fa-question-circle"></i>
-                        <span>Online questions </span></a></li>
+                        @php $count = \App\Models\Contact::where('status',0)->count(); @endphp
+                        <span>Online questions (<span id="count-question">{{$count}}</span>) </span></a></li>
                 <li class="{{ (Request::is('admin/participants')) ? 'active' : '' }}"><a
                             href="{{url('admin/participants')}}"><i class="fa  fa-user-plus"></i>
                         <span>Manage Delegates </span></a></li>
@@ -114,7 +115,7 @@
             @if(auth('backend')->user()->type == \App\Models\User::REVIEWER)
                     <li class="{{ (Request::is('admin/review-participants')) ? 'active' : '' }}"><a
                                 href="{{url('admin/review-participants')}}"><i class="fa  fa-user-plus"></i>
-                            <span>List Delegates</span></a></li>
+                            <span>Review Abstracts </span></a></li>
             @endif
 
             @if(auth('backend')->user()->type == \App\Models\User::PARTNER)
@@ -127,6 +128,13 @@
                     <li class="{{ (Request::is('admin/submit')) ? 'active' : '' }}"><a
                                 href="{{url('admin/submit')}}"><i class="fa   fa-cloud-upload"></i>
                             <span>Submit abstract</span></a></li>
+
+
+                    <li class="{{ (Request::is('admin/list-delegates')) ? 'active' : '' }}"><a
+                                href="{{url('admin/list-delegates')}}"><i class="fa  fa-user-plus"></i>
+                            <span>List Delegates  </span></a></li>
+
+
                     <li class=""><a
                                 href="{{url('contact-us')}}"><i class="fa  fa-question-circle"></i>
                             <span>Contact us</span></a></li>

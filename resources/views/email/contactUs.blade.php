@@ -4,14 +4,15 @@
         text-decoration: underline !important;
     }
 </style>
-{{--<p>New online questions</p>--}}
-{{--<p>{{$contact->first_name}} {{$contact->sur_name}}</p>--}}
+
 <p>Dear {{ucfirst($contact->title)}}. {{ucfirst ($contact->sur_name)}},</p>
-<p>{{$contact->question}}</p>
+
+<p>{{$contact->answer}}</p>
 
 <p>Hope this helps. Please don't hesitate to contact us should you have any other question in the future.
 </p>
-<p> Best regards, </p>
+<p>Best regards,</p>
+
 
 
 <span id="docs-internal-guid-bce07a37-56fd-a84c-d641-59fb31f6947b">Hanoi Forum Secretariat</span><br>

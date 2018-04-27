@@ -60,7 +60,7 @@ class HomeController extends AdminController
                 return redirect()->back()->with('error', 'Email exist')->withInput(Input::all());
             }
             if ($request->file('file')) {
-                $data['paper'] = $this->saveFile($request->file('file'));
+                $data['file'] = $this->saveFile($request->file('file'));
             }
             $data['password'] = Hash::make($data['password']);
             $data['type'] = User::PARTNER;

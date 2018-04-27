@@ -56,9 +56,11 @@
         <div class="col-md-9">
             <div class="box box-primary">
                 <div class="box-body ">
-                    <p class="text-red">{{\App\Models\User::$paymentText[$user->payment_status]}}</p>
-                    @if(!$user->confirm_abstract)
-                        <p class="text-red">You have not yet submitted your abstract</p>
+                    <p class="text-black">Payment status: {{\App\Models\User::$paymentText[$user->payment_status]}}</p>
+                    @if(!$user->abstract)
+                        <p class="text-black">Submission status: You have not yet submitted an abstract. </p>
+                        @else
+                        <p class="text-black">Submission status: You have submitted an abstract. Notification of the result will be announced by July 15, 2018. </p>
                     @endif
                     @if($user->reject_abstract)
                         <p class="text-red">{{$user->reject_abstract}}</p>

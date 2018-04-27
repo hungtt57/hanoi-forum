@@ -3,107 +3,121 @@
 
 @push('styles')
 
-<style>
-
-
-    .img-partners {
-        max-width: 80px;
-    }
-
-    .box-partner {
-        height: 160px;
-    }
-    .text-banner {
-        text-align: center; font-size: 12px; font-weight: bold
-    }
-    .text-banner-top {
-        font-weight: bold; text-align: center; font-size: 12px;
-    }
-    .img-t-2 {
-        position: relative; margin-top: 9%;
-    }
-    .ol-timeline {
-        margin-top: 50px !important;
-    }
-
-
-    /*@media (min-width: 1281px) and (max-width: 1601px) {*/
-
-
-       /*.seq-canvas > li {*/
-           /*height: 80% !important;*/
-       /*}*/
-
-    /*}*/
-
-    @media (min-width: 1025px) and (max-width: 1280px) {
+    <style>
 
 
         .img-partners {
             max-width: 80px;
         }
 
-        #left, #right {
-            height: 320px;
-        }
-
-        .img2 {
-            height: 80px;
-        }
-
-        .img-s {
-            margin-top: 15px;
-        }
-
-        .text-s {
-            margin-top: 14px;
-        }
-
-    }
-
-    @media (min-width: 320px) and (max-width: 480px) {
-
-        .img-partners {
-            max-width: 100px;
-        }
-
-        #left-b {
-            margin-bottom: 10px;
-        }
-
-        .ol-timeline {
-            margin-top: 80px !important;
-        }
-
-        .img-s-2 {
-            max-width: 100px !important;
+        .box-partner {
+            height: 160px;
         }
 
         .text-banner {
-            text-align: center; font-size: 15px; color: #0045D1; font-weight: bold
+            text-align: center;
+            font-size: 12px;
+            font-weight: bold
         }
 
         .text-banner-top {
-            color: #0045D1; font-weight: bold; text-align: center; font-size: 15px;
+            font-weight: bold;
+            text-align: center;
+            font-size: 12px;
         }
 
-
-        .box-t-1{
-            margin-bottom: 15px;
+        .img-t-2 {
+            position: relative;
+            margin-top: 9%;
+        }
+        .taitro a {
+            color: inherit;
         }
 
-        .box-partner {
-            height: 150px;
-            margin-bottom: 8px;
+        .ol-timeline {
+            margin-top: 50px !important;
         }
+
+        /*@media (min-width: 1281px) and (max-width: 1601px) {*/
 
         /*.seq-canvas > li {*/
-            /*filter: blur(5px) !important;*/
-            /*-webkit-filter: blur(5px) !important;*/
+        /*height: 80% !important;*/
         /*}*/
 
-    }
-</style>
+        /*}*/
+
+        @media (min-width: 1025px) and (max-width: 1280px) {
+
+            .img-partners {
+                max-width: 80px;
+            }
+
+            #left, #right {
+                height: 320px;
+            }
+
+            .img2 {
+                height: 80px;
+            }
+
+            .img-s {
+                margin-top: 15px;
+            }
+
+            .text-s {
+                margin-top: 14px;
+            }
+
+        }
+
+        @media (min-width: 320px) and (max-width: 480px) {
+
+            .img-partners {
+                max-width: 100px;
+            }
+
+            #left-b {
+                margin-bottom: 10px;
+            }
+
+            .ol-timeline {
+                margin-top: 80px !important;
+            }
+
+            .img-s-2 {
+                max-width: 100px !important;
+            }
+
+            .text-banner {
+                text-align: center;
+                font-size: 15px;
+                color: #0045D1;
+                font-weight: bold
+            }
+
+            .text-banner-top {
+                color: #0045D1;
+                font-weight: bold;
+                text-align: center;
+                font-size: 15px;
+            }
+
+            .box-t-1 {
+                margin-bottom: 15px;
+            }
+
+            .box-partner {
+                height: 150px;
+                margin-bottom: 8px;
+            }
+
+            /*.seq-canvas > li {*/
+            /*filter: blur(5px) !important;*/
+            /*-webkit-filter: blur(5px) !important;*/
+            /*}*/
+
+        }
+    </style>
 
 @endpush
 
@@ -179,24 +193,24 @@
                 </div>
                 @php $posts = App\Models\Post::where('status',1)->orderBy('created_at','desc')->limit(5)->get(); @endphp
                 @if($posts)
-                    <div class="col-sm-4" >
+                    <div class="col-sm-4">
 
                         <article class="news-card sabbi-thumlinepost-card solitude-bg__x" id="right">
-                        {{--<img src="/assets/img/hnforum.jpg" style="width: 100%">--}}
-                        <h2 class="stage-title">Latest Events</h2>
-                        <ul class="list-unstyled lst_news_list" tabindex="0">
-                        @foreach($posts as $post)
-                        <li class="lst_news_item">
-                        <h3 class="title mg_0"><a
-                        href="{{url('post').'/'.str_slug($post->title).'-'.$post->id}}">{{$post->title}}</a>
-                        </h3>
-                        <div>
-                        <span class="date">{{$post->created_at->format('M d Y')}}</span>
-                        </div>
-                        </li>
-                        @endforeach
-                        </ul>
-                        {{--<a href="events.html" class="btn btn-unsolemn btn-action read-more">VIEW ALL</a>--}}
+                            {{--<img src="/assets/img/hnforum.jpg" style="width: 100%">--}}
+                            <h2 class="stage-title">Latest Events</h2>
+                            <ul class="list-unstyled lst_news_list" tabindex="0">
+                                @foreach($posts as $post)
+                                    <li class="lst_news_item">
+                                        <h3 class="title mg_0"><a
+                                                    href="{{url('post').'/'.str_slug($post->title).'-'.$post->id}}">{{$post->title}}</a>
+                                        </h3>
+                                        <div>
+                                            <span class="date">{{$post->created_at->format('M d Y')}}</span>
+                                        </div>
+                                    </li>
+                                @endforeach
+                            </ul>
+                            {{--<a href="events.html" class="btn btn-unsolemn btn-action read-more">VIEW ALL</a>--}}
                         </article>
                     </div>
                 @endif
@@ -206,60 +220,74 @@
 
                     <div class="col-sm-12">
 
-                        <div class="row">
+                        <div class="row taitro" >
                             <div class="col-sm-6">
                                 <div class="row">
                                     <h4 style="text-align: center; font-weight: bold">ORGANIZERS</h4>
+                                    <a href="http://www.vnu.edu.vn/home/" target="_blank">
+                                        <div class="col-sm-6">
 
-                                    <div class="col-sm-6">
-
-                                        <img src="/frontend/assets/img/vnu.png" style="max-width: 80px" class="img-responsive center-block img-s-2">
-                                        <div style="margin-top: 10px">
-                                            <p class="text-banner-top">Vietnam National University, Hanoi</p>
+                                            <img src="/frontend/assets/img/vnu.png" style="max-width: 80px"
+                                                 class="img-responsive center-block img-s-2">
+                                            <div style="margin-top: 10px">
+                                                <p class="text-banner-top">Vietnam National University, Hanoi</p>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </a>
+                                    <a href="http://www.kfas.or.kr/" target="_blank">
                                     <div class="col-sm-6">
 
-                                        <img src="/frontend/assets/img/kfas_logo.jpg" style="" class="img-responsive center-block img-s">
+                                        <img src="/frontend/assets/img/kfas_logo.jpg" style=""
+                                             class="img-responsive center-block img-s">
 
-                                        <p class="text-banner-top text-s" style="" >Korea Foundation for Advanced Studies</p>
+                                        <p class="text-banner-top text-s" style="">Korea Foundation for Advanced
+                                            Studies</p>
                                     </div>
-
+                                    </a>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="row">
                                     <h4 style="text-align: center; font-weight: bold">PARTNERS</h4>
+                                    <a href="https://www.most.gov.vn/en/Pages/home.aspx" target="_blank">
+                                    <div class="col-sm-3 box-partner">
 
-                                        <div class="col-sm-3 box-partner">
+                                        <img src="/frontend/bkhvcn.png"
+                                             class="img-responsive center-block img-partners ">
 
-                                            <img src="/frontend/bkhvcn.png" class="img-responsive center-block img-partners ">
+                                        <p class="text-banner">Ministry of Science and Technology</p>
 
-                                            <p class="text-banner">Ministry of Science and Technology</p>
+                                    </div>
+                                    </a>
+                                    <a href="http://www.monre.gov.vn/wps/portal/Trangchu/!ut/p/c5/04_SB8K8xLLM9MSSzPy8xBz9CP0os3hnd0cPE3MfAwMDT1dDA89AtyBjD3cfIyBfPxykwyzeAAdwNND388jPTdUvyM4rBwDpuoT1/dl3/d3/L2dBISEvZ0FBIS9nQSEh/" target="_blank">
+                                    <div class="col-sm-3 box-partner">
 
-                                        </div>
-                                        <div class="col-sm-3 box-partner">
+                                        <img src="/frontend/btnvmt.png"
+                                             class="img-responsive center-block img-partners ">
+                                        <p class="text-banner"> Ministry of Natural Resources and Environment</p>
+                                    </div>
+                                    </a>
+                                    <a href="http://hanoi.gov.vn/home" target="_blank">
+                                    <div class="col-sm-3 box-partner">
 
-                                            <img src="/frontend/btnvmt.png" class="img-responsive center-block img-partners ">
-                                            <p class="text-banner"> Ministry of Natural Resources and Environment</p>
-                                        </div>
-                                        <div class="col-sm-3 box-partner">
+                                        <img src="/frontend/hanoi.png"
+                                             class="img-responsive center-block img-partners ">
+                                        <p class="text-banner">Hanoi Municipal People's Committee</p>
 
-                                            <img src="/frontend/hanoi.png" class="img-responsive center-block img-partners ">
-                                            <p class="text-banner">Hanoi Municipal People's Committee</p>
+                                    </div>
+                                    </a>
+                                    <a href="http://www.vast.ac.vn/en/" target="_blank">
+                                    <div class="col-sm-3 box-partner">
 
-                                        </div>
-                                        <div class="col-sm-3 box-partner" >
+                                        <img src="/frontend/vast.png" class="img-responsive center-block img2"
+                                             style="max-height: 80px">
 
-                                            <img src="/frontend/VAST_1.png" class="img-responsive center-block img2" style="max-height: 80px">
+                                        <p class="text-banner">Vietnam Academy Of Science And Technology</p>
 
-                                            <p class="text-banner">Vietnam Academy Of Science And Technology</p>
-
-                                        </div>
-
+                                    </div>
+                                    </a>
 
                                 </div>
-
 
 
                             </div>
@@ -269,36 +297,36 @@
 
                 </div>
                 {{--<div class="row" style="margin-top: 15px">--}}
-                    {{--<div class="col-sm-12">--}}
-                        {{--<h3 style="text-align: center; color: #0045D1; font-weight: bold">PARTNERS</h3>--}}
-                        {{--<div class="row">--}}
-                            {{--<div class="col-sm-3 box-partner">--}}
+                {{--<div class="col-sm-12">--}}
+                {{--<h3 style="text-align: center; color: #0045D1; font-weight: bold">PARTNERS</h3>--}}
+                {{--<div class="row">--}}
+                {{--<div class="col-sm-3 box-partner">--}}
 
-                                {{--<img src="/frontend/bkhvcn.png" class="img-responsive center-block img-partners ">--}}
+                {{--<img src="/frontend/bkhvcn.png" class="img-responsive center-block img-partners ">--}}
 
-                                {{--<p class="text-banner">Ministry of Science and Technology</p>--}}
+                {{--<p class="text-banner">Ministry of Science and Technology</p>--}}
 
-                            {{--</div>--}}
-                            {{--<div class="col-sm-3 box-partner">--}}
+                {{--</div>--}}
+                {{--<div class="col-sm-3 box-partner">--}}
 
-                                {{--<img src="/frontend/btnvmt.png" class="img-responsive center-block img-partners ">--}}
-                                {{--<p class="text-banner"> Ministry of Natural Resources and Environment</p>--}}
-                            {{--</div>--}}
-                            {{--<div class="col-sm-3 box-partner">--}}
+                {{--<img src="/frontend/btnvmt.png" class="img-responsive center-block img-partners ">--}}
+                {{--<p class="text-banner"> Ministry of Natural Resources and Environment</p>--}}
+                {{--</div>--}}
+                {{--<div class="col-sm-3 box-partner">--}}
 
-                                {{--<img src="/frontend/hanoi.png" class="img-responsive center-block img-partners ">--}}
-                                {{--<p class="text-banner">Hanoi Municipal People's Committee</p>--}}
+                {{--<img src="/frontend/hanoi.png" class="img-responsive center-block img-partners ">--}}
+                {{--<p class="text-banner">Hanoi Municipal People's Committee</p>--}}
 
-                            {{--</div>--}}
-                            {{--<div class="col-sm-3 box-partner" >--}}
+                {{--</div>--}}
+                {{--<div class="col-sm-3 box-partner" >--}}
 
-                                {{--<img src="http://smartindustry.vn/wp-content/uploads/logo/VAST.png" class="img-responsive center-block">--}}
+                {{--<img src="http://smartindustry.vn/wp-content/uploads/logo/VAST.png" class="img-responsive center-block">--}}
 
-                                {{--<p class="text-banner" style="position: relative; bottom: -19px">VietNam Academy Of Science And Technology</p>--}}
+                {{--<p class="text-banner" style="position: relative; bottom: -19px">VietNam Academy Of Science And Technology</p>--}}
 
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
+                {{--</div>--}}
+                {{--</div>--}}
+                {{--</div>--}}
                 {{--</div>--}}
             </div>
             <hr>
