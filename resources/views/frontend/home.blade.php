@@ -221,7 +221,7 @@
                             <div class="col-sm-6">
                                 <div class="row">
                                     <h4 style="text-align: center; font-weight: bold">ORGANIZERS</h4>
-                                    <a href="" target="_blank">
+                                    <a href="http://www.vnu.edu.vn/home/" target="_blank">
                                         <div class="col-sm-6">
 
                                             <img src="/frontend/assets/img/vnu.png" style="max-width: 80px"
@@ -231,6 +231,7 @@
                                             </div>
                                         </div>
                                     </a>
+                                    <a href="http://www.kfas.or.kr/" target="_blank">
                                     <div class="col-sm-6">
 
                                         <img src="/frontend/assets/img/kfas_logo.jpg" style=""
@@ -239,13 +240,13 @@
                                         <p class="text-banner-top text-s" style="">Korea Foundation for Advanced
                                             Studies</p>
                                     </div>
-
+                                    </a>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="row">
                                     <h4 style="text-align: center; font-weight: bold">PARTNERS</h4>
-
+                                    <a href="https://www.most.gov.vn/en/Pages/home.aspx" target="_blank">
                                     <div class="col-sm-3 box-partner">
 
                                         <img src="/frontend/bkhvcn.png"
@@ -254,12 +255,16 @@
                                         <p class="text-banner">Ministry of Science and Technology</p>
 
                                     </div>
+                                    </a>
+                                    <a href="http://www.monre.gov.vn/wps/portal/Trangchu/!ut/p/c5/04_SB8K8xLLM9MSSzPy8xBz9CP0os3hnd0cPE3MfAwMDT1dDA89AtyBjD3cfIyBfPxykwyzeAAdwNND388jPTdUvyM4rBwDpuoT1/dl3/d3/L2dBISEvZ0FBIS9nQSEh/" target="_blank">
                                     <div class="col-sm-3 box-partner">
 
                                         <img src="/frontend/btnvmt.png"
                                              class="img-responsive center-block img-partners ">
                                         <p class="text-banner"> Ministry of Natural Resources and Environment</p>
                                     </div>
+                                    </a>
+                                    <a href="http://hanoi.gov.vn/home" target="_blank">
                                     <div class="col-sm-3 box-partner">
 
                                         <img src="/frontend/hanoi.png"
@@ -267,6 +272,8 @@
                                         <p class="text-banner">Hanoi Municipal People's Committee</p>
 
                                     </div>
+                                    </a>
+                                    <a href="http://www.vast.ac.vn/en/" target="_blank">
                                     <div class="col-sm-3 box-partner">
 
                                         <img src="/frontend/vast.png" class="img-responsive center-block img2"
@@ -275,7 +282,7 @@
                                         <p class="text-banner">Vietnam Academy Of Science And Technology</p>
 
                                     </div>
-
+                                    </a>
 
                                 </div>
 
