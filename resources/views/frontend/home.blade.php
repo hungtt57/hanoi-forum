@@ -30,6 +30,9 @@
             position: relative;
             margin-top: 9%;
         }
+        .taitro a {
+            color: inherit;
+        }
 
         .ol-timeline {
             margin-top: 50px !important;
@@ -217,7 +220,7 @@
 
                     <div class="col-sm-12">
 
-                        <div class="row">
+                        <div class="row taitro" >
                             <div class="col-sm-6">
                                 <div class="row">
                                     <h4 style="text-align: center; font-weight: bold">ORGANIZERS</h4>

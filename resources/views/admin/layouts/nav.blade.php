@@ -114,7 +114,7 @@
             @if(auth('backend')->user()->type == \App\Models\User::REVIEWER)
                     <li class="{{ (Request::is('admin/review-participants')) ? 'active' : '' }}"><a
                                 href="{{url('admin/review-participants')}}"><i class="fa  fa-user-plus"></i>
-                            <span>List Delegates</span></a></li>
+                            <span>Review Abstracts </span></a></li>
             @endif
 
             @if(auth('backend')->user()->type == \App\Models\User::PARTNER)
