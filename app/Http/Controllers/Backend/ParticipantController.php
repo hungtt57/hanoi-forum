@@ -220,16 +220,45 @@ class ParticipantController extends AdminController
         $user = User::select($keys)->where('type',User::PARTNER)->get()->toArray();
         if(count($user)) {
             foreach ($user as $key => $value) {
-                if(isset($value['gender'])) {
-                    $user[$key]['gender'] = ($value['gender'] == User::FEMALE) ? 'female' : 'male';
+                if(array_key_exists('gender',$value)) {
+                    $user[$key]['Gender'] = ($value['gender'] == User::FEMALE) ? 'female' : 'male';
+                    unset($user[$key]['gender']);
                 }
-                if(isset($value['paper'])) {
-                    $user[$key]['paper'] = ($value['paper']) ? url($value['paper']) : '';
+                if(array_key_exists('paper',$value)) {
+                    $user[$key]['Paper'] = ($value['paper']) ? url($value['paper']) : '';
+                    unset($user[$key]['paper']);
+                }
+                if(array_key_exists('first_name',$value)) {
+                    $user[$key]['First name'] =$value['first_name'];
+                    unset($user[$key]['first_name']);
+                }
+                if(array_key_exists('last_name',$value)) {
+                    $user[$key]['Last name'] =$value['last_name'];
+                    unset($user[$key]['last_name']);
+                }
+                if(array_key_exists('title',$value)) {
+                    $user[$key]['Title'] =$value['title'];
+                    unset($user[$key]['title']);
+                }
+                if(array_key_exists('affiliation',$value)) {
+                    $user[$key]['Affiliation'] =$value['affiliation'];
+                    unset($user[$key]['affiliation']);
+                }
+                if(array_key_exists('email',$value)) {
+                    $user[$key]['Email'] =$value['email'];
+                    unset($user[$key]['email']);
+                }
+                if(array_key_exists('abstract',$value)) {
+
+                    $user[$key]['Abstract'] = $value['abstract'];
+                    unset($user[$key]['abstract']);
+                }
+                if(array_key_exists('title_of_paper',$value)) {
+                    $user[$key]['Title of paper'] =$value['title_of_paper'];
+                    unset($user[$key]['title_of_paper']);
                 }
             }
         }
-
-
         Excel::create('list-delegates-' . Carbon::now()->toDateString(), function ($excel) use ($user) {
 
             $excel->sheet('sheet', function ($sheet) use ($user) {
