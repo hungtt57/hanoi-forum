@@ -142,6 +142,7 @@
               if (response.status === 1) {
                 $('#answer-modal').modal('hide');
                 $('#answer-modal').find('input[name=content]').val('');
+                $('#count-question').html(response.data.count);
                 table.draw();
                 swal(response.message, '', 'success');
               } else {

@@ -104,7 +104,8 @@
                         <span> Abstract submission  </span></a></li>
                 <li class="{{ (Request::is('admin/contact-us')) ? 'active' : '' }}"><a
                             href="{{url('admin/contact-us')}}"><i class="fa fa-question-circle"></i>
-                        <span>Online questions </span></a></li>
+                        @php $count = \App\Models\Contact::where('status',0)->count(); @endphp
+                        <span>Online questions (<span id="count-question">{{$count}}</span>) </span></a></li>
                 <li class="{{ (Request::is('admin/participants')) ? 'active' : '' }}"><a
                             href="{{url('admin/participants')}}"><i class="fa  fa-user-plus"></i>
                         <span>Manage Delegates </span></a></li>
