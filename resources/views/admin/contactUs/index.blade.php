@@ -94,7 +94,7 @@
           processing: true,
           serverSide: true,
           // searching: true,
-     
+
           ajax: '{{route('Backend::contact@datatables')}}',
           columns: [
             {data: 'first_name', name: 'first_name',orderable : false},
