@@ -8,12 +8,12 @@ use App\Models\Contact;
 use App\Models\EmailLog;
 use App\Models\Post;
 use App\Models\User;
-use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use DB;
 use Hash;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Mail;
-use DB;
+
 class HomeController extends AdminController
 {
     public function sendEmailReminder(Request $request)
@@ -61,6 +61,8 @@ class HomeController extends AdminController
             }
             if ($request->file('file')) {
                 $data['file'] = $this->saveFile($request->file('file'));
+            } else {
+                unset($data['file']);
             }
             $data['password'] = Hash::make($data['password']);
             $data['type'] = User::PARTNER;
@@ -68,8 +70,7 @@ class HomeController extends AdminController
             $data['status'] = 0;
             $code = '';
             $count = 1;
-            $data['title'] = rtrim($data['title'],'.');
-            $data['title'] = rtrim($data['title'],',');
+            $data['title'] = rtrim($data['title'], '.');
             do {
                 $code = str_random(5);
                 $count = User::where('code', $code)->count();
@@ -78,15 +79,15 @@ class HomeController extends AdminController
             $user = User::create($data);
             Mail::to($user->email)->cc('hanoiforum@vnu.edu.vn')->send(new RegisterEmail($user));
             EmailLog::create([
-               'to' => $user->email,
-               'event' => 'register',
+                'to' => $user->email,
+                'event' => 'register',
                 'data' => $user->toArray()
             ]);
             DB::commit();
             if ($data['apply'] == 1) {
                 return redirect()->back()->with('success', '<p>Thank you for your registration. An automatic confirmation has been sent to your email address. You should check your junk mail in case you do not receive it. Please click on the provided link in the email to activate your account. Please contact us directly at hanoiforum@vnu.edu.vn if you do not receive a confirmation within 24 hours.</p>
 <p>After the verification, you can log into your account and submit your abstract.</p><p>Registration fee is USD100 and includes access to all sessions and side events, welcome dinner, refreshments during the conference and conference materials. Registration fee will automatically be waived to delegates with accepted abstracts.</p>
-')->with('hideform','yes');
+')->with('hideform', 'yes');
             } else {
                 return redirect()->back()->with('success', '
 <p>Thank you for your registration. An automatic confirmation has been sent to your email address. You should check your junk mail in case you do not receive this email. Please click on the provided link in the email to activate your account. Please contact us directly at hanoiforum@vnu.edu.vn if you do not receive a confirmation within 24 hours. </p>
@@ -95,7 +96,7 @@ class HomeController extends AdminController
 
 <p>You can pay the registration fee until October 20, 2018 by logging onto your account. The registration fee is USD100 and includes access to all sessions and side events, welcome dinner, refreshments during the event, and the event materials. </p>
 <p>Limited financial support for registration is available and on a first come first served basis. </p>
-')->with('hideform','yes');
+')->with('hideform', 'yes');
             }
 
         } catch (\Exception $ex) {
@@ -133,7 +134,7 @@ class HomeController extends AdminController
             ]);
             DB::commit();
             return redirect()->back()->with('success', 'Thank you for contacting us. Your request has been recorded. We will try to get back to you as soon as we can. ');
-        }catch (\Exception $ex) {
+        } catch (\Exception $ex) {
             DB::rollback();
             return redirect()->back()->with('error', 'Server error.Try again later')->withInput(Input::all());
         }
@@ -143,13 +144,13 @@ class HomeController extends AdminController
     public function vefiryEmail(Request $request)
     {
         $code = $request->input('code');
-        $user= null;
+        $user = null;
         if ($code) {
             $user = User::where('code', $code)->first();
             $user->update(['status' => 1]);
         }
 
-        return view('frontend.verifyEmail',compact('user'));
+        return view('frontend.verifyEmail', compact('user'));
     }
 
     public function about()
@@ -242,9 +243,11 @@ class HomeController extends AdminController
         return view('frontend.sponsor');
     }
 
-    public function faq(Request $request) {
+    public function faq(Request $request)
+    {
         return view('frontend.faq');
     }
+
     public function importantDates(Request $request)
     {
         return view('frontend.importantDates');

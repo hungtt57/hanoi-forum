@@ -108,7 +108,7 @@
             {data: 'created_at', name: 'created_at',orderable : false},
             {data: 'status', name: 'status',orderable:false},
 
-            {data: 'action', name: 'action'},
+            {data: 'action', name: 'action',orderable:false},
           ],
 
           // initComplete: function () {
