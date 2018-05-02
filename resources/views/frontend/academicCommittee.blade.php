@@ -176,7 +176,7 @@
                                 <div class="image-human">
                                     <img  src="/frontend/anh/hoangvanthang.jpg" alt="">
                                 </div>
-                                <p><strong>HOANG Van Thang, </strong>Professor</p>
+                                <p><strong>HOANG Van Thang, </strong>PhD</p>
 
                                 <p>Affiliation(s): Director, VNU Centre Institute for Natural Resources and
                                     Environmental Studies.</p>
