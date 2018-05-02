@@ -29,7 +29,7 @@ class SendContactEmail extends Mailable
      */
     public function build()
     {
-        return $this->from(['address' => 'no-reply@hanoiforum.vnu.edu.vn', 'name' => 'Hanoi forum 2018'])
+        return $this->from(['address' => 'hanoiforum.vnu.edu.vn', 'name' => 'Hanoi forum 2018'])
             ->subject('Contact us')
             ->view('email.contactUs')->with(['contact' => $this->contact]);
     }
