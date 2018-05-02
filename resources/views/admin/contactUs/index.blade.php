@@ -17,10 +17,10 @@
                                 <th>First name</th>
                                 <th>Sur name</th>
                                 <th>Title</th>
-                                <th>Email</th>
-                                <th>Registration ID</th>
+                                {{--<th>Email</th>--}}
+                                {{--<th>Registration ID</th>--}}
                                 <th>Issue</th>
-                                <th>Subject</th>
+                                {{--<th>Subject</th>--}}
                                 <th>Question</th>
                                 <th>Created at</th>
                                 <th>Status</th>
@@ -100,10 +100,10 @@
             {data: 'first_name', name: 'first_name',orderable : false},
             {data: 'sur_name', name: 'sur_name',orderable : false},
             {data: 'title', name: 'title',orderable : false},
-            {data: 'email', name: 'email',orderable : false},
-            {data: 'code', name: 'code',orderable : false},
+//            {data: 'email', name: 'email',orderable : false},
+//            {data: 'code', name: 'code',orderable : false},
             {data: 'issue', name: 'issue',orderable : false},
-            {data: 'subject', name: 'subject',orderable : false},
+//            {data: 'subject', name: 'subject',orderable : false},
             {data: 'question', name: 'question',orderable : false},
             {data: 'created_at', name: 'created_at',orderable : false},
             {data: 'status', name: 'status',orderable:false},
