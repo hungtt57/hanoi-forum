@@ -129,8 +129,8 @@
                         <div class="clearfix"></div>
                         <input type="file" class="post-image form-control" id="file" name="file">
                             <div class="clearfix"></div>
-                            @if(isset($user) and $user->paper)
-                                <a class="btn btn-primary green start" href="{{$user->paper}}" download="{{$user->paper}}"
+                            @if(isset($user) and $user->file)
+                                <a class="btn btn-primary green start" href="{{$user->file}}" download="{{$user->file}}"
                                    style="float: left;margin-right: 10px;margin-top: 10px">
                                     <i class="fa fa-download"></i>
                                     <span>Download File</span>

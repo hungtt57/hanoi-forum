@@ -170,8 +170,8 @@
             <div class="form-group">
                 <label class="control-label col-md-3">Paper</label>
                 <div class="col-md-6">
-                    @if(isset($user) and $user->paper)
-                        <a class="btn btn-primary green start" href="{{$user->paper}}" download="{{$user->paper}}"
+                    @if(isset($user) and $user->file)
+                        <a class="btn btn-primary green start" href="{{$user->file}}" download="{{$user->file}}"
                            style="float: left;margin-right: 10px;margin-bottom: 10px">
                             <i class="fa fa-download"></i>
                             <span>Tải xuống</span>
