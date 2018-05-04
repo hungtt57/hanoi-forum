@@ -30,6 +30,7 @@
                                 <th>Submission status</th>
                                 <th>Reviewer</th>
                                 <th style="width: 105px;">Payment Status</th>
+                                <th >Verify</th>
                                 <th>Created at</th>
                                 <th>Action</th>
                             </tr>
@@ -153,7 +154,53 @@
           });
         });
 
+        $(document).on('click','.verify',function () {
+          var id = $(this).data('id');
+          var that = this;
+          bootbox.confirm({
+            message: "Do you want to verify delegate",
+            buttons: {
+              confirm: {
+                label: 'Yes',
+                className: 'btn-success'
+              },
+              cancel: {
+                label: 'No',
+                className: 'btn-danger'
+              }
+            },
 
+
+            callback: function (result) {
+              if (result == true) {
+                $.ajax({
+                  url: '{{ route('Backend::participants@verify') }}',
+                  type: 'post',
+                  data: {
+                    id: id
+                  },
+                  dataType: 'json',
+
+                  success: function (response) {
+                    if (response.status == 1) {
+                        if(response.data.verify == 1) {
+                            $(that).removeClass('btn-danger').addClass('btn-primary').html('Active');
+                        }else {
+                            $(that).removeClass('btn-primary').addClass('btn-danger').html('InActive');
+                        }
+                      swal(response.message, '', 'success');
+
+                    } else {
+                      swal(response.message, '', 'error');
+                    }
+                  }, error: function (error) {
+                    swal('Error,Try again later', '', 'error');
+                  }
+                });
+              }
+            }
+          });
+        });
         $(document).on('change', '.select-payment', function () {
           var val = $(this).val();
 
@@ -198,6 +245,7 @@
             {data: 'status_submit', name: 'status_submit', searchable: false, orderable: false},
             {data: 'reviewer', name: 'reviewer'},
             {data: 'payment_status', name: 'payment_status', orderable: false, searchable: false},
+            {data: 'verify', name: 'verify', orderable: false, searchable: false},
             {data: 'created_at', name: 'created_at'},
 
             {data: 'action', name: 'action'},

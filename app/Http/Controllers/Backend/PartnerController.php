@@ -153,6 +153,9 @@ class PartnerController extends AdminController
 
     }
     public function listDelegates(Request $request) {
+        if(auth('backend')->user()->verify == 0) {
+            abort(403);
+        }
         return view('admin.partner.listDelegates');
     }
     public function listDelegatesData(Request $request)

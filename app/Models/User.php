@@ -24,17 +24,18 @@ class User extends Authenticatable
     const WAIVED = 2;
     const PAID = 1;
     const UNPAID = 0;
-    public static $paymentText  = [
+    public static $paymentText = [
         0 => 'Unpaid',
         1 => 'Paid',
         2 => 'Waived',
     ];
     protected $fillable = [
-        'name', 'email', 'password', 'type', 'phone','file','image',
-        'first_name','last_name','title','affiliation','gender','nationality','link_cv','abstract','paper',
-        'status','apply','code','reviewer_id','title_of_paper',
-        'confirm_abstract','confirm_paper','reject_abstract','reject_paper','comment_abstract','comment_paper',
-        'share_info','payment_status'
+        'name', 'email', 'password', 'type', 'phone', 'file', 'image',
+        'first_name', 'last_name', 'title', 'affiliation', 'gender', 'nationality', 'link_cv', 'abstract', 'paper',
+        'status', 'apply', 'code', 'reviewer_id', 'title_of_paper',
+        'confirm_abstract', 'confirm_paper', 'reject_abstract', 'reject_paper', 'comment_abstract', 'comment_paper',
+        'share_info', 'payment_status',
+        'verify'
     ];
 
     /**
