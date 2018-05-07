@@ -104,7 +104,7 @@
                 </div>
             </div>
 
-            <div class="applyContainer  @if(old('apply',$user->apply) != 1)hide @endif">
+            <div class="applyContainer  ">
                 <div class="form-group">
                     <label class="control-label  col-md-3">Resume/CV </label>
 
@@ -206,15 +206,15 @@
 
     <script type="application/javascript">
       $(function () {
-        $('input[name="apply"]').change(function () {
-          var value = $(this).val();
-
-          if (value == 1) {
-            $('.applyContainer').removeClass('hide');
-          } else {
-            $('.applyContainer').addClass('hide');
-          }
-        });
+//        $('input[name="apply"]').change(function () {
+//          var value = $(this).val();
+//
+//          if (value == 1) {
+//            $('.applyContainer').removeClass('hide');
+//          } else {
+//            $('.applyContainer').addClass('hide');
+//          }
+//        });
         $("#file").fileinput({
           'showUpload': false,
           'showRemove': false,

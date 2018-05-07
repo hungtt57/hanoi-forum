@@ -33,7 +33,10 @@ class ParticipantController extends AdminController
                 return view('admin.participant.payment', compact('user'))->render();
             })
             ->addColumn('status_submit', function ($user) {
-                $string = '';
+                $string = 'Not submit abstract yet';
+                if($user->apply == 0) {
+                    $string = 'N/A';
+                }
                 if ($user->abstract and !$user->confirm_abstract) {
                     $string = 'submitted abstract';
                 }
@@ -44,7 +47,7 @@ class ParticipantController extends AdminController
                     $string = 'submitted paper';
                 }
                 if ($user->confirm_paper == 1) {
-                    $string = 'Finsh';
+                    $string = 'Finish';
                 }
                 return $string;
             })

@@ -45,10 +45,12 @@
                          </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li class="{{ (Request::is('admin/articles')) ? 'active' : '' }}"><a href="{{url('admin/articles')}}"><i
+                        <li class="{{ (Request::is('admin/articles')) ? 'active' : '' }}"><a
+                                    href="{{url('admin/articles')}}"><i
                                         class="fa fa-newspaper-o"></i> List Articles</a></li>
                         <li class="{{ (Request::is('admin/articles/add')) ? 'active' : '' }}"><a
-                                    href="{{url('admin/articles/add')}}"><i class="fa fa-newspaper-o"></i> Add New Article</a>
+                                    href="{{url('admin/articles/add')}}"><i class="fa fa-newspaper-o"></i> Add New
+                                Article</a>
                         </li>
                     </ul>
                 </li>
@@ -64,7 +66,8 @@
                                     href="{{url('admin/reviewer')}}"><i
                                         class="fa fa-user-times"></i> List Reviewers</a></li>
                         <li class="{{ (Request::is('admin/reviewer/add')) ? 'active' : '' }}"><a
-                                    href="{{url('admin/reviewer/add')}}"><i class="fa fa-user-times"></i> Add New Reviewer</a>
+                                    href="{{url('admin/reviewer/add')}}"><i class="fa fa-user-times"></i> Add New
+                                Reviewer</a>
                         </li>
                     </ul>
                 </li>
@@ -76,10 +79,12 @@
                          </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li class="{{ (Request::is('admin/banners')) ? 'active' : '' }}"><a href="{{url('admin/banners')}}"><i
+                        <li class="{{ (Request::is('admin/banners')) ? 'active' : '' }}"><a
+                                    href="{{url('admin/banners')}}"><i
                                         class="fa fa-file-image-o"></i> List Banners</a></li>
                         <li class="{{ (Request::is('admin/banners/add')) ? 'active' : '' }}"><a
-                                    href="{{url('admin/banners/add')}}"><i class="fa fa-file-image-o"></i> Add New Banner</a>
+                                    href="{{url('admin/banners/add')}}"><i class="fa fa-file-image-o"></i> Add New
+                                Banner</a>
                         </li>
                     </ul>
                 </li>
@@ -95,7 +100,8 @@
                                     href="{{url('admin/subcommittee')}}"><i
                                         class="fa fa-circle-o"></i> List Subcommittee</a></li>
                         <li class="{{ (Request::is('admin/subcommittee/add')) ? 'active' : '' }}"><a
-                                    href="{{url('admin/subcommittee/add')}}"><i class="fa fa-circle-o"></i> Add New Subcommittee</a>
+                                    href="{{url('admin/subcommittee/add')}}"><i class="fa fa-circle-o"></i> Add New
+                                Subcommittee</a>
                         </li>
                     </ul>
                 </li>
@@ -113,31 +119,33 @@
             @endif
 
             @if(auth('backend')->user()->type == \App\Models\User::REVIEWER)
-                    <li class="{{ (Request::is('admin/review-participants')) ? 'active' : '' }}"><a
-                                href="{{url('admin/review-participants')}}"><i class="fa  fa-user-plus"></i>
-                            <span>Review Abstracts </span></a></li>
+                <li class="{{ (Request::is('admin/review-participants')) ? 'active' : '' }}"><a
+                            href="{{url('admin/review-participants')}}"><i class="fa  fa-user-plus"></i>
+                        <span>Review Abstracts </span></a></li>
             @endif
 
             @if(auth('backend')->user()->type == \App\Models\User::PARTNER)
-                    <li class="{{ (Request::is('admin/dashboard')) ? 'active' : '' }}"><a
-                                href="{{url('admin/dashboard')}}"><i class="fa  fa fa-dashboard"></i>
-                            <span>Dashboard</span></a></li>
-                    <li class="{{ (Request::is('admin/partner/edit')) ? 'active' : '' }}"><a
-                                href="{{url('admin/partner/edit')}}"><i class="fa   fa-user-circle"></i>
-                            <span>Manage your profile</span></a></li>
+                <li class="{{ (Request::is('admin/dashboard')) ? 'active' : '' }}"><a
+                            href="{{url('admin/dashboard')}}"><i class="fa  fa fa-dashboard"></i>
+                        <span>Dashboard</span></a></li>
+                <li class="{{ (Request::is('admin/partner/edit')) ? 'active' : '' }}"><a
+                            href="{{url('admin/partner/edit')}}"><i class="fa   fa-user-circle"></i>
+                        <span>Manage your profile</span></a></li>
+                @if(auth('backend')->user()->apply)
                     <li class="{{ (Request::is('admin/submit')) ? 'active' : '' }}"><a
                                 href="{{url('admin/submit')}}"><i class="fa   fa-cloud-upload"></i>
                             <span>Submit abstract</span></a></li>
-                    @if(auth('backend')->user()->verify )
+                @endif
+                @if(auth('backend')->user()->verify )
 
                     <li class="{{ (Request::is('admin/list-delegates')) ? 'active' : '' }}"><a
                                 href="{{url('admin/list-delegates')}}"><i class="fa  fa-user-plus"></i>
                             <span>List Delegates  </span></a></li>
-                    @endif
+                @endif
 
-                    <li class=""><a
-                                href="{{url('contact-us')}}"><i class="fa  fa-question-circle"></i>
-                            <span>Contact us</span></a></li>
+                <li class=""><a
+                            href="{{url('contact-us')}}"><i class="fa  fa-question-circle"></i>
+                        <span>Contact us</span></a></li>
             @endif
         </ul>
     </section>

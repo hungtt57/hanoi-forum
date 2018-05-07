@@ -122,7 +122,7 @@
                                 </div>
                             </div>
                             {{--<input type="hidden" name="apply" value="1">--}}
-                            <div class="applyContainer @if(old('apply') == 0 and !empty(old('apply'))) hide @endif" >
+                            <div class="applyContainer" >
                                 <div class="form-group">
                                     <label class="control-label ">Resume/CV </label>
                                     <p class="control-label " >Paste the link to your online CV here (preferably LinkedIN if available) </p>
@@ -188,15 +188,15 @@
           'showUploadedThumbs': false,
           'allowedFileTypes': 'any'
         });
-        $('input[name="apply"]').change(function () {
-          var value = $(this).val();
-
-          if(value == 1) {
-            $('.applyContainer').removeClass('hide');
-          }else {
-            $('.applyContainer').addClass('hide');
-          }
-        });
+//        $('input[name="apply"]').change(function () {
+//          var value = $(this).val();
+//
+//          if(value == 1) {
+//            $('.applyContainer').removeClass('hide');
+//          }else {
+//            $('.applyContainer').addClass('hide');
+//          }
+//        });
       });
     </script>
 
