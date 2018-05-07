@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Datatables;
 use Maatwebsite\Excel\Facades\Excel;
+
 class ParticipantController extends AdminController
 {
     public function index()
@@ -76,6 +77,15 @@ class ParticipantController extends AdminController
                 }
                 return '';
             })
+            ->editColumn('verify', function ($post) {
+                $string = '';
+                    if($post->verify) {
+                        $string = '<a href="javascript:;void(0)" class="btn btn-primary verify" data-id="'.$post->id.'">Active</a>';
+                    }else {
+                        $string = '<a  href="javascript:;void(0)" class="btn btn-danger verify" data-id="'.$post->id.'">InActive</a>';
+                    }
+                    return $string;
+            })
             ->addColumn('action', function ($post) {
                 $urlEdit = route('Backend::participants@edit', ['id' => $post->id]);
 
@@ -92,7 +102,31 @@ class ParticipantController extends AdminController
 
             })->make(true);
     }
-
+    public function verify(Request $request) {
+        $id = $request->input('id');
+        $user = User::find($id);
+        if($user) {
+            if($user->verify ) {
+                $user->verify = 0;
+                $user->save();
+            }else {
+                $user->verify = 1;
+                $user->save();
+            }
+            return response([
+                'status' => 1,
+                'message' => 'Success',
+                'data' => [
+                    'verify' => $user->verify
+                ]
+            ], 200);
+        }
+        return response([
+            'status' => 0,
+            'message' => 'Delegate not exist',
+            'data' => null
+        ], 200);
+    }
     public function delete($id)
     {
         $post = User::where('id', $id)->where('type', User::PARTNER)->first();
@@ -217,44 +251,44 @@ class ParticipantController extends AdminController
         $data = array_only($request->all(), $model->getFillable());
         $keys = array_keys($data);
 
-        $user = User::select($keys)->where('type',User::PARTNER)->get()->toArray();
-        if(count($user)) {
+        $user = User::select($keys)->where('type', User::PARTNER)->get()->toArray();
+        if (count($user)) {
             foreach ($user as $key => $value) {
-                if(array_key_exists('gender',$value)) {
+                if (array_key_exists('gender', $value)) {
                     $user[$key]['Gender'] = ($value['gender'] == User::FEMALE) ? 'female' : 'male';
                     unset($user[$key]['gender']);
                 }
-                if(array_key_exists('paper',$value)) {
+                if (array_key_exists('paper', $value)) {
                     $user[$key]['Paper'] = ($value['paper']) ? url($value['paper']) : '';
                     unset($user[$key]['paper']);
                 }
-                if(array_key_exists('first_name',$value)) {
-                    $user[$key]['First name'] =$value['first_name'];
+                if (array_key_exists('first_name', $value)) {
+                    $user[$key]['First name'] = $value['first_name'];
                     unset($user[$key]['first_name']);
                 }
-                if(array_key_exists('last_name',$value)) {
-                    $user[$key]['Last name'] =$value['last_name'];
+                if (array_key_exists('last_name', $value)) {
+                    $user[$key]['Last name'] = $value['last_name'];
                     unset($user[$key]['last_name']);
                 }
-                if(array_key_exists('title',$value)) {
-                    $user[$key]['Title'] =$value['title'];
+                if (array_key_exists('title', $value)) {
+                    $user[$key]['Title'] = $value['title'];
                     unset($user[$key]['title']);
                 }
-                if(array_key_exists('affiliation',$value)) {
-                    $user[$key]['Affiliation'] =$value['affiliation'];
+                if (array_key_exists('affiliation', $value)) {
+                    $user[$key]['Affiliation'] = $value['affiliation'];
                     unset($user[$key]['affiliation']);
                 }
-                if(array_key_exists('email',$value)) {
-                    $user[$key]['Email'] =$value['email'];
+                if (array_key_exists('email', $value)) {
+                    $user[$key]['Email'] = $value['email'];
                     unset($user[$key]['email']);
                 }
-                if(array_key_exists('abstract',$value)) {
+                if (array_key_exists('abstract', $value)) {
 
                     $user[$key]['Abstract'] = $value['abstract'];
                     unset($user[$key]['abstract']);
                 }
-                if(array_key_exists('title_of_paper',$value)) {
-                    $user[$key]['Title of paper'] =$value['title_of_paper'];
+                if (array_key_exists('title_of_paper', $value)) {
+                    $user[$key]['Title of paper'] = $value['title_of_paper'];
                     unset($user[$key]['title_of_paper']);
                 }
             }
@@ -268,6 +302,6 @@ class ParticipantController extends AdminController
             });
 
         })->download('xls');
-        return redirect(route('Backend::participants@index'))->with('success','Export Success');
+        return redirect(route('Backend::participants@index'))->with('success', 'Export Success');
     }
 }
