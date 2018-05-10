@@ -68,7 +68,8 @@
                                 <div class="image-human">
                                     <img class="" src="/frontend/anh/park.jpg" alt="">
                                 </div>
-                                <p><strong>President PARK In Kook, KFAS</strong></p>
+                                <p>
+                                    President,<strong> PARK In Kook</strong>, KFAS</p>
                                 <p>Affiliation(s): President, Korea Foundation for Advanced Studies (KFAS)
                                 </p>
 
