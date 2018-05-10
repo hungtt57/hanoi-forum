@@ -68,11 +68,12 @@
                                 <div class="image-human">
                                     <img class="" src="/frontend/anh/park.jpg" alt="">
                                 </div>
-                                <p><strong>PARK In Kook</strong></p>
-                                <p>Affiliation(s): President, Korean Foundation for Advanced Studies (KFAS)
+                                <p><strong>President PARK In Kook, KFAS</strong></p>
+                                <p>Affiliation(s): President, Korea Foundation for Advanced Studies (KFAS)
                                 </p>
 
-                                <p>Research areas: Chinese language, literature and law</p>
+                                <p>Research areas: Chinese language, literature and law
+                                </p>
                                 <div class="clearfix"></div>
                             </div>
 
