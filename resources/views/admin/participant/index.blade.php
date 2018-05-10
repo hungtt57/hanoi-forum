@@ -29,7 +29,7 @@
                                 <th>Title of paper</th>
                                 <th>Submission status</th>
                                 <th>Reviewer</th>
-                                <th style="width: 105px;">Payment Status</th>
+                                {{--<th style="width: 105px;">Payment Status</th>--}}
                                 <th >Verify</th>
                                 <th>Created at</th>
                                 <th>Action</th>
@@ -244,7 +244,7 @@
             {data: 'title_of_paper', name: 'title_of_paper'},
             {data: 'status_submit', name: 'status_submit', searchable: false, orderable: false},
             {data: 'reviewer', name: 'reviewer'},
-            {data: 'payment_status', name: 'payment_status', orderable: false, searchable: false},
+            // {data: 'payment_status', name: 'payment_status', orderable: false, searchable: false},
             {data: 'verify', name: 'verify', orderable: false, searchable: false},
             {data: 'created_at', name: 'created_at'},
 
