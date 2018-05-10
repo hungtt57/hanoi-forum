@@ -133,7 +133,7 @@
                     <address>
                         <h3 class="entry-title">Contact Information</h3>
                         <div class="address-entry">
-                            <p class="__ad-num">Tel: (84) 24 37547670 - Ext: 723</p>
+                            <p class="__ad-num">Tel: :(84) 24 39983856 - Ext: 723</p>
                             <p class="__ad-num">Email: hanoiforum@vnu.edu.vn</p>
                         </div>
                     </address>
