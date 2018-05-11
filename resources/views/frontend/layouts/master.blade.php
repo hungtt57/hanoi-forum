@@ -117,32 +117,56 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
-                <div class="footer-site-info">
+
                     {{--<header>--}}
                         {{--<a class="footer-brand" href="index.html"><img alt="" class="img-responsive" src="assets/img/site-logo.png"></a>--}}
                     {{--</header>--}}
-                    <address>
-                        <h3 class="entry-title">Address</h3>
-                        <div class="address-entry">
-                            <p class="__adtext">Hanoi Forum Secretariat</p>
-                            <p class="__ad-num">R1006, Administration Building</p>
-                            <p class="__ad-num">Vietnam National University, Hanoi</p>
-                            <p class="__ad-num">144 Xuan Thuy Rd., Cau Giay dist.</p>
+                    {{--<address>--}}
+                        {{--<h3 class="entry-title">Address</h3>--}}
+                        {{--<div class="address-entry">--}}
+                            {{--<p class="__adtext">Hanoi Forum Secretariat</p>--}}
+                            {{--<p class="__ad-num">R1006, Administration Building</p>--}}
+                            {{--<p class="__ad-num">Vietnam National University, Hanoi</p>--}}
+                            {{--<p class="__ad-num">144 Xuan Thuy Rd., Cau Giay dist.</p>--}}
+                        {{--</div>--}}
+                    {{--</address>--}}
+                    <section class="widget widget_sec">
+                        <div class="widget-main">
+                            <h2 class="widget-title">Address</h2>
+                            <ul class="list list-unstyled list-footer-nav">
+                                <li><a >Hanoi Forum Secretariat</a></li>
+                                <li><a >R1006, Administration Building</a></li>
+                                <li><a >Vietnam National University, Hanoi</a></li>
+                                <li><a >144 Xuan Thuy Rd., Cau Giay dist.</a></li>
+
+                            </ul>
                         </div>
-                    </address>
-                    <address>
-                        <h3 class="entry-title">Contact Information</h3>
-                        <div class="address-entry">
-                            <p class="__ad-num">Tel: (84) 24 39983856</p>
-                            <p class="__ad-num">Email: hanoiforum@vnu.edu.vn</p>
-                        </div>
-                    </address>
+                    </section>
+                <section class="widget widget_sec">
+                    <div class="widget-main">
+                        <h2 class="widget-title">Contact Information</h2>
+                        <ul class="list list-unstyled list-footer-nav">
+                            <li><a >Tel: (84) 24 39983856</a></li>
+                            <li><a >Email: hanoiforum@vnu.edu.vn</a></li>
+
+
+                        </ul>
+                    </div>
+                </section>
+                    {{--<img style="width: 100px" src="/frontend/qrcode.png" alt="">--}}
+                    {{--<address>--}}
+                        {{--<h3 class="entry-title">Contact Information</h3>--}}
+                        {{--<div class="address-entry">--}}
+                            {{--<p class="__ad-num">Tel: (84) 24 39983856</p>--}}
+                            {{--<p class="__ad-num">Email: hanoiforum@vnu.edu.vn</p>--}}
+                        {{--</div>--}}
+                    {{--</address>--}}
                     {{--<footer class="contact-info">--}}
                         {{--<h3 class="entry-title">Contact Information</h3>--}}
                         {{--<p class="__ad-num">Tel: (84) 24 37547670 - Ext: 723</p>--}}
                         {{--<p class="__ad-num">Email: hanoiforum@vnu.edu.vn</p>--}}
                     {{--</footer>--}}
-                </div>
+
             </div>
             <div class="col-sm-3">
 
