@@ -191,11 +191,7 @@
                         </ul>
                     </div>
                 </section>
-                <section class="widget widget_sec">
-                    <div class="widget-main">
-                        <h2 class="widget-title"><a href=""> Venue </a></h2>
-                    </div>
-                </section>
+
                 <section class="widget widget_sec">
                     <div class="widget-main">
                         <h2 class="widget-title"><a href="{{url('/faq')}}"> FAQ</a><span style="text-transform: none !important;">s</span></h2>
@@ -240,15 +236,19 @@
                 <section class="widget widget_sec">
                     <div class="widget-main">
                         <h2 class="widget-title">Visa to Vietnam</h2>
-                        <ul class="list list-unstyled list-footer-nav">
-                            <li><a href="">Visa exemption</a></li>
-                            <li><a href="">Visa on arrival</a></li>
-                            <li><a href="">Application for visa</a></li>
+                        {{--<ul class="list list-unstyled list-footer-nav">--}}
+                            {{--<li><a href="">Visa exemption</a></li>--}}
+                            {{--<li><a href="">Visa on arrival</a></li>--}}
+                            {{--<li><a href="">Application for visa</a></li>--}}
 
-                        </ul>
+                        {{--</ul>--}}
                     </div>
                 </section>
-
+                <section class="widget widget_sec">
+                    <div class="widget-main">
+                        <h2 class="widget-title"><a href=""> Venue </a></h2>
+                    </div>
+                </section>
                 {{--<section class="widget widget_sec">--}}
                     {{--<div class="widget-main">--}}
                         {{--<h2 class="widget-title"><a href="{{url('/')}}">Multimedia</a></h2>--}}
