@@ -235,7 +235,7 @@
 
                 <section class="widget widget_sec">
                     <div class="widget-main">
-                        <h2 class="widget-title">Visa to Vietnam</h2>
+                        <h2 class="widget-title"><a href="{{url('visa')}}"> Visa to Vietnam </a></h2>
                         {{--<ul class="list list-unstyled list-footer-nav">--}}
                             {{--<li><a href="">Visa exemption</a></li>--}}
                             {{--<li><a href="">Visa on arrival</a></li>--}}
@@ -262,15 +262,11 @@
             <div class="col-sm-3">
                 <section class="widget widget_sec">
                     <div class="widget-main">
-                        <h2 class="widget-title">Transportation</h2>
+                        <h2 class="widget-title"><a href="{{url('transportation')}}">Transportation </a></h2>
                         <ul class="list list-unstyled list-footer-nav">
-                            <li><a href="">From-and-to Noi Bai airport</a></li>
-                            {{--<li class="footer-c3"><a href="">Door-to-door pickup</a></li>--}}
-                            {{--<li class="footer-c3"><a href="">Shuttle bus</a></li>--}}
-                            <li><a href="">Around Hanoi city</a></li>
-                            {{--<li class="footer-c3"><a href="">Public transportation</a></li>--}}
-                            {{--<li class="footer-c3"><a href="">Taxi</a></li>--}}
-                            {{--<li class="footer-c3"><a href="">GrabCar</a></li>--}}
+                            {{--<li><a href="">From-and-to Noi Bai airport</a></li>--}}
+                            {{--<li><a href="">Around Hanoi city</a></li>--}}
+
                         </ul>
                     </div>
                 </section>

@@ -261,5 +261,11 @@ class HomeController extends AdminController
     {
         return view('frontend.keynoteSpeakers');
     }
+    public function visa(Request $request) {
+        return view('frontend.visa');
+    }
+    public function transportation(Request $request) {
+        return view('frontend.transportation');
+    }
 }
 
