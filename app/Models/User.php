@@ -47,4 +47,23 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function getLinkCvAttribute()
+    {
+//        if (env('USE_LOCAL_IMAGE')) {
+//            if (!empty($this->attributes['local_image'])) {
+//                return $this->attributes['local_image'];
+//            }
+//        }
+
+        if (str_contains($this->attributes['link_cv'], 'http') || str_contains($this->attributes['link_cv'], 'https')) {
+            return $this->attributes['link_cv'];
+        }
+        if($this->attributes['link_cv']) {
+            return 'http://' . $this->attributes['link_cv'];
+        }
+
+        return $this->attributes['link_cv'];
+
+
+    }
 }
