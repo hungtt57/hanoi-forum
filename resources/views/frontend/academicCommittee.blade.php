@@ -157,7 +157,7 @@
                                 </div>
 
 
-                                <p><strong>Cuong LE-Van</strong><strong>, </strong>Emeritus Professor</p>
+                                <p><strong>Cuong Le Van</strong><strong>, </strong>Emeritus Professor</p>
 
                                 <p>Affiliation(s):</p>
 
