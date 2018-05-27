@@ -40,7 +40,8 @@ Route::group([
     Route::get('about', 'HomeController@about');
     Route::get('hanoi-forum', 'HomeController@hanoi');
     Route::get('hanoi-forum-2018', 'HomeController@hanoiForum2018');
-
+    Route::get('visa','HomeController@visa');
+    Route::get('transportation','HomeController@transportation');
 
     Route::get('important-dates', 'HomeController@importantDates');
     Route::get('forum-program', 'HomeController@forumProgram');

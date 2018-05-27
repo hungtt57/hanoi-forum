@@ -56,7 +56,7 @@
         <div class="col-md-9">
             <div class="box box-primary">
                 <div class="box-body ">
-                    <p class="text-black">Payment status: {{\App\Models\User::$paymentText[$user->payment_status]}}</p>
+                    {{--<p class="text-black">Payment status: {{\App\Models\User::$paymentText[$user->payment_status]}}</p>--}}
                     @if(!$user->abstract)
                         <p class="text-black">Submission status: You have not yet submitted an abstract. </p>
                         @else

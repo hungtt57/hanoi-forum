@@ -27,11 +27,11 @@ class ParticipantController extends AdminController
 
                 return view('admin.participant.reviewer', compact('user', 'reviewers'))->render();
             })
-            ->editColumn('payment_status', function ($user) {
-
-//                return User::$paymentText[$post->payment_status];
-                return view('admin.participant.payment', compact('user'))->render();
-            })
+//            ->editColumn('payment_status', function ($user) {
+//
+////                return User::$paymentText[$post->payment_status];
+//                return view('admin.participant.payment', compact('user'))->render();
+//            })
             ->addColumn('status_submit', function ($user) {
                 $string = 'Not submit abstract yet';
                 if($user->apply == 0) {

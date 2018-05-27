@@ -138,9 +138,9 @@
                 @endif
                 @if(auth('backend')->user()->verify )
 
-                    <li class="{{ (Request::is('admin/list-delegates')) ? 'active' : '' }}"><a
-                                href="{{url('admin/list-delegates')}}"><i class="fa  fa-user-plus"></i>
-                            <span>List Delegates  </span></a></li>
+                    {{--<li class="{{ (Request::is('admin/list-delegates')) ? 'active' : '' }}"><a--}}
+                                {{--href="{{url('admin/list-delegates')}}"><i class="fa  fa-user-plus"></i>--}}
+                            {{--<span>List Delegates  </span></a></li>--}}
                 @endif
 
                 <li class=""><a
