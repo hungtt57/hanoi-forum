@@ -4,7 +4,7 @@
     <header class="sabbi-page-header page-header-lg">
         <div class="page-header-content conternt-center">
             <div class="header-title-block">
-                <h1 class="page-title">Humans impact climate</h1>
+                <h1 class="page-title">Human impacts on Climate Change</h1>
             </div>
         </div>
     </header>
