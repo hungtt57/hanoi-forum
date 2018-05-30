@@ -15,6 +15,9 @@ class HttpsProtocol
      */
     public function handle($request, Closure $next)
     {
+        if(str_contains( Request::getHost(),'org')) {
+            return redirect('https://hanoiforum.vnu.edu.vn');
+        }
         if (!$request->secure()) {
             if(Request::getHost() != 'dev.hanoiforum.com' && Request::getHost() != 'forum.fitme.vn' )
                 return redirect()->secure($request->getRequestUri());
