@@ -49,12 +49,19 @@
                 </div>
             </div>
 
+
             <div class="form-group">
-                <label class="control-label col-md-3 ">Title* (Prof., Dr., Mrs., Ms., Mr.,....)</label>
+                <label class="control-label col-md-3 ">Title* </label>
                 <div class="col-md-6">
-                    <input type="text" name="title" tabindex="2"
-                           class="form-control"
-                           value="{{old('title',@$user->title)}}">
+                    {{--<input type="text" name="title" tabindex="2"--}}
+                    {{--class="form-control"--}}
+                    {{--value="{{old('title',@$user->title)}}">--}}
+
+                    <select class="form-control" name="title" >
+                        @foreach(\App\Models\Account::$titleText as $key => $value)
+                            <option value="{{$key}}" @if($value == old('title',@$user->title)) selected @endif>{{$value}}</option>
+                        @endforeach
+                    </select>
                 </div>
             </div>
             <div class="form-group">
