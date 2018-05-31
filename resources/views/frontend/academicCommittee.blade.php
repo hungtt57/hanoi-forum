@@ -69,7 +69,7 @@
                                     <img class="" src="/frontend/anh/park.jpg" alt="">
                                 </div>
                                 <p>
-                                   <strong> Park In-kook</strong></p>
+                                   <strong> Park In kook</strong></p>
                                 <p>Affiliation(s): President, Korea Foundation for Advanced Studies (KFAS)
                                 </p>
 
