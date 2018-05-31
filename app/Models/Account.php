@@ -9,4 +9,11 @@ class Account extends Model
     protected $fillable = [
         'name', 'email', 'password', 'type', 'phone'
     ];
+    public static $titleText = [
+        'Prof' => 'Prof',
+        'Dr' => 'Dr',
+        'Mrs' => 'Mrs',
+        'Ms' => 'Ms',
+        'Mr' => 'Mr'
+    ];
 }

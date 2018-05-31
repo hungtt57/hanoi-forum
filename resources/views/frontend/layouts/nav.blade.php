@@ -81,14 +81,35 @@
                 </li>
 
 
-                <li class="{{Request::is('publication') ? 'active' : ''}}">
-                    <a href="{{url('/publication')}}" title="Publication">Publications</a>
+                <li class="{{Request::is('call-deadlines') ? 'active' : ''}}">
+                    <a href="{{url('/call-deadlines')}}" title="Calls & Deadlines">Calls & Deadlines</a>
                 </li>
                 <li class="{{Request::is('news') ? 'active' : ''}}">
                     <a href="{{url('/news')}}" title="News">News</a>
                 </li>
                 <li>
-                    <a href="{{url('/')}}" title="Multimedia">Multimedia</a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" title="Organizers" data-hover="dropdown"
+                       data-animations="zoomIn">Plan Your Visit<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="#" title="Vietnam Experience">Vietnam Experience</a>
+                        </li>
+                        <li>
+                            <a href="#" title="About and Around Vietnam">About and Around Vietnam
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Accommodation">Accommodation</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Forum Site Information">Forum Site Information</a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="{{url('/')}}" title="Registration ">Registration </a>
                 </li>
                 <li>
                     <a href="{{url('/faq')}}" title="FAQ">FAQs</a>

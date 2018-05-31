@@ -49,7 +49,7 @@ Route::group([
 
 
     Route::get('program', 'HomeController@program');
-    Route::get('publication', 'HomeController@publication');
+    Route::get('call-deadlines', 'HomeController@publication');
 //    Route::get('organizers', 'HomeController@organizers');
     Route::get('steering-committee', 'HomeController@steeringCommittee');
     Route::get('organizing-committee', 'HomeController@OrganizingCommittee');

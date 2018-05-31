@@ -153,33 +153,11 @@
                         </ul>
                     </div>
                 </section>
-                    {{--<img style="width: 100px" src="/frontend/qrcode.png" alt="">--}}
-                    {{--<address>--}}
-                        {{--<h3 class="entry-title">Contact Information</h3>--}}
-                        {{--<div class="address-entry">--}}
-                            {{--<p class="__ad-num">Tel: (84) 24 39983856</p>--}}
-                            {{--<p class="__ad-num">Email: hanoiforum@vnu.edu.vn</p>--}}
-                        {{--</div>--}}
-                    {{--</address>--}}
-                    {{--<footer class="contact-info">--}}
-                        {{--<h3 class="entry-title">Contact Information</h3>--}}
-                        {{--<p class="__ad-num">Tel: (84) 24 37547670 - Ext: 723</p>--}}
-                        {{--<p class="__ad-num">Email: hanoiforum@vnu.edu.vn</p>--}}
-                    {{--</footer>--}}
+
 
             </div>
             <div class="col-sm-3">
 
-                {{--<section class="widget widget_sec">--}}
-                    {{--<div class="widget-main">--}}
-                        {{--<h2 class="widget-title">About</h2>--}}
-                        {{--<ul class="list list-unstyled list-footer-nav">--}}
-                            {{--<li><a href="{{url('hanoi-forum')}}">Hanoi Forum</a></li>--}}
-                            {{--<li><a href="{{url('hanoi-forum-2018')}}">Hanoi Forum 2018</a></li>--}}
-
-                        {{--</ul>--}}
-                    {{--</div>--}}
-                {{--</section>--}}
                 <section class="widget widget_sec">
                     <div class="widget-main">
                         <h2 class="widget-title">PROGRAM</h2>
@@ -205,18 +183,6 @@
 
                     </div>
                 </section>
-                {{--<section class="widget widget_sec">--}}
-                    {{--<div class="widget-main">--}}
-                        {{--<h2 class="widget-title"><a href="{{url('publication')}}">PUBLICATION </a></h2>--}}
-
-                    {{--</div>--}}
-                {{--</section>--}}
-                {{--<section class="widget widget_sec">--}}
-                    {{--<div class="widget-main">--}}
-                        {{--<h2 class="widget-title"><a href="{{url('news')}}"> News</a></h2>--}}
-
-                    {{--</div>--}}
-                {{--</section>--}}
 
 
             </div>
@@ -233,29 +199,17 @@
                     </div>
                 </section>
 
+
+
                 <section class="widget widget_sec">
                     <div class="widget-main">
-                        <h2 class="widget-title"><a href="{{url('visa')}}"> Visa to Vietnam </a></h2>
-                        {{--<ul class="list list-unstyled list-footer-nav">--}}
-                            {{--<li><a href="">Visa exemption</a></li>--}}
-                            {{--<li><a href="">Visa on arrival</a></li>--}}
-                            {{--<li><a href="">Application for visa</a></li>--}}
-
-                        {{--</ul>--}}
+                        <h2 class="widget-title">Visiting Hanoi city</h2>
+                        <ul class="list list-unstyled list-footer-nav">
+                            <li><a href="">Tourist Attractions</a></li>
+                            <li><a href="">Weather</a></li>
+                        </ul>
                     </div>
                 </section>
-                <section class="widget widget_sec">
-                    <div class="widget-main">
-                        <h2 class="widget-title"><a href=""> Venue </a></h2>
-                    </div>
-                </section>
-                {{--<section class="widget widget_sec">--}}
-                    {{--<div class="widget-main">--}}
-                        {{--<h2 class="widget-title"><a href="{{url('/')}}">Multimedia</a></h2>--}}
-
-                    {{--</div>--}}
-                {{--</section>--}}
-
 
 
             </div>
@@ -272,17 +226,24 @@
                 </section>
                 <section class="widget widget_sec">
                     <div class="widget-main">
-                        <h2 class="widget-title"><a href=""> Accommodation </a></h2>
+                        <h2 class="widget-title">Plan Your Visit</h2>
+                        <ul class="list list-unstyled list-footer-nav">
+                            <li><a href="#">Vietnam Experience</a></li>
+                            <li><a href="#">About and Around Vietnam</a></li>
+                            <li><a href="#">Accommodation</a></li>
+                            <li><a href="#">Forum Site Information</a></li>
+
+                        </ul>
                     </div>
                 </section>
-
                 <section class="widget widget_sec">
                     <div class="widget-main">
-                        <h2 class="widget-title">Visiting Hanoi city</h2>
-                        <ul class="list list-unstyled list-footer-nav">
-                            <li><a href="">Tourist Attractions</a></li>
-                            <li><a href="">Weather</a></li>
-                        </ul>
+                        <h2 class="widget-title"><a href="{{url('visa')}}"> Visa to Vietnam </a></h2>
+                    </div>
+                </section>
+                <section class="widget widget_sec">
+                    <div class="widget-main">
+                        <h2 class="widget-title"><a href=""> Venue </a></h2>
                     </div>
                 </section>
 
