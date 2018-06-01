@@ -17,6 +17,13 @@ class User extends Authenticatable
      *
      * @var array
      */
+    public static $titleText = [
+        'Prof' => 'Prof',
+        'Dr' => 'Dr',
+        'Mrs' => 'Mrs',
+        'Ms' => 'Ms',
+        'Mr' => 'Mr'
+    ];
     const MALE = 2;
     const FEMALE = 1;
     const NOT_SPECIFY = 0;
@@ -35,7 +42,8 @@ class User extends Authenticatable
         'status', 'apply', 'code', 'reviewer_id', 'title_of_paper',
         'confirm_abstract', 'confirm_paper', 'reject_abstract', 'reject_paper', 'comment_abstract', 'comment_paper',
         'share_info', 'payment_status',
-        'verify'
+        'verify',
+        'dietary','dietary_content'
     ];
 
     /**

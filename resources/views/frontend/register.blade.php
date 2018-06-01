@@ -54,7 +54,7 @@
                                     <label class="control-label ">Title* (Prof., Dr., Mrs., Ms., Mr.,....)</label>
                                     <div class="controls">
                                         <select class="form-control" name="title">
-                                            @foreach(\App\Models\Account::$titleText as $key => $value)
+                                            @foreach(\App\Models\User::$titleText as $key => $value)
                                                 <option value="{{$key}}"
                                                         @if($value == old('title')) selected @endif>{{$value}}</option>
                                             @endforeach
@@ -163,12 +163,25 @@
                                 <h2 class="page-title">SPECIAL DIETARY REQUIREMENTS</h2>
                                 <div class="form-group">
                                     <div class="controls">
-                                        <label class="radio-inline"><input type="radio" name="dietary" value="0"
-                                                                         >None</label>
-                                        <label class="radio-inline"><input type="radio" name="dietary" value="1"
-                                                                           >Vegetarian</label>
-                                        <label class="radio-inline"><input type="radio" name="dietary" value="2"
-                                                                          >Others (Please specify)</label>
+                                        <p>
+                                            <label class="radio-inline">
+                                            <input type="radio" name="dietary" value="0" @if(old('dietary') == 0) checked
+                                                   @endif  @if(empty(old('dietary'))) checked @endif
+                                            > None
+                                                </label>
+                                        </p>
+                                            <p>
+                                                <label class="radio-inline">
+                                                <input type="radio" name="dietary" value="1"   @if(old('dietary') == 1 and !empty(old('dietary'))) checked @endif
+                                                > Vegetarian
+                                                    </label>
+                                            </p>
+                                        <p>
+                                            <label class="radio-inline">
+                                            <input type="radio" name="dietary" value="2" @if(old('dietary') == 2 and !empty(old('dietary'))) checked @endif> Others (Please specify) :  <input type="text"  value="{{old('dietary_content')}}" style="width: 60%" name="dietary_content">
+                                            </label>
+                                        </p>
+
                                     </div>
                                 </div>
                                 <div class="form-group">
