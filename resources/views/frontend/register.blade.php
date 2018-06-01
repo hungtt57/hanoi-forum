@@ -33,7 +33,7 @@
                             <form id="login-form" action="{{route('Frontend::postRegister')}}" method="post" role="form"
                                   enctype="multipart/form-data">
                                 {{ csrf_field() }}
-                                <h2 class="page-title">PERSONAL PARTICULARS</h2>
+                                <h4 class="page-title">PERSONAL PARTICULARS</h4>
                                 <div class="form-group">
                                     <label class="control-label ">First name*</label>
                                     <div class="controls">
@@ -51,7 +51,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label ">Title* (Prof., Dr., Mrs., Ms., Mr.,....)</label>
+                                    <label class="control-label ">Title*</label>
                                     <div class="controls">
                                         <select class="form-control" name="title">
                                             @foreach(\App\Models\User::$titleText as $key => $value)
@@ -160,7 +160,7 @@
                                                                            @if(old('share_info') == 0 and !empty(old('share_info'))) checked @endif>No</label>
                                     </div>
                                 </div>
-                                <h2 class="page-title">SPECIAL DIETARY REQUIREMENTS</h2>
+                                <h4 class="page-title">SPECIAL DIETARY REQUIREMENTS</h4>
                                 <div class="form-group">
                                     <div class="controls">
                                         <p>

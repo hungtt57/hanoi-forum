@@ -80,12 +80,12 @@
                     </ul>
                 </li>
 
-
                 <li class="{{Request::is('call-deadlines') ? 'active' : ''}}">
                     <a href="{{url('/call-deadlines')}}" title="Calls & Deadlines">Calls & Deadlines</a>
                 </li>
-                <li class="{{Request::is('news') ? 'active' : ''}}">
-                    <a href="{{url('/news')}}" title="News">News</a>
+
+                <li>
+                    <a href="{{url('/')}}" title="Registration ">Registration </a>
                 </li>
                 <li>
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" title="Organizers" data-hover="dropdown"
@@ -108,9 +108,13 @@
 
                     </ul>
                 </li>
-                <li>
-                    <a href="{{url('/')}}" title="Registration ">Registration </a>
+
+
+
+                <li class="{{Request::is('news') ? 'active' : ''}}">
+                    <a href="{{url('/news')}}" title="News">News</a>
                 </li>
+
                 <li>
                     <a href="{{url('/faq')}}" title="FAQ">FAQs</a>
                 </li>

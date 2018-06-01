@@ -18,11 +18,14 @@ class User extends Authenticatable
      * @var array
      */
     public static $titleText = [
-        'Prof' => 'Prof',
-        'Dr' => 'Dr',
-        'Mrs' => 'Mrs',
-        'Ms' => 'Ms',
-        'Mr' => 'Mr'
+        'Prof.' => 'Prof.',
+        'Assoc. Prof.' =>  'Assoc. Prof.',
+        'Adj. Prof.' =>  'Adj. Prof.',
+        'Prof. Dr.' => 'Prof. Dr.',
+        'Dr.' => 'Dr.',
+        'Mrs.' => 'Mrs.',
+        'Ms.' => 'Ms.',
+        'Mr.' => 'Mr.'
     ];
     const MALE = 2;
     const FEMALE = 1;
