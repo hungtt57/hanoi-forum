@@ -39,6 +39,12 @@ class User extends Authenticatable
         1 => 'Paid',
         2 => 'Waived',
     ];
+
+    public static $kindSupportText = [
+        0 => 'Flight tickets',
+        1 => 'Accommodation',
+        2 => 'Flight tickets and accommodation'
+    ];
     protected $fillable = [
         'name', 'email', 'password', 'type', 'phone', 'file', 'image',
         'first_name', 'last_name', 'title', 'affiliation', 'gender', 'nationality', 'link_cv', 'abstract', 'paper',
@@ -46,7 +52,8 @@ class User extends Authenticatable
         'confirm_abstract', 'confirm_paper', 'reject_abstract', 'reject_paper', 'comment_abstract', 'comment_paper',
         'share_info', 'payment_status',
         'verify',
-        'dietary','dietary_content'
+        'dietary','dietary_content',
+        'need_support' ,'kind_support'
     ];
 
     /**

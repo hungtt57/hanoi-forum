@@ -12,6 +12,22 @@
         .col-lg-6 {
             padding-left: 0px;
         }
+
+        .title-register {
+            background: #007f49;
+            padding: 5px;
+            text-align: center;
+            color: white;
+        }
+        .file-input-new .btn-primary.btn-file {
+            background-color: #007f49;
+        }
+        #login-submit {
+            background-color: #007f49;
+        }
+        p {
+            text-align: justify;
+        }
     </style>
 @endpush
 @section('content')
@@ -33,7 +49,7 @@
                             <form id="login-form" action="{{route('Frontend::postRegister')}}" method="post" role="form"
                                   enctype="multipart/form-data">
                                 {{ csrf_field() }}
-                                <h4 class="page-title">PERSONAL PARTICULARS</h4>
+                                <h4 class="page-title title-register">PERSONAL PARTICULARS</h4>
                                 <div class="form-group">
                                     <label class="control-label ">First name*</label>
                                     <div class="controls">
@@ -160,36 +176,96 @@
                                                                            @if(old('share_info') == 0 and !empty(old('share_info'))) checked @endif>No</label>
                                     </div>
                                 </div>
-                                <h4 class="page-title">SPECIAL DIETARY REQUIREMENTS</h4>
+                                <h4 class="page-title title-register">SPONSORSHIP</h4>
+                                <div class="form-group">
+                                    <p>
+                                        We may be able to provide some forms of support for participants to attend the
+                                        Hanoi Forum 2018 depending on (i) the relevance of their papers to the
+                                        conference's thematic topics as well as the papers’ quality, which will be
+                                        assessed by our Academic Committee members, and (ii) our funding availability.
+                                    </p>
+                                    <p>
+                                        If your abstract is accepted, you will be invited to submit a full paper, and
+                                        will be considered to receive sponsorship should you need one. Please indicate
+                                        in the form below what kind of support you may need. We will be in touch to
+                                        inform you of the result of this consideration.
+                                    </p>
+                                    <p>
+                                        We encourage interested participants to seek for alternative sources of funding to attend the forum while awaiting the result.
+                                    </p>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Do you need any support to attend the Hanoi Forum 2018?</label>
+                                    <div class="controls">
+                                        <p>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="need_support" value="0"
+                                                       @if(old('need_support') == 0) checked
+                                                       @endif  @if(empty(old('need_support'))) checked @endif
+                                                > No
+                                            </label>
+                                        </p>
+                                        <p>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="need_support" value="1"
+                                                       @if(old('need_support') == 1 and !empty(old('need_support'))) checked @endif
+                                                > Yes
+                                            </label>
+                                        </p>
+
+                                    </div>
+                                </div>
+                                <div id="kindSupport" class="form-group @if(old('need_support') == 0 || empty(old('need_support'))) hide @endif">
+                                    <label class="control-label">If yes, what kind of support do you need to attend the forum? </label>
+                                    <div class="controls">
+                                        @foreach(\App\Models\User::$kindSupportText as $key => $value)
+                                        <p>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="kind_support" value="{{$key}}"
+                                                       @if(old('kind_support') == $key ) checked @endif
+                                                > {{$value}}
+                                            </label>
+                                        </p>
+                                        @endforeach
+                                    </div>
+                                </div>
+                                <h4 class="page-title title-register">SPECIAL DIETARY REQUIREMENTS</h4>
                                 <div class="form-group">
                                     <div class="controls">
                                         <p>
                                             <label class="radio-inline">
-                                            <input type="radio" name="dietary" value="0" @if(old('dietary') == 0) checked
-                                                   @endif  @if(empty(old('dietary'))) checked @endif
-                                            > None
-                                                </label>
+                                                <input type="radio" name="dietary" value="0"
+                                                       @if(old('dietary') == 0) checked
+                                                       @endif  @if(empty(old('dietary'))) checked @endif
+                                                > None
+                                            </label>
                                         </p>
-                                            <p>
-                                                <label class="radio-inline">
-                                                <input type="radio" name="dietary" value="1"   @if(old('dietary') == 1 and !empty(old('dietary'))) checked @endif
-                                                > Vegetarian
-                                                    </label>
-                                            </p>
                                         <p>
                                             <label class="radio-inline">
-                                            <input type="radio" name="dietary" value="2" @if(old('dietary') == 2 and !empty(old('dietary'))) checked @endif> Others (Please specify) :  <input type="text"  value="{{old('dietary_content')}}" style="width: 60%" name="dietary_content">
+                                                <input type="radio" name="dietary" value="1"
+                                                       @if(old('dietary') == 1 and !empty(old('dietary'))) checked @endif
+                                                > Vegetarian
+                                            </label>
+                                        </p>
+                                        <p>
+                                            <label class="radio-inline" style="width: 100%;">
+                                                <input type="radio" name="dietary" value="2"
+                                                       @if(old('dietary') == 2 and !empty(old('dietary'))) checked @endif>
+                                                Others (Please specify) : <input type="text"
+                                                                                 value="{{old('dietary_content')}}"
+                                                                                 style="width: 60%"
+                                                                                 name="dietary_content">
                                             </label>
                                         </p>
 
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <h4 class="page-title"> LETTER OF INVITATION (Presenters may also require such
-                                        letter)</h4>
+                                    <h4 class="page-title title-register"> LETTER OF INVITATION <span style="font-size: 14px !important;">(Presenters may also require such
+                                        letter)</span></h4>
                                     <p>Should you require a formal invitation letter for your VISA application, please
                                         write in to us at hanoiforum@vnu.edu.vn.</p>
-                                    <h4 class="page-title">Entry VISA</h4>
+                                    <h4 class="page-title title-register">Entry VISA</h4>
                                     <p>Consular information for foreigners traveling to Vietnam can be found at <a
                                                 href="https://evisa.xuatnhapcanh.gov.vn/en_US/trang-chu-ttdt"
                                                 target="_blank">Vietnam Immigration Department</a>.
@@ -199,7 +275,7 @@
                                         designated number of days.
                                         Should you have any questions and/or need further support on visa application,
                                         please contact us at hanoiforum@vnu.edu.vn.</p>
-                                    <h4 class="page-title">IMPORTANT NOTE</h4>
+                                    <h4 class="page-title title-register">IMPORTANT NOTE</h4>
                                     <p>
                                         By filling up this registration form, I hereby agree and consent that my
                                         personal data provided in this form may be collected, used, processed and
@@ -278,6 +354,15 @@
 //            $('.applyContainer').addClass('hide');
 //          }
 //        });
+        $('input[name=need_support]').change(function () {
+          var value = $(this).val();
+//
+         if(value == 1) {
+           $('#kindSupport').removeClass('hide');
+         }else {
+           $('#kindSupport').addClass('hide');
+         }
+        });
       });
     </script>
 
