@@ -134,7 +134,7 @@
                 @if(auth('backend')->user()->apply)
                     <li class="{{ (Request::is('admin/submit')) ? 'active' : '' }}"><a
                                 href="{{url('admin/submit')}}"><i class="fa   fa-cloud-upload"></i>
-                            <span>Submit abstract</span></a></li>
+                            <span>Submit your abstract</span></a></li>
                 @endif
                 @if(auth('backend')->user()->verify )
 
