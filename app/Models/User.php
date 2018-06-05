@@ -64,11 +64,13 @@ class User extends Authenticatable
     ];
     public static $knowText = [
       0 => 'Conference alert',
-        1 => 'Vietnam National University, Hanoi (VNU) Website',
-        2 => 'Group/network emails',
-        3 => 'Friends and/or colleagues',
-        4 => 'Korea Foundation for Advanced Studies (KFAS)',
-        5 => 'Others'
+        1 => 'Vietnam National University, Hanoi (VNU) website',
+        2 => 'Korea Foundation for Advanced Studies (KFAS)',
+        3 => 'Group/network emails',
+        4 => 'Friends and/or colleagues',
+        5 => 'Your organization’s website',
+        6 => 'Your department/faculty',
+        7 => 'Others'
     ];
     protected $fillable = [
         'name', 'email', 'password', 'type', 'phone', 'file', 'image',

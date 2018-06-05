@@ -186,7 +186,7 @@
                                         choose more than one option)</label>
                                     <div class="controls">
                                         @foreach(\App\Models\User::$knowText as $key => $value)
-                                            @if($key == 2 || $key == 5)
+                                            @if($key == 3 || $key == 7)
                                                 <p>
                                                     <label class="radio-inline" style="width: 100%;padding-left: 0px">
                                                         <input type="checkbox" name="know[{{$key}}][id]" value="{{$key}}"> {{$value}} (Please specify) :<input type="text"
@@ -250,7 +250,7 @@
                                             @if($key != 4)
                                                 <p>
                                                     <label class="radio-inline">
-                                                        <input type="radio" name="dietary" value="{{$key}}"
+                                                        <input type="radio" name="indicate" value="{{$key}}"
                                                                @if(old('indicate') == $key) checked
                                                                 @endif
                                                         > {{$value}}
@@ -261,7 +261,7 @@
                                                 <p>
                                                     <label class="radio-inline" style="width: 100%;">
                                                         <input type="radio" name="indicate" value="{{$key}}"
-                                                               @if(old('dietary') == $key ) checked @endif>
+                                                               @if(old('indicate') == $key ) checked @endif>
                                                         Others (Please specify) : <input type="text"
                                                                                          value="{{old('indicate_content')}}"
                                                                                          style="width: 60%"
