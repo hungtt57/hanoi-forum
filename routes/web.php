@@ -59,6 +59,8 @@ Route::group([
     Route::get('news', 'HomeController@news');
     Route::get('faq', 'HomeController@faq');
 
+    Route::get('registration','HomeController@registration');
+
     //panel
     Route::get('climate-change-evidence-and-security', 'HomeController@climateChangeEvidenceAndSecurity');
     Route::get('humans-impact-climate', 'HomeController@humanImpactClimate');

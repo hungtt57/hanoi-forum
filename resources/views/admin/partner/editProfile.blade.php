@@ -188,59 +188,59 @@
                     </div>
 
 
-                    <h4 class="page-title title-register">SPONSORSHIP</h4>
-                    <div class="form-group">
-                        <p>
-                            We may be able to provide some forms of support for participants to attend the
-                            Hanoi Forum 2018 depending on (i) the relevance of their papers to the
-                            conference's thematic topics as well as the papers’ quality, which will be
-                            assessed by our Academic Committee members, and (ii) our funding availability.
-                        </p>
-                        <p>
-                            If your abstract is accepted, you will be invited to submit a full paper, and
-                            will be considered to receive sponsorship should you need one. Please indicate
-                            in the form below what kind of support you may need. We will be in touch to
-                            inform you of the result of this consideration.
-                        </p>
-                        <p>
-                            We encourage interested participants to seek for alternative sources of funding to attend the forum while awaiting the result.
-                        </p>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label">Do you need any support to attend the Hanoi Forum 2018?</label>
-                        <div class="controls">
-                            <p>
-                                <label class="radio-inline">
-                                    <input type="radio" name="need_support" value="0"
-                                           @if(old('need_support',$user->need_support) == 0) checked
-                                           @endif
-                                    > No
-                                </label>
-                            </p>
-                            <p>
-                                <label class="radio-inline">
-                                    <input type="radio" name="need_support" value="1"
-                                           @if(old('need_support',$user->need_support) == 1 )) checked @endif
-                                    > Yes
-                                </label>
-                            </p>
+                    {{--<h4 class="page-title title-register">SPONSORSHIP</h4>--}}
+                    {{--<div class="form-group">--}}
+                        {{--<p>--}}
+                            {{--We may be able to provide some forms of support for participants to attend the--}}
+                            {{--Hanoi Forum 2018 depending on (i) the relevance of their papers to the--}}
+                            {{--conference's thematic topics as well as the papers’ quality, which will be--}}
+                            {{--assessed by our Academic Committee members, and (ii) our funding availability.--}}
+                        {{--</p>--}}
+                        {{--<p>--}}
+                            {{--If your abstract is accepted, you will be invited to submit a full paper, and--}}
+                            {{--will be considered to receive sponsorship should you need one. Please indicate--}}
+                            {{--in the form below what kind of support you may need. We will be in touch to--}}
+                            {{--inform you of the result of this consideration.--}}
+                        {{--</p>--}}
+                        {{--<p>--}}
+                            {{--We encourage interested participants to seek for alternative sources of funding to attend the forum while awaiting the result.--}}
+                        {{--</p>--}}
+                    {{--</div>--}}
+                    {{--<div class="form-group">--}}
+                        {{--<label class="control-label">Do you need any support to attend the Hanoi Forum 2018?</label>--}}
+                        {{--<div class="controls">--}}
+                            {{--<p>--}}
+                                {{--<label class="radio-inline">--}}
+                                    {{--<input type="radio" name="need_support" value="0"--}}
+                                           {{--@if(old('need_support',$user->need_support) == 0) checked--}}
+                                           {{--@endif--}}
+                                    {{--> No--}}
+                                {{--</label>--}}
+                            {{--</p>--}}
+                            {{--<p>--}}
+                                {{--<label class="radio-inline">--}}
+                                    {{--<input type="radio" name="need_support" value="1"--}}
+                                           {{--@if(old('need_support',$user->need_support) == 1 )) checked @endif--}}
+                                    {{--> Yes--}}
+                                {{--</label>--}}
+                            {{--</p>--}}
 
-                        </div>
-                    </div>
-                    <div id="kindSupport" class="form-group @if(old('need_support',$user->need_support) == 0)) hide @endif">
-                        <label class="control-label">If yes, what kind of support do you need to attend the forum? </label>
-                        <div class="controls">
-                            @foreach(\App\Models\User::$kindSupportText as $key => $value)
-                                <p>
-                                    <label class="radio-inline">
-                                        <input type="radio" name="kind_support" value="{{$key}}"
-                                               @if(old('kind_support',$user->kind_support) == $key ) checked @endif
-                                        > {{$value}}
-                                    </label>
-                                </p>
-                            @endforeach
-                        </div>
-                    </div>
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<div id="kindSupport" class="form-group @if(old('need_support',$user->need_support) == 0)) hide @endif">--}}
+                        {{--<label class="control-label">If yes, what kind of support do you need to attend the forum? </label>--}}
+                        {{--<div class="controls">--}}
+                            {{--@foreach(\App\Models\User::$kindSupportText as $key => $value)--}}
+                                {{--<p>--}}
+                                    {{--<label class="radio-inline">--}}
+                                        {{--<input type="radio" name="kind_support" value="{{$key}}"--}}
+                                               {{--@if(old('kind_support',$user->kind_support) == $key ) checked @endif--}}
+                                        {{--> {{$value}}--}}
+                                    {{--</label>--}}
+                                {{--</p>--}}
+                            {{--@endforeach--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
                 </div>
             </div>
         </div>

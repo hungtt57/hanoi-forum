@@ -85,7 +85,7 @@
                 </li>
 
                 <li>
-                    <a href="{{url('/')}}" title="Registration ">Registration </a>
+                    <a href="{{url('/registration')}}" title="Registration ">Registration </a>
                 </li>
                 <li>
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" title="Organizers" data-hover="dropdown"

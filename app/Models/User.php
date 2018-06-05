@@ -27,6 +27,23 @@ class User extends Authenticatable
         'Ms.' => 'Ms.',
         'Mr.' => 'Mr.'
     ];
+
+    public static $dietaryText = [
+       0 => 'None',
+        1 => 'Vegetarian',
+        2 => 'Vegan',
+        3 => 'Halal food',
+        4 => 'Others (Please specify):'
+    ];
+
+    public static $indicateText = [
+       0 => 'None',
+       1 => 'Wheelchair',
+       2 => 'Hearing aid',
+       3 => 'A sighted guide',
+       4 => 'Others (Please specify):'
+    ];
+
     const MALE = 2;
     const FEMALE = 1;
     const NOT_SPECIFY = 0;
@@ -53,7 +70,8 @@ class User extends Authenticatable
         'share_info', 'payment_status',
         'verify',
         'dietary','dietary_content',
-        'need_support' ,'kind_support'
+        'need_support' ,'kind_support',
+        'indicate','indicate_content'
     ];
 
     /**

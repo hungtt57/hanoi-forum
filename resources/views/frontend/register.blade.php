@@ -176,90 +176,75 @@
                                                                            @if(old('share_info') == 0 and !empty(old('share_info'))) checked @endif>No</label>
                                     </div>
                                 </div>
-                                <h4 class="page-title title-register">SPONSORSHIP</h4>
-                                <div class="form-group">
-                                    <p>
-                                        We may be able to provide some forms of support for participants to attend the
-                                        Hanoi Forum 2018 depending on (i) the relevance of their papers to the
-                                        conference's thematic topics as well as the papers’ quality, which will be
-                                        assessed by our Academic Committee members, and (ii) our funding availability.
-                                    </p>
-                                    <p>
-                                        If your abstract is accepted, you will be invited to submit a full paper, and
-                                        will be considered to receive sponsorship should you need one. Please indicate
-                                        in the form below what kind of support you may need. We will be in touch to
-                                        inform you of the result of this consideration.
-                                    </p>
-                                    <p>
-                                        We encourage interested participants to seek for alternative sources of funding to attend the forum while awaiting the result.
-                                    </p>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Do you need any support to attend the Hanoi Forum 2018?</label>
-                                    <div class="controls">
-                                        <p>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="need_support" value="0"
-                                                       @if(old('need_support') == 0) checked
-                                                       @endif  @if(empty(old('need_support'))) checked @endif
-                                                > No
-                                            </label>
-                                        </p>
-                                        <p>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="need_support" value="1"
-                                                       @if(old('need_support') == 1 and !empty(old('need_support'))) checked @endif
-                                                > Yes
-                                            </label>
-                                        </p>
 
-                                    </div>
-                                </div>
-                                <div id="kindSupport" class="form-group @if(old('need_support') == 0 || empty(old('need_support'))) hide @endif">
-                                    <label class="control-label">If yes, what kind of support do you need to attend the forum? </label>
+                                <h4 class="page-title title-register">SPECIAL REQUIREMENTS</h4>
+                                <div class="form-group">
+
+                                    <label class="control-label">Please indicate if you need any special diet requirements:</label>
                                     <div class="controls">
-                                        @foreach(\App\Models\User::$kindSupportText as $key => $value)
-                                        <p>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="kind_support" value="{{$key}}"
-                                                       @if(old('kind_support') == $key ) checked @endif
-                                                > {{$value}}
-                                            </label>
-                                        </p>
+                                        @foreach(\App\Models\User::$dietaryText as $key => $value)
+                                            @if($key != 4)
+                                            <p>
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="dietary" value="{{$key}}"
+                                                           @if(old('dietary') == $key) checked
+                                                           @endif
+                                                    > {{$value}}
+                                                </label>
+                                            </p>
+                                            @endif
+                                            @if($key == 4)
+                                                    <p>
+                                                        <label class="radio-inline" style="width: 100%;">
+                                                            <input type="radio" name="dietary" value="{{$key}}"
+                                                                   @if(old('dietary') == $key ) checked @endif>
+                                                            Others (Please specify) : <input type="text"
+                                                                                             value="{{old('dietary_content')}}"
+                                                                                             style="width: 60%"
+                                                                                             name="dietary_content">
+                                                        </label>
+                                                    </p>
+
+                                                @endif
                                         @endforeach
-                                    </div>
-                                </div>
-                                <h4 class="page-title title-register">SPECIAL DIETARY REQUIREMENTS</h4>
-                                <div class="form-group">
-                                    <div class="controls">
-                                        <p>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="dietary" value="0"
-                                                       @if(old('dietary') == 0) checked
-                                                       @endif  @if(empty(old('dietary'))) checked @endif
-                                                > None
-                                            </label>
-                                        </p>
-                                        <p>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="dietary" value="1"
-                                                       @if(old('dietary') == 1 and !empty(old('dietary'))) checked @endif
-                                                > Vegetarian
-                                            </label>
-                                        </p>
-                                        <p>
-                                            <label class="radio-inline" style="width: 100%;">
-                                                <input type="radio" name="dietary" value="2"
-                                                       @if(old('dietary') == 2 and !empty(old('dietary'))) checked @endif>
-                                                Others (Please specify) : <input type="text"
-                                                                                 value="{{old('dietary_content')}}"
-                                                                                 style="width: 60%"
-                                                                                 name="dietary_content">
-                                            </label>
-                                        </p>
 
                                     </div>
                                 </div>
+
+                                <div class="form-group">
+
+                                    <label class="control-label">Please indicate if you have a disability and require any special assistance during the forum:</label>
+                                    <div class="controls">
+                                        @foreach(\App\Models\User::$indicateText as $key => $value)
+                                            @if($key != 4)
+                                                <p>
+                                                    <label class="radio-inline">
+                                                        <input type="radio" name="dietary" value="{{$key}}"
+                                                               @if(old('indicate') == $key) checked
+                                                                @endif
+                                                        > {{$value}}
+                                                    </label>
+                                                </p>
+                                            @endif
+                                            @if($key == 4)
+                                                <p>
+                                                    <label class="radio-inline" style="width: 100%;">
+                                                        <input type="radio" name="indicate" value="{{$key}}"
+                                                               @if(old('dietary') == $key ) checked @endif>
+                                                        Others (Please specify) : <input type="text"
+                                                                                         value="{{old('indicate_content')}}"
+                                                                                         style="width: 60%"
+                                                                                         name="indicate_content">
+                                                    </label>
+                                                </p>
+
+                                            @endif
+                                        @endforeach
+
+                                    </div>
+                                </div>
+
+
                                 <div class="form-group">
                                     <h4 class="page-title title-register"> LETTER OF INVITATION <span style="font-size: 14px !important;">(Presenters may also require such
                                         letter)</span></h4>

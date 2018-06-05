@@ -267,5 +267,8 @@ class HomeController extends AdminController
     public function transportation(Request $request) {
         return view('frontend.transportation');
     }
+    public function registration(Request $request) {
+        return view('frontend.registration');
+    }
 }
 

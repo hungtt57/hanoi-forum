@@ -13,7 +13,9 @@ class Article extends Model
         'faq' => 'FAQs',
         'forum-program' => 'Forum Program',
         'visa' => 'Visa to VietNam',
-        'transportation' => 'Transportation'
+        'transportation' => 'Transportation',
+        'registration' => 'Registration',
+
 //      'hanoi-forum' => 'Hanoi forum',
 //        'hanoi-forum-2018' => 'Hanoi forum 2018',
 
