@@ -92,6 +92,23 @@ class HomeController extends AdminController
 
             }
             $data['know'] = $d;
+            $indicate = [];
+            if (count($data['indicate'])) {
+                foreach ($data['indicate'] as $key => $value) {
+
+                    if(isset($value['id'])) {
+                        $indicate[] = [
+                            'id' => $value['id'],
+                            'content' => (isset($value['content'])) ? $value['content'] : ''
+                        ];
+
+                    }else {
+                        continue;
+                    }
+                }
+
+            }
+            $data['indicate'] = $indicate;
             $user = User::create($data);
             Mail::to($user->email)->cc('hanoiforum@vnu.edu.vn')->send(new RegisterEmail($user));
             EmailLog::create([

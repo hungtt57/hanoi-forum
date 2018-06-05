@@ -250,9 +250,8 @@
                                             @if($key != 4)
                                                 <p>
                                                     <label class="radio-inline">
-                                                        <input type="radio" name="indicate" value="{{$key}}"
-                                                               @if(old('indicate') == $key) checked
-                                                                @endif
+                                                        <input type="checkbox" name="indicate[{{$key}}][id]" value="{{$key}}"
+
                                                         > {{$value}}
                                                     </label>
                                                 </p>
@@ -260,12 +259,12 @@
                                             @if($key == 4)
                                                 <p>
                                                     <label class="radio-inline" style="width: 100%;">
-                                                        <input type="radio" name="indicate" value="{{$key}}"
-                                                               @if(old('indicate') == $key ) checked @endif>
+                                                        <input type="checkbox" name="indicate" value="{{$key}}"
+                                                        >
                                                         Others (Please specify) : <input type="text"
                                                                                          value="{{old('indicate_content')}}"
                                                                                          style="width: 60%"
-                                                                                         name="indicate_content">
+                                                                                         name="indicate[{{$key}}][content]">
                                                     </label>
                                                 </p>
 
