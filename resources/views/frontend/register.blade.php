@@ -182,8 +182,7 @@
 
 
                                 <div class="form-group">
-                                    <label class="control-label">How did you know about the Hanoi Forum 2018? (you can
-                                        choose more than one option)</label>
+                                    <label class="control-label"> Could you please let us know from which source you knew about the Hanoi Forum 2018? (you can choose more than one option)</label>
                                     <div class="controls">
                                         @foreach(\App\Models\User::$knowText as $key => $value)
                                             @if($key == 3 || $key == 7)
@@ -244,12 +243,12 @@
                                 <div class="form-group">
 
                                     <label class="control-label">Please indicate if you have a disability and require
-                                        any special assistance during the forum:</label>
+                                        any special assistance during the forum (you can choose more than one option) :</label>
                                     <div class="controls">
                                         @foreach(\App\Models\User::$indicateText as $key => $value)
                                             @if($key != 4)
                                                 <p>
-                                                    <label class="radio-inline">
+                                                    <label class="radio-inline" style="padding-left: 0px">
                                                         <input type="checkbox" name="indicate[{{$key}}][id]" value="{{$key}}"
 
                                                         > {{$value}}
@@ -258,7 +257,7 @@
                                             @endif
                                             @if($key == 4)
                                                 <p>
-                                                    <label class="radio-inline" style="width: 100%;">
+                                                    <label class="radio-inline" style="width: 100%;padding-left: 0px">
                                                         <input type="checkbox" name="indicate" value="{{$key}}"
                                                         >
                                                         Others (Please specify) : <input type="text"
@@ -289,8 +288,7 @@
                                                                href="https://lanhsuvietnam.gov.vn/Lists/BaiViet/B%C3%A0i vi%E1%BA%BFt/DispForm.aspx?List=dc7c7d75-6a32-4215-afeb-47d4bee70eee&ID=306">listed
                                             countries</a> are exempted from obtaining a visa to enter Vietnam for a
                                         designated number of days.
-                                        Should you have any questions and/or need further support on visa application,
-                                        please contact us at hanoiforum@vnu.edu.vn.</p>
+                                     <b>Should you need to apply for a visa to enter Vietnam, please contact us at hanoiforum@vnu.edu.vn for further support.</b></p>
                                     <h4 class="page-title title-register">IMPORTANT NOTE</h4>
                                     <p>
                                         By filling up this registration form, I hereby agree and consent that my
