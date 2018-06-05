@@ -19,12 +19,15 @@
             text-align: center;
             color: white;
         }
+
         .file-input-new .btn-primary.btn-file {
             background-color: #007f49;
         }
+
         #login-submit {
             background-color: #007f49;
         }
+
         p {
             text-align: justify;
         }
@@ -177,35 +180,62 @@
                                     </div>
                                 </div>
 
+
+                                <div class="form-group">
+                                    <label class="control-label">How did you know about the Hanoi Forum 2018? (you can
+                                        choose more than one option)</label>
+                                    <div class="controls">
+                                        @foreach(\App\Models\User::$knowText as $key => $value)
+                                            @if($key == 2 || $key == 5)
+                                                <p>
+                                                    <label class="radio-inline" style="width: 100%;padding-left: 0px">
+                                                        <input type="checkbox" name="know[{{$key}}][id]" value="{{$key}}"> {{$value}} (Please specify) :<input type="text"
+                                                                                                                              value="{{old('dietary_content')}}"
+                                                                                                                              style="width: 60%"
+                                                                                                                              name="know[{{$key}}][content]">
+                                                    </label>
+                                                </p>
+                                            @else
+                                                <p>
+                                                    <label class="radio-inline" style="padding-left: 0px">
+                                                        <input type="checkbox" name="know[{{$key}}][id]"  value="{{$key}}"> {{$value}}
+                                                    </label>
+                                                </p>
+                                            @endif
+                                        @endforeach
+                                    </div>
+                                </div>
+
                                 <h4 class="page-title title-register">SPECIAL REQUIREMENTS</h4>
                                 <div class="form-group">
 
-                                    <label class="control-label">Please indicate if you need any special diet requirements:</label>
+                                    <label class="control-label">Please indicate if you need any special diet
+                                        requirements:</label>
                                     <div class="controls">
                                         @foreach(\App\Models\User::$dietaryText as $key => $value)
                                             @if($key != 4)
-                                            <p>
-                                                <label class="radio-inline">
-                                                    <input type="radio" name="dietary" value="{{$key}}"
-                                                           @if(old('dietary') == $key) checked
-                                                           @endif
-                                                    > {{$value}}
-                                                </label>
-                                            </p>
+                                                <p>
+                                                    <label class="radio-inline">
+                                                        <input type="radio" name="dietary" value="{{$key}}"
+                                                               @if(old('dietary') == $key) checked
+                                                                @endif
+                                                        > {{$value}}
+                                                    </label>
+                                                </p>
                                             @endif
                                             @if($key == 4)
-                                                    <p>
-                                                        <label class="radio-inline" style="width: 100%;">
-                                                            <input type="radio" name="dietary" value="{{$key}}"
-                                                                   @if(old('dietary') == $key ) checked @endif>
-                                                            Others (Please specify) : <input type="text"
-                                                                                             value="{{old('dietary_content')}}"
-                                                                                             style="width: 60%"
-                                                                                             name="dietary_content">
-                                                        </label>
-                                                    </p>
+                                                <p>
+                                                    <label class="radio-inline" style="width: 100%;">
+                                                        <input type="radio" name="dietary" value="{{$key}}"
+                                                               @if(old('dietary') == $key ) checked @endif>
+                                                        Others (Please specify) : <input type="text"
+                                                                                         value="{{old('dietary_content')}}"
+                                                                                         style="width: 60%"
+                                                                                         name="dietary_content">
+                                                    </label>
+                                                </p>
 
-                                                @endif
+                                            @endif
                                         @endforeach
 
                                     </div>
@@ -213,7 +243,8 @@
 
                                 <div class="form-group">
 
-                                    <label class="control-label">Please indicate if you have a disability and require any special assistance during the forum:</label>
+                                    <label class="control-label">Please indicate if you have a disability and require
+                                        any special assistance during the forum:</label>
                                     <div class="controls">
                                         @foreach(\App\Models\User::$indicateText as $key => $value)
                                             @if($key != 4)
@@ -246,7 +277,8 @@
 
 
                                 <div class="form-group">
-                                    <h4 class="page-title title-register"> LETTER OF INVITATION <span style="font-size: 14px !important;">(Presenters may also require such
+                                    <h4 class="page-title title-register"> LETTER OF INVITATION <span
+                                                style="font-size: 14px !important;">(Presenters may also require such
                                         letter)</span></h4>
                                     <p>Should you require a formal invitation letter for your VISA application, please
                                         write in to us at hanoiforum@vnu.edu.vn.</p>
@@ -342,11 +374,11 @@
         $('input[name=need_support]').change(function () {
           var value = $(this).val();
 //
-         if(value == 1) {
-           $('#kindSupport').removeClass('hide');
-         }else {
-           $('#kindSupport').addClass('hide');
-         }
+          if (value == 1) {
+            $('#kindSupport').removeClass('hide');
+          } else {
+            $('#kindSupport').addClass('hide');
+          }
         });
       });
     </script>

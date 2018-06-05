@@ -37,22 +37,21 @@ class HomeController extends AdminController
 
     public function postRegister(Request $request)
     {
-
-        $this->validate($request, [
-            'email' => 'required|email|max:255',
-            'password' => 'required|min:6|confirmed',
-            'file' => 'max:5120',
-            'first_name' => 'required',
-            'last_name' => 'required',
-            'title' => 'required',
-            'affiliation' => 'required',
-        ], [
-            'file.max' => 'Max file size 5MB',
-            'first_name.required' => 'Please enter first name',
-            'last_name.required' => 'Please enter last name',
-            'title.required' => 'Please enter title',
-            'affiliation.required' => 'Please enter affiliation',
-        ]);
+//        $this->validate($request, [
+//            'email' => 'required|email|max:255',
+//            'password' => 'required|min:6|confirmed',
+//            'file' => 'max:5120',
+//            'first_name' => 'required',
+//            'last_name' => 'required',
+//            'title' => 'required',
+//            'affiliation' => 'required',
+//        ], [
+//            'file.max' => 'Max file size 5MB',
+//            'first_name.required' => 'Please enter first name',
+//            'last_name.required' => 'Please enter last name',
+//            'title.required' => 'Please enter title',
+//            'affiliation.required' => 'Please enter affiliation',
+//        ]);
         $data = $request->all();
         \DB::beginTransaction();
         try {
@@ -76,6 +75,23 @@ class HomeController extends AdminController
                 $count = User::where('code', $code)->count();
             } while ($count);
             $data['code'] = $code;
+            $d = [];
+            if (count($data['know'])) {
+                foreach ($data['know'] as $key => $value) {
+
+                    if(isset($value['id'])) {
+                        $d[] = [
+                            'id' => $value['id'],
+                            'content' => (isset($value['content'])) ? $value['content'] : ''
+                        ];
+
+                    }else {
+                        continue;
+                    }
+                }
+
+            }
+            $data['know'] = $d;
             $user = User::create($data);
             Mail::to($user->email)->cc('hanoiforum@vnu.edu.vn')->send(new RegisterEmail($user));
             EmailLog::create([
@@ -99,6 +115,7 @@ class HomeController extends AdminController
             }
 
         } catch (\Exception $ex) {
+            dd($ex->getMessage());
             DB::rollback();
             return redirect()->back()->with('error', 'Server error.Try again later')->withInput(Input::all());
         }
@@ -261,13 +278,19 @@ class HomeController extends AdminController
     {
         return view('frontend.keynoteSpeakers');
     }
-    public function visa(Request $request) {
+
+    public function visa(Request $request)
+    {
         return view('frontend.visa');
     }
-    public function transportation(Request $request) {
+
+    public function transportation(Request $request)
+    {
         return view('frontend.transportation');
     }
-    public function registration(Request $request) {
+
+    public function registration(Request $request)
+    {
         return view('frontend.registration');
     }
 }

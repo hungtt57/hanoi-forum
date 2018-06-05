@@ -19,8 +19,8 @@ class User extends Authenticatable
      */
     public static $titleText = [
         'Prof.' => 'Prof.',
-        'Assoc. Prof.' =>  'Assoc. Prof.',
-        'Adj. Prof.' =>  'Adj. Prof.',
+        'Assoc. Prof.' => 'Assoc. Prof.',
+        'Adj. Prof.' => 'Adj. Prof.',
         'Prof. Dr.' => 'Prof. Dr.',
         'Dr.' => 'Dr.',
         'Mrs.' => 'Mrs.',
@@ -29,7 +29,7 @@ class User extends Authenticatable
     ];
 
     public static $dietaryText = [
-       0 => 'None',
+        0 => 'None',
         1 => 'Vegetarian',
         2 => 'Vegan',
         3 => 'Halal food',
@@ -37,11 +37,11 @@ class User extends Authenticatable
     ];
 
     public static $indicateText = [
-       0 => 'None',
-       1 => 'Wheelchair',
-       2 => 'Hearing aid',
-       3 => 'A sighted guide',
-       4 => 'Others (Please specify):'
+        0 => 'None',
+        1 => 'Wheelchair',
+        2 => 'Hearing aid',
+        3 => 'A sighted guide',
+        4 => 'Others (Please specify):'
     ];
 
     const MALE = 2;
@@ -62,6 +62,14 @@ class User extends Authenticatable
         1 => 'Accommodation',
         2 => 'Flight tickets and accommodation'
     ];
+    public static $knowText = [
+      0 => 'Conference alert',
+        1 => 'Vietnam National University, Hanoi (VNU) Website',
+        2 => 'Group/network emails',
+        3 => 'Friends and/or colleagues',
+        4 => 'Korea Foundation for Advanced Studies (KFAS)',
+        5 => 'Others'
+    ];
     protected $fillable = [
         'name', 'email', 'password', 'type', 'phone', 'file', 'image',
         'first_name', 'last_name', 'title', 'affiliation', 'gender', 'nationality', 'link_cv', 'abstract', 'paper',
@@ -69,11 +77,13 @@ class User extends Authenticatable
         'confirm_abstract', 'confirm_paper', 'reject_abstract', 'reject_paper', 'comment_abstract', 'comment_paper',
         'share_info', 'payment_status',
         'verify',
-        'dietary','dietary_content',
-        'need_support' ,'kind_support',
-        'indicate','indicate_content'
+        'dietary', 'dietary_content',
+        'need_support', 'kind_support',
+        'indicate', 'indicate_content','know'
     ];
-
+    protected $casts = [
+        'know' => 'array',
+    ];
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -94,7 +104,7 @@ class User extends Authenticatable
         if (str_contains($this->attributes['link_cv'], 'http') || str_contains($this->attributes['link_cv'], 'https')) {
             return $this->attributes['link_cv'];
         }
-        if($this->attributes['link_cv']) {
+        if ($this->attributes['link_cv']) {
             return 'http://' . $this->attributes['link_cv'];
         }
 
