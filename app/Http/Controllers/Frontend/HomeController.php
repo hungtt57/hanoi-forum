@@ -80,7 +80,7 @@ class HomeController extends AdminController
                 foreach ($data['know'] as $key => $value) {
 
                     if(isset($value['id'])) {
-                        $d[] = [
+                        $d[$value['id']] = [
                             'id' => $value['id'],
                             'content' => (isset($value['content'])) ? $value['content'] : ''
                         ];
@@ -97,7 +97,7 @@ class HomeController extends AdminController
                 foreach ($data['indicate'] as $key => $value) {
 
                     if(isset($value['id'])) {
-                        $indicate[] = [
+                        $indicate[$value['id']] = [
                             'id' => $value['id'],
                             'content' => (isset($value['content'])) ? $value['content'] : ''
                         ];

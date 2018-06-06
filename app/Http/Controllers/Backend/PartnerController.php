@@ -127,6 +127,42 @@ class PartnerController extends AdminController
             ]);
         }
         try {
+            $d = [];
+            if (count($data['know'])) {
+                foreach ($data['know'] as $key => $value) {
+
+                    if(isset($value['id'])) {
+                        $d[$value['id']] = [
+                            'id' => $value['id'],
+                            'content' => (isset($value['content'])) ? $value['content'] : ''
+                        ];
+
+                    }else {
+                        continue;
+                    }
+                }
+
+            }
+            $data['know'] = $d;
+            $indicate = [];
+            if (count($data['indicate'])) {
+                foreach ($data['indicate'] as $key => $v) {
+
+                    if(isset($v['id'])) {
+                        $indicate[$v['id']] = [
+                            'id' => $v['id'],
+                            'content' => (isset($v['content'])) ? $v['content'] : ''
+                        ];
+
+                    }else {
+                        continue;
+                    }
+                }
+
+            }
+            $data['indicate'] = $indicate;
+
+
             $userId = auth('backend')->user()->id;
             $user = User::find($userId);
             if ($request->file('file')) {
@@ -148,6 +184,7 @@ class PartnerController extends AdminController
             $user->update($data);
             return redirect()->back()->with('success', 'Success');
         } catch (\Exception $ex) {
+
             return redirect()->back()->with('error', 'Server error.Try again later')->withInput(Input::all());
         }
 

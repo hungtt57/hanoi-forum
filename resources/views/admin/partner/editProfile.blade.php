@@ -11,18 +11,21 @@
         .col-lg-6 {
             padding-left: 0px;
         }
+
         .title-register {
             background: #007f49;
             padding: 5px;
             text-align: center;
             color: white;
         }
+
         .file-input-new .btn-primary.btn-file {
             background-color: #007f49;
         }
-        p {
-            text-align: justify;
-        }
+
+        /*p {*/
+        /*text-align: justify;*/
+        /*}*/
     </style>
     <link href="/assets/css/fileinput.min.css" rel="stylesheet" type="text/css"/>
 @endsection
@@ -68,9 +71,10 @@
                         <label class="control-label col-md-3 ">Title* </label>
                         <div class="col-md-6">
 
-                            <select class="form-control" name="title" >
+                            <select class="form-control" name="title">
                                 @foreach(\App\Models\User::$titleText as $key => $value)
-                                    <option value="{{$key}}" @if($value == old('title',@$user->title)) selected @endif>{{$value}}</option>
+                                    <option value="{{$key}}"
+                                            @if($value == old('title',@$user->title)) selected @endif>{{$value}}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -87,7 +91,8 @@
                     <div class="form-group">
                         <label class="control-label col-md-3 " for="Name">Email address*</label>
                         <div class="col-md-6">
-                            <input type="email" name="email" @if(isset($user)) disabled @endif tabindex="1" class="form-control"
+                            <input type="email" name="email" @if(isset($user)) disabled @endif tabindex="1"
+                                   class="form-control"
                                    value="{{old('email',@$user->email)}}">
                         </div>
                     </div>
@@ -126,7 +131,8 @@
                             @php $nations = \App\Models\Country::orderBy('nicename','desc')->get(); @endphp
                             <select class="form-control select2" name="nationality" id="nationality">
                                 @foreach($nations as $nation)
-                                    <option value="{{$nation->iso}}" @if($nation->iso === $user->nationality) selected @endif>{{$nation->nicename}}</option>
+                                    <option value="{{$nation->iso}}"
+                                            @if($nation->iso === $user->nationality) selected @endif>{{$nation->nicename}}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -162,7 +168,8 @@
                                 <input type="file" class="post-image form-control" id="file" name="file">
                                 <div class="clearfix"></div>
                                 @if(isset($user) and $user->paper)
-                                    <a class="btn btn-primary green start" href="{{$user->paper}}" download="{{$user->paper}}"
+                                    <a class="btn btn-primary green start" href="{{$user->paper}}"
+                                       download="{{$user->paper}}"
                                        style="float: left;margin-right: 10px;margin-top: 10px">
                                         <i class="fa fa-download"></i>
                                         <span>Download File</span>
@@ -176,7 +183,8 @@
                     <div class="form-group">
 
                         <label class="control-label col-md-6 col-md-offset-3" style="text-align: left">
-                            For the sake of networking, we wish to share the information given above and/or Linkedin profiles among the delegates.
+                            For the sake of networking, we wish to share the information given above and/or Linkedin
+                            profiles among the delegates.
                             <br>
                             Do you agree to us sharing this information with the other delegates?</label>
                         <div class="controls col-md-6 col-md-offset-3">
@@ -188,59 +196,114 @@
                     </div>
 
 
-                    {{--<h4 class="page-title title-register">SPONSORSHIP</h4>--}}
-                    {{--<div class="form-group">--}}
-                        {{--<p>--}}
-                            {{--We may be able to provide some forms of support for participants to attend the--}}
-                            {{--Hanoi Forum 2018 depending on (i) the relevance of their papers to the--}}
-                            {{--conference's thematic topics as well as the papers’ quality, which will be--}}
-                            {{--assessed by our Academic Committee members, and (ii) our funding availability.--}}
-                        {{--</p>--}}
-                        {{--<p>--}}
-                            {{--If your abstract is accepted, you will be invited to submit a full paper, and--}}
-                            {{--will be considered to receive sponsorship should you need one. Please indicate--}}
-                            {{--in the form below what kind of support you may need. We will be in touch to--}}
-                            {{--inform you of the result of this consideration.--}}
-                        {{--</p>--}}
-                        {{--<p>--}}
-                            {{--We encourage interested participants to seek for alternative sources of funding to attend the forum while awaiting the result.--}}
-                        {{--</p>--}}
-                    {{--</div>--}}
-                    {{--<div class="form-group">--}}
-                        {{--<label class="control-label">Do you need any support to attend the Hanoi Forum 2018?</label>--}}
-                        {{--<div class="controls">--}}
-                            {{--<p>--}}
-                                {{--<label class="radio-inline">--}}
-                                    {{--<input type="radio" name="need_support" value="0"--}}
-                                           {{--@if(old('need_support',$user->need_support) == 0) checked--}}
-                                           {{--@endif--}}
-                                    {{--> No--}}
-                                {{--</label>--}}
-                            {{--</p>--}}
-                            {{--<p>--}}
-                                {{--<label class="radio-inline">--}}
-                                    {{--<input type="radio" name="need_support" value="1"--}}
-                                           {{--@if(old('need_support',$user->need_support) == 1 )) checked @endif--}}
-                                    {{--> Yes--}}
-                                {{--</label>--}}
-                            {{--</p>--}}
+                    <div class="form-group">
+                        <label class="control-label col-md-6 col-md-offset-3" style="text-align: left"> Could you please
+                            let us know from which source you knew about the Hanoi Forum 2018? (you can choose more than
+                            one option)</label>
+                        <div class="controls col-md-6 col-md-offset-3">
 
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    {{--<div id="kindSupport" class="form-group @if(old('need_support',$user->need_support) == 0)) hide @endif">--}}
-                        {{--<label class="control-label">If yes, what kind of support do you need to attend the forum? </label>--}}
-                        {{--<div class="controls">--}}
-                            {{--@foreach(\App\Models\User::$kindSupportText as $key => $value)--}}
-                                {{--<p>--}}
-                                    {{--<label class="radio-inline">--}}
-                                        {{--<input type="radio" name="kind_support" value="{{$key}}"--}}
-                                               {{--@if(old('kind_support',$user->kind_support) == $key ) checked @endif--}}
-                                        {{--> {{$value}}--}}
-                                    {{--</label>--}}
-                                {{--</p>--}}
-                            {{--@endforeach--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
+                            @foreach(\App\Models\User::$knowText as $key => $value)
+                                @if($key == 3 || $key == 7)
+                                    <p>
+                                        <label class="radio-inline" style="width: 100%;padding-left: 0px">
+                                            <input type="checkbox" @if(is_array($user->know) and isset($user->know[$key])) checked
+                                                   @endif  name="know[{{$key}}][id]" value="{{$key}}"> {{$value}}
+                                            (Please specify) :<input type="text"
+                                                                     @if(is_array($user->know) && isset($user->know[$key]))  value="{{old('know['.$key.'][content]',$user->know[$key]['content'])}}"
+                                                                     @else
+                                                                     value="{{old('know['.$key.'][content]')}}"
+                                                                     @endif
+                                                                     name="know[{{$key}}][content]">
+                                        </label>
+                                    </p>
+                                @else
+                                    <p>
+                                        <label class="radio-inline" style="padding-left: 0px">
+                                            <input type="checkbox" name="know[{{$key}}][id]" @if(is_array($user->know) and isset($user->know[$key])) checked
+                                                   @endif
+                                                   value="{{$key}}"> {{$value}}
+                                        </label>
+                                    </p>
+                                @endif
+                            @endforeach
+                        </div>
+                    </div>
+
+                    <h4 class="page-title title-register">SPECIAL REQUIREMENTS</h4>
+                    <div class="form-group">
+
+                        <label class="control-label col-md-6 col-md-offset-3" style="text-align: left">Please indicate
+                            if you need any special diet
+                            requirements:</label>
+                        <div class="controls col-md-6 col-md-offset-3">
+                            @foreach(\App\Models\User::$dietaryText as $key => $value)
+                                @if($key != 4)
+                                    <p>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="dietary" value="{{$key}}"
+                                                   @if(old('dietary',$user->dietary) == $key) checked
+                                                    @endif
+                                            > {{$value}}
+                                        </label>
+                                    </p>
+                                @endif
+                                @if($key == 4)
+                                    <p>
+                                        <label class="radio-inline" style="width: 100%;">
+                                            <input type="radio" name="dietary" value="{{$key}}"
+                                                   @if(old('dietary',$user->dietary) == $key ) checked @endif>
+                                            Others (Please specify) : <input type="text"
+                                                                             value="{{old('dietary_content',$user->dietary_content)}}"
+                                                                             name="dietary_content">
+                                        </label>
+                                    </p>
+
+                                @endif
+                            @endforeach
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+
+                        <label class="control-label col-md-6 col-md-offset-3" style="text-align: left">Please indicate
+                            if you have a disability and require
+                            any special assistance during the forum (you can choose more than one option) :</label>
+                        <div class="controls col-md-6 col-md-offset-3">
+                            @foreach(\App\Models\User::$indicateText as $key => $value)
+                                @if($key != 4)
+                                    <p>
+                                        <label class="radio-inline" style="padding-left: 0px">
+                                            <input type="checkbox" @if(is_array($user->indicate) and isset($user->indicate[$key])) checked
+                                                   @endif   name="indicate[{{$key}}][id]" value="{{$key}}"
+
+                                            > {{$value}}
+                                        </label>
+                                    </p>
+                                @endif
+                                @if($key == 4)
+                                    <p>
+                                        <label class="radio-inline" style="width: 100%;padding-left: 0px">
+                                            <input type="checkbox" @if(is_array($user->indicate) and isset($user->indicate[$key])) checked
+                                                   @endif name="indicate[{{$key}}][id]"  value="{{$key}}"
+                                            >
+                                            Others (Please specify) : <input type="text"
+                                                                             @if(is_array($user->indicate)and isset($user->indicate[$key]))  value="{{old('indicate['.$key.'][content]',$user->indicate[$key]['content'])}}"
+                                                                             @else
+                                                                             value="{{old('indicate['.$key.'][content]')}}"
+                                                                             @endif
+
+                                                                             name="indicate[{{$key}}][content]">
+                                        </label>
+                                    </p>
+
+                                @endif
+                            @endforeach
+
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
@@ -282,9 +345,9 @@
         $('input[name=need_support]').change(function () {
           var value = $(this).val();
 //
-          if(value == 1) {
+          if (value == 1) {
             $('#kindSupport').removeClass('hide');
-          }else {
+          } else {
             $('#kindSupport').addClass('hide');
           }
         });

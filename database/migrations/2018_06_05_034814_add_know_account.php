@@ -14,7 +14,7 @@ class AddKnowAccount extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->text('indicate')->nullable()->default(0);
+            $table->text('indicate')->nullable();
             $table->text('indicate_content')->nullable();
             $table->text('know')->nullable();
         });
