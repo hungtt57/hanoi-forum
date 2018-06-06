@@ -19,6 +19,7 @@ class User extends Authenticatable
      */
     public static $titleText = [
         'Prof.' => 'Prof.',
+        'Assist. Prof.' => 'Assist. Prof.',
         'Assoc. Prof.' => 'Assoc. Prof.',
         'Adj. Prof.' => 'Adj. Prof.',
         'Prof. Dr.' => 'Prof. Dr.',

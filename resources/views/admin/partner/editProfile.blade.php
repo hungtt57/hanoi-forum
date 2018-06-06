@@ -198,7 +198,7 @@
 
                     <div class="form-group">
                         <label class="control-label col-md-6 col-md-offset-3" style="text-align: left"> Could you please
-                            let us know from which source you knew about the Hanoi Forum 2018? (you can choose more than
+                            let us know from which source(s) you knew about the Hanoi Forum 2018? (you can choose more than
                             one option)</label>
                         <div class="controls col-md-6 col-md-offset-3">
 

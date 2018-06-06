@@ -182,7 +182,7 @@
 
 
                                 <div class="form-group">
-                                    <label class="control-label"> Could you please let us know from which source you knew about the Hanoi Forum 2018? (you can choose more than one option)</label>
+                                    <label class="control-label"> Could you please let us know from which source(s) you knew about the Hanoi Forum 2018? (you can choose more than one option)</label>
                                     <div class="controls">
                                         @foreach(\App\Models\User::$knowText as $key => $value)
                                             @if($key == 3 || $key == 7)
@@ -309,7 +309,7 @@
 
                                     </p>
                                     <p> All photography, audio and video recording may be used by Vietnam National
-                                        University, Hanoi for education, marketing, promotional and/or publication
+                                        University, Hanoi, for education, marketing, promotional and/or publication
                                         purposes. If you do not wish to have your image recorded or published, for
                                         compelling and legitimate grounds relating to your particular situation, please
                                         email to hanoiforum@vnu.edu.vn.</p>
