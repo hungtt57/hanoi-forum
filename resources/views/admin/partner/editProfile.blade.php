@@ -186,7 +186,7 @@
                             For the sake of networking, we wish to share the information given above and/or Linkedin
                             profiles among the delegates.
                             <br>
-                            Do you agree to us sharing this information with the other delegates?</label>
+                            Do you agree to us sharing this information with the other delegates * ?</label>
                         <div class="controls col-md-6 col-md-offset-3">
                             <label class="radio-inline"><input type="radio" name="share_info" value="1"
                                                                @if(old('share_info',$user->share_info) == 1) checked @endif >Yes</label>
@@ -199,19 +199,26 @@
                     <div class="form-group">
                         <label class="control-label col-md-6 col-md-offset-3" style="text-align: left"> Could you please
                             let us know from which source(s) you knew about the Hanoi Forum 2018? (you can choose more than
-                            one option)</label>
+                            one option) *</label>
                         <div class="controls col-md-6 col-md-offset-3">
 
                             @foreach(\App\Models\User::$knowText as $key => $value)
                                 @if($key == 3 || $key == 7)
                                     <p>
                                         <label class="radio-inline" style="width: 100%;padding-left: 0px">
-                                            <input type="checkbox" @if(is_array($user->know) and isset($user->know[$key])) checked
-                                                   @endif  name="know[{{$key}}][id]" value="{{$key}}"> {{$value}}
+                                            <input type="checkbox"
+                                                   @if(old('know.'.$key.'.id') == $key and old('know.'.$key.'.id') != null) checked
+                                                   @else
+                                                   @if(is_array($user->know) and isset($user->know[$key])) checked @endif
+
+                                                   @endif
+
+
+                                                   name="know[{{$key}}][id]" value="{{$key}}"> {{$value}}
                                             (Please specify) :<input type="text"
-                                                                     @if(is_array($user->know) && isset($user->know[$key]))  value="{{old('know['.$key.'][content]',$user->know[$key]['content'])}}"
+                                                                     @if(is_array($user->know) && isset($user->know[$key]))  value="{{old('know.'.$key.'.content',$user->know[$key]['content'])}}"
                                                                      @else
-                                                                     value="{{old('know['.$key.'][content]')}}"
+                                                                     value="{{old('know.'.$key.'.content]')}}"
                                                                      @endif
                                                                      name="know[{{$key}}][content]">
                                         </label>
@@ -219,8 +226,13 @@
                                 @else
                                     <p>
                                         <label class="radio-inline" style="padding-left: 0px">
-                                            <input type="checkbox" name="know[{{$key}}][id]" @if(is_array($user->know) and isset($user->know[$key])) checked
+                                            <input type="checkbox" name="know[{{$key}}][id]"
+                                                   @if(old('know.'.$key.'.id') == $key and old('know.'.$key.'.id') != null) checked
+                                                   @else
+                                                         @if(is_array($user->know) and isset($user->know[$key])) checked @endif
+
                                                    @endif
+
                                                    value="{{$key}}"> {{$value}}
                                         </label>
                                     </p>
@@ -234,7 +246,7 @@
 
                         <label class="control-label col-md-6 col-md-offset-3" style="text-align: left">Please indicate
                             if you need any special diet
-                            requirements:</label>
+                            requirements *:</label>
                         <div class="controls col-md-6 col-md-offset-3">
                             @foreach(\App\Models\User::$dietaryText as $key => $value)
                                 @if($key != 4)
@@ -268,14 +280,21 @@
 
                         <label class="control-label col-md-6 col-md-offset-3" style="text-align: left">Please indicate
                             if you have a disability and require
-                            any special assistance during the forum (you can choose more than one option) :</label>
+                            any special assistance during the forum (you can choose more than one option) * :</label>
                         <div class="controls col-md-6 col-md-offset-3">
                             @foreach(\App\Models\User::$indicateText as $key => $value)
                                 @if($key != 4)
                                     <p>
                                         <label class="radio-inline" style="padding-left: 0px">
-                                            <input type="checkbox" @if(is_array($user->indicate) and isset($user->indicate[$key])) checked
-                                                   @endif   name="indicate[{{$key}}][id]" value="{{$key}}"
+                                            <input type="checkbox"
+                                                   @if(old('indicate.'.$key.'.id') == $key and old('indicate.'.$key.'.id') != null) checked
+                                                   @else
+                                                   @if(is_array($user->indicate) and isset($user->indicate[$key])) checked @endif
+
+                                                   @endif
+
+
+                                                   name="indicate[{{$key}}][id]" value="{{$key}}"
 
                                             > {{$value}}
                                         </label>
@@ -284,13 +303,19 @@
                                 @if($key == 4)
                                     <p>
                                         <label class="radio-inline" style="width: 100%;padding-left: 0px">
-                                            <input type="checkbox" @if(is_array($user->indicate) and isset($user->indicate[$key])) checked
-                                                   @endif name="indicate[{{$key}}][id]"  value="{{$key}}"
+                                            <input type="checkbox"
+                                                   @if(old('indicate.'.$key.'.id') == $key and old('indicate.'.$key.'.id') != null) checked
+                                                   @else
+                                                   @if(is_array($user->indicate) and isset($user->indicate[$key])) checked @endif
+
+                                                   @endif
+
+                                                   name="indicate[{{$key}}][id]"  value="{{$key}}"
                                             >
                                             Others (Please specify) : <input type="text"
-                                                                             @if(is_array($user->indicate)and isset($user->indicate[$key]))  value="{{old('indicate['.$key.'][content]',$user->indicate[$key]['content'])}}"
+                                                                             @if(is_array($user->indicate) && isset($user->indicate[$key]))  value="{{old('indicate.'.$key.'.content',$user->indicate[$key]['content'])}}"
                                                                              @else
-                                                                             value="{{old('indicate['.$key.'][content]')}}"
+                                                                             value="{{old('indicate.'.$key.'.content]')}}"
                                                                              @endif
 
                                                                              name="indicate[{{$key}}][content]">

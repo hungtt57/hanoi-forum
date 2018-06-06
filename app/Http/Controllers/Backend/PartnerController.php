@@ -127,7 +127,7 @@ class PartnerController extends AdminController
             ]);
         }
         try {
-            $d = [];
+            $check = true;
             if (count($data['know'])) {
                 foreach ($data['know'] as $key => $value) {
 
@@ -136,29 +136,36 @@ class PartnerController extends AdminController
                             'id' => $value['id'],
                             'content' => (isset($value['content'])) ? $value['content'] : ''
                         ];
-
+                        $check = false;
                     }else {
                         continue;
                     }
                 }
 
             }
+            if($check == true) {
+                return redirect()->back()->with('error', 'Please answer all the required fields ')->withInput(Input::all());
+            }
             $data['know'] = $d;
             $indicate = [];
+            $check = true;
             if (count($data['indicate'])) {
-                foreach ($data['indicate'] as $key => $v) {
+                foreach ($data['indicate'] as $key => $value) {
 
-                    if(isset($v['id'])) {
-                        $indicate[$v['id']] = [
-                            'id' => $v['id'],
-                            'content' => (isset($v['content'])) ? $v['content'] : ''
+                    if(isset($value['id'])) {
+                        $indicate[$value['id']] = [
+                            'id' => $value['id'],
+                            'content' => (isset($value['content'])) ? $value['content'] : ''
                         ];
-
+                        $check = false;
                     }else {
                         continue;
                     }
                 }
 
+            }
+            if($check == true) {
+                return redirect()->back()->with('error', 'Please answer all the required fields ')->withInput(Input::all());
             }
             $data['indicate'] = $indicate;
 

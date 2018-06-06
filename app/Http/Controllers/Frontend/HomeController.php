@@ -37,21 +37,23 @@ class HomeController extends AdminController
 
     public function postRegister(Request $request)
     {
-//        $this->validate($request, [
-//            'email' => 'required|email|max:255',
-//            'password' => 'required|min:6|confirmed',
-//            'file' => 'max:5120',
-//            'first_name' => 'required',
-//            'last_name' => 'required',
-//            'title' => 'required',
-//            'affiliation' => 'required',
-//        ], [
-//            'file.max' => 'Max file size 5MB',
-//            'first_name.required' => 'Please enter first name',
-//            'last_name.required' => 'Please enter last name',
-//            'title.required' => 'Please enter title',
-//            'affiliation.required' => 'Please enter affiliation',
-//        ]);
+        $this->validate($request, [
+            'email' => 'required|email|max:255',
+            'password' => 'required|min:6|confirmed',
+            'file' => 'max:5120',
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'title' => 'required',
+            'affiliation' => 'required',
+            'confirm' => 'required'
+        ], [
+            'file.max' => 'Max file size 5MB',
+            'first_name.required' => 'Please enter first name',
+            'last_name.required' => 'Please enter last name',
+            'title.required' => 'Please enter title',
+            'affiliation.required' => 'Please enter affiliation',
+            'confirm.required' => 'Please answer all the required fields '
+        ]);
         $data = $request->all();
         \DB::beginTransaction();
         try {
@@ -76,6 +78,7 @@ class HomeController extends AdminController
             } while ($count);
             $data['code'] = $code;
             $d = [];
+            $check = true;
             if (count($data['know'])) {
                 foreach ($data['know'] as $key => $value) {
 
@@ -84,15 +87,19 @@ class HomeController extends AdminController
                             'id' => $value['id'],
                             'content' => (isset($value['content'])) ? $value['content'] : ''
                         ];
-
+                        $check = false;
                     }else {
                         continue;
                     }
                 }
 
             }
+            if($check == true) {
+                return redirect()->back()->with('error', 'Please answer all the required fields ')->withInput(Input::all());
+            }
             $data['know'] = $d;
             $indicate = [];
+            $check = true;
             if (count($data['indicate'])) {
                 foreach ($data['indicate'] as $key => $value) {
 
@@ -101,12 +108,15 @@ class HomeController extends AdminController
                             'id' => $value['id'],
                             'content' => (isset($value['content'])) ? $value['content'] : ''
                         ];
-
+                        $check = false;
                     }else {
                         continue;
                     }
                 }
 
+            }
+            if($check == true) {
+                return redirect()->back()->with('error', 'Please answer all the required fields ')->withInput(Input::all());
             }
             $data['indicate'] = $indicate;
             $user = User::create($data);

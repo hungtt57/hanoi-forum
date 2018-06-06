@@ -170,7 +170,7 @@
 
                                     <label class="control-label"> For the sake of networking, we wish to share the
                                         information given above and/or Linkedin profiles among the delegates. Do you
-                                        agree to us sharing this information with the other delegates?</label>
+                                        agree to us sharing this information with the other delegates? *</label>
                                     <div class="controls">
                                         <label class="radio-inline"><input type="radio" name="share_info" value="1"
                                                                            @if(old('share_info') == 1) checked
@@ -182,22 +182,28 @@
 
 
                                 <div class="form-group">
-                                    <label class="control-label"> Could you please let us know from which source(s) you knew about the Hanoi Forum 2018? (you can choose more than one option)</label>
+                                    <label class="control-label"> Could you please let us know from which source(s) you
+                                        knew about the Hanoi Forum 2018? (you can choose more than one option) *</label>
                                     <div class="controls">
                                         @foreach(\App\Models\User::$knowText as $key => $value)
                                             @if($key == 3 || $key == 7)
                                                 <p>
                                                     <label class="radio-inline" style="width: 100%;padding-left: 0px">
-                                                        <input type="checkbox" name="know[{{$key}}][id]" value="{{$key}}"> {{$value}} (Please specify) :<input type="text"
-                                                                                                                              value="{{old('dietary_content')}}"
-                                                                                                                              style="width: 60%"
-                                                                                                                              name="know[{{$key}}][content]">
+                                                        <input type="checkbox" name="know[{{$key}}][id]"
+                                                               @if(old('know.'.$key.'.id') == $key and old('know.'.$key.'.id') != null) checked @endif
+                                                               value="{{$key}}"> {{$value}} (Please specify) :<input
+                                                                type="text"
+                                                                value="{{old('know.'.$key.'.content')}}"
+                                                                style="width: 60%"
+                                                                name="know[{{$key}}][content]">
                                                     </label>
                                                 </p>
                                             @else
                                                 <p>
                                                     <label class="radio-inline" style="padding-left: 0px">
-                                                        <input type="checkbox" name="know[{{$key}}][id]"  value="{{$key}}"> {{$value}}
+
+                                                        <input type="checkbox" name="know[{{$key}}][id]"    @if(old('know.'.$key.'.id') == $key and old('know.'.$key.'.id') != null) checked @endif
+                                                               value="{{$key}}"> {{$value}}
                                                     </label>
                                                 </p>
                                             @endif
@@ -209,7 +215,7 @@
                                 <div class="form-group">
 
                                     <label class="control-label">Please indicate if you need any special diet
-                                        requirements:</label>
+                                        requirements *:</label>
                                     <div class="controls">
                                         @foreach(\App\Models\User::$dietaryText as $key => $value)
                                             @if($key != 4)
@@ -243,14 +249,17 @@
                                 <div class="form-group">
 
                                     <label class="control-label">Please indicate if you have a disability and require
-                                        any special assistance during the forum (you can choose more than one option) :</label>
+                                        any special assistance during the forum (you can choose more than one option) *
+                                        :</label>
                                     <div class="controls">
                                         @foreach(\App\Models\User::$indicateText as $key => $value)
                                             @if($key != 4)
                                                 <p>
-                                                    <label class="radio-inline" style="padding-left: 0px">
-                                                        <input type="checkbox" name="indicate[{{$key}}][id]" value="{{$key}}"
 
+                                                    <label class="radio-inline" style="padding-left: 0px">
+                                                        <input type="checkbox" name="indicate[{{$key}}][id]"
+                                                               value="{{$key}}"
+                                                               @if(old('indicate.'.$key.'.id') == $key and old('indicate.'.$key.'.id') != null) checked @endif
                                                         > {{$value}}
                                                     </label>
                                                 </p>
@@ -258,10 +267,11 @@
                                             @if($key == 4)
                                                 <p>
                                                     <label class="radio-inline" style="width: 100%;padding-left: 0px">
-                                                        <input type="checkbox" name="indicate" value="{{$key}}"
+
+                                                        <input type="checkbox" name="indicate[{{$key}}][id]"  value="{{$key}}"  @if(old('indicate.'.$key.'.id') == $key) checked @endif
                                                         >
                                                         Others (Please specify) : <input type="text"
-                                                                                         value="{{old('indicate_content')}}"
+                                                                                         value="{{old('indicate.'.$key.'.content')}}"
                                                                                          style="width: 60%"
                                                                                          name="indicate[{{$key}}][content]">
                                                     </label>
@@ -288,7 +298,8 @@
                                                                href="https://lanhsuvietnam.gov.vn/Lists/BaiViet/B%C3%A0i vi%E1%BA%BFt/DispForm.aspx?List=dc7c7d75-6a32-4215-afeb-47d4bee70eee&ID=306">listed
                                             countries</a> are exempted from obtaining a visa to enter Vietnam for a
                                         designated number of days.
-                                     <b>Should you need to apply for a visa to enter Vietnam, please contact us at hanoiforum@vnu.edu.vn for further support.</b></p>
+                                        <b>Should you need to apply for a visa to enter Vietnam, please contact us at
+                                            hanoiforum@vnu.edu.vn for further support.</b></p>
                                     <h4 class="page-title title-register">IMPORTANT NOTE</h4>
                                     <p>
                                         By filling up this registration form, I hereby agree and consent that my
@@ -368,6 +379,7 @@
 //            $('.applyContainer').addClass('hide');
 //          }
 //        });
+
         $('input[name=need_support]').change(function () {
           var value = $(this).val();
 //
@@ -377,6 +389,7 @@
             $('#kindSupport').addClass('hide');
           }
         });
+
       });
     </script>
 
