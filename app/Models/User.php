@@ -82,7 +82,8 @@ class User extends Authenticatable
         'verify',
         'dietary', 'dietary_content',
         'need_support', 'kind_support',
-        'indicate', 'indicate_content','know'
+        'indicate', 'indicate_content','know',
+        'confirm'
     ];
     protected $casts = [
         'know' => 'array',
