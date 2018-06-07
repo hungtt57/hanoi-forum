@@ -67,50 +67,50 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group">
-                                    <label class="control-label ">Registration ID</label>
-                                    <div class="controls">
-                                        <input type="text" name="code"
-                                               class="form-control"
-                                               v value="{{($user) ? $user->code : ''}}">
-                                    </div>
-                                </div>
+                                {{--<div class="form-group">--}}
+                                    {{--<label class="control-label ">Registration ID</label>--}}
+                                    {{--<div class="controls">--}}
+                                        {{--<input type="text" name="code"--}}
+                                               {{--class="form-control"--}}
+                                               {{--v value="{{($user) ? $user->code : ''}}">--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
 
-                                <div class="form-group">
-                                    <label class="control-label ">Issue</label>
-                                    <div class="controls">
+                                {{--<div class="form-group">--}}
+                                    {{--<label class="control-label ">Issue</label>--}}
+                                    {{--<div class="controls">--}}
 
-                                        <select class="form-control" name="issue" id="nationality">
-                                            <option value="Accommodation"
-                                                    @if('Accommodation' == old('issue')) checked @endif>Accommodation
-                                            </option>
-                                            <option value="Travel grant"
-                                                    @if('Travel grant' == old('issue')) checked @endif>Travel grant
-                                            </option>
-                                            <option value="Abstract/paper submission"
-                                                    @if('Abstract/paper submission' == old('issue')) checked @endif>
-                                                Abstract/paper submission
-                                            </option>
-                                            <option value="Registration"
-                                                    @if('Registration' == old('issue')) checked @endif>Registration
-                                            </option>
-                                            <option value="Academic issues"
-                                                    @if('Academic issues' == old('issue')) checked @endif>Academic
-                                                issues
-                                            </option>
-                                            <option value="Others" @if('Others' == old('issue')) checked @endif>Others
-                                            </option>
-                                        </select>
-                                    </div>
-                                </div>
+                                        {{--<select class="form-control" name="issue" id="nationality">--}}
+                                            {{--<option value="Accommodation"--}}
+                                                    {{--@if('Accommodation' == old('issue')) checked @endif>Accommodation--}}
+                                            {{--</option>--}}
+                                            {{--<option value="Travel grant"--}}
+                                                    {{--@if('Travel grant' == old('issue')) checked @endif>Travel grant--}}
+                                            {{--</option>--}}
+                                            {{--<option value="Abstract/paper submission"--}}
+                                                    {{--@if('Abstract/paper submission' == old('issue')) checked @endif>--}}
+                                                {{--Abstract/paper submission--}}
+                                            {{--</option>--}}
+                                            {{--<option value="Registration"--}}
+                                                    {{--@if('Registration' == old('issue')) checked @endif>Registration--}}
+                                            {{--</option>--}}
+                                            {{--<option value="Academic issues"--}}
+                                                    {{--@if('Academic issues' == old('issue')) checked @endif>Academic--}}
+                                                {{--issues--}}
+                                            {{--</option>--}}
+                                            {{--<option value="Others" @if('Others' == old('issue')) checked @endif>Others--}}
+                                            {{--</option>--}}
+                                        {{--</select>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
 
-                                <div class="form-group">
-                                    <label class="control-label " for="Name">Subject</label>
-                                    <div class="controls">
-                                        <input type="text" name="subject" class="form-control"
-                                               value="{{old('subject')}}">
-                                    </div>
-                                </div>
+                                {{--<div class="form-group">--}}
+                                    {{--<label class="control-label " for="Name">Subject</label>--}}
+                                    {{--<div class="controls">--}}
+                                        {{--<input type="text" name="subject" class="form-control"--}}
+                                               {{--value="{{old('subject')}}">--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
 
                                 <div class="form-group">
                                     <label class="control-label " for="Name">Question</label>

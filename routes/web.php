@@ -61,6 +61,13 @@ Route::group([
 
     Route::get('registration','HomeController@registration');
 
+
+
+    Route::get('hanoi-experience','HomeController@hne');
+    Route::get('about-and-around-vietnam','HomeController@aboutandaroudvietnam');
+    Route::get('accommodation','HomeController@accommodation');
+    Route::get('forum-site-information','HomeController@forumSiteInfo');
+
     //panel
     Route::get('climate-change-evidence-and-security', 'HomeController@climateChangeEvidenceAndSecurity');
     Route::get('humans-impact-climate', 'HomeController@humanImpactClimate');

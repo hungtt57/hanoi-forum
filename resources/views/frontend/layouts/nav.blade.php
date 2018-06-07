@@ -92,17 +92,17 @@
                        data-animations="zoomIn">Plan Your Visit<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li>
-                            <a href="#" title="Vietnam Experience">Vietnam Experience</a>
+                            <a href="{{url('hanoi-experience')}}" title="Hanoi Experience">Hanoi Experience</a>
                         </li>
                         <li>
-                            <a href="#" title="About and Around Vietnam">About and Around Vietnam
+                            <a href="{{url('about-and-around-vietnam')}}" title="About and Around Vietnam">About and Around Vietnam
                             </a>
                         </li>
                         <li>
-                            <a href="#" title="Accommodation">Accommodation</a>
+                            <a href="{{url('accommodation')}}" title="Accommodation">Accommodation</a>
                         </li>
                         <li>
-                            <a href="#" title="Forum Site Information">Forum Site Information</a>
+                            <a href="{{url('forum-site-information')}}" title="Forum Site Information">Forum Site Information</a>
                         </li>
 
 

@@ -200,20 +200,29 @@
                 </section>
 
 
-
                 <section class="widget widget_sec">
                     <div class="widget-main">
-                        <h2 class="widget-title">Visiting Hanoi city</h2>
-                        <ul class="list list-unstyled list-footer-nav">
-                            <li><a href="">Tourist Attractions</a></li>
-                            <li><a href="">Weather</a></li>
-                        </ul>
+                        <h2 class="widget-title"><a href="{{url('visa')}}"> Visa to Vietnam </a></h2>
                     </div>
                 </section>
 
 
+
+
             </div>
             <div class="col-sm-3">
+                <section class="widget widget_sec">
+                    <div class="widget-main">
+                        <h2 class="widget-title">Plan Your Visit</h2>
+                        <ul class="list list-unstyled list-footer-nav">
+                            <li><a href="{{url('hanoi-experience')}}">Hanoi Experience</a></li>
+                            <li><a href="{{url('about-and-around-vietnam')}}">About and Around Vietnam</a></li>
+                            <li><a href="{{url('accommodation')}}">Accommodation</a></li>
+                            <li><a href="{{url('forum-site-information')}}">Forum Site Information</a></li>
+
+                        </ul>
+                    </div>
+                </section>
                 <section class="widget widget_sec">
                     <div class="widget-main">
                         <h2 class="widget-title"><a href="{{url('transportation')}}">Transportation </a></h2>
@@ -224,28 +233,7 @@
                         </ul>
                     </div>
                 </section>
-                <section class="widget widget_sec">
-                    <div class="widget-main">
-                        <h2 class="widget-title">Plan Your Visit</h2>
-                        <ul class="list list-unstyled list-footer-nav">
-                            <li><a href="#">Vietnam Experience</a></li>
-                            <li><a href="#">About and Around Vietnam</a></li>
-                            <li><a href="#">Accommodation</a></li>
-                            <li><a href="#">Forum Site Information</a></li>
 
-                        </ul>
-                    </div>
-                </section>
-                <section class="widget widget_sec">
-                    <div class="widget-main">
-                        <h2 class="widget-title"><a href="{{url('visa')}}"> Visa to Vietnam </a></h2>
-                    </div>
-                </section>
-                <section class="widget widget_sec">
-                    <div class="widget-main">
-                        <h2 class="widget-title"><a href=""> Venue </a></h2>
-                    </div>
-                </section>
 
 
 

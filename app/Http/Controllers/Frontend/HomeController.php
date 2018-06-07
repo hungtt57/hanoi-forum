@@ -320,5 +320,18 @@ class HomeController extends AdminController
     {
         return view('frontend.registration');
     }
+
+    public function hne(Request $request) {
+        return view('frontend.hanoiex');
+    }
+    public function aboutandaroudvietnam(Request $request) {
+        return view('frontend.aboutvietnam');
+    }
+    public function accommodation(Request $request) {
+        return view('frontend.accommodation');
+    }
+    public function forumSiteInfo(Request $request) {
+        return view('frontend.forumSiteInfo');
+    }
 }
 

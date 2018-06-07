@@ -15,6 +15,11 @@ class Article extends Model
         'visa' => 'Visa to VietNam',
         'transportation' => 'Transportation',
         'registration' => 'Registration',
+        'hanoiex' => 'Hanoi Experience',
+        'aboutVn' => 'About and Around Vietnam',
+        'accommodation' => 'Accommodation',
+        'forumSiteInfo' => 'Forum Site Information',
+        'callDeadline' => 'CALLS & DEADLINES',
 
 //      'hanoi-forum' => 'Hanoi forum',
 //        'hanoi-forum-2018' => 'Hanoi forum 2018',
