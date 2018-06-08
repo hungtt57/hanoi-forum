@@ -53,7 +53,7 @@
                                     <p><strong>Prof. Dr. MAI Trong Nhuan</strong></p>
                                     <p>Affiliation(s):</p>
                                     <ul>
-                                        <li>Vice chairman, Vietnam Panel on Climate change.
+                                        <li>Vice Chairman, Vietnam Panel on Climate change.
                                         </li>
                                         <li>Director, VNU Key lab of Geoenvironment and Climate change response.</li>
                                         <li>Director, Master’s program on Climate change and Development, Vietnam Japan University, VNU.</li>
