@@ -43,12 +43,10 @@
             <section class="bio__holder">
                 <div class="row">
                     <div class="content-page">
-                    <div class="col-md-8 col-sm-5 col-md-offset-2 col-xs-12">
-                        <p class="title-text">Co-Chairs</p>
-                        <p>Assoc. Prof. Nguyen Kim Son, VNU, Vietnam</p>
-                        <p> President Park In-kook, KFAS, Republic of Korea</p>
-
-                    </div>
+                        @php $article = \App\Models\Article::where('title','steering')->first(); @endphp
+                        @if($article)
+                            {!! $article->content !!}
+                        @endif
                     </div>
 
                 </div>

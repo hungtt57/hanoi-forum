@@ -50,16 +50,15 @@
                                     <div class="image-human">
                                         <img class="" src="/frontend/anh/maitrongnhuan.jpg" alt="">
                                     </div>
-                                    <p><strong>MAI Trong Nhuan, </strong>Professor</p>
+                                    <p><strong>Prof. Dr. MAI Trong Nhuan</strong></p>
                                     <p>Affiliation(s):</p>
                                     <ul>
-                                        <li>Member of the National Steering Committee for International Integration of
-                                            Education, Science, and Technology.
+                                        <li>Vice chairman, Vietnam Panel on Climate change.
                                         </li>
-                                        <li>Chairman, the VNU Council for Education Quality Assurance.</li>
+                                        <li>Director, VNU Key lab of Geoenvironment and Climate change response.</li>
+                                        <li>Director, Master’s program on Climate change and Development, Vietnam Japan University, VNU.</li>
                                     </ul>
-                                    <p>Research areas: Earth science, Environment, Climate change, Sustainable
-                                        development.</p>
+                                    <p>Research areas: Climate Change  and disaster assessment and response; Natural resource and environment management; Sustainability Science.</p>
 
                                 <div class="clearfix"></div>
                             </div>
@@ -69,7 +68,7 @@
                                     <img class="" src="/frontend/anh/park.jpg" alt="">
                                 </div>
                                 <p>
-                                   <strong> Park In kook</strong></p>
+                                   <strong> President PARK In-kook</strong></p>
                                 <p>Affiliation(s): President, Korea Foundation for Advanced Studies (KFAS)
                                 </p>
 
@@ -85,12 +84,13 @@
                                     <img  src="/frontend/anh/vuminhgiang.jpg" alt="">
                                 </div>
 
-                                <p><strong>VU Minh Giang, </strong>Professor</p>
+                                <p><strong>Prof. Dr. Sc. VU Minh Giang</strong></p>
 
                                 <p>Affiliation(s):</p>
 
                                 <ul>
                                     <li>Chairman, VNU Council for Science and Training.</li>
+                                    <li>Vice President, Council National for Cultural Heritage.</li>
                                     <li>Chairman of Academic Advisory Committee, Asia Research Centre, VNU.</li>
                                     <li>Member of the National Council for Science and Technology.</li>
                                     <li>Director, Master’s program on Sustainability Science, VNU School of Interdisciplinary Studies.</li>
@@ -109,7 +109,7 @@
                                     <img  src="/frontend/anh/diana.jpg" alt="">
                                 </div>
 
-                                <p><strong>Diana &Uuml;rge-Vorsatz, </strong>Professor</p>
+                                <p><strong>Prof. Diana ÜRGE-VORSATZ</strong></p>
 
                                 <p>Affiliation(s):</p>
 
@@ -140,15 +140,11 @@
                                 <div class="image-human">
                                     <img  src="/frontend/anh/nils.jpg" alt="">
                                 </div>
-                                <p><strong>Nils Roar Salthun</strong><strong>, </strong>Emeritus Professor</p>
+                                <p><strong>Emeritus Prof. Nils Roar SALTHUN</strong></p>
 
-                                <p>Affiliation(s): former Head of Department of Geosciences at the University of
-                                    Oslo, Norway.</p>
+                                <p>Affiliation(s): Former Head of Department of Geosciences at the University of Oslo, Norway.</p>
 
-                                <p>Research areas: Development and applications of hydrological models, Water
-                                    resources management, Impacts of climate change impacts on water resources,
-                                    Hydropower hydrology, Floods, Design flood estimation, Environmental information
-                                    systems.</p>
+                                <p>Research areas: Development and applications of hydrological models, Water resources management, Impacts of climate change impacts on water resources, Hydropower hydrology, Floods, Design flood estimation, Environmental information systems.</p>
 
                                 <div class="clearfix"></div>
                             </div>
@@ -159,7 +155,7 @@
                                 </div>
 
 
-                                <p><strong>Cuong Le Van</strong><strong>, </strong>Emeritus Professor</p>
+                                <p><strong>Emeritus Prof. Cuong LE Van</strong></p>
 
                                 <p>Affiliation(s):</p>
 
@@ -168,8 +164,7 @@
                                     <li>Emeritus Research Director, French National for Scientific Research (CNRS).</li>
                                 </ul>
 
-                                <p>Research areas: Quantitative Methods, Macroeconomics and asset accumulation,
-                                    Macroeconomics dynamics, General equilibrium.</p>
+                                <p>Research areas: Quantitative Methods, Macroeconomics and asset accumulation, Macroeconomics dynamics, General equilibrium.</p>
 
                                 <div class="clearfix"></div>
                             </div>
@@ -178,13 +173,11 @@
                                 <div class="image-human">
                                     <img  src="/frontend/anh/hoangvanthang.jpg" alt="">
                                 </div>
-                                <p><strong>HOANG Van Thang, </strong>PhD</p>
+                                <p><strong>Dr. HOANG Van Thang</strong></p>
 
-                                <p>Affiliation(s): Director, VNU Centre Institute for Natural Resources and
-                                    Environmental Studies.</p>
+                                <p>Affiliation(s): Director General, VNU Central Institute for Natural Resources and Environmental Studies.</p>
 
-                                <p>Research areas: Management and conservation of wetlands, Environmental planning,
-                                    Biodiversity conservation, Sustainable development.</p>
+                                <p>Research areas: Management and conservation of wetlands, Environmental planning, Biodiversity conservation, Sustainable development.</p>
 
                                 <div class="clearfix"></div>
                             </div>
@@ -194,20 +187,20 @@
                                 <div class="image-human">
                                     <img  src="/frontend/anh/truongquanghoc.jpg" alt="">
                                 </div>
-                                <p><strong>TRUONG Quang Hoc, </strong>Professor</p>
+                                <p><strong>Prof. DSc. TRUONG Quang Hoc</strong></p>
 
                                 <p>Affiliation(s):</p>
 
                                 <ul>
-                                    <li>Deputy Head of Vietnam Association for Conservation of Nature and
-                                        Environment.
-                                    </li>
-                                    <li>Member of VNU - Centre Institute for Natural Resources
-                                        and Environmental Studies.
-                                    </li>
+                                    <li>Chair, Training and Scientific Council of the Central Institute for Natural Resources and Environmental Studies (CRES), VNU.</li>
+                                    <li>Advisory Council Member for the National Committee on Climate Change (VPCC).</li>
+                                    <li>Advisory Council Member of Ministry of Natural Resources and Environment.</li>
+                                    <li>Former Director of the Dept. of Scientific and Technological Management of VNU.</li>
+                                    <li>Former Director of the Center of for Natural Resources and Environmental Studies (CRES), VNU.</li>
+
                                 </ul>
 
-                                <p>Research areas: Science of Sustainability, Sustainable Development.</p>
+                                <p>Research areas: Environmental Biology, Climate change, Sustainability Science.</p>
 
                                 <div class="clearfix"></div>
                             </div>
@@ -217,7 +210,7 @@
                                 <div class="image-human">
                                     <img  src="/frontend/anh/jungtaeyong.jpg" alt="">
                                 </div>
-                                <p><strong>JUNG Tae Yong, </strong>Professor</p>
+                                <p><strong>Prof. JUNG Tae Yong</strong></p>
 
                                 <p>Affiliation(s):</p>
 
@@ -238,18 +231,169 @@
                                 <div class="image-human">
                                     <img  src="/frontend/anh/phanvantan.png" alt="">
                                 </div>
-                                <p><strong>PHAN Van Tan, </strong>Professor</p>
+                                <p><strong>Prof. Dr. PHAN Van Tan</strong></p>
 
-                                <p>Affiliation(s): Professor, Faculty of Hydrology, Meteorology and Oceanography, VNU University of Science.</p>
+                                <p>Affiliation(s): Professor, Department of Meteorology and Climate Change, Faculty of Hydrology, Meteorology and Oceanography, VNU University of Science.</p>
 
-                                <p>Research areas: Meteorology, Climate change.</p>
+                                <p>Research areas: Regional Climate Modelling and Climate Change, Dynamical Seasonal Prediction.</p>
+
+                                <div class="clearfix"></div>
+                            </div>
+
+                            <div class="col-md-12 content-human">
+
+                                <div class="image-human">
+                                    <img  src="/frontend/anh/mimura.jpg" alt="">
+                                </div>
+                                <p><strong>Prof. Nobuo MIMURA</strong></p>
+
+                                <p>Affiliation(s): President, Ibaraki University.</p>
+
+                                <p>Research areas: : Impact Assessment of Global Warming and Climate Change, Adaptation Science for Global Environmental Change, Sustainability Science, Coastal Engineering. </p>
+
+                                <div class="clearfix"></div>
+                            </div>
+
+
+                            <div class="col-md-12 content-human">
+
+                                <div class="image-human">
+                                    <img  src="/frontend/anh/yasuhara.jpg" alt="">
+                                </div>
+                                <p><strong>Emeritus Prof. Kazuya YASUHARA</strong></p>
+
+                                <p>Affiliation(s): Professor Emeritus, Ibaraki University.</p>
+
+                                <p>Research areas: : Geotechnical engineering, Geotechnical adaption to climate change. </p>
 
                                 <div class="clearfix"></div>
                             </div>
 
 
 
-                            <p><em> To be continued</em></p>
+                            <div class="col-md-12 content-human">
+
+                                <div class="image-human">
+                                    <img  src="/frontend/anh/fink.jpg" alt="">
+                                </div>
+                                <p><strong>Prof. Dr. Andreas H. FINK </strong></p>
+
+                                <p>Affiliation(s): Karlsruhe Institute of Technology (KIT), Institute for Meteorology and Climate Research (IMK).</p>
+
+                                <p>Research areas: : Karlsruhe Institute of Technology (KIT), Institute for Meteorology and Climate Research (IMK).</p>
+
+                                <div class="clearfix"></div>
+                            </div>
+
+
+                            <div class="col-md-12 content-human">
+
+                                <div class="image-human">
+                                    <img  src="/frontend/anh/tranthuc.jpg" alt="">
+                                </div>
+                                <p><strong>Prof. Dr. TRAN Thuc</strong></p>
+
+                                <p>Affiliation(s):</p>
+
+                                <ul>
+                                    <li>Vice Chairman, The Vietnam Panel on Climate Change.</li>
+                                    <li>Chairman, Vietnam National Committee for the International Hydrological Program (IHP).</li>
+
+                                </ul>
+
+
+                                <p>Research areas: : Hydrometeorology, environment, disaster risk reduction, and climate change.</p>
+
+                                <div class="clearfix"></div>
+                            </div>
+
+
+
+                            <div class="col-md-12 content-human">
+
+                                <div class="image-human">
+                                    <img  src="/frontend/anh/tranhongthai.jpg" alt="">
+                                </div>
+                                <p><strong>Assoc. Prof. TRAN Hong Thai</strong></p>
+
+                                <p>Affiliation(s): Deputy General Director, Vietnam Meteorological and Hydrological Administration.</p>
+
+                                <p>Research areas: : Climate change, water resources, environment, exploitations.</p>
+
+                                <div class="clearfix"></div>
+                            </div>
+
+
+                            <div class="col-md-12 content-human">
+
+                                <div class="image-human">
+                                    <img  src="/frontend/anh/hieutrung.jpg" alt="">
+                                </div>
+                                <p><strong>Assoc. Prof. NGUYEN Hieu Trung</strong></p>
+
+                                <p>Affiliation(s): Director, Climate Change Research Institute (Dragon-Mekong Institute) – Can Tho University.</p>
+
+                                <p>Research areas: : Integrated water resources management, land use dynamic, climate change adaptation, urban resilience.</p>
+
+                                <div class="clearfix"></div>
+                            </div>
+
+
+
+                            <div class="col-md-12 content-human">
+
+                                <div class="image-human">
+                                    <img  src="/frontend/anh/tranthodat.jpg" alt="">
+                                </div>
+                                <p><strong>Prof. Dr. TRAN Tho Dat</strong></p>
+
+                                <p>Affiliation(s): President, National Economics University.</p>
+
+                                <p>Research areas: : Economic growth models, quality of growth, education and growth, economics of climate change, higher education financing, demand for money and monetary policy.
+
+                                </p>
+
+                                <div class="clearfix"></div>
+                            </div>
+
+
+                            <div class="col-md-12 content-human">
+
+                                <div class="image-human">
+                                    <img  src="/frontend/anh/kensuke.png" alt="">
+                                </div>
+                                <p><strong>Prof. Fukushi KENSUKE</strong></p>
+
+                                <p>Affiliation(s): Integrated Research System for Sustainability Science (IR3S), The University of Tokyo Institute for Advanced Studies.</p>
+
+                                <p>Research areas: : Environmental engineering, risk assessment, climate change effect, water resource, biological technology, membrane technology.
+                                </p>
+
+                                <div class="clearfix"></div>
+                            </div>
+
+
+                            <div class="col-md-12 content-human">
+
+                                <div class="image-human">
+                                    <img  src="/frontend/anh/wiwa.jpg" alt="">
+                                </div>
+                                <p><strong>Assoc. Prof. Dr. Dawan WIWATTANADATE</strong></p>
+
+                                <p>Affiliation(s): Director of EDS (Environment, Development and Sustainability) Program, Graduate School, Chulalongkorn University.</p>
+
+                                <p>Research areas: : Energy and Materials Resource Recovery and Recycling, Climate Friendly Resources Utilization.
+                                </p>
+
+                                <div class="clearfix"></div>
+                            </div>
+
+
+
+
+
+
+
                         </div>
                     </div>
 
