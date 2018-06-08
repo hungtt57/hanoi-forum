@@ -20,6 +20,7 @@ class Article extends Model
         'accommodation' => 'Accommodation',
         'forumSiteInfo' => 'Forum Site Information',
         'callDeadline' => 'CALLS & DEADLINES',
+        'organizingCommittee' => 'Organizing Committee'
 
 //      'hanoi-forum' => 'Hanoi forum',
 //        'hanoi-forum-2018' => 'Hanoi forum 2018',
