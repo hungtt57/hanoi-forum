@@ -69,10 +69,10 @@
                                 </div>
                                 <p>
                                    <strong> President PARK In-kook</strong></p>
-                                <p>Affiliation(s): President, Korea Foundation for Advanced Studies (KFAS)
+                                <p>Affiliation(s): President, Korea Foundation for Advanced Studies (KFAS).
                                 </p>
 
-                                <p>Research areas: Chinese language, literature and law
+                                <p>Research areas: Chinese language, literature and law.
                                 </p>
                                 <div class="clearfix"></div>
                             </div>
@@ -229,7 +229,7 @@
                             <div class="col-md-12 content-human">
 
                                 <div class="image-human">
-                                    <img  src="/frontend/anh/phanvantan.png" alt="">
+                                    <img  src="/frontend/anh/phanvantan.jpg" alt="">
                                 </div>
                                 <p><strong>Prof. Dr. PHAN Van Tan</strong></p>
 
@@ -280,7 +280,7 @@
 
                                 <p>Affiliation(s): Karlsruhe Institute of Technology (KIT), Institute for Meteorology and Climate Research (IMK).</p>
 
-                                <p>Research areas: : Karlsruhe Institute of Technology (KIT), Institute for Meteorology and Climate Research (IMK).</p>
+                                <p>Research areas: : Dynamics and predictability of weather phenomena, Climate variability and change, Extreme weather and climate events, and regional climate modeling.</p>
 
                                 <div class="clearfix"></div>
                             </div>
