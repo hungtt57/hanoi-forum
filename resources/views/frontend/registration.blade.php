@@ -8,6 +8,14 @@
             </div>
         </div>
     </header>
+    <div class="auth-breadcrumb-wrap">
+        <div class="container">
+            <ol class="breadcrumb sabbi-breadcrumb list-unstyled list-inline">
+                <li><a href="{{url('/')}}">Home</a></li>
+                <li class="active"><a href="#">Registration</a></li>
+            </ol>
+        </div>
+    </div>
     <main class="sabbi-page-wrap">
         <div class="container">
             <section class="bio__holder">

@@ -116,9 +116,6 @@
                 </li>
 
                 <li>
-                    <a href="{{url('/faq')}}" title="FAQ">FAQs</a>
-                </li>
-                <li>
                     <a href="{{url('/contact-us')}}" title="Contact Us">Contact Us</a>
                 </li>
 
