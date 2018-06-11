@@ -222,6 +222,48 @@ class ParticipantController extends AdminController
             ]);
         }
         try {
+            $check = true;
+            if (count($data['know'])) {
+                foreach ($data['know'] as $key => $value) {
+
+                    if(isset($value['id'])) {
+                        $d[$value['id']] = [
+                            'id' => $value['id'],
+                            'content' => (isset($value['content'])) ? $value['content'] : ''
+                        ];
+                        $check = false;
+                    }else {
+                        continue;
+                    }
+                }
+
+            }
+            if($check == true) {
+                return redirect()->back()->with('error', 'Please answer all the required fields ')->withInput(Input::all());
+            }
+            $data['know'] = $d;
+            $indicate = [];
+            $check = true;
+            if (count($data['indicate'])) {
+                foreach ($data['indicate'] as $key => $value) {
+
+                    if(isset($value['id'])) {
+                        $indicate[$value['id']] = [
+                            'id' => $value['id'],
+                            'content' => (isset($value['content'])) ? $value['content'] : ''
+                        ];
+                        $check = false;
+                    }else {
+                        continue;
+                    }
+                }
+
+            }
+            if($check == true) {
+                return redirect()->back()->with('error', 'Please answer all the required fields ')->withInput(Input::all());
+            }
+            $data['indicate'] = $indicate;
+
 
             if ($request->file('file')) {
                 $data['file'] = $this->saveFile($request->file('file'));

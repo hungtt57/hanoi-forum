@@ -188,59 +188,196 @@
                     </div>
 
 
-                    {{--<h4 class="page-title title-register">SPONSORSHIP</h4>--}}
-                    {{--<div class="form-group">--}}
-                        {{--<p>--}}
-                            {{--We may be able to provide some forms of support for participants to attend the--}}
-                            {{--Hanoi Forum 2018 depending on (i) the relevance of their papers to the--}}
-                            {{--conference's thematic topics as well as the papers’ quality, which will be--}}
-                            {{--assessed by our Academic Committee members, and (ii) our funding availability.--}}
-                        {{--</p>--}}
-                        {{--<p>--}}
-                            {{--If your abstract is accepted, you will be invited to submit a full paper, and--}}
-                            {{--will be considered to receive sponsorship should you need one. Please indicate--}}
-                            {{--in the form below what kind of support you may need. We will be in touch to--}}
-                            {{--inform you of the result of this consideration.--}}
-                        {{--</p>--}}
-                        {{--<p>--}}
-                            {{--We encourage interested participants to seek for alternative sources of funding to attend the forum while awaiting the result.--}}
-                        {{--</p>--}}
-                    {{--</div>--}}
-                    {{--<div class="form-group">--}}
-                        {{--<label class="control-label">Do you need any support to attend the Hanoi Forum 2018?</label>--}}
-                        {{--<div class="controls">--}}
-                            {{--<p>--}}
-                                {{--<label class="radio-inline">--}}
-                                    {{--<input type="radio" name="need_support" value="0"--}}
-                                           {{--@if(old('need_support',$user->need_support) == 0) checked--}}
-                                            {{--@endif--}}
-                                    {{--> No--}}
-                                {{--</label>--}}
-                            {{--</p>--}}
-                            {{--<p>--}}
-                                {{--<label class="radio-inline">--}}
-                                    {{--<input type="radio" name="need_support" value="1"--}}
-                                           {{--@if(old('need_support',$user->need_support) == 1 )) checked @endif--}}
-                                    {{--> Yes--}}
-                                {{--</label>--}}
-                            {{--</p>--}}
+                    <div class="form-group">
+                        <label class="control-label col-md-6 col-md-offset-3" style="text-align: left"> Could you please
+                            let us know from which source(s) you knew about the Hanoi Forum 2018? (you can choose more
+                            than
+                            one option) *</label>
+                        <div class="controls col-md-6 col-md-offset-3">
 
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    {{--<div id="kindSupport" class="form-group @if(old('need_support',$user->need_support) == 0)) hide @endif">--}}
-                        {{--<label class="control-label">If yes, what kind of support do you need to attend the forum? </label>--}}
-                        {{--<div class="controls">--}}
-                            {{--@foreach(\App\Models\User::$kindSupportText as $key => $value)--}}
-                                {{--<p>--}}
-                                    {{--<label class="radio-inline">--}}
-                                        {{--<input type="radio" name="kind_support" value="{{$key}}"--}}
-                                               {{--@if(old('kind_support',$user->kind_support) == $key ) checked @endif--}}
-                                        {{--> {{$value}}--}}
-                                    {{--</label>--}}
-                                {{--</p>--}}
-                            {{--@endforeach--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
+                            @foreach(\App\Models\User::$knowText as $key => $value)
+                                @if($key == 3 || $key == 7)
+                                    <p>
+                                        <label class="radio-inline" style="width: 100%;padding-left: 0px">
+                                            <input type="checkbox"
+                                                   @if(old('know.'.$key.'.id') == $key and old('know.'.$key.'.id') != null) checked
+                                                   @else
+                                                   @if(is_array($user->know) and isset($user->know[$key])) checked
+                                                   @endif
+
+                                                   @endif
+
+
+                                                   name="know[{{$key}}][id]" value="{{$key}}"> {{$value}}
+                                            (Please specify) :<input type="text"
+                                                                     @if(is_array($user->know) && isset($user->know[$key]))  value="{{old('know.'.$key.'.content',$user->know[$key]['content'])}}"
+                                                                     @else
+                                                                     value="{{old('know.'.$key.'.content]')}}"
+                                                                     @endif
+                                                                     name="know[{{$key}}][content]">
+                                        </label>
+                                    </p>
+                                @else
+                                    <p>
+                                        <label class="radio-inline" style="padding-left: 0px">
+                                            <input type="checkbox" name="know[{{$key}}][id]"
+                                                   @if(old('know.'.$key.'.id') == $key and old('know.'.$key.'.id') != null) checked
+                                                   @else
+                                                   @if(is_array($user->know) and isset($user->know[$key])) checked
+                                                   @endif
+
+                                                   @endif
+
+                                                   value="{{$key}}"> {{$value}}
+                                        </label>
+                                    </p>
+                                @endif
+                            @endforeach
+                        </div>
+                    </div>
+
+                    <h4 class="page-title title-register">SPECIAL REQUIREMENTS</h4>
+                    <div class="form-group">
+
+                        <label class="control-label col-md-6 col-md-offset-3" style="text-align: left">Please indicate
+                            if you need any special diet
+                            requirements *:</label>
+                        <div class="controls col-md-6 col-md-offset-3">
+                            @foreach(\App\Models\User::$dietaryText as $key => $value)
+                                @if($key != 4)
+                                    <p>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="dietary" value="{{$key}}"
+                                                   @if(old('dietary',$user->dietary) == $key) checked
+                                                    @endif
+                                            > {{$value}}
+                                        </label>
+                                    </p>
+                                @endif
+                                @if($key == 4)
+                                    <p>
+                                        <label class="radio-inline" style="width: 100%;">
+                                            <input type="radio" name="dietary" value="{{$key}}"
+                                                   @if(old('dietary',$user->dietary) == $key ) checked @endif>
+                                            Others (Please specify) : <input type="text"
+                                                                             value="{{old('dietary_content',$user->dietary_content)}}"
+                                                                             name="dietary_content">
+                                        </label>
+                                    </p>
+
+                                @endif
+                            @endforeach
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+
+                        <label class="control-label col-md-6 col-md-offset-3" style="text-align: left">Please indicate
+                            if you have a disability and require
+                            any special assistance during the forum (you can choose more than one option) * :</label>
+                        <div class="controls col-md-6 col-md-offset-3">
+                            @foreach(\App\Models\User::$indicateText as $key => $value)
+                                @if($key != 4)
+                                    <p>
+                                        <label class="radio-inline" style="padding-left: 0px">
+                                            <input type="checkbox"
+                                                   @if(old('indicate.'.$key.'.id') == $key and old('indicate.'.$key.'.id') != null) checked
+                                                   @else
+                                                   @if(is_array($user->indicate) and isset($user->indicate[$key])) checked
+                                                   @endif
+
+                                                   @endif
+
+
+                                                   name="indicate[{{$key}}][id]" value="{{$key}}"
+
+                                            > {{$value}}
+                                        </label>
+                                    </p>
+                                @endif
+                                @if($key == 4)
+                                    <p>
+                                        <label class="radio-inline" style="width: 100%;padding-left: 0px">
+                                            <input type="checkbox"
+                                                   @if(old('indicate.'.$key.'.id') == $key and old('indicate.'.$key.'.id') != null) checked
+                                                   @else
+                                                   @if(is_array($user->indicate) and isset($user->indicate[$key])) checked
+                                                   @endif
+
+                                                   @endif
+
+                                                   name="indicate[{{$key}}][id]" value="{{$key}}"
+                                            >
+                                            Others (Please specify) : <input type="text"
+                                                                             @if(is_array($user->indicate) && isset($user->indicate[$key]))  value="{{old('indicate.'.$key.'.content',$user->indicate[$key]['content'])}}"
+                                                                             @else
+                                                                             value="{{old('indicate.'.$key.'.content]')}}"
+                                                                             @endif
+
+                                                                             name="indicate[{{$key}}][content]">
+                                        </label>
+                                    </p>
+
+                                @endif
+                            @endforeach
+
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="form-group" style="text-align: justify">
+                        <h4 class="page-title title-register"> LETTER OF INVITATION <span
+                                    style="font-size: 14px !important;">(Presenters may also require such
+                                        letter)</span></h4>
+                        <p>Should you require a formal invitation letter for your VISA application, please
+                            write in to us at hanoiforum@vnu.edu.vn.</p>
+                        <h4 class="page-title title-register">Entry VISA</h4>
+                        <p>Consular information for foreigners traveling to Vietnam can be found at <a
+                                    href="https://evisa.xuatnhapcanh.gov.vn/en_US/trang-chu-ttdt"
+                                    target="_blank">Vietnam Immigration Department</a>.
+                            Passport holders of <a target="_blank"
+                                                   href="https://lanhsuvietnam.gov.vn/Lists/BaiViet/B%C3%A0i vi%E1%BA%BFt/DispForm.aspx?List=dc7c7d75-6a32-4215-afeb-47d4bee70eee&ID=306">listed
+                                countries</a> are exempted from obtaining a visa to enter Vietnam for a
+                            designated number of days.
+                            <b>Should you need to apply for a visa to enter Vietnam, please contact us at
+                                hanoiforum@vnu.edu.vn for further support.</b></p>
+                        <h4 class="page-title title-register">IMPORTANT NOTE</h4>
+                        <p>
+                            By filling up this registration form, I hereby agree and consent that my
+                            personal data provided in this form may be collected, used, processed and
+                            disclosed by VNU for the purposes of processing my registration, in accordance
+                            with all related legislation by Vietnamese Government. In respect of disclosure,
+                            I understand that VNU may disclose my personal data to third parties (which may
+                            be in or outside of Vietnam) where necessary for such purposes.
+
+                        </p>
+                        <p>
+                            I understand that photography and videography may be conducted during the Hanoi
+                            Forum 2018 and I consent to VNU taking photographs and videos of myself and
+                            using the same for the purposes of event reporting, marketing, publicity, and
+                            media/social media. I further consent to VNU disclosing such photographs and
+                            videos to third party media entities (whether in Vietnam or otherwise) for
+                            publicity purposes and VNU may identify me by name.
+
+                        </p>
+                        <p> All photography, audio and video recording may be used by Vietnam National
+                            University, Hanoi, for education, marketing, promotional and/or publication
+                            purposes. If you do not wish to have your image recorded or published, for
+                            compelling and legitimate grounds relating to your particular situation, please
+                            email to hanoiforum@vnu.edu.vn.</p>
+                    </div>
+                    @if($user->confirm != 1)
+                        <div class="form-group">
+                            <input type="checkbox" name="confirm" value="1"
+                                   @if(old('confirm') == 1) checked @endif>I acknowledge that the information is
+                            true and correct and that I have read, understood and agreed to the terms &
+                            conditions outlined in the form above.
+                        </div>
+                    @endif
+
                 </div>
             </div>
         </div>
