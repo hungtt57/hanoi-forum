@@ -273,7 +273,7 @@
 
                                 <p>Affiliation(s): President, Ibaraki University.</p>
 
-                                <p>Research areas: : Impact Assessment of Global Warming and Climate Change, Adaptation Science for Global Environmental Change, Sustainability Science, Coastal Engineering. </p>
+                                <p>Research areas: Impact Assessment of Global Warming and Climate Change, Adaptation Science for Global Environmental Change, Sustainability Science, Coastal Engineering. </p>
 
                                 <div class="clearfix"></div>
                             </div>
@@ -288,7 +288,7 @@
 
                                 <p>Affiliation(s): Professor Emeritus, Ibaraki University.</p>
 
-                                <p>Research areas: : Geotechnical engineering, Geotechnical adaption to climate change. </p>
+                                <p>Research areas: Geotechnical engineering, Geotechnical adaption to climate change. </p>
 
                                 <div class="clearfix"></div>
                             </div>
@@ -304,7 +304,7 @@
 
                                 <p>Affiliation(s): Karlsruhe Institute of Technology (KIT), Institute for Meteorology and Climate Research (IMK).</p>
 
-                                <p>Research areas: : Dynamics and predictability of weather phenomena, Climate variability and change, Extreme weather and climate events, and regional climate modeling.</p>
+                                <p>Research areas: Dynamics and predictability of weather phenomena, Climate variability and change, Extreme weather and climate events, and regional climate modeling.</p>
 
                                 <div class="clearfix"></div>
                             </div>
@@ -326,7 +326,7 @@
                                 </ul>
 
 
-                                <p>Research areas: : Hydrometeorology, environment, disaster risk reduction, and climate change.</p>
+                                <p>Research areas: Hydrometeorology, environment, disaster risk reduction, and climate change.</p>
 
                                 <div class="clearfix"></div>
                             </div>
@@ -342,7 +342,7 @@
 
                                 <p>Affiliation(s): Deputy General Director, Vietnam Meteorological and Hydrological Administration.</p>
 
-                                <p>Research areas: : Climate change, water resources, environment, exploitations.</p>
+                                <p>Research areas:  Climate change, water resources, environment, exploitations.</p>
 
                                 <div class="clearfix"></div>
                             </div>
@@ -357,7 +357,7 @@
 
                                 <p>Affiliation(s): Director, Climate Change Research Institute (Dragon-Mekong Institute) – Can Tho University.</p>
 
-                                <p>Research areas: : Integrated water resources management, land use dynamic, climate change adaptation, urban resilience.</p>
+                                <p>Research areas: Integrated water resources management, land use dynamic, climate change adaptation, urban resilience.</p>
 
                                 <div class="clearfix"></div>
                             </div>
@@ -373,7 +373,7 @@
 
                                 <p>Affiliation(s): President, National Economics University.</p>
 
-                                <p>Research areas: : Economic growth models, quality of growth, education and growth, economics of climate change, higher education financing, demand for money and monetary policy.
+                                <p>Research areas: Economic growth models, quality of growth, education and growth, economics of climate change, higher education financing, demand for money and monetary policy.
 
                                 </p>
 
@@ -390,7 +390,7 @@
 
                                 <p>Affiliation(s): Integrated Research System for Sustainability Science (IR3S), The University of Tokyo Institute for Advanced Studies.</p>
 
-                                <p>Research areas: : Environmental engineering, risk assessment, climate change effect, water resource, biological technology, membrane technology.
+                                <p>Research areas: Environmental engineering, risk assessment, climate change effect, water resource, biological technology, membrane technology.
                                 </p>
 
                                 <div class="clearfix"></div>
@@ -406,7 +406,7 @@
 
                                 <p>Affiliation(s): Director of EDS (Environment, Development and Sustainability) Program, Graduate School, Chulalongkorn University.</p>
 
-                                <p>Research areas: : Energy and Materials Resource Recovery and Recycling, Climate Friendly Resources Utilization.
+                                <p>Research areas: Energy and Materials Resource Recovery and Recycling, Climate Friendly Resources Utilization.
                                 </p>
 
                                 <div class="clearfix"></div>
@@ -430,7 +430,7 @@
 
                                 </ul>
 
-                                <p>Research areas: : Sustainable development, climate change adaptation, natural resources management, environmental economics, and urbanization.
+                                <p>Research areas:  Sustainable development, climate change adaptation, natural resources management, environmental economics, and urbanization.
                                 </p>
 
                                 <div class="clearfix"></div>
@@ -454,7 +454,7 @@
 
                                 </ul>
 
-                                <p>Research areas: : : Environmental response and resilience to future forcings at human and planning time-scales, Coupling earth surface processes to the human process, Active tectonics and tectonic geomorphology, The Anthropocene, writ large.
+                                <p>Research areas: Environmental response and resilience to future forcings at human and planning time-scales, Coupling earth surface processes to the human process, Active tectonics and tectonic geomorphology, The Anthropocene, writ large.
                                 </p>
 
                                 <div class="clearfix"></div>
