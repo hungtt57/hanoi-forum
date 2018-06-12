@@ -114,6 +114,22 @@
                             <div class="col-md-12 content-human">
 
                                 <div class="image-human">
+                                    <img class="" src="/frontend/anh/vuvantich.jpg" alt="">
+                                </div>
+                                <p>
+                                    <strong> Assoc. Prof. VU Van Tich</strong></p>
+                                <p>Affiliation(s): Director, Science and Technology Department, VNU.
+                                </p>
+
+                                <p>Research areas: Geology specialised in petrography, tectonics, and isotopes.
+                                </p>
+                                <div class="clearfix"></div>
+                            </div>
+
+
+                            <div class="col-md-12 content-human">
+
+                                <div class="image-human">
                                     <img  src="/frontend/anh/diana.jpg" alt="">
                                 </div>
 
@@ -397,6 +413,52 @@
                             </div>
 
 
+
+                            <div class="col-md-12 content-human">
+
+                                <div class="image-human">
+                                    <img  src="/frontend/anh/smajgl.png" alt="">
+                                </div>
+                                <p><strong>Adj. Prof. Alex SMAJGL</strong></p>
+
+                                <p>Affiliation(s): </p>
+
+                                <ul>
+                                    <li>Managing Director, Mekong Region Futures Institute.</li>
+                                    <li>Managing Director, Sustainable Futures Institute Australia.</li>
+                                    <li>Adjunct Professor, Deakin University, Australia.</li>
+
+                                </ul>
+
+                                <p>Research areas: : Sustainable development, climate change adaptation, natural resources management, environmental economics, and urbanization.
+                                </p>
+
+                                <div class="clearfix"></div>
+                            </div>
+
+
+
+                            <div class="col-md-12 content-human">
+
+                                <div class="image-human">
+                                    <img  src="/frontend/anh/ellis.jpg" alt="">
+                                </div>
+                                <p><strong>Dr. Michael A. ELLIS </strong></p>
+
+                                <p>Affiliation(s): </p>
+
+                                <ul>
+                                    <li>Head of Catchment Science and Observatories, British Geological Survey.</li>
+                                    <li>Editor, Earth’s Future (an AGU/Wiley journal).</li>
+
+
+                                </ul>
+
+                                <p>Research areas: : : Environmental response and resilience to future forcings at human and planning time-scales, Coupling earth surface processes to the human process, Active tectonics and tectonic geomorphology, The Anthropocene, writ large.
+                                </p>
+
+                                <div class="clearfix"></div>
+                            </div>
 
 
 
