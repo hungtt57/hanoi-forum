@@ -36,7 +36,7 @@
                             <div class="col-md-6">
                                 <select name="title" id=""  @if(isset($article)) disabled @endif class="form-control">
                                     @foreach(\App\Models\Article::$typeText  as $key => $value)
-                                        <option value="{{$key}}" @if(isset($article)) selected @endif>{{$value}}</option>
+                                        <option value="{{$key}}" @if(isset($article) and $article->title == $key) selected @endif>{{$value}}</option>
 
                                     @endforeach
                                 </select>
