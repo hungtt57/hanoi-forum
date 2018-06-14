@@ -87,9 +87,10 @@
                 <li>
                     <a href="{{url('/registration')}}" title="Registration ">Registration </a>
                 </li>
-                <li>
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" title="Organizers" data-hover="dropdown"
-                       data-animations="zoomIn">Plan Your Visit<span class="caret"></span></a>
+                <li class="dropdown">
+
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" title="Plan Your Visit" data-hover="dropdown"
+                       data-animations="zoomIn">Plan Your Visit <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li>
                             <a href="{{url('hanoi-experience')}}" title="Hanoi Experience">Hanoi Experience</a>

@@ -52,7 +52,7 @@
                 <div class="row">
                     <div class="col-md-8 col-sm-5 col-md-offset-2 col-xs-12">
                         <div>
-                            <p class="title-text">Co-Chairs</p>
+                            <p class="title-text" style="font-size: 16px">Co-Chairs</p>
                             <div class="col-md-12 content-human">
 
                                     <div class="image-human">
@@ -85,7 +85,7 @@
                                 <div class="clearfix"></div>
                             </div>
 
-                            <p class="title-text">Committee members</p>
+                            <p class="title-text" style="font-size: 16px">Committee Members</p>
                             <div class="col-md-12 content-human">
 
                                 <div class="image-human">
