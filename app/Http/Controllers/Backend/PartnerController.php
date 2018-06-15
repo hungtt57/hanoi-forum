@@ -41,7 +41,12 @@ class PartnerController extends AdminController
             \DB::beginTransaction();
             try {
 
-                $user->abstract = $request->input('abstract');
+//                $user->abstract = $request->input('abstract');
+
+                if ($request->file('abstract')) {
+                    $user->abstract  = $this->saveFile($request->file('abstract'));
+                }
+
                 $user->title_of_paper = $request->input('title_of_paper');
                 $user->reject_abstract = null;
                 $user->save();

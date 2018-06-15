@@ -101,6 +101,10 @@
                                 <input type="checkbox" class="minimal" name="paper">
                                 Paper
                             </label>
+                            <label>
+                                <input type="checkbox" class="minimal" name="nationality">
+                                Nationality
+                            </label>
                         </div>
 
 

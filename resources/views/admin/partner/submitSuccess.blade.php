@@ -39,11 +39,29 @@
             <div class="form-group">
                 <label class="control-label col-md-3 " for="Name">Abstract</label>
                 <div class="col-md-6">
-                    <textarea name="abstract" disabled class="form-control" maxlength="250"
-                                           rows="5">{{old('abstract',$user->abstract)}}</textarea>
+                    <a class="btn btn-primary green start" href="{{$user->abstract}}"
+                       download=""
+                       style="float: left;margin-right: 10px;margin-top: 10px">
+                        <i class="fa fa-download"></i>
+                        <span>Download File</span>
+                        <div class="clearfix"></div>
+                    </a>
                 </div>
             </div>
 
+            <div class="form-group">
+                <label class="control-label col-md-3 " for="Name">Submission to panel session</label>
+                <div class="col-md-6">
+                    <div class="col-md-6">
+
+                        <select class="form-control" name="abstract_panel" disabled >
+                            @foreach(\App\Models\User::$panelText as $key => $value)
+                                <option value="{{$key}}" @if($key == old('abstract_panel',@$user->abstract_panel)) selected @endif>{{$value}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+            </div>
 
         </div>
         <div class="form-actions">

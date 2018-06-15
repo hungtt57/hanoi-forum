@@ -51,6 +51,7 @@ class ReviewerController extends AdminController
     {
         $posts = User::select('*')->where('type', User::REVIEWER);
         return \Datatables::eloquent($posts)
+
             ->addColumn('action', function ($post) {
                 $urlEdit = route('Backend::reviewer@edit', ['id' => $post->id]);
 
@@ -119,6 +120,9 @@ class ReviewerController extends AdminController
         $user = auth('backend')->user();
         $contacts = User::select('*')->where('type', User::PARTNER)->where('reviewer_id', $user->id);
         return \Datatables::eloquent($contacts)
+            ->editColumn('abstract',function ($post) {
+                return    '<a class="btn btn-primary green start" href="'.$post->abstract.'" download="" style="float: left;margin-right: 10px;margin-top: 10px"> <i class="fa fa-download"></i> <span>Download File</span><div class="clearfix"></div> </a>';
+            })
             ->editColumn('paper',function ($post) {
                 if($post->paper) {
                     return   '<a class="btn btn-primary green start" href="'.$post->paper.'"

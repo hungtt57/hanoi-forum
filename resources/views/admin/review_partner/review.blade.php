@@ -12,6 +12,10 @@
         .col-lg-6 {
             padding-left: 0px;
         }
+        .doc {
+            width: 100%;
+            height: 600px;
+        }
     </style>
 @endsection
 @section('content')
@@ -35,10 +39,17 @@
                 </div>
                 <div class="form-group">
                     <label class="control-label col-md-3 " for="Name">Abstract*</label>
+                    {{--<div class="col-md-6">--}}
+                    {{--<textarea name="abstract" class="form-control" maxlength="250" disabled--}}
+                              {{--rows="5">{{old('abstract',$participant->abstract)}}</textarea>--}}
+                    {{--</div>--}}
                     <div class="col-md-6">
-                    <textarea name="abstract" class="form-control" maxlength="250" disabled
-                              rows="5">{{old('abstract',$participant->abstract)}}</textarea>
+                        <iframe  class="doc" src="https://docs.google.com/gview?url={{url($participant->abstract)}}&embedded=true"></iframe>
                     </div>
+                </div>
+
+                <div class="form-group">
+
                 </div>
             @endif
             @if($participant->confirm_abstract)

@@ -336,6 +336,10 @@ class ParticipantController extends AdminController
                     $user[$key]['Title of paper'] = $value['title_of_paper'];
                     unset($user[$key]['title_of_paper']);
                 }
+                if (array_key_exists('nationality', $value)) {
+                    $user[$key]['Nationality'] = $value['nationality'];
+                    unset($user[$key]['title_of_paper']);
+                }
             }
         }
         Excel::create('list-delegates-' . Carbon::now()->toDateString(), function ($excel) use ($user) {

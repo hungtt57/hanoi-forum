@@ -24,9 +24,9 @@
 
         <div class="form-body">
             {{ csrf_field() }}
+            <p>Please download the abstract template <a href="{{url('abstract-example.docx')}}" class="" target="_blank">here</a> and follow the instruction for submission.</p>
 
-
-            @if(!$user->confirm_abstract)
+        @if(!$user->confirm_abstract)
               @if($user->reject_abstract)
                 <div class="alert alert-danger">{{$user->reject_abstract}}</div>
 
@@ -36,16 +36,34 @@
                     <div class="col-md-6">
                         <input type="text" name="title_of_paper"
                                class="form-control"
-                               value="{{old('paper',$user->title_of_paper)}}">
+                               value="{{old('title_of_paper',$user->title_of_paper)}}">
                     </div>
                 </div>
-            <div class="form-group">
-                <label class="control-label col-md-3 " for="Name">Abstract*</label>
-                <div class="col-md-6">
-                    <textarea name="abstract" class="form-control"
-                                           rows="5">{{old('abstract',$user->abstract)}}</textarea>
+                <div class="form-group">
+                    <label class="control-label col-md-3 " for="Name">Abstract*</label>
+                    <div class="col-md-6">
+                        <div class="col-md-6">
+
+                            <input type="file" class="post-image form-control" name="abstract"
+                                   rel="post_status_images">
+                        </div>
+                    </div>
                 </div>
-            </div>
+                  <div class="form-group">
+                      <label class="control-label col-md-3 " for="Name">Submission to panel session*</label>
+                      <div class="col-md-6">
+                          <div class="col-md-6">
+
+                              <select class="form-control" name="abstract_panel" >
+                                  @foreach(\App\Models\User::$panelText as $key => $value)
+                                      <option value="{{$key}}" @if($key == old('abstract_panel',@$user->abstract_panel)) selected @endif>{{$value}}</option>
+                                  @endforeach
+                              </select>
+                          </div>
+                      </div>
+                  </div>
+
+
             @endif
             {{--@if($user->confirm_abstract and $user->confirm_paper == 0)--}}
               {{--@if($user->reject_paper)--}}

@@ -64,14 +64,23 @@ class User extends Authenticatable
         2 => 'Flight tickets and accommodation'
     ];
     public static $knowText = [
-      0 => 'Conference alert',
-        1 => 'Vietnam National University, Hanoi (VNU) website',
-        2 => 'Korea Foundation for Advanced Studies (KFAS)',
-        3 => 'Group/network emails',
-        4 => 'Friends and/or colleagues',
-        5 => 'Your organization’s website',
-        6 => 'Your department/faculty',
-        7 => 'Others'
+    0 => 'Conference alert',
+    1 => 'Vietnam National University, Hanoi (VNU) website',
+    2 => 'Korea Foundation for Advanced Studies (KFAS)',
+    3 => 'Group/network emails',
+    4 => 'Friends and/or colleagues',
+    5 => 'Your organization’s website',
+    6 => 'Your department/faculty',
+    7 => 'Others'
+];
+    public static $panelText = [
+
+        1 => 'Panel 1: Climate change evidence and security',
+        2 => 'Panel 2: Human impacts on climate change',
+        3 => 'Panel 3: Climate change response',
+        4 => 'Panel 4: Policy and governance of climate change response and sustainability',
+        5 => 'Panel 5: Science, technology and education for climate change response and sustainability',
+
     ];
     protected $fillable = [
         'name', 'email', 'password', 'type', 'phone', 'file', 'image',
