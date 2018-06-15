@@ -24,7 +24,7 @@
 
         <div class="form-body">
             {{ csrf_field() }}
-            <p>Please download the abstract template <a href="{{url('abstract-example.docx')}}" class="" target="_blank">here</a> and follow the instruction for submission.</p>
+            <p>  <b>Please download the abstract template <a href="{{url('abstract-example.docx')}}" class="" target="_blank">here</a> and follow the instruction for submission.</b></p>
 
         @if(!$user->confirm_abstract)
               @if($user->reject_abstract)
