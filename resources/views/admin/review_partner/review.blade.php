@@ -85,17 +85,17 @@
               method="POST" enctype="multipart/form-data">
             {{ csrf_field() }}
             <input type="hidden" name="id" value="{{$participant->id}}">
-            <div class="form-group">
-                <label class="control-label col-md-3">Subcommittee</label>
-                <div class="col-md-6">
-                    @php $subs = \App\Models\Subcommittee::orderBy('id','desc')->get(); @endphp
-                    <select class="form-control select2" name="sub" id="sub" style="width: 100%" required>
-                        @foreach($subs as $sub)
-                            <option value="{{$sub->id}}">{{$sub->name}}</option>
-                        @endforeach
-                    </select>
-                </div>
-            </div>
+            {{--<div class="form-group">--}}
+                {{--<label class="control-label col-md-3">Subcommittee</label>--}}
+                {{--<div class="col-md-6">--}}
+                    {{--@php $subs = \App\Models\Subcommittee::orderBy('id','desc')->get(); @endphp--}}
+                    {{--<select class="form-control select2" name="sub" id="sub" style="width: 100%" required>--}}
+                        {{--@foreach($subs as $sub)--}}
+                            {{--<option value="{{$sub->id}}">{{$sub->name}}</option>--}}
+                        {{--@endforeach--}}
+                    {{--</select>--}}
+                {{--</div>--}}
+            {{--</div>--}}
             <div class="form-group">
                 <label class="control-label col-md-3 " for="Name">Comment </label>
                 <div class="col-md-6">
