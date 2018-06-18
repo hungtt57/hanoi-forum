@@ -329,7 +329,7 @@ class ParticipantController extends AdminController
                     unset($user[$key]['email']);
                 }
                 if (array_key_exists('abstract', $value)) {
-                    if($value['abstract']) {
+                    if($value['abstract'] and str_contains($value['abstract'],'/files/attachments/')) {
                         $user[$key]['Abstract'] = url($value['abstract']);
                     }else {
                         $user[$key]['Abstract'] ='';
