@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Models\Contact;
+use App\Models\Country;
 use App\Models\Post;
 use App\Models\User;
 use Carbon\Carbon;
@@ -328,8 +329,12 @@ class ParticipantController extends AdminController
                     unset($user[$key]['email']);
                 }
                 if (array_key_exists('abstract', $value)) {
+                    if($value['abstract']) {
+                        $user[$key]['Abstract'] = url($value['abstract']);
+                    }else {
+                        $user[$key]['Abstract'] ='';
+                    }
 
-                    $user[$key]['Abstract'] = $value['abstract'];
                     unset($user[$key]['abstract']);
                 }
                 if (array_key_exists('title_of_paper', $value)) {
@@ -337,7 +342,12 @@ class ParticipantController extends AdminController
                     unset($user[$key]['title_of_paper']);
                 }
                 if (array_key_exists('nationality', $value)) {
-                    $user[$key]['Nationality'] = $value['nationality'];
+                    $country = Country::where('iso',$value['nationality'])->first();
+                    if($country) {
+                        $user[$key]['Nationality'] = $country->nicename;
+                    }
+
+
                     unset($user[$key]['title_of_paper']);
                 }
             }
