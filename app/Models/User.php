@@ -80,7 +80,8 @@ class User extends Authenticatable
         3 => 'Panel 3: Climate change response',
         4 => 'Panel 4: Policy and governance of climate change response and sustainability',
         5 => 'Panel 5: Science, technology and education for climate change response and sustainability',
-
+        6 => 'Policy Dialogue 1: Resources Management in Mekong Delta Region: An Institution Perspective',
+        7 => 'Policy Dialogue 2: Building Resilient and Safe City for Sustainable Development in the Red River Delta'
     ];
     protected $fillable = [
         'name', 'email', 'password', 'type', 'phone', 'file', 'image',
