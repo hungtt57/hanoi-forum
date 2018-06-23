@@ -137,12 +137,10 @@ class HomeController extends AdminController
 
 <p>After the verification, you can log into your account, and manage your information and setting. </p>
 
-<p>Limited financial support for registration is available and on a first come first served basis. </p>
 ')->with('hideform', 'yes');
             }
 
         } catch (\Exception $ex) {
-            dd($ex->getMessage());
             DB::rollback();
             return redirect()->back()->with('error', 'Server error.Try again later')->withInput(Input::all());
         }
