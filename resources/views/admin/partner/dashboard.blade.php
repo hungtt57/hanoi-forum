@@ -20,12 +20,15 @@
     <div class="row">
         @if (session()->has('welcome'))
             <div class="alert alert-success">
-                <p>Welcome! This is your personal account on Hanoi Forum website. You can use the navigation panel on your left-hand side to, among others, manage your profile, submit your abstract, and get connected with other delegates.</p>
+                <p>Welcome! This is your personal account on Hanoi Forum website. You can use the navigation panel on
+                    your left-hand side to, among others, manage your profile, submit your abstract, and get connected
+                    with other delegates.</p>
 
-                <p>    Should you have any question, you may want to read our <a href="{{url('faq')}}">FAQs</a>  or contact us
+                <p> Should you have any question, you may want to read our <a href="{{url('faq')}}">FAQs</a> or contact
+                    us
                     <a href="{{url('contact-us')}}">here</a>.</p>
 
-                <p>    Thank you for your interest in Hanoi Forum!</p>
+                <p> Thank you for your interest in Hanoi Forum!</p>
             </div>
         @endif
 
@@ -57,10 +60,15 @@
             <div class="box box-primary">
                 <div class="box-body ">
                     {{--<p class="text-black">Payment status: {{\App\Models\User::$paymentText[$user->payment_status]}}</p>--}}
-                    @if(!$user->abstract)
-                        <p class="text-black">Submission status: You have not yet submitted an abstract. </p>
+                    @if($user->apply == 0)
+                        <p class="text-black">Submission status: N/A (You chose not to submit an abstract). </p>
+                    @else
+                        @if(!$user->abstract)
+                            <p class="text-black">Submission status: You have not yet submitted an abstract. </p>
                         @else
-                        <p class="text-black">Submission status: You have submitted an abstract. Notification of the result will be announced by July 15, 2018. </p>
+                            <p class="text-black">Submission status: You have submitted an abstract. Notification of the
+                                result will be announced by July 15, 2018. </p>
+                        @endif
                     @endif
                     @if($user->reject_abstract)
                         <p class="text-red">{{$user->reject_abstract}}</p>
