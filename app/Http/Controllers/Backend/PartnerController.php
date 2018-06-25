@@ -34,9 +34,11 @@ class PartnerController extends AdminController
         if (!$user->confirm_abstract) {
             $this->validate($request, [
                 'abstract' => 'required',
-                'title_of_paper' => 'required'
+                'title_of_paper' => 'required',
+                'abstract_panel' => 'required'
             ], [
-                'title_of_paper.required' => 'Title of paper is required'
+                'title_of_paper.required' => 'Title of paper is required',
+                'abstract_panel.required' => 'Submission to panel session is required'
             ]);
             \DB::beginTransaction();
             try {
@@ -49,6 +51,7 @@ class PartnerController extends AdminController
 
                 $user->title_of_paper = $request->input('title_of_paper');
                 $user->reject_abstract = null;
+                $user->abstract_panel = $request->input('abstract_panel');
                 $user->save();
                 Mail::to($user->email)->send(new SubmitAbstract($user));
                 EmailLog::create([
