@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Datatables;
 use Maatwebsite\Excel\Facades\Excel;
-
+use Illuminate\Support\Facades\Input;
 class ParticipantController extends AdminController
 {
     public function index()
@@ -297,7 +297,7 @@ class ParticipantController extends AdminController
         $data = array_only($request->all(), $model->getFillable());
         $keys = array_keys($data);
 
-        $user = User::select($keys)->where('type', User::PARTNER)->get()->toArray();
+        $user = User::select($keys)->orderBy('created_at','desc')->where('type', User::PARTNER)->get()->toArray();
         if (count($user)) {
             foreach ($user as $key => $value) {
                 if (array_key_exists('gender', $value)) {
@@ -350,8 +350,24 @@ class ParticipantController extends AdminController
 
                     unset($user[$key]['nationality']);
                 }
+                if (array_key_exists('know', $value)) {
+                    $knowUser = $value['know'];
+
+                    foreach(User::$knowText as $k => $know){
+                        $user[$key]['Source of info'.$k] = '';
+
+                        if( isset($knowUser[$k])) {
+                            $user[$key]['Source of info'.$k] = $know;
+                            if($k == 7) {
+                                $user[$key]['Source of info'.$k] = $knowUser[$k]['content'];
+                            }
+                        }
+                    }
+                    unset($user[$key]['know']);
+                }
             }
         }
+
         Excel::create('list-delegates-' . Carbon::now()->toDateString(), function ($excel) use ($user) {
 
             $excel->sheet('sheet', function ($sheet) use ($user) {

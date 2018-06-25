@@ -13,6 +13,7 @@ use App\Mail\SubmitAbstract;
 use Illuminate\Support\Facades\Input;
 use App\Models\User;
 
+
 class PartnerController extends AdminController
 {
     public function dashboard()

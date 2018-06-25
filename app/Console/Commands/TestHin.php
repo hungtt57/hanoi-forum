@@ -43,12 +43,14 @@ class TestHin extends Command
                     if($account->abstract and str_contains($account->abstract,'/files/attachments/')) {
 
                       $ext = File::extension(public_path($account->abstract));
-                      $filename = $account->abstract_panel.'_'.$account->first.'.'.$ext;
-//                        $file->move(public_path() . '/files/attachments/', $filename);
-//
-//                        if ($old) {
-//                            @unlink(public_path($old));
+                      $filename = $account->abstract_panel.'_'.str_slug($account->first_name).str_slug($account->last_name).'_'.str_slug($account->title_of_paper).'.'.$ext;
+                        $success = \File::copy(public_path($account->abstract),public_path( '/files/attachments/'.$filename) );
+
+//                        if ($account->abstract) {
+//                            @unlink(public_path($account->abstract));
 //                        }
+                        $account->abstract =  '/files/attachments/'.$filename;
+                        $account->save();
                     }
 
             }

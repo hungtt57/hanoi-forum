@@ -104,6 +104,9 @@
                             <label>
                                 <input type="checkbox" class="minimal" name="nationality">
                                 Nationality
+                            </label><label>
+                                <input type="checkbox" class="minimal" name="know">
+                                Source
                             </label>
                         </div>
 
