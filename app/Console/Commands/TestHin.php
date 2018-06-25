@@ -4,7 +4,7 @@ namespace App\Console\Commands;
 
 use App\Models\User;
 use Illuminate\Console\Command;
-
+use File;
 class TestHin extends Command
 {
     /**
@@ -39,7 +39,19 @@ class TestHin extends Command
     public function handle()
     {
             $accounts = User::all();
-            
+            foreach ($accounts as $account) {
+                    if($account->abstract and str_contains($account->abstract,'/files/attachments/')) {
+
+                      $ext = File::extension(public_path($account->abstract));
+                      $filename = $account->'.'.$ext;
+//                        $file->move(public_path() . '/files/attachments/', $filename);
+//
+//                        if ($old) {
+//                            @unlink(public_path($old));
+//                        }
+                    }
+
+            }
 
     }
 }
