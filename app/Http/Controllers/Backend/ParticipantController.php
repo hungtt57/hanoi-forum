@@ -332,7 +332,7 @@ class ParticipantController extends AdminController
                     if($value['abstract'] and str_contains($value['abstract'],'/files/attachments/')) {
                         $user[$key]['Abstract'] = url($value['abstract']);
                     }else {
-                        $user[$key]['Abstract'] ='';
+                        $user[$key]['Abstract'] = $value['abstract'];
                     }
 
                     unset($user[$key]['abstract']);
@@ -348,7 +348,7 @@ class ParticipantController extends AdminController
                     }
 
 
-                    unset($user[$key]['title_of_paper']);
+                    unset($user[$key]['nationality']);
                 }
             }
         }

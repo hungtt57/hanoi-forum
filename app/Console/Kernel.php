@@ -4,6 +4,7 @@ namespace App\Console;
 
 use App\Console\Commands\BlurBanner;
 use App\Console\Commands\SendMail;
+use App\Console\Commands\TestHin;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -17,7 +18,8 @@ class Kernel extends ConsoleKernel
     protected $commands = [
         //
         SendMail::class,
-	    BlurBanner::class
+	    BlurBanner::class,
+	    TestHin::class,
     ];
 
     /**
