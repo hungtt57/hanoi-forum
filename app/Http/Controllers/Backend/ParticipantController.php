@@ -341,6 +341,10 @@ class ParticipantController extends AdminController
                     $user[$key]['Title of paper'] = $value['title_of_paper'];
                     unset($user[$key]['title_of_paper']);
                 }
+                if (array_key_exists('abstract_panel', $value)) {
+                    $user[$key]['Submission to panel'] = isset(User::$panelText[$value['abstract_panel']]) ? User::$panelText[$value['abstract_panel']] : '' ;
+                    unset($user[$key]['abstract_panel']);
+                }
                 if (array_key_exists('nationality', $value)) {
                     $country = Country::where('iso',$value['nationality'])->first();
                     if($country) {
