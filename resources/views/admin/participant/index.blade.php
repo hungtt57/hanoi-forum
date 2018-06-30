@@ -14,6 +14,8 @@
     <div class="col-md-12">
         <a data-toggle="modal" data-target="#export-modal" class="btn btn-success pull-right"
            style="margin-bottom: 20px">Export</a>
+        <a   href="{{url('admin/download-all')}}" class="btn btn-primary pull-right"
+           style="margin-bottom: 20px">Download all Abstract</a>
     </div>
     <div class="col-md-12" style="margin-top: 20px">
 

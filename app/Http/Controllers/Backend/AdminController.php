@@ -12,27 +12,32 @@ class AdminController extends Controller
 {
 
     public function downloadAll(Request $request) {
-        $zip = new \ZipArchive();
-        $public_dir= public_path();
-        $zipFileName = "abstracts.zip"; // Zip name
+        try {
+            $zip = new \ZipArchive();
+            $public_dir= public_path();
+            $zipFileName = "abstracts.zip"; // Zip name
 
-        if ($zip->open($public_dir . '/' . $zipFileName, \ZipArchive::CREATE) === TRUE) {
+            if ($zip->open($public_dir . '/' . $zipFileName, \ZipArchive::CREATE) === TRUE) {
 
-            $users = User::where('type',User::PARTNER)->get();
-            foreach ($users as $user) {
-                if($user->abstract and str_contains($user->abstract,'/files/attachments/')) {
-//                    dd(public_path($user->abstract));
-                    $zip->addFile(public_path($user->abstract));
+                $users = User::where('type',User::PARTNER)->get();
+                foreach ($users as $user) {
+                    if($user->abstract and str_contains($user->abstract,'/files/attachments/')) {
+                        $zip->addFile(public_path($user->abstract),str_replace('/files/attachments/','',$user->abstract));
+//                    $zip->addFromString('test.doc', file_get_contents(public_path($user->abstract)));
+                    }
                 }
-            }
-            $zip->close();
-            $headers = array(
-                'Content-Type' => 'application/octet-stream',
-            );
-            $filetopath= $public_dir.'/'.$zipFileName;
+                $zip->close();
+                $headers = array(
+                    'Content-Type' => 'application/octet-stream',
+                );
+                $filetopath= $public_dir.'/'.$zipFileName;
                 return response()->download($filetopath,$zipFileName,$headers);
 
+            }
+        }catch (\Exception $ex) {
+            dd($ex->getMessage());
         }
+
 
     }
     public function saveFile($file, $old = null, $name = null)
