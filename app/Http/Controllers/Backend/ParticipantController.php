@@ -297,7 +297,7 @@ class ParticipantController extends AdminController
         $data = array_only($request->all(), $model->getFillable());
         $keys = array_keys($data);
 
-        $user = User::select($keys)->orderBy('created_at','desc')->where('type', User::PARTNER)->get()->toArray();
+        $user = User::select($keys)->orderBy('updated_at','desc')->where('type', User::PARTNER)->get()->toArray();
         if (count($user)) {
             foreach ($user as $key => $value) {
                 if (array_key_exists('gender', $value)) {
