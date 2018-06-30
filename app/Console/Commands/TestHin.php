@@ -44,7 +44,7 @@ class TestHin extends Command
 
                       $ext = File::extension(public_path($account->abstract));
                       $filename = $account->abstract_panel.'_'.str_slug($account->first_name).str_slug($account->last_name).'_'.str_slug($account->title_of_paper).'.'.$ext;
-                        $success = \File::copy(public_path($account->abstract),public_path( '/files/attachments/'.$filename) );
+                        $success = \File::move(public_path($account->abstract),public_path( '/files/attachments/'.$filename) );
 
 //                        if ($account->abstract) {
 //                            @unlink(public_path($account->abstract));

@@ -45,14 +45,16 @@ class PartnerController extends AdminController
             try {
 
 //                $user->abstract = $request->input('abstract');
-
+                    $abstract_panel=  $request->input('abstract_panel');
+                    $title_of_paper=  $request->input('title_of_paper');
                 if ($request->file('abstract')) {
-                    $user->abstract  = $this->saveFile($request->file('abstract'));
+                    $filename = $abstract_panel.'_'.str_slug($user->first_name).str_slug($user->last_name).'_'.str_slug($title_of_paper);
+                    $user->abstract  = $this->saveFile($request->file('abstract'),null,$filename);
                 }
 
-                $user->title_of_paper = $request->input('title_of_paper');
+                $user->title_of_paper = $title_of_paper;
                 $user->reject_abstract = null;
-                $user->abstract_panel = $request->input('abstract_panel');
+                $user->abstract_panel = $abstract_panel;
                 $user->save();
                 Mail::to($user->email)->send(new SubmitAbstract($user));
                 EmailLog::create([

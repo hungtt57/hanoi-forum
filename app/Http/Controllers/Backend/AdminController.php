@@ -15,6 +15,9 @@ class AdminController extends Controller
     public function saveFile($file, $old = null, $name = null)
     {
         $clientName = $file->getClientOriginalName();
+        if($name) {
+            $clientName = $name;
+        }
         $filename = $clientName . '.' . $file->getClientOriginalExtension();
         $file->move(public_path() . '/files/attachments/', $filename);
 
