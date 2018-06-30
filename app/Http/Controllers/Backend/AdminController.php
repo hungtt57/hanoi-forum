@@ -7,11 +7,34 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Intervention\Image\Facades\Image;
 use Hash;
-
+use Response;
 class AdminController extends Controller
 {
 
+    public function downloadAll(Request $request) {
+        $zip = new \ZipArchive();
+        $public_dir= public_path();
+        $zipFileName = "abstracts.zip"; // Zip name
 
+        if ($zip->open($public_dir . '/' . $zipFileName, \ZipArchive::CREATE) === TRUE) {
+
+            $users = User::where('type',User::PARTNER)->get();
+            foreach ($users as $user) {
+                if($user->abstract and str_contains($user->abstract,'/files/attachments/')) {
+//                    dd(public_path($user->abstract));
+                    $zip->addFile(public_path($user->abstract));
+                }
+            }
+            $zip->close();
+            $headers = array(
+                'Content-Type' => 'application/octet-stream',
+            );
+            $filetopath= $public_dir.'/'.$zipFileName;
+                return response()->download($filetopath,$zipFileName,$headers);
+
+        }
+
+    }
     public function saveFile($file, $old = null, $name = null)
     {
         $clientName = $file->getClientOriginalName();

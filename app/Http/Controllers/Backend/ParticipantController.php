@@ -296,7 +296,9 @@ class ParticipantController extends AdminController
 
         $data = array_only($request->all(), $model->getFillable());
         $keys = array_keys($data);
-
+        if(count($keys) == 0) {
+            return redirect()->back()->with('error','Please choose field to export');
+        }
         $user = User::select($keys)->orderBy('updated_at','desc');
             if($request->input('id')) {
             $user = $user->whereIn('id',$request->input('id'));

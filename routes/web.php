@@ -99,6 +99,7 @@ Route::group([
     'middleware' => 'auth.backend',
     'as' => 'Backend::'
 ], function () {
+
     Route::get('/', [
         'as' => 'admin',
         'uses' => 'AdminController@index'
@@ -114,6 +115,7 @@ Route::group([
     });
 
     Route::group(['middleware' => 'ADMIN'], function () {
+        Route::get('download-all','AdminController@downloadAll');
         Route::group([
             'prefix' => 'contact-us',
             'as' => 'contact@'
