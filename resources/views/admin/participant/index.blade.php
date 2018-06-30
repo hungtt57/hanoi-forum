@@ -1,6 +1,11 @@
 @extends('admin.layouts.master')
 @section('style')
     <link rel="stylesheet" href="/backend/plugins/iCheck/all.css">
+    <style>
+        .select2-container {
+            width: 100% !important;
+        }
+    </style>
 @endsection
 @section('content')
     <h3 class="inline">List delegates</h3>
@@ -113,6 +118,22 @@
                                 <input type="checkbox" class="minimal" name="abstract_panel">
                                 Submission to panel
                             </label>
+
+                            <div class="row">
+                                <div class="form-group">
+                                    <label class="control-label col-md-3">User</label>
+                                    <div class="col-md-6">
+                                        @php $users = \App\Models\User::where('type', \App\Models\User::PARTNER)->get(); @endphp
+                                        <select class="form-control select2" name="id[]"  multiple id="nationality">
+
+                                            @foreach($users as $user)
+                                                <option value="{{$user->id}}" >{{$user->email}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
 
 
