@@ -42,7 +42,7 @@
 
                         <p><strong>2)</strong> <strong>Human</strong><strong> impacts on climate change: </strong>Land-use change; Natural resource exploitations; Greenhouse gas emissions; Environment pollution.</p>
 
-                        <p><strong>3) Climate change response:</strong>Climate change adaptation; Climate change mitigation; Climate resilient economic and livelihood development; Resilient infrastructure development in the context of climate change; Disaster and climate-resilient communities; Resilient cities; Nature and ecosystem adaptation; Innovative measures for greenhouse gas mitigation.</p>
+                        <p><strong>3)Climate change response: </strong>Climate change adaptation; Climate change mitigation; Climate resilient economic and livelihood development; Resilient infrastructure development in the context of climate change; Disaster and climate-resilient communities; Resilient cities; Nature and ecosystem adaptation; Innovative measures for greenhouse gas mitigation.</p>
 
                         <p><strong>4) Policy and governance of climate change response and sustainability: </strong>Policies in response to climate change; International politics of climate change; International agreements on climate change policy; Strategies for sustainability; Human adaptive strategies.</p>
 
