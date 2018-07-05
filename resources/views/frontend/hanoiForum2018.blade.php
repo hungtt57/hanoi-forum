@@ -40,7 +40,7 @@
 
                         <p><strong>1) Climate change evidence and security: </strong>Sea level change; Floods, drought, forest fires, hurricanes, and other sporadic events; Disasters; Climate extreme; Climate change impact and vulnerability; Climate change resilience and adaptation; Riverine ecosystem impacts;&nbsp;&nbsp;&nbsp; Mountain ecosystem impacts; Coastal ecosystem impacts;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Marine ecosystem impacts; Impacts on humans: water supply, desertification; Climate measurement processes, methodologies, and technologies; Paleoclimatology;&nbsp;&nbsp;&nbsp;&nbsp; Environmental change; Energy sustainability;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Environment sustainability; Ecosystem sustainability.</p>
 
-                        <p><strong>2)</strong> <strong>Human</strong><strong>s</strong><strong> impact climate: </strong>Land-use change; Natural resource exploitations; Greenhouse gas emissions; Environment pollution.</p>
+                        <p><strong>2)</strong> <strong>Human</strong><strong>s</strong><strong> impacts on climate change: </strong>Land-use change; Natural resource exploitations; Greenhouse gas emissions; Environment pollution.</p>
 
                         <p><strong>3) Climate change response: </strong>Climate change adaptation; Climate change mitigation; Climate resilient economic and livelihood development; Resilient infrastructure development in the context of climate change; Disaster and climate-resilient communities; Resilient cities; Nature and ecosystem adaptation; Innovative measures for greenhouse gas mitigation.</p>
 
