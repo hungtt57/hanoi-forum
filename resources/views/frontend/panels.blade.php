@@ -129,8 +129,7 @@
 
             <div class="sabbi-thumlinepost-card-meta">
                 <a href="#" style="color:inherit">
-                    <h2 class="meta-title ht-5"> Policy Dialogue 1: Resources Management in Mekong Delta Region: An Institution
-                        Perspective
+                    <h2 class="meta-title ht-5"> Policy Dialogue 1: Sustainable development of Mekong Delta responding to Climate change
                     </h2>
                 </a>
 
@@ -153,9 +152,7 @@
 
             <div class="sabbi-thumlinepost-card-meta">
                 <a href="#" style="color:inherit">
-                    <h2 class="meta-title ht-5"> Policy Dialogue 2: Building Resilient and Safe City for Sustainable Development
-                        in the Red
-                        River Delta
+                    <h2 class="meta-title ht-5"> Policy Dialogue 2: Building Resilient, safe and sustainable cities in Red River delta (Hanoi City, Vinh Phuc City, Hai Phong city)
                     </h2>
                 </a>
                 <p class="meta-text"></p>
