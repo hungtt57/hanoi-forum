@@ -39,16 +39,16 @@
             </div>
         </div>
     </header>
-    <div class="auth-breadcrumb-wrap">
-        <div class="container">
-            <ol class="breadcrumb sabbi-breadcrumb list-unstyled list-inline">
-                <li><a href="{{url('/')}}">Home</a></li>
-                <li class="active"><a href="#">  Policy Dialogue 2: Building Resilient, safe and sustainable cities in Red River delta (Hanoi City, Vinh Phuc City, Hai Phong city)
+    {{--<div class="auth-breadcrumb-wrap">--}}
+        {{--<div class="container">--}}
+            {{--<ol class="breadcrumb sabbi-breadcrumb list-unstyled list-inline">--}}
+                {{--<li><a href="{{url('/')}}">Home</a></li>--}}
+                {{--<li class="active"><a href="#">  Policy Dialogue 2: Building Resilient, safe and sustainable cities in Red River delta (Hanoi City, Vinh Phuc City, Hai Phong city)--}}
 
-                    </a></li>
-            </ol>
-        </div>
-    </div>
+                    {{--</a></li>--}}
+            {{--</ol>--}}
+        {{--</div>--}}
+    {{--</div>--}}
     <main class="sabbi-page-wrap">
         <div class="container">
             <section class="bio__holder">
@@ -64,7 +64,7 @@
 
                 </div>
             </section><!-- /.bio__holder -->
-
+            @include('frontend.panels')
         </div>
 
     </main>

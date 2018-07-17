@@ -38,15 +38,15 @@
             </div>
         </div>
     </header>
-    <div class="auth-breadcrumb-wrap">
-        <div class="container">
-            <ol class="breadcrumb sabbi-breadcrumb list-unstyled list-inline">
-                <li><a href="{{url('/')}}">Home</a></li>
-                <li class="active"><a href="#"> Policy Dialogue 1: Sustainable development of Mekong Delta responding to Climate change
-                    </a></li>
-            </ol>
-        </div>
-    </div>
+    {{--<div class="auth-breadcrumb-wrap">--}}
+        {{--<div class="container">--}}
+            {{--<ol class="breadcrumb sabbi-breadcrumb list-unstyled list-inline">--}}
+                {{--<li><a href="{{url('/')}}">Home</a></li>--}}
+                {{--<li class="active"><a href="#"> Policy Dialogue 1: Sustainable development of Mekong Delta responding to Climate change--}}
+                    {{--</a></li>--}}
+            {{--</ol>--}}
+        {{--</div>--}}
+    {{--</div>--}}
     <main class="sabbi-page-wrap">
         <div class="container">
             <section class="bio__holder">
@@ -62,7 +62,7 @@
 
                 </div>
             </section><!-- /.bio__holder -->
-
+            @include('frontend.panels')
         </div>
 
     </main>
