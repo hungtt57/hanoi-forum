@@ -462,6 +462,34 @@
 
 
 
+                            <div class="col-md-12 content-human">
+
+                                <div class="image-human">
+                                    <img  src="/frontend/anh/takemoto.jpg" alt="">
+                                </div>
+                                <p><strong>Dr. Akio TAKEMOTO</strong></p>
+
+                                <p>Affiliation(s): </p>
+
+                                <ul>
+                                    <li>Senior Environmental Specialist, Programs Unit, Global Environment Facility  (GEF)  (January 2018-).</li>
+                                    <li>Director for International Strategy on Climate Change, Ministry of the Environment, Japan (July 2017 – January 2018).</li>
+                                    <li>Director for Research and Information Office, Ministry of the Environment, Japan (July 2014- July 2017).</li>
+                                    <li>Director, Secretariat of Asia-Pacific Network for Global Change Research (July 2011 – July 2014).</li>
+
+
+
+                                </ul>
+
+                                <p>Research areas: climate change adaptation and mitigation, climate finance.
+                                </p>
+
+                                <div class="clearfix"></div>
+                            </div>
+
+
+
+
 
 
                         </div>

@@ -120,7 +120,7 @@
     <div class="col-md-4 col-sm-6">
         <article class="sabbi-thumlinepost-card solitude-bg__x">
 
-            <a href="#" style="color:inherit">
+            <a href="{{url('sustainable-development-of-mekong-delta-responding-to-climate-change')}}" style="color:inherit">
                 <figure class="sabbi-thumlinepost-card-figure">
                     <img src="/frontend/assets/img/panel/mekong.jpg" alt=""
                          class="img-responsive img-thumpost">
@@ -128,13 +128,13 @@
             </a>
 
             <div class="sabbi-thumlinepost-card-meta">
-                <a href="#" style="color:inherit">
+                <a href="{{url('sustainable-development-of-mekong-delta-responding-to-climate-change')}}" style="color:inherit">
                     <h2 class="meta-title ht-5"> Policy Dialogue 1: Sustainable development of Mekong Delta responding to Climate change
                     </h2>
                 </a>
 
                 <p class="meta-text"></p>
-                <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
+                <a href="{{url('sustainable-development-of-mekong-delta-responding-to-climate-change')}}" class="btn btn-unsolemn btn-action read-more">Read More</a>
             </div>
 
 
@@ -143,7 +143,7 @@
     <div class="col-md-4 col-sm-6">
         <article class="sabbi-thumlinepost-card solitude-bg__x">
 
-            <a href="#" style="color:inherit">
+            <a href="{{url('building-resilient-safe-and-sustainable-cities-in-red-river-delta')}}" style="color:inherit">
                 <figure class="sabbi-thumlinepost-card-figure">
                     <img src="/frontend/assets/img/panel/redriver.jpg" alt=""
                          class="img-responsive img-thumpost">
@@ -151,12 +151,12 @@
             </a>
 
             <div class="sabbi-thumlinepost-card-meta">
-                <a href="#" style="color:inherit">
+                <a href="{{url('building-resilient-safe-and-sustainable-cities-in-red-river-delta')}}" style="color:inherit">
                     <h2 class="meta-title ht-5"> Policy Dialogue 2: Building Resilient, safe and sustainable cities in Red River delta (Hanoi City, Vinh Phuc City, Hai Phong city)
                     </h2>
                 </a>
                 <p class="meta-text"></p>
-                <a href="#" class="btn btn-unsolemn btn-action read-more">Read More</a>
+                <a href="{{url('building-resilient-safe-and-sustainable-cities-in-red-river-delta')}}" class="btn btn-unsolemn btn-action read-more">Read More</a>
             </div>
 
         </article>

@@ -331,5 +331,12 @@ class HomeController extends AdminController
     public function forumSiteInfo(Request $request) {
         return view('frontend.forumSiteInfo');
     }
+
+    public function policy1() {
+        return view('frontend.policy1');
+    }
+    public function policy2() {
+        return view('frontend.policy2');
+    }
 }
 
