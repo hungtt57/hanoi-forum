@@ -1,4 +1,4 @@
-<style>
+`<style>
     .contact a {
         color: #000000 !important;
         text-decoration: underline !important;

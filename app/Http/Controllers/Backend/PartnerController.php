@@ -12,7 +12,7 @@ use App\Models\EmailLog;
 use App\Mail\SubmitAbstract;
 use Illuminate\Support\Facades\Input;
 use App\Models\User;
-
+use Hash;
 
 class PartnerController extends AdminController
 {
