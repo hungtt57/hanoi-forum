@@ -15,36 +15,34 @@
     </style>
 @endsection
 @section('content')
-    <h3>Submit Abstract</h3>
+    <h3>Submit Full Paper</h3>
 
     @include('admin.flash_message')
 
-    <form action="{{route('Backend::postSubmit')}}" class="form-horizontal"
+    <form action="{{route('Backend::postSubmitPaper')}}" class="form-horizontal"
           method="POST" enctype="multipart/form-data">
 
         <div class="form-body">
             {{ csrf_field() }}
-            <p>  <b>Please download the abstract template <a href="{{url('abstract-example.docx')}}" class="" target="_blank">here</a> and follow the instruction for submission.</b></p>
+            <p>
+                <b>Please download the abstract template <a href="{{url('abstract-example.docx')}}" class="" target="_blank">here</a> and follow the instruction for submission.</b>
+            </p>
 
-        @if(!$user->confirm_abstract)
-              {{--@if($user->reject_abstract)--}}
-                {{--<div class="alert alert-danger">{{$user->reject_abstract}}</div>--}}
 
-            {{--@endif--}}
                 <div class="form-group">
                     <label class="control-label col-md-3">Title of the paper*</label>
                     <div class="col-md-6">
                         <input type="text" name="title_of_paper"
                                class="form-control"
-                               value="{{old('title_of_paper',$user->title_of_paper)}}">
+                               value="{{old('title_of_full_paper',$user->title_of_full_paper)}}">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="control-label col-md-3 " for="Name">Abstract*</label>
+                    <label class="control-label col-md-3 " for="Name">Full Paper*</label>
                     <div class="col-md-6">
                         <div class="col-md-6">
 
-                            <input type="file" class="post-image form-control" name="abstract"
+                            <input type="file" class="post-image form-control" name="paper"
                                    rel="post_status_images">
                         </div>
                     </div>
@@ -54,18 +52,16 @@
                       <div class="col-md-6">
                           <div class="col-md-6">
 
-                              <select class="form-control" name="abstract_panel" >
+                              <select class="form-control" name="paper_panel" >
                                   <option value="">Please choose panel</option>
                                   @foreach(\App\Models\User::$panelText as $key => $value)
-                                      <option value="{{$key}}" @if($key == old('abstract_panel',@$user->abstract_panel)) selected @endif>{{$value}}</option>
+                                      <option value="{{$key}}" @if($key == old('paper_panel',@$user->paper_panel)) selected @endif>{{$value}}</option>
                                   @endforeach
                               </select>
                           </div>
                       </div>
                   </div>
 
-
-            @endif
 
         </div>
         {{--@if(!$user->confirm_abstract || !$user->confirm_paper)--}}

@@ -261,6 +261,10 @@ Route::group([
             'as' => 'submit',
             'uses' => 'PartnerController@submit'
         ]);
+        Route::get('/submit-paper', [
+            'as' => 'submitPaper',
+            'uses' => 'PartnerController@submitPaper'
+        ]);
         Route::get('/submit/success', [
             'as' => 'submitSuccess',
             'uses' => 'PartnerController@submitSuccess'
@@ -276,6 +280,10 @@ Route::group([
         Route::post('/submit', [
             'as' => 'postSubmit',
             'uses' => 'PartnerController@postSubmit'
+        ]);
+        Route::post('/submit', [
+            'as' => 'postSubmitPaper',
+            'uses' => 'PartnerController@postSubmitPaper'
         ]);
     });
 });

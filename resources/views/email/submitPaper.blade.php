@@ -6,7 +6,7 @@
 </style>
 <p>Dear {{ucfirst($user->title)}}. {{ucfirst ($user->last_name)}},</p>
 <p>This email is to confirm that we have received your full paper. A copy of your submission is as follows:</p>
-<p>{!! $user->paper !!}</p>
+<p><a href="{{url($user->paper)}}">{{url($user->paper)}}</a></p>
 
 <p> We look forward to welcoming you this November.</p>
 <p> Regards,</p>

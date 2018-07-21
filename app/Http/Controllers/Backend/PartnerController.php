@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Backend;
 
+use App\Mail\SubmitPaper;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -30,7 +31,6 @@ class PartnerController extends AdminController
 
     public function postSubmit(Request $request)
     {
-
         $user = auth('backend')->user();
         if (!$user->confirm_abstract) {
             $this->validate($request, [
@@ -71,20 +71,62 @@ class PartnerController extends AdminController
             }
 
         }
-        if ($user->confirm_abstract) {
+//        if ($user->confirm_abstract) {
+//            $this->validate($request, [
+//                'paper' => 'required'
+//            ]);
+//            \DB::beginTransaction();
+//            try {
+//
+//                if ($request->file('paper')) {
+//                    $data['paper'] = $this->saveFile($request->file('paper'));
+//                }
+//
+//                $user->reject_paper = null;
+//                $user->save();
+//                Mail::to($user->email)->send(new SubmitAbstract($user));
+//                EmailLog::create([
+//                    'to' => $user->email,
+//                    'event' => 'submitPaper',
+//                    'data' => $user->toArray()
+//                ]);
+//                DB::commit();
+//
+//                return redirect('/admin/submit/success');
+//            } catch (\Exception $ex) {
+//                DB::rollback();
+//                return redirect()->back()->with('success', 'Server error.Try again later')->withInput(Input::all());
+//            }
+//        }
+
+    }
+    public function postSubmitPaper(Request $request)
+    {
+        $user = auth('backend')->user();
+
             $this->validate($request, [
-                'paper' => 'required'
+                'paper' => 'required',
+                'title_of_full_paper' => 'required',
+                'paper_panel' => 'required'
+            ], [
+                'title_of_full_paper.required' => 'Title of paper is required',
+                'paper_panel.required' => 'Submission to panel session is required'
             ]);
             \DB::beginTransaction();
             try {
 
-                if ($request->file('paper')) {
-                    $data['paper'] = $this->saveFile($request->file('paper'));
+                    $paper_panel=  $request->input('paper_panel');
+                $title_of_full_paper=  $request->input('title_of_full_paper');
+                if ($request->file('abstract')) {
+                    $filename = $paper_panel.'_'.str_slug($user->first_name).str_slug($user->last_name).'_'.str_slug($title_of_full_paper);
+                    $user->paper  = $this->saveFile($request->file('paper'),null,$filename);
                 }
 
+                $user->title_of_full_paper = $title_of_full_paper;
                 $user->reject_paper = null;
+                $user->paper_panel = $paper_panel;
                 $user->save();
-                Mail::to($user->email)->send(new SubmitAbstract($user));
+                Mail::to($user->email)->send(new SubmitPaper($user));
                 EmailLog::create([
                     'to' => $user->email,
                     'event' => 'submitPaper',
@@ -97,10 +139,16 @@ class PartnerController extends AdminController
                 DB::rollback();
                 return redirect()->back()->with('success', 'Server error.Try again later')->withInput(Input::all());
             }
-        }
+
+
+//
 
     }
 
+    public function submitPaper(Request $request) {
+        $user = auth('backend')->user();
+        return view('admin.partner.submitPaper', compact('user'));
+    }
     public function submitSuccess(Request $request)
     {
         $user = auth('backend')->user();

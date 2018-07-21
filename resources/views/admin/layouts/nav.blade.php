@@ -135,7 +135,12 @@
                     <li class="{{ (Request::is('admin/submit')) ? 'active' : '' }}"><a
                                 href="{{url('admin/submit')}}"><i class="fa   fa-cloud-upload"></i>
                             <span>Submit your abstract</span></a></li>
+
+                        <li class="{{ (Request::is('admin/submit-paper')) ? 'active' : '' }}"><a
+                                    href="{{url('admin/submit-paper')}}"><i class="fa   fa-cloud-upload"></i>
+                                <span>Submit your full paper</span></a></li>
                 @endif
+
                 @if(auth('backend')->user()->verify )
 
                     {{--<li class="{{ (Request::is('admin/list-delegates')) ? 'active' : '' }}"><a--}}

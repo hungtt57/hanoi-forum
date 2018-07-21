@@ -94,7 +94,8 @@ class User extends Authenticatable
         'need_support', 'kind_support',
         'indicate', 'indicate_content','know',
         'confirm',
-        'abstract_panel'
+        'abstract_panel',
+        'title_of_full_paper'
     ];
     protected $casts = [
         'know' => 'array',
