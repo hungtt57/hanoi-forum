@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Backend;
 
+use App\Mail\SendEmailAbstract;
 use App\Models\Contact;
 use App\Models\Country;
 use App\Models\Post;
@@ -12,8 +13,36 @@ use App\Http\Controllers\Controller;
 use Datatables;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Input;
+use Mail;
+use App\Models\EmailLog;
+use DB;
 class ParticipantController extends AdminController
 {
+    public function sendEmail(Request $request, $id)
+    {
+        $user = User::find($id);
+        if (empty($user->abstract)) {
+            return redirect()->back()->with('error', 'User do not submit abstract');
+        }
+        \DB::beginTransaction();
+        try {
+            Mail::to($user->email)->cc('hanoiforum@vnu.edu.vn')->send(new SendEmailAbstract($user));
+            EmailLog::create([
+                'to' => $user->email,
+                'event' => 'send email abstract',
+                'data' => $user->toArray()
+            ]);
+            $user->send_email_abstract = 1;
+            $user->save();
+            DB::commit();
+        } catch (\Exception $ex) {
+            DB::rollback();
+            return redirect()->back()->with('error', 'Server error.Try again later')->withInput(Input::all());
+        }
+
+        return redirect()->back()->with('success', 'Success');
+    }
+
     public function index()
     {
         return view('admin.participant.index');
@@ -35,7 +64,7 @@ class ParticipantController extends AdminController
 //            })
             ->addColumn('status_submit', function ($user) {
                 $string = 'Not submit abstract yet';
-                if($user->apply == 0) {
+                if ($user->apply == 0) {
                     $string = 'N/A';
                 }
                 if ($user->abstract and !$user->confirm_abstract) {
@@ -83,19 +112,20 @@ class ParticipantController extends AdminController
             })
             ->editColumn('verify', function ($post) {
                 $string = '';
-                    if($post->verify) {
-                        $string = '<a href="javascript:;void(0)" class="btn btn-primary verify" data-id="'.$post->id.'">Active</a>';
-                    }else {
-                        $string = '<a  href="javascript:;void(0)" class="btn btn-danger verify" data-id="'.$post->id.'">InActive</a>';
-                    }
-                    return $string;
+                if ($post->verify) {
+                    $string = '<a href="javascript:;void(0)" class="btn btn-primary verify" data-id="' . $post->id . '">Active</a>';
+                } else {
+                    $string = '<a  href="javascript:;void(0)" class="btn btn-danger verify" data-id="' . $post->id . '">InActive</a>';
+                }
+                return $string;
             })
             ->addColumn('action', function ($post) {
                 $urlEdit = route('Backend::participants@edit', ['id' => $post->id]);
 
                 $urlDelete = route('Backend::participants@delete', ['id' => $post->id]);
-
+                $urlSendEmail = route('Backend::participants@sendEmail', ['id' => $post->id]);
                 $string = '';
+                $string .= '<a  href="' . $urlSendEmail . '" class="btn btn-primary">Send Email</a>';
 
                 $string .= '<a  href="' . $urlEdit . '" class="btn btn-info">Edit</a>';
 
@@ -106,14 +136,16 @@ class ParticipantController extends AdminController
 
             })->make(true);
     }
-    public function verify(Request $request) {
+
+    public function verify(Request $request)
+    {
         $id = $request->input('id');
         $user = User::find($id);
-        if($user) {
-            if($user->verify ) {
+        if ($user) {
+            if ($user->verify) {
                 $user->verify = 0;
                 $user->save();
-            }else {
+            } else {
                 $user->verify = 1;
                 $user->save();
             }
@@ -131,6 +163,7 @@ class ParticipantController extends AdminController
             'data' => null
         ], 200);
     }
+
     public function delete($id)
     {
         $post = User::where('id', $id)->where('type', User::PARTNER)->first();
@@ -227,19 +260,19 @@ class ParticipantController extends AdminController
             if (count($data['know'])) {
                 foreach ($data['know'] as $key => $value) {
 
-                    if(isset($value['id'])) {
+                    if (isset($value['id'])) {
                         $d[$value['id']] = [
                             'id' => $value['id'],
                             'content' => (isset($value['content'])) ? $value['content'] : ''
                         ];
                         $check = false;
-                    }else {
+                    } else {
                         continue;
                     }
                 }
 
             }
-            if($check == true) {
+            if ($check == true) {
                 return redirect()->back()->with('error', 'Please answer all the required fields ')->withInput(Input::all());
             }
             $data['know'] = $d;
@@ -248,19 +281,19 @@ class ParticipantController extends AdminController
             if (count($data['indicate'])) {
                 foreach ($data['indicate'] as $key => $value) {
 
-                    if(isset($value['id'])) {
+                    if (isset($value['id'])) {
                         $indicate[$value['id']] = [
                             'id' => $value['id'],
                             'content' => (isset($value['content'])) ? $value['content'] : ''
                         ];
                         $check = false;
-                    }else {
+                    } else {
                         continue;
                     }
                 }
 
             }
-            if($check == true) {
+            if ($check == true) {
                 return redirect()->back()->with('error', 'Please answer all the required fields ')->withInput(Input::all());
             }
             $data['indicate'] = $indicate;
@@ -296,15 +329,15 @@ class ParticipantController extends AdminController
 
         $data = array_only($request->all(), $model->getFillable());
         $keys = array_keys($data);
-        if(count($keys) == 0) {
-            return redirect()->back()->with('error','Please choose field to export');
+        if (count($keys) == 0) {
+            return redirect()->back()->with('error', 'Please choose field to export');
         }
-        $user = User::select($keys)->orderBy('updated_at','desc');
-            if($request->input('id')) {
-            $user = $user->whereIn('id',$request->input('id'));
-            }
+        $user = User::select($keys)->orderBy('updated_at', 'desc');
+        if ($request->input('id')) {
+            $user = $user->whereIn('id', $request->input('id'));
+        }
 
-        $user=$user->where('type', User::PARTNER)->get()->toArray();
+        $user = $user->where('type', User::PARTNER)->get()->toArray();
         if (count($user)) {
             foreach ($user as $key => $value) {
                 if (array_key_exists('gender', $value)) {
@@ -336,9 +369,9 @@ class ParticipantController extends AdminController
                     unset($user[$key]['email']);
                 }
                 if (array_key_exists('abstract', $value)) {
-                    if($value['abstract'] and str_contains($value['abstract'],'/files/attachments/')) {
+                    if ($value['abstract'] and str_contains($value['abstract'], '/files/attachments/')) {
                         $user[$key]['Abstract'] = url($value['abstract']);
-                    }else {
+                    } else {
                         $user[$key]['Abstract'] = $value['abstract'];
                     }
 
@@ -349,12 +382,12 @@ class ParticipantController extends AdminController
                     unset($user[$key]['title_of_paper']);
                 }
                 if (array_key_exists('abstract_panel', $value)) {
-                    $user[$key]['Submission to panel'] = isset(User::$panelText[$value['abstract_panel']]) ? User::$panelText[$value['abstract_panel']] : '' ;
+                    $user[$key]['Submission to panel'] = isset(User::$panelText[$value['abstract_panel']]) ? User::$panelText[$value['abstract_panel']] : '';
                     unset($user[$key]['abstract_panel']);
                 }
                 if (array_key_exists('nationality', $value)) {
-                    $country = Country::where('iso',$value['nationality'])->first();
-                    if($country) {
+                    $country = Country::where('iso', $value['nationality'])->first();
+                    if ($country) {
                         $user[$key]['Nationality'] = $country->nicename;
                     }
 
@@ -364,13 +397,13 @@ class ParticipantController extends AdminController
                 if (array_key_exists('know', $value)) {
                     $knowUser = $value['know'];
 
-                    foreach(User::$knowText as $k => $know){
-                        $user[$key]['Source of info'.$k] = '';
+                    foreach (User::$knowText as $k => $know) {
+                        $user[$key]['Source of info' . $k] = '';
 
-                        if( isset($knowUser[$k])) {
-                            $user[$key]['Source of info'.$k] = $know;
-                            if($k == 7) {
-                                $user[$key]['Source of info'.$k] = $knowUser[$k]['content'];
+                        if (isset($knowUser[$k])) {
+                            $user[$key]['Source of info' . $k] = $know;
+                            if ($k == 7) {
+                                $user[$key]['Source of info' . $k] = $knowUser[$k]['content'];
                             }
                         }
                     }

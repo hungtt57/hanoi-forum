@@ -120,6 +120,7 @@ Route::group([
 
     Route::group(['middleware' => 'ADMIN'], function () {
         Route::get('download-all','AdminController@downloadAll');
+        Route::get('send-email-abstract','AdminController@sendEmailAll');
         Route::group([
             'prefix' => 'contact-us',
             'as' => 'contact@'
@@ -181,6 +182,7 @@ Route::group([
             'prefix' => 'participants',
             'as' => 'participants@'
         ], function () {
+            Route::get('send-email/{id}', ['as' => 'sendEmail', 'uses' => 'ParticipantController@sendEmail']);
             Route::get('/', ['as' => 'index', 'uses' => 'ParticipantController@index']);
             Route::get('/datatables', ['as' => 'datatables', 'uses' => 'ParticipantController@datatables']);
             Route::get('/delete/{id}', ['as' => 'delete', 'uses' => 'ParticipantController@delete']);
@@ -281,7 +283,7 @@ Route::group([
             'as' => 'postSubmit',
             'uses' => 'PartnerController@postSubmit'
         ]);
-        Route::post('/submit', [
+        Route::post('/submit-paper', [
             'as' => 'postSubmitPaper',
             'uses' => 'PartnerController@postSubmitPaper'
         ]);

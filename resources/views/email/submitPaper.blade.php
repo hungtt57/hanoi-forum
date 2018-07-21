@@ -4,7 +4,7 @@
         text-decoration: underline !important;
     }
 </style>
-<p>Dear {{ucfirst($user->title)}}. {{ucfirst ($user->last_name)}},</p>
+<p>Dear {{ucfirst($user->title)}} {{ucfirst ($user->last_name)}},</p>
 <p>This email is to confirm that we have received your full paper. A copy of your submission is as follows:</p>
 <p><a href="{{url($user->paper)}}">{{url($user->paper)}}</a></p>
 

@@ -16,6 +16,8 @@
            style="margin-bottom: 20px">Export</a>
         <a   href="{{url('admin/download-all')}}" class="btn btn-primary pull-right"
            style="margin-bottom: 20px">Download all Abstract</a>
+        <a   href="{{url('admin/send-email-abstract')}}" class="btn btn-info pull-right"
+             style="margin-bottom: 20px">Send email abstract</a>
     </div>
     <div class="col-md-12" style="margin-top: 20px">
 

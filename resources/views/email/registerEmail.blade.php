@@ -2,7 +2,7 @@
     .contact a {color:#000000!important; text-decoration:underline!important;}
 </style>
 @if($user->apply == 0)
-<p>Dear {{ucfirst($user->title)}}. {{ucfirst ($user->last_name)}},</p>
+<p>Dear {{ucfirst($user->title)}} {{ucfirst ($user->last_name)}},</p>
 <p>Welcome to Hanoi Forum 2018!</p>
 <p>Please click on the button <strong>Verify</strong> below to activate your account.</p>
 <p>Once your account is activated, you can log in on Hanoi Forum website to manage your setting and get the most updated information from the Forum. </p>

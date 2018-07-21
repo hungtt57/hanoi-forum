@@ -99,6 +99,7 @@ class User extends Authenticatable
         'abstract_panel',
         'title_of_full_paper',
         'paper_panel',
+        'send_email_abstract'
 
     ];
     protected $casts = [

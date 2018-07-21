@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Backend;
 
+use App\Mail\SendEmailAbstract;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -10,7 +11,27 @@ use Hash;
 use Response;
 class AdminController extends Controller
 {
+    public function sendEmailAll(Request $request) {
+        $users = User::where('type',User::PARTNER)->where('send_email_abstract',0)->where('abstract','!=',null)->get();
+        foreach ($users as $user) {
+            \DB::beginTransaction();
+            try {
+                Mail::to($user->email)->cc('hanoiforum@vnu.edu.vn')->send(new SendEmailAbstract($user));
+                EmailLog::create([
+                    'to' => $user->email,
+                    'event' => 'send email abstract',
+                    'data' => $user->toArray()
+                ]);
+                $user->send_email_abstract = 1;
+                $user->save();
+                DB::commit();
+            } catch (\Exception $ex) {
+                DB::rollback();
 
+            }
+
+        }
+    }
     public function downloadAll(Request $request) {
         try {
             $zip = new \ZipArchive();
