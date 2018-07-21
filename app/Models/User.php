@@ -86,7 +86,7 @@ class User extends Authenticatable
     protected $fillable = [
         'name', 'email', 'password', 'type', 'phone', 'file', 'image',
         'first_name', 'last_name', 'title', 'affiliation', 'gender', 'nationality', 'link_cv', 'abstract', 'paper',
-        'status', 'apply', 'code', 'reviewer_id', 'title_of_paper',
+        'status', 'apply', 'code', 'reviewer_id',
         'confirm_abstract', 'confirm_paper', 'reject_abstract', 'reject_paper', 'comment_abstract', 'comment_paper',
         'share_info', 'payment_status',
         'verify',
@@ -94,8 +94,12 @@ class User extends Authenticatable
         'need_support', 'kind_support',
         'indicate', 'indicate_content','know',
         'confirm',
+
+        'title_of_paper',
         'abstract_panel',
-        'title_of_full_paper'
+        'title_of_full_paper',
+        'paper_panel',
+
     ];
     protected $casts = [
         'know' => 'array',

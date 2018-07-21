@@ -25,7 +25,7 @@
         <div class="form-body">
             {{ csrf_field() }}
             <p>
-                <b>Please download the abstract template <a href="{{url('abstract-example.docx')}}" class="" target="_blank">here</a> and follow the instruction for submission.</b>
+                <b>Please download the full paper template <a href="{{url('Full paper template for Hanoi Forum 2018.docx')}}" class="" target="_blank">here</a> and follow the instruction for submission.</b>
             </p>
 
 
