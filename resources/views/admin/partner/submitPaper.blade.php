@@ -24,15 +24,15 @@
 
         <div class="form-body">
             {{ csrf_field() }}
-            <p>
-                <b>Please download the full paper template <a href="{{url('Full paper template for Hanoi Forum 2018.docx')}}" class="" target="_blank">here</a> and follow the instruction for submission.</b>
-            </p>
+            <h4>
+                <b>Please download the full paper template <a href="{{url('Full paper template for Hanoi Forum 2018.docx')}}" class="" target="_blank">here</a> and <span style="text-decoration: underline">follow the instruction for submission</span>.</b>
+            </h4>
 
 
                 <div class="form-group">
                     <label class="control-label col-md-3">Title of the paper*</label>
                     <div class="col-md-6">
-                        <input type="text" name="title_of_paper"
+                        <input type="text" name="title_of_full_paper"
                                class="form-control"
                                value="{{old('title_of_full_paper',$user->title_of_full_paper)}}">
                     </div>
