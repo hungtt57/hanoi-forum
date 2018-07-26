@@ -129,7 +129,7 @@ class ParticipantController extends AdminController
 
                 $string .= '<a  href="' . $urlEdit . '" class="btn btn-info">Edit</a>';
 
-                $string .= '<a href="' . $urlDelete . '" class="btn btn-danger delete-btn">Delete</a>';
+                $string .= '<a href="#" data-url="'.$urlDelete.'" class="btn btn-danger delete-part">Delete</a>';
 
 
                 return $string;
@@ -164,13 +164,25 @@ class ParticipantController extends AdminController
         ], 200);
     }
 
-    public function delete($id)
+    public function delete(Request $request,$id)
     {
         $post = User::where('id', $id)->where('type', User::PARTNER)->first();
         if (empty($post)) {
+            if($request->ajax()) {
+                return response([
+                    'status' => 0,
+                    'message' => 'Delegate not exist'
+                ]);
+            }
             return redirect()->back()->with('error', 'Delegate not exist!');
         }
         $post->delete();
+        if($request->ajax()) {
+            return response([
+                'status' => 1,
+                'message' => 'Delegate not exist'
+            ]);
+        }
         return redirect()->back()->with('success', 'Success');
     }
 

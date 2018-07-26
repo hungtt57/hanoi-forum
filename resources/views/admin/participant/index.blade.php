@@ -304,5 +304,55 @@
 
       });
 
+        $(document).on('click', '.delete-part', function (e) {
+
+          var that = this;
+          var url = $(this).attr('data-url');
+          bootbox.confirm({
+            message: "Bạn có chắc chắn muốn xóa",
+            buttons: {
+              confirm: {
+                label: 'Có',
+                className: 'btn-success'
+              },
+              cancel: {
+                label: 'Không',
+                className: 'btn-danger'
+              }
+            },
+
+
+            callback: function (result) {
+              if (result == true) {
+                $.ajax({
+                  url: url,
+                  type: 'get',
+                  data: {
+
+                  },
+                  dataType: 'json',
+
+                  success: function (response) {
+                    if (response.status == 1) {
+                      var row = table.row($(that).parents('tr'));
+                      var rowNode = row.node();
+                      row.remove();
+
+                      table.draw();
+                    } else {
+                      swal(response.message, '', 'error');
+                    }
+                  }, error: function (error) {
+                    swal('Error,Try again later', '', 'error');
+                  }
+                });
+
+              }
+            }
+          });
+
+
+      });
+
     </script>
 @endpush

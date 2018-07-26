@@ -175,7 +175,7 @@ class AdminController extends Controller
             })->make(true);
     }
 
-    public function delete($id)
+    public function delete(Request $request,$id)
     {
         $post = User::where('id', $id)->where('type', User::ADMIN)->first();
         if (empty($post)) {
