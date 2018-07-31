@@ -66,7 +66,7 @@ class ArticleController extends AdminController
 
             })->make(true);
     }
-    public function delete($id) {
+    public function delete(Request $request,$id) {
         $article = Article::findOrFail($id);
         $article->delete();
         return redirect()->back()->with('success','Success');

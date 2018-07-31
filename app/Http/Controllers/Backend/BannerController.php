@@ -73,7 +73,7 @@ class BannerController extends AdminController
 
             })->make(true);
     }
-    public function delete($id) {
+    public function delete(Request $request,$id) {
         $banner = Banner::findOrFail($id);
         $banner->delete();
         cache()->forget('banners');

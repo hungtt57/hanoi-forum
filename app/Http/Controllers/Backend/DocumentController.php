@@ -73,7 +73,7 @@ class DocumentController extends AdminController
             })->make(true);
     }
 
-    public function delete($id)
+    public function delete(Request $request,$id)
     {
         $post = Document::where('id',$id)->first();
         if (empty($post)) {

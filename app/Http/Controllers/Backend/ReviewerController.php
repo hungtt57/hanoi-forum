@@ -70,8 +70,8 @@ class ReviewerController extends AdminController
             })->make(true);
     }
 
-    public function delete($id)
-    {
+    public function delete(Request $request,$id) {
+
         $post = User::where('id', $id)->where('type', User::REVIEWER)->first();
         if (empty($post)) {
             return redirect()->back()->with('error', 'Reviewer not exist!');
