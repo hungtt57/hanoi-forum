@@ -56,7 +56,13 @@ class ParticipantController extends AdminController
             ->addColumn('reviewer', function ($user) use ($reviewers) {
 
                 return view('admin.participant.reviewer', compact('user', 'reviewers'))->render();
+            })->addColumn('paper_panel', function ($user) {
+                if($user->paper)  {
+                    return view('admin.participant.paper_panel', compact('user'))->render();
+                }
+               return '';
             })
+
 //            ->editColumn('payment_status', function ($user) {
 //
 ////                return User::$paymentText[$post->payment_status];
@@ -208,6 +214,28 @@ class ParticipantController extends AdminController
             ], 200);
         }
         $user->reviewer_id = $reviewId;
+        $user->save();
+        return response([
+            'status' => 1,
+            'message' => 'Success',
+            'data' => null
+        ], 200);
+    }
+
+ public function selectPaperPanel(Request $request)
+    {
+        $id = $request->input('id');
+        $panel = $request->input('panel');
+        $user = User::where('id', $id)->where('type', User::PARTNER)->first();
+        if (empty($user)) {
+            return response([
+                'status' => 0,
+                'message' => 'Delegate not exist',
+                'data' => null
+            ], 200);
+        }
+
+        $user->paper_panel = $panel;
         $user->save();
         return response([
             'status' => 1,

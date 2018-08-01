@@ -36,7 +36,7 @@
 
                                 <th>CV</th>
                                 <th>Title of paper</th>
-                                <th>Submission status</th>
+                                <th>Full-text paper panel</th>
                                 <th>Reviewer</th>
                                 {{--<th style="width: 105px;">Payment Status</th>--}}
                                 <th >Verify</th>
@@ -190,6 +190,30 @@
             }
           });
         });
+        $(document).on('change', '.select-paper-panel', function (e) {
+          var val = $(this).val();
+          var id = $(this).attr('data-id');
+          $.ajax({
+            url: '{{ route('Backend::participants@selectPaperPanel') }}',
+            type: 'post',
+            data: {
+              panel: val,
+              id: id
+            },
+            dataType: 'json',
+
+            success: function (response) {
+              if (response.status == 1) {
+                swal(response.message, '', 'success');
+
+              } else {
+                swal(response.message, '', 'error');
+              }
+            }, error: function (error) {
+              swal('Error,Try again later', '', 'error');
+            }
+          });
+        });
 
         $(document).on('click','.verify',function () {
           var id = $(this).data('id');
@@ -279,8 +303,10 @@
             {data: 'affiliation', name: 'affiliation'},
             {data: 'link_cv', name: 'link_cv', searchable: false, orderable: false},
             {data: 'title_of_paper', name: 'title_of_paper'},
-            {data: 'status_submit', name: 'status_submit', searchable: false, orderable: false},
-            {data: 'reviewer', name: 'reviewer'},
+            // {data: 'status_submit', name: 'status_submit', searchable: false, orderable: false},
+            {data: 'paper_panel', name: 'paper_panel',searchable: false, orderable: false},
+            {data: 'reviewer', name: 'reviewer',searchable: false, orderable: false},
+
             // {data: 'payment_status', name: 'payment_status', orderable: false, searchable: false},
             {data: 'verify', name: 'verify', orderable: false, searchable: false},
             {data: 'created_at', name: 'created_at'},

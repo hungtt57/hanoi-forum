@@ -107,10 +107,10 @@ class PartnerController extends AdminController
             $this->validate($request, [
                 'paper' => 'required',
                 'title_of_full_paper' => 'required',
-                'paper_panel' => 'required'
+//                'paper_panel' => 'required'
             ], [
                 'title_of_full_paper.required' => 'Title of paper is required',
-                'paper_panel.required' => 'Submission to panel session is required'
+//                'paper_panel.required' => 'Submission to panel session is required'
             ]);
             \DB::beginTransaction();
             try {
@@ -124,7 +124,7 @@ class PartnerController extends AdminController
 
                 $user->title_of_full_paper = $title_of_full_paper;
                 $user->reject_paper = null;
-                $user->paper_panel = $paper_panel;
+//                $user->paper_panel = $paper_panel;
                 $user->save();
                 Mail::to($user->email)->send(new SubmitPaper($user));
                 EmailLog::create([

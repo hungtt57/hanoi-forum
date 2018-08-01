@@ -15,7 +15,7 @@
     </style>
 @endsection
 @section('content')
-    <h3>Submit Full Paper</h3>
+    <h3>Submit Full-text Paper</h3>
 
     @include('admin.flash_message')
 
@@ -25,7 +25,7 @@
         <div class="form-body">
             {{ csrf_field() }}
             <h4>
-                <b>Please download the full paper template <a href="{{url('Full paper template for Hanoi Forum 2018.docx')}}" class="" target="_blank">here</a> and <span style="text-decoration: underline">follow the instruction for submission</span>.</b>
+                <b>Please download the full-text paper template <a href="{{url('Full paper template for Hanoi Forum 2018.docx')}}" class="" target="_blank">here</a> and <span style="text-decoration: underline">follow the instruction for submission</span>.</b>
             </h4>
 
 
@@ -38,7 +38,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="control-label col-md-3 " for="Name">Full Paper*</label>
+                    <label class="control-label col-md-3 " for="Name">Full-text Paper*</label>
                     <div class="col-md-6">
                         <div class="col-md-6">
 
@@ -47,20 +47,20 @@
                         </div>
                     </div>
                 </div>
-                  <div class="form-group">
-                      <label class="control-label col-md-3 " for="Name">Submission to panel session*</label>
-                      <div class="col-md-6">
-                          <div class="col-md-6">
+                  {{--<div class="form-group">--}}
+                      {{--<label class="control-label col-md-3 " for="Name">Submission to panel session*</label>--}}
+                      {{--<div class="col-md-6">--}}
+                          {{--<div class="col-md-6">--}}
 
-                              <select class="form-control" name="paper_panel" >
-                                  <option value="">Please choose panel</option>
-                                  @foreach(\App\Models\User::$panelText as $key => $value)
-                                      <option value="{{$key}}" @if($key == old('paper_panel',@$user->paper_panel)) selected @endif>{{$value}}</option>
-                                  @endforeach
-                              </select>
-                          </div>
-                      </div>
-                  </div>
+                              {{--<select class="form-control" name="paper_panel" >--}}
+                                  {{--<option value="">Please choose panel</option>--}}
+                                  {{--@foreach(\App\Models\User::$panelText as $key => $value)--}}
+                                      {{--<option value="{{$key}}" @if($key == old('paper_panel',@$user->paper_panel)) selected @endif>{{$value}}</option>--}}
+                                  {{--@endforeach--}}
+                              {{--</select>--}}
+                          {{--</div>--}}
+                      {{--</div>--}}
+                  {{--</div>--}}
 
 
         </div>
