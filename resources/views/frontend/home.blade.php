@@ -191,7 +191,7 @@
                         </ol>
                     </div>
                 </div>
-                @php $posts = App\Models\Post::where('status',1)->orderBy('created_at','desc')->limit(5)->get(); @endphp
+                @php $posts = App\Models\Post::where('status',1)->orderBy('created_at','desc')->limit(3)->get(); @endphp
                 @if($posts)
                     <div class="col-sm-4">
 
