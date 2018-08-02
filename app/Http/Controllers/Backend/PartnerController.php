@@ -117,7 +117,7 @@ class PartnerController extends AdminController
 
                     $paper_panel=  $request->input('paper_panel');
                 $title_of_full_paper=  $request->input('title_of_full_paper');
-                if ($request->file('abstract')) {
+                if ($request->file('paper')) {
                     $filename = $paper_panel.'_'.str_slug($user->first_name).str_slug($user->last_name).'_'.str_slug($title_of_full_paper);
                     $user->paper  = $this->saveFile($request->file('paper'),null,$filename);
                 }
@@ -134,10 +134,11 @@ class PartnerController extends AdminController
                 ]);
                 DB::commit();
 
-                return redirect('/admin/submit/success');
+                return redirect('/admin/submit/success-paper');
             } catch (\Exception $ex) {
                 DB::rollback();
-                return redirect()->back()->with('success', 'Server error.Try again later')->withInput(Input::all());
+
+                return redirect()->back()->with('error', 'Server error.Try again later')->withInput(Input::all());
             }
 
 
@@ -153,6 +154,11 @@ class PartnerController extends AdminController
     {
         $user = auth('backend')->user();
         return view('admin.partner.submitSuccess', compact('user'));
+    }
+    public function submitSuccessPaper(Request $request)
+    {
+        $user = auth('backend')->user();
+        return view('admin.partner.submitSuccessPaper', compact('user'));
     }
 
     public function editProfile(Request $request)

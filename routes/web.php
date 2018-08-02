@@ -271,6 +271,10 @@ Route::group([
             'as' => 'submitSuccess',
             'uses' => 'PartnerController@submitSuccess'
         ]);
+        Route::get('/submit/success-paper', [
+            'as' => 'submitSuccessPaper',
+            'uses' => 'PartnerController@submitSuccessPaper'
+        ]);
         Route::get('/list-delegates', [
             'as' => 'listDelegates',
             'uses' => 'PartnerController@listDelegates'

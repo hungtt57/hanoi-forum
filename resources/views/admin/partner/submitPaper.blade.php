@@ -15,7 +15,7 @@
     </style>
 @endsection
 @section('content')
-    <h3>Submit Full-text Paper</h3>
+    <h3 style="margin-bottom: 20px">Submit Full-text Paper</h3>
 
     @include('admin.flash_message')
 
