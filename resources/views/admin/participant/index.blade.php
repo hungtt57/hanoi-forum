@@ -298,7 +298,7 @@
           columns: [
             // {data: 'email', name: 'email'},
             {data: 'first_name', name: 'first_name'},
-            {data: 'last_name', name: 'sur_name'},
+            {data: 'last_name', name: 'last_name'},
             {data: 'title', name: 'title'},
             {data: 'affiliation', name: 'affiliation'},
             {data: 'link_cv', name: 'link_cv', searchable: false, orderable: false},

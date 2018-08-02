@@ -89,6 +89,7 @@ class ParticipantController extends AdminController
             })
             ->editColumn('link_cv', function ($post) {
                 $string = '';
+                $string .=' <div style="max-width: 200px">';
                 if ($post->link_cv) {
                     $string .= '<a target="_blank" href="' . $post->link_cv . '">' . $post->link_cv . '</a>';
                 }
@@ -101,6 +102,7 @@ class ParticipantController extends AdminController
                                 <div class="clearfix"></div>
                             </a>';
                 }
+                $string.= '</div>';
 
                 return $string;
             })
