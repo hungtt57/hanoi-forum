@@ -23,7 +23,7 @@
                     <div class="content-page">
                         <div class="col-md-8 col-sm-5 col-md-offset-2 col-xs-12">
                             <div class="col-md-12">
-                                To be updated in July
+                                To be updated in August
                             </div>
                         </div>
                     </div>
