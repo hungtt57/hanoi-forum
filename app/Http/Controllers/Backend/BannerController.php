@@ -23,7 +23,8 @@ class BannerController extends AdminController
 
     public function store(Request $request)
     {
-
+        ini_set('post_max_size', '64M');
+        ini_set('upload_max_filesize', '64M');
         $this->validate($request, [
             'image' => 'required'
         ], [
@@ -31,16 +32,21 @@ class BannerController extends AdminController
             'image.required' => 'Image is required'
         ]);
 
-        $data = $request->all();
+        try {
 
-        if($request->file('image')) {
-            $data['image'] = $this->saveImageAndBlur($request->file('image'));
+            $data = $request->all();
+
+            if($request->file('image')) {
+                $data['image'] = $this->saveImage($request->file('image'));
+            }
+
+            $banner = Banner::create($data);
+            cache()->forget('banners');
+            return redirect()->back()->with('success', 'Success');
+        }catch (\Exception $ex) {
+
         }
 
-
-        $banner = Banner::create($data);
-        cache()->forget('banners');
-        return redirect()->back()->with('success', 'Success');
     }
 
     public function datatables(Request $request)
