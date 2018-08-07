@@ -108,13 +108,18 @@ class ParticipantController extends AdminController
             })
             ->editColumn('paper', function ($post) {
                 if ($post->paper) {
-                    return '<a class="btn btn-primary green start" href="' . $post->paper . '"
-                               download="' . $post->paper . '"
+                    $string = '';
+                    $files = json_decode($post->paper,true);
+                    foreach ($files as $file) {
+                        $string.='<a class="btn btn-primary green start" href="' . $file . '"
+                               download="' .$file. '"
                                style="float: left;margin-right: 10px;margin-top: 10px">
                                 <i class="fa fa-download"></i>
                                 <span>Download File</span>
                                 <div class="clearfix"></div>
                             </a>';
+                    }
+
                 }
                 return '';
             })

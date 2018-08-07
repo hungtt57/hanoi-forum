@@ -6,7 +6,10 @@
 </style>
 <p>Dear {{ucfirst($user->title)}} {{ucfirst ($user->last_name)}},</p>
 <p>This email is to confirm that we have received your manuscript titled {{$user->title_of_full_paper}}. A copy of your submission is as follows:</p>
-<p><a href="{{url($user->paper)}}">{{url($user->paper)}}</a></p>
+@php $files = json_decode($user->paper,true); @endphp
+@foreach($files as $file)
+    <p><a href="{{url($file)}}">{{url($file)}}</a></p>
+@endforeach
 
 <p> We look forward to welcoming you this November.</p>
 <p> Regards,</p>

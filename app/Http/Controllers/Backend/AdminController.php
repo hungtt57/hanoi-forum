@@ -9,10 +9,12 @@ use App\Http\Controllers\Controller;
 use Intervention\Image\Facades\Image;
 use Hash;
 use Response;
+
 class AdminController extends Controller
 {
-    public function sendEmailAll(Request $request) {
-        $users = User::where('type',User::PARTNER)->where('send_email_abstract',0)->where('abstract','!=',null)->get();
+    public function sendEmailAll(Request $request)
+    {
+        $users = User::where('type', User::PARTNER)->where('send_email_abstract', 0)->where('abstract', '!=', null)->get();
         foreach ($users as $user) {
             \DB::beginTransaction();
             try {
@@ -32,39 +34,49 @@ class AdminController extends Controller
 
         }
     }
-    public function downloadAll(Request $request) {
+
+    public function downloadAll(Request $request)
+    {
         try {
             $zip = new \ZipArchive();
-            $public_dir= public_path();
+            $public_dir = public_path('zip');
             $zipFileName = "abstracts.zip"; // Zip name
 
             if ($zip->open($public_dir . '/' . $zipFileName, \ZipArchive::CREATE) === TRUE) {
 
-                $users = User::where('type',User::PARTNER)->get();
+                $users = User::where('type', User::PARTNER)->get();
                 foreach ($users as $user) {
-                    if($user->abstract and str_contains($user->abstract,'/files/attachments/')) {
-                        $zip->addFile(public_path($user->abstract),str_replace('/files/attachments/','',$user->abstract));
-//                    $zip->addFromString('test.doc', file_get_contents(public_path($user->abstract)));
+                    if($user->abstract) {
+                        $files = json_decode($user->abstract, true);
+                        if(count($files)) {
+                            foreach ($files as $file) {
+                                $zip->addFile(public_path($file), str_replace('/files/attachments/', '', $file) );
+                            }
+                        }
+
                     }
+
+
                 }
                 $zip->close();
                 $headers = array(
                     'Content-Type' => 'application/octet-stream',
                 );
-                $filetopath= $public_dir.'/'.$zipFileName;
-                return response()->download($filetopath,$zipFileName,$headers);
+                $filetopath = $public_dir . '/' . $zipFileName;
+                return response()->download($filetopath, $zipFileName, $headers);
 
             }
-        }catch (\Exception $ex) {
-            dd($ex->getMessage());
+        } catch (\Exception $ex) {
+            dd($ex->getMessage().'|'.$ex->getLine());
         }
 
 
     }
+
     public function saveFile($file, $old = null, $name = null)
     {
         $clientName = $file->getClientOriginalName();
-        if($name) {
+        if ($name) {
             $clientName = $name;
         }
         $filename = $clientName . '.' . $file->getClientOriginalExtension();
@@ -109,7 +121,7 @@ class AdminController extends Controller
             return view('admin.admin.index');
         }
         if (auth('backend')->user()->type == User::PARTNER) {
-            return redirect('admin/dashboard')->with('welcome','true');
+            return redirect('admin/dashboard')->with('welcome', 'true');
 //            return redirect('admin/paert');
 //            return view('admin.partner.index');
         }
@@ -154,7 +166,6 @@ class AdminController extends Controller
         $posts = User::select('*')->where('type', User::ADMIN);
 
         return \Datatables::eloquent($posts)
-
             ->addColumn('action', function ($post) {
                 $urlEdit = route('Backend::admin@edit', ['id' => $post->id]);
 
@@ -163,8 +174,7 @@ class AdminController extends Controller
                 $string = '';
 
 
-
-                    $string .= '<a  href="' . $urlEdit . '" class="btn btn-info">Edit</a>';
+                $string .= '<a  href="' . $urlEdit . '" class="btn btn-info">Edit</a>';
                 if (auth('backend')->user()->id != $post->id) {
                     $string .= '<a href="' . $urlDelete . '" class="btn btn-danger delete-btn">Delete</a>';
                 }
@@ -175,7 +185,7 @@ class AdminController extends Controller
             })->make(true);
     }
 
-    public function delete(Request $request,$id)
+    public function delete(Request $request, $id)
     {
         $post = User::where('id', $id)->where('type', User::ADMIN)->first();
         if (empty($post)) {

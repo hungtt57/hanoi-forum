@@ -12,6 +12,9 @@
         .col-lg-6 {
             padding-left: 0px;
         }
+        .post-image {
+            margin-bottom: 5px;
+        }
     </style>
 @endsection
 @section('content')
@@ -37,16 +40,23 @@
                                value="{{old('title_of_full_paper',$user->title_of_full_paper)}}">
                     </div>
                 </div>
-                <div class="form-group">
-                    <label class="control-label col-md-3 " for="Name">Full-text Paper*</label>
-                    <div class="col-md-6">
-                        <div class="col-md-6">
 
-                            <input type="file" class="post-image form-control" name="paper"
-                                   rel="post_status_images">
+            <div class="form-group">
+                <label class="control-label col-md-3 " for="Name">Full-text Paper**</label>
+                <div class="col-md-6">
+                    <div class="col-md-6" id="list-file-abstract">
+                        <div class="item-file row">
+                            <div class="col-md-10">  <input type="file" class="post-image form-control" name="paper[]"></div>
+                            <div class="col-md-2">    <button class="btn btn-danger remove-file" type="button" ><i class="fa fa-close"></i></button></div>
+
                         </div>
+
+                    </div>
+                    <div class="col-md-1">
+                        <button class="btn btn-primary" type="button" id="add-more-file"><i class="fa fa-plus"></i></button>
                     </div>
                 </div>
+            </div>
                   {{--<div class="form-group">--}}
                       {{--<label class="control-label col-md-3 " for="Name">Submission to panel session*</label>--}}
                       {{--<div class="col-md-6">--}}
@@ -83,14 +93,15 @@
 @push('scripts')
     <script src="/assets/js/fileinput.min.js"></script>
 
-    <script type="application/javascript">
-      $(function () {
-        $(".post-image").fileinput({
-          'showUpload': false, 'previewFileType': 'any',
-          'showCaption': false,
-          // 'maxFileSize': '5120',
-          'showUploadedThumbs': false,
-          'allowedFileTypes': 'any'
+    <script >
+      $(document).ready(function () {
+        $(document).on('click','.remove-file',function (e) {
+          e.preventDefault();
+          $(this).parent().parent().remove();
+        });
+        $('#add-more-file').click(function (e) {
+          e.preventDefault();
+          $('#list-file-abstract').append(  '<div class="item-file row"> <div class="col-md-10">  <input type="file" class="post-image form-control" name="paper[]"></div> <div class="col-md-2">    <button class="btn btn-danger remove-file" type="button" ><i class="fa fa-close"></i></button></div> </div>');
         });
       });
     </script>

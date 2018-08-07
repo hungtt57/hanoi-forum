@@ -39,13 +39,14 @@
             <div class="form-group">
                 <label class="control-label col-md-3 " for="Name">Abstract</label>
                 <div class="col-md-6">
-                    <a class="btn btn-primary green start" href="{{$user->abstract}}"
-                       download=""
-                       style="float: left;margin-right: 10px;margin-top: 10px">
-                        <i class="fa fa-download"></i>
-                        <span>Download File</span>
-                        <div class="clearfix"></div>
-                    </a>
+                    @php $files = json_decode($user->abstract,true); @endphp
+                    @foreach($files as $file)
+                        <a class="btn btn-primary green start" href="{{$user->$file}}"
+                           download="" style="float: left;margin-right: 10px;margin-top: 10px"><i class="fa fa-download"></i><span>Download File</span>
+                            <div class="clearfix"></div>
+                        </a>
+                    @endforeach
+
                 </div>
             </div>
 

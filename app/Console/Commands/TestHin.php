@@ -38,22 +38,30 @@ class TestHin extends Command
      */
     public function handle()
     {
-            $accounts = User::all();
-            foreach ($accounts as $account) {
-                    if($account->abstract and str_contains($account->abstract,'/files/attachments/')) {
-
-                      $ext = File::extension(public_path($account->abstract));
-                      $filename = $account->abstract_panel.'_'.str_slug($account->first_name).str_slug($account->last_name).'_'.str_slug($account->title_of_paper).'.'.$ext;
-                        $success = \File::move(public_path($account->abstract),public_path( '/files/attachments/'.$filename) );
-
-//                        if ($account->abstract) {
-//                            @unlink(public_path($account->abstract));
-//                        }
-                        $account->abstract =  '/files/attachments/'.$filename;
-                        $account->save();
-                    }
+//            $accounts = User::all();
+//            foreach ($accounts as $account) {
+//                    if($account->abstract and str_contains($account->abstract,'/files/attachments/')) {
+//
+//                      $ext = File::extension(public_path($account->abstract));
+//                      $filename = $account->abstract_panel.'_'.str_slug($account->first_name).str_slug($account->last_name).'_'.str_slug($account->title_of_paper).'.'.$ext;
+//                        $success = \File::move(public_path($account->abstract),public_path( '/files/attachments/'.$filename) );
+//                        $account->abstract =  '/files/attachments/'.$filename;
+//                        $account->save();
+//                    }
+//
+//            }
+        $accounts = User::where('type',User::PARTNER)->get();
+        foreach ($accounts as $account) {
+            $this->line($account->id);
+            if($account->abstract) {
+                $account->abstract = json_encode([$account->abstract]);
 
             }
+            if($account->paper) {
+                $account->paper = json_encode([$account->paper]);
 
+            }
+            $account->save();
+        }
     }
 }

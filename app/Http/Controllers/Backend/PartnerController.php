@@ -43,14 +43,15 @@ class PartnerController extends AdminController
             ]);
             \DB::beginTransaction();
             try {
-
-//                $user->abstract = $request->input('abstract');
                     $abstract_panel=  $request->input('abstract_panel');
                     $title_of_paper=  $request->input('title_of_paper');
-                if ($request->file('abstract')) {
-                    $filename = $abstract_panel.'_'.str_slug($user->first_name).str_slug($user->last_name).'_'.str_slug($title_of_paper);
-                    $user->abstract  = $this->saveFile($request->file('abstract'),null,$filename);
-                }
+                    $files = $request->file('abstract',[]);
+                    $abstract = [];
+                    foreach ($files as $index => $file) {
+                        $filename = $abstract_panel.$index.'_'.str_slug($user->first_name).str_slug($user->last_name).'_'.str_slug($title_of_paper);
+                        $abstract[] = $this->saveFile($file,null,$filename);
+                    }
+                $user->abstract = json_encode($abstract);
 
                 $user->title_of_paper = $title_of_paper;
                 $user->reject_abstract = null;
@@ -67,7 +68,7 @@ class PartnerController extends AdminController
                 return redirect('/admin/submit/success');
             } catch (\Exception $ex) {
                 DB::rollback();
-                return redirect()->back()->with('success', 'Server error.Try again later')->withInput(Input::all());
+                return redirect()->back()->with('error', 'Server error.Try again later')->withInput(Input::all());
             }
 
         }
@@ -117,10 +118,13 @@ class PartnerController extends AdminController
 
                     $paper_panel=  $request->input('paper_panel');
                 $title_of_full_paper=  $request->input('title_of_full_paper');
-                if ($request->file('paper')) {
-                    $filename = $paper_panel.'_'.str_slug($user->first_name).str_slug($user->last_name).'_'.str_slug($title_of_full_paper);
-                    $user->paper  = $this->saveFile($request->file('paper'),null,$filename);
+                $abstract = [];
+                $files = $request->file('paper',[]);
+                foreach ($files as $index => $file) {
+                    $filename = $paper_panel.$index.'_'.str_slug($user->first_name).str_slug($user->last_name).'_'.str_slug($title_of_full_paper);
+                    $abstract[] = $this->saveFile($file,null,$filename);
                 }
+                $user->paper = json_encode($abstract);
 
                 $user->title_of_full_paper = $title_of_full_paper;
                 $user->reject_paper = null;
