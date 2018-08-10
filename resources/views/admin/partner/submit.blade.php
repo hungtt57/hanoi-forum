@@ -15,6 +15,9 @@
         .post-image {
             margin-bottom: 5px;
         }
+        .title_input {
+            margin-bottom: 5px;
+        }
     </style>
 @endsection
 @section('content')
@@ -34,20 +37,25 @@
                 {{--<div class="alert alert-danger">{{$user->reject_abstract}}</div>--}}
 
             {{--@endif--}}
-                <div class="form-group">
-                    <label class="control-label col-md-3">Title of the paper*</label>
-                    <div class="col-md-6">
-                        <input type="text" name="title_of_paper"
-                               class="form-control"
-                               value="{{old('title_of_paper',$user->title_of_paper)}}">
-                    </div>
-                </div>
+                {{--<div class="form-group">--}}
+                    {{--<label class="control-label col-md-3">Title of the paper*</label>--}}
+                    {{--<div class="col-md-6">--}}
+                        {{--<input type="text" name="title_of_paper"--}}
+                               {{--class="form-control"--}}
+                               {{--value="{{old('title_of_paper',$user->title_of_paper)}}">--}}
+                    {{--</div>--}}
+                {{--</div>--}}
                 <div class="form-group">
                     <label class="control-label col-md-3 " for="Name">Abstract*</label>
                     <div class="col-md-6">
                         <div class="col-md-6" id="list-file-abstract">
                             <div class="item-file row">
-                                <div class="col-md-10">  <input type="file" class="post-image form-control" name="abstract[]"></div>
+                                <div class="col-md-10">
+                                    <input type="text" name="title_abstract[]"
+                                           class="form-control title_input" placeholder="Enter title of abstract"
+                                          >
+                                    <input type="file" class="post-image form-control" name="abstract[]">
+                                </div>
                                 <div class="col-md-2">    <button class="btn btn-danger remove-file" type="button" ><i class="fa fa-close"></i></button></div>
 
                             </div>
@@ -105,7 +113,10 @@
         });
         $('#add-more-file').click(function (e) {
           e.preventDefault();
-            $('#list-file-abstract').append(  '<div class="item-file row"> <div class="col-md-10">  <input type="file" class="post-image form-control" name="abstract[]"></div> <div class="col-md-2">    <button class="btn btn-danger remove-file" type="button" ><i class="fa fa-close"></i></button></div> </div>');
+            $('#list-file-abstract').append(  '<div class="item-file row"> <div class="col-md-10">  <input type="text" name="title_abstract[]"' +
+              '                                           class="form-control title_input" placeholder="Enter title of abstract"' +
+              '                                          >' +
+              '                                    <input type="file" class="post-image form-control" name="abstract[]"> </div> <div class="col-md-2">    <button class="btn btn-danger remove-file" type="button" ><i class="fa fa-close"></i></button></div> </div>');
         });
       });
     </script>

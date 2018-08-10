@@ -137,7 +137,19 @@
                                     </div>
                                 </div>
                             </div>
-
+                            <div class="row">
+                                <div class="form-group">
+                                    <label class="control-label col-md-3">Time</label>
+                                    <div class="col-md-6">
+                                        <div class="input-group date">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" name="time" class="form-control pull-right" id="datepicker">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
 
@@ -162,6 +174,10 @@
       var table;
 
       $(function () {
+        $('#datepicker').datepicker({
+          format: 'dd/mm/yyyy',
+          autoclose: true
+        })
         $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
           checkboxClass: 'icheckbox_minimal-blue',
           radioClass: 'iradio_minimal-blue'

@@ -383,8 +383,13 @@ class ParticipantController extends AdminController
         if ($request->input('id')) {
             $user = $user->whereIn('id', $request->input('id'));
         }
+        if($request->input('time')) {
+            $time = Carbon::createFromFormat('d/m/Y',$request->input('time'));
+            $user = $user->where('created_at','<=',$time);
+        }
 
         $user = $user->where('type', User::PARTNER)->get()->toArray();
+
         if (count($user)) {
             foreach ($user as $key => $value) {
                 if (array_key_exists('gender', $value)) {
