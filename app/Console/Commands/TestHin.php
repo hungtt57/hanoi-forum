@@ -53,12 +53,14 @@ class TestHin extends Command
         $accounts = User::where('type',User::PARTNER)->get();
         foreach ($accounts as $account) {
             $this->line($account->id);
-            if($account->abstract) {
+            if($account->abstract && str_contains($account->abstract,'/files/attachments/')) {
                 $account->abstract = json_encode([$account->abstract]);
+                $account->title_abstract = json_encode([$account->title_of_paper]);
 
             }
-            if($account->paper) {
+            if($account->paper && str_contains($account->paper,'/files/attachments/')) {
                 $account->paper = json_encode([$account->paper]);
+                $account->title_paper = json_encode([$account->title_of_full_paper]);
 
             }
             $account->save();

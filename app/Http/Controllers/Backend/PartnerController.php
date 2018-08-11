@@ -35,24 +35,29 @@ class PartnerController extends AdminController
         if (!$user->confirm_abstract) {
             $this->validate($request, [
                 'abstract' => 'required',
-                'title_of_paper' => 'required',
-                'abstract_panel' => 'required'
+//                'title_of_paper' => 'required',
+//                'abstract_panel' => 'required'
             ], [
-                'title_of_paper.required' => 'Title of paper is required',
-                'abstract_panel.required' => 'Submission to panel session is required'
+//                'title_of_paper.required' => 'Title of paper is required',
+//                'abstract_panel.required' => 'Submission to panel session is required'
+            'abstract.required' => 'Abstract file is required'
             ]);
             \DB::beginTransaction();
             try {
-                    $abstract_panel=  $request->input('abstract_panel');
-                    $title_of_paper=  $request->input('title_of_paper');
-                    $files = $request->file('abstract',[]);
-                    $abstract = [];
-                    foreach ($files as $index => $file) {
-                        $filename = $abstract_panel.$index.'_'.str_slug($user->first_name).str_slug($user->last_name).'_'.str_slug($title_of_paper);
-                        $abstract[] = $this->saveFile($file,null,$filename);
-                    }
+                $abstract_panel = $request->input('abstract_panel');
+                $title_of_paper = $request->input('title_of_paper');
+                $files = $request->file('abstract', []);
+                $titleAbstract = $request->input('title_abstract', []);
+                $abstract = [];
+                $title_of_abstract = [];
+                foreach ($files as $index => $file) {
+                    $ta = (isset($titleAbstract[$index])) ? $titleAbstract[$index] : '';
+                    $filename = $abstract_panel . $index . '_' . str_slug($user->first_name) . str_slug($user->last_name) . '_' . str_slug($ta);
+                    $abstract[] = $this->saveFile($file, null, $filename);
+                    $title_of_abstract[] = $ta;
+                }
                 $user->abstract = json_encode($abstract);
-
+                $user->title_abstract = json_encode($title_of_abstract);
                 $user->title_of_paper = $title_of_paper;
                 $user->reject_abstract = null;
                 $user->abstract_panel = $abstract_panel;
@@ -101,64 +106,73 @@ class PartnerController extends AdminController
 //        }
 
     }
+
     public function postSubmitPaper(Request $request)
     {
         $user = auth('backend')->user();
 
-            $this->validate($request, [
-                'paper' => 'required',
-                'title_of_full_paper' => 'required',
+        $this->validate($request, [
+            'paper' => 'required',
+//            'title_of_full_paper' => 'required',
 //                'paper_panel' => 'required'
-            ], [
-                'title_of_full_paper.required' => 'Title of paper is required',
-//                'paper_panel.required' => 'Submission to panel session is required'
-            ]);
-            \DB::beginTransaction();
-            try {
+        ], [
+//            'title_of_full_paper.required' => 'Title of paper is required',
+                'paper.required' => 'Full-text paper is required'
+        ]);
+        \DB::beginTransaction();
+        try {
 
-                    $paper_panel=  $request->input('paper_panel');
-                $title_of_full_paper=  $request->input('title_of_full_paper');
-                $abstract = [];
-                $files = $request->file('paper',[]);
-                foreach ($files as $index => $file) {
-                    $filename = $paper_panel.$index.'_'.str_slug($user->first_name).str_slug($user->last_name).'_'.str_slug($title_of_full_paper);
-                    $abstract[] = $this->saveFile($file,null,$filename);
-                }
-                $user->paper = json_encode($abstract);
+            $paper_panel = $request->input('paper_panel');
+            $title_of_full_paper = $request->input('title_of_full_paper');
+            $abstract = [];
+            $files = $request->file('paper', []);
 
-                $user->title_of_full_paper = $title_of_full_paper;
-                $user->reject_paper = null;
-//                $user->paper_panel = $paper_panel;
-                $user->save();
-                Mail::to($user->email)->send(new SubmitPaper($user));
-                EmailLog::create([
-                    'to' => $user->email,
-                    'event' => 'submitPaper',
-                    'data' => $user->toArray()
-                ]);
-                DB::commit();
-
-                return redirect('/admin/submit/success-paper');
-            } catch (\Exception $ex) {
-                DB::rollback();
-
-                return redirect()->back()->with('error', 'Server error.Try again later')->withInput(Input::all());
+            $titlePaper = $request->input('title_paper', []);
+            $title_of_abstract = [];
+            foreach ($files as $index => $file) {
+                $ta = (isset($titleAbstract[$index])) ? $titlePaper[$index] : '';
+                $filename = $paper_panel . $index . '_' . str_slug($user->first_name) . str_slug($user->last_name) . '_' . str_slug($ta);
+                $abstract[] = $this->saveFile($file, null, $filename);
+                $title_of_abstract[] = $ta;
             }
+            $user->paper = json_encode($abstract);
+            $user->title_paper = json_encode($title_of_abstract);
+            $user->title_of_full_paper = $title_of_full_paper;
+            $user->reject_paper = null;
+//                $user->paper_panel = $paper_panel;
+            $user->save();
+            Mail::to($user->email)->send(new SubmitPaper($user));
+            EmailLog::create([
+                'to' => $user->email,
+                'event' => 'submitPaper',
+                'data' => $user->toArray()
+            ]);
+            DB::commit();
+
+            return redirect('/admin/submit/success-paper');
+        } catch (\Exception $ex) {
+            DB::rollback();
+
+            return redirect()->back()->with('error', 'Server error.Try again later')->withInput(Input::all());
+        }
 
 
 //
 
     }
 
-    public function submitPaper(Request $request) {
+    public function submitPaper(Request $request)
+    {
         $user = auth('backend')->user();
         return view('admin.partner.submitPaper', compact('user'));
     }
+
     public function submitSuccess(Request $request)
     {
         $user = auth('backend')->user();
         return view('admin.partner.submitSuccess', compact('user'));
     }
+
     public function submitSuccessPaper(Request $request)
     {
         $user = auth('backend')->user();
@@ -200,19 +214,19 @@ class PartnerController extends AdminController
             if (count($data['know'])) {
                 foreach ($data['know'] as $key => $value) {
 
-                    if(isset($value['id'])) {
+                    if (isset($value['id'])) {
                         $d[$value['id']] = [
                             'id' => $value['id'],
                             'content' => (isset($value['content'])) ? $value['content'] : ''
                         ];
                         $check = false;
-                    }else {
+                    } else {
                         continue;
                     }
                 }
 
             }
-            if($check == true) {
+            if ($check == true) {
                 return redirect()->back()->with('error', 'Please answer all the required fields ')->withInput(Input::all());
             }
             $data['know'] = $d;
@@ -221,19 +235,19 @@ class PartnerController extends AdminController
             if (count($data['indicate'])) {
                 foreach ($data['indicate'] as $key => $value) {
 
-                    if(isset($value['id'])) {
+                    if (isset($value['id'])) {
                         $indicate[$value['id']] = [
                             'id' => $value['id'],
                             'content' => (isset($value['content'])) ? $value['content'] : ''
                         ];
                         $check = false;
-                    }else {
+                    } else {
                         continue;
                     }
                 }
 
             }
-            if($check == true) {
+            if ($check == true) {
                 return redirect()->back()->with('error', 'Please answer all the required fields ')->withInput(Input::all());
             }
             $data['indicate'] = $indicate;
@@ -242,12 +256,11 @@ class PartnerController extends AdminController
             $userId = auth('backend')->user()->id;
             $user = User::find($userId);
             if ($request->file('file')) {
-                $data['file'] = $this->saveFile($request->file('file'),$user->file);
+                $data['file'] = $this->saveFile($request->file('file'), $user->file);
             }
-            if($request->file('image')) {
-                $data['image'] = $this->saveImage($request->file('image'),$user->image);
+            if ($request->file('image')) {
+                $data['image'] = $this->saveImage($request->file('image'), $user->image);
             }
-
 
 
             if (isset($data['password']) and $data['password']) {
@@ -265,28 +278,31 @@ class PartnerController extends AdminController
         }
 
     }
-    public function listDelegates(Request $request) {
-        if(auth('backend')->user()->verify == 0) {
+
+    public function listDelegates(Request $request)
+    {
+        if (auth('backend')->user()->verify == 0) {
             abort(403);
         }
         return view('admin.partner.listDelegates');
     }
+
     public function listDelegatesData(Request $request)
     {
-        $contacts = User::select('*')->where('type', User::PARTNER)->where('share_info',1);
+        $contacts = User::select('*')->where('type', User::PARTNER)->where('share_info', 1);
         return \Datatables::eloquent($contacts)
-            ->editColumn('link_cv',function ($post) {
-                $string= '';
-                if($post->link_cv) {
-                    $string .= '<a target="_blank" href="'.$post->link_cv.'">'.$post->link_cv.'</a>';
+            ->editColumn('link_cv', function ($post) {
+                $string = '';
+                if ($post->link_cv) {
+                    $string .= '<a target="_blank" href="' . $post->link_cv . '">' . $post->link_cv . '</a>';
                 }
 
                 return $string;
             })
-            ->editColumn('cv',function ($post) {
-                if($post->file) {
-                    return   '<a class="btn btn-primary green start" href="'.$post->file.'"
-                               download="'.$post->file.'"
+            ->editColumn('cv', function ($post) {
+                if ($post->file) {
+                    return '<a class="btn btn-primary green start" href="' . $post->file . '"
+                               download="' . $post->file . '"
                                style="float: left;margin-right: 10px;margin-top: 10px">
                                 <i class="fa fa-download"></i>
                                 <span>Download File</span>
@@ -295,6 +311,6 @@ class PartnerController extends AdminController
                 }
                 return '';
             })
-          ->make(true);
+            ->make(true);
     }
 }

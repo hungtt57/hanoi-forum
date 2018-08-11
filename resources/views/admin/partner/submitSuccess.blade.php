@@ -27,20 +27,24 @@
         <div class="form-body">
             {{ csrf_field() }}
 
-                <div class="form-group">
-                    <label class="control-label col-md-3">Title of the paper</label>
-                    <div class="col-md-6">
+                {{--<div class="form-group">--}}
+                    {{--<label class="control-label col-md-3">Title of the paper</label>--}}
+                    {{--<div class="col-md-6">--}}
 
-                        <input type="text" name="paper"
-                               class="form-control"
-                               value="{{old('paper',$user->title_of_paper)}}" disabled>
-                    </div>
-                </div>
+                        {{--<input type="text" name="paper"--}}
+                               {{--class="form-control"--}}
+                               {{--value="{{old('paper',$user->title_of_paper)}}" disabled>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
             <div class="form-group">
                 <label class="control-label col-md-3 " for="Name">Abstract</label>
                 <div class="col-md-6">
                     @php $files = json_decode($user->abstract,true); @endphp
-                    @foreach($files as $file)
+                    @php $titleAbstract = json_decode($user->title_abstract,true); @endphp
+                    @foreach($files as $index => $file)
+                        <input type="text"
+                               class="form-control"
+                               value="{{(isset($titleAbstract[$index])) ? $titleAbstract[$index] : ''}}" disabled>
                         <a class="btn btn-primary green start" href="{{$user->$file}}"
                            download="" style="float: left;margin-right: 10px;margin-top: 10px"><i class="fa fa-download"></i><span>Download File</span>
                             <div class="clearfix"></div>

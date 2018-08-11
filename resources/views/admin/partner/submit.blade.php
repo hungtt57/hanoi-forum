@@ -25,7 +25,7 @@
 
     @include('admin.flash_message')
 
-    <form lang="us" action="{{route('Backend::postSubmit')}}" class="form-horizontal"
+    <form lang="us" id="form" action="{{route('Backend::postSubmit')}}" class="form-horizontal"
           method="POST" enctype="multipart/form-data">
 
         <div class="form-body">
@@ -108,7 +108,6 @@
       $(document).ready(function () {
         $(document).on('click','.remove-file',function (e) {
           e.preventDefault();
-          console.log(  $(this).parent().parent());
           $(this).parent().parent().remove();
         });
         $('#add-more-file').click(function (e) {
@@ -118,6 +117,20 @@
               '                                          >' +
               '                                    <input type="file" class="post-image form-control" name="abstract[]"> </div> <div class="col-md-2">    <button class="btn btn-danger remove-file" type="button" ><i class="fa fa-close"></i></button></div> </div>');
         });
+        $(document).on('submit','#form',function(e){
+
+          $('.post-image').each(function () {
+            if($(this).val()) {
+              if(!$(this).parent().find('.title_input').val()) {
+                e.preventDefault()
+                swal("Please enter title of abstract", '', 'error');
+              }
+            }
+          });
+
+        });
+
+
       });
     </script>
 

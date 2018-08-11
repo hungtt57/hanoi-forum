@@ -15,6 +15,9 @@
         .post-image {
             margin-bottom: 5px;
         }
+        .title_input {
+            margin-bottom: 5px;
+        }
     </style>
 @endsection
 @section('content')
@@ -22,7 +25,7 @@
 
     @include('admin.flash_message')
 
-    <form action="{{route('Backend::postSubmitPaper')}}" class="form-horizontal"
+    <form action="{{route('Backend::postSubmitPaper')}}"  id="form" class="form-horizontal"
           method="POST" enctype="multipart/form-data">
 
         <div class="form-body">
@@ -32,21 +35,23 @@
             </h4>
 
 
-                <div class="form-group">
-                    <label class="control-label col-md-3">Title of the paper*</label>
-                    <div class="col-md-6">
-                        <input type="text" name="title_of_full_paper"
-                               class="form-control"
-                               value="{{old('title_of_full_paper',$user->title_of_full_paper)}}">
-                    </div>
-                </div>
+                {{--<div class="form-group">--}}
+                    {{--<label class="control-label col-md-3">Title of the paper*</label>--}}
+                    {{--<div class="col-md-6">--}}
+                        {{--<input type="text" name="title_of_full_paper"--}}
+                               {{--class="form-control"--}}
+                               {{--value="{{old('title_of_full_paper',$user->title_of_full_paper)}}">--}}
+                    {{--</div>--}}
+                {{--</div>--}}
 
             <div class="form-group">
                 <label class="control-label col-md-3 " for="Name">Full-text Paper**</label>
                 <div class="col-md-6">
                     <div class="col-md-6" id="list-file-abstract">
                         <div class="item-file row">
-                            <div class="col-md-10">  <input type="file" class="post-image form-control" name="paper[]"></div>
+                            <div class="col-md-10"> <input type="text" name="title_paper[]"
+                                                           class="form-control title_input" placeholder="Enter title of paper"
+                                >  <input type="file" class="post-image form-control" name="paper[]"></div>
                             <div class="col-md-2">    <button class="btn btn-danger remove-file" type="button" ><i class="fa fa-close"></i></button></div>
 
                         </div>
@@ -101,8 +106,23 @@
         });
         $('#add-more-file').click(function (e) {
           e.preventDefault();
-          $('#list-file-abstract').append(  '<div class="item-file row"> <div class="col-md-10">  <input type="file" class="post-image form-control" name="paper[]"></div> <div class="col-md-2">    <button class="btn btn-danger remove-file" type="button" ><i class="fa fa-close"></i></button></div> </div>');
+          $('#list-file-abstract').append(  '<div class="item-file row"> <div class="col-md-10">  <input type="text" name="title_paper[]"' +
+            '                                                           class="form-control title_input" placeholder="Enter title of paper"' +
+            '                                >   <input type="file" class="post-image form-control" name="paper[]"></div> <div class="col-md-2">    <button class="btn btn-danger remove-file" type="button" ><i class="fa fa-close"></i></button></div> </div>');
         });
+        $(document).on('submit','#form',function(e){
+
+          $('.post-image').each(function () {
+            if($(this).val()) {
+              if(!$(this).parent().find('.title_input').val()) {
+                e.preventDefault()
+                swal("Please enter title of paper", '', 'error');
+              }
+            }
+          });
+
+        });
+
       });
     </script>
 

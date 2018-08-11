@@ -40,7 +40,11 @@
                 <label class="control-label col-md-3 " for="Name">Full-text paper</label>
                 <div class="col-md-6">
                     @php $files = json_decode($user->paper,true); @endphp
-                    @foreach($files as $file)
+                    @php $titlePaper = json_decode($user->title_paper,true); @endphp
+                    @foreach($files as $index => $file)
+                        <input type="text"
+                               class="form-control"
+                               value="{{(isset($titlePaper[$index])) ? $titlePaper[$index] : ''}}" disabled>
                         <a class="btn btn-primary green start" href="{{$user->$file}}"
                            download="" style="float: left;margin-right: 10px;margin-top: 10px"><i class="fa fa-download"></i><span>Download File</span>
                             <div class="clearfix"></div>
