@@ -49,6 +49,13 @@
                     text-align: center;
                     font-weight: bold;
                 }
+                .name-human {
+                    color : #32813E;
+                    font-size: 18px;
+                }
+                .nghieng {
+                    font-style: italic;
+                }
             </style>
             <section class="bio__holder">
                 <div class="row">
@@ -60,7 +67,7 @@
                                 <div class="image-human">
                                     <img class="" src="/frontend/keynote/helen.jpg" alt="">
                                 </div>
-                                <p><strong>HELEN CLARK</strong></p>
+                                <p class="name-human"><strong>HELEN CLARK</strong></p>
                                 <p>Former Administrator of UNDP</p>
                                 <p>Former Prime Minister of New Zealand</p>
                                 <p>Helen Clark was Prime Minister of New Zealand for three successive terms from 1999–2008.  She was the first woman to be elected as Prime Minister in New Zealand.
@@ -80,7 +87,7 @@
                                 <div class="image-human">
                                     <img class="" src="/frontend/keynote/groff.jpg" alt="">
                                 </div>
-                                <p><strong>STEPHEN P. GROFF</strong></p>
+                                <p class="name-human"><strong>STEPHEN P. GROFF</strong></p>
                                 <p>Stephen P. Groff is Vice-President (Operations 2) of the Asian Development Bank (ADB). He assumed office in October 2011.</p>
                                 <p>Mr. Groff is responsible for the full range of ADB's operations in East Asia, Southeast Asia, and the Pacific. His mandate includes establishing strategic and operational priorities in his areas of responsibility, producing investment and technical assistance operations amounting to approximately $5 billion annually, managing an existing portfolio of about $31 billion, and leading about 650 staff.
                                 </p>
@@ -93,6 +100,7 @@
                                 </p>
                                 <p>Mr. Groff holds a Master's degree in Public Administration from Harvard University and a Bachelor of Science degree in Environmental Biology from Yale University.
                                 </p>
+                                <p class="nghieng">Source: Asian Development Bank</p>
                                 <div class="clearfix"></div>
                             </div>
 
