@@ -17,9 +17,11 @@ class SendContactEmail extends Mailable
      * @return void
      */
     protected $contact;
-    public function __construct($contact)
+    protected $type;
+    public function __construct($contact,$type = null)
     {
         $this->contact = $contact;
+        $this->type = $type;
     }
 
     /**
@@ -31,6 +33,6 @@ class SendContactEmail extends Mailable
     {
         return $this->from(['address' => 'no-reply@hanoiforum.vnu.edu.vn', 'name' => 'Hanoi forum 2018'])
             ->subject('Contact us')
-            ->view('email.contactUs')->with(['contact' => $this->contact]);
+            ->view('email.contactUs')->with(['contact' => $this->contact,'type' => $this->type]);
     }
 }
