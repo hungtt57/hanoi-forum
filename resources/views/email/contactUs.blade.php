@@ -5,7 +5,6 @@
     }
 </style>
 @if($type == 1)
-    <p>Dear Ms Diep,</p>
     <p>{{ucfirst($contact->title)}}. {{ucfirst ($contact->sur_name)}}</p>
     <p>{{$contact->question}}</p>
 
