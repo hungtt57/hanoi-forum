@@ -139,13 +139,24 @@
                             </div>
                             <div class="row">
                                 <div class="form-group">
-                                    <label class="control-label col-md-3">Time</label>
+                                    <label class="control-label col-md-3">Start time</label>
                                     <div class="col-md-6">
                                         <div class="input-group date">
                                             <div class="input-group-addon">
                                                 <i class="fa fa-calendar"></i>
                                             </div>
-                                            <input type="text" name="time" class="form-control pull-right" id="datepicker">
+                                            <input type="text" name="start_time" class="form-control pull-right" id="datepicker">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3">End time</label>
+                                    <div class="col-md-6">
+                                        <div class="input-group date">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" name="end_time" class="form-control pull-right" id="datepicker2">
                                         </div>
                                     </div>
                                 </div>
@@ -175,6 +186,10 @@
 
       $(function () {
         $('#datepicker').datepicker({
+          format: 'dd/mm/yyyy',
+          autoclose: true
+        })
+        $('#datepicker2').datepicker({
           format: 'dd/mm/yyyy',
           autoclose: true
         })

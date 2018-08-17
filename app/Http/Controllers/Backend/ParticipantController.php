@@ -383,8 +383,12 @@ class ParticipantController extends AdminController
         if ($request->input('id')) {
             $user = $user->whereIn('id', $request->input('id'));
         }
-        if($request->input('time')) {
-            $time = Carbon::createFromFormat('d/m/Y',$request->input('time'));
+        if($request->input('start_time')) {
+            $time = Carbon::createFromFormat('d/m/Y',$request->input('start_time'));
+            $user = $user->where('created_at','>=',$time);
+        }
+        if($request->input('end_time')) {
+            $time = Carbon::createFromFormat('d/m/Y',$request->input('end_time'));
             $user = $user->where('created_at','<=',$time);
         }
 
