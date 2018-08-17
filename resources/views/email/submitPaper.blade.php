@@ -8,7 +8,7 @@
 <p>This email is to confirm that we have received your manuscript titled {{$user->title_of_full_paper}}. A copy of your submission is as follows:</p>
 @php $files = json_decode($user->paper,true); @endphp
 @php $title_paper = json_decode($user->title_paper,true); @endphp
-@foreach($files as $file)
+@foreach($files as $index => $file)
     <p>{{$title_paper[$index]}}</p>
     <p><a href="{{url($file)}}">{{url($file)}}</a></p>
 @endforeach
