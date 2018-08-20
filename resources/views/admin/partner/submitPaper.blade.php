@@ -124,7 +124,7 @@
 
           $('.post-image').each(function () {
             if($(this).val()) {
-              if(!$(this).parent().find('.title_input').val()) {
+              if(!$(this).parents('.item-file').find('.title_input').val()) {
                 e.preventDefault()
                 swal("Please enter title of paper", '', 'error');
               }
