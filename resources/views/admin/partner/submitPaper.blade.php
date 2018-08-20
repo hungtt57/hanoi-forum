@@ -113,7 +113,7 @@
         });
         $('#add-more-file').click(function (e) {
           e.preventDefault();
-          var id = $('#item-file').length() + '123';
+          var id = $('#item-file').length + '123';
           $('#list-file-abstract').append(  '<div class="item-file row"> <div class="col-md-10">  <input type="text" name="title_paper[]"' +
             '                                                           class="form-control title_input" placeholder="Enter title of paper"' +
             '                                > '+

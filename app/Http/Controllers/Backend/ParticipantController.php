@@ -57,9 +57,9 @@ class ParticipantController extends AdminController
 
                 return view('admin.participant.reviewer', compact('user', 'reviewers'))->render();
             })->addColumn('paper_panel', function ($user) {
-                if($user->paper)  {
-                    return view('admin.participant.paper_panel', compact('user'))->render();
-                }
+//                if($user->paper)  {
+//                    return view('admin.participant.paper_panel', compact('user'))->render();
+//                }
                return '';
             })
 
