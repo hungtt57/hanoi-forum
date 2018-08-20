@@ -56,12 +56,19 @@ class TestHin extends Command
             if($account->abstract && str_contains($account->abstract,'/files/attachments/')) {
                 $account->abstract = json_encode([$account->abstract]);
                 $account->title_abstract = json_encode([$account->title_of_paper]);
-
+                $account->panel_of_abstract = json_encode([$account->panel_abstract]);
+            } else {
+                $account->abstract = json_encode([]);
+                $account->title_abstract = json_encode([]);
+                $account->panel_of_abstract = json_encode([]);
             }
             if($account->paper && str_contains($account->paper,'/files/attachments/')) {
                 $account->paper = json_encode([$account->paper]);
                 $account->title_paper = json_encode([$account->title_of_full_paper]);
 
+            }else {
+                $account->paper = json_encode([]);
+                $account->title_paper = json_encode([]);
             }
             $account->save();
         }

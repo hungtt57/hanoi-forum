@@ -48,6 +48,7 @@
 
                     <div class="col-md-8 col-sm-5 col-md-offset-2 col-xs-12">
                         @include('admin.flash_message')
+                        @if(\Carbon\Carbon::now() < Carbon\Carbon::createFromDate(2018,11,2))
                         @if(!session()->has('hideform'))
                             <form id="login-form" action="{{route('Frontend::postRegister')}}" method="post" role="form"
                                   enctype="multipart/form-data">
@@ -346,6 +347,11 @@
 
                             </form>
                         @endif
+
+                            @else
+                            <p>Registration for Hanoi Forum 2018 has been closed. Please contact us at hanoiforum@vnu.edu.vn should you have any question or request assistance.</p>
+                        @endif
+
                     </div>
 
                 </div>

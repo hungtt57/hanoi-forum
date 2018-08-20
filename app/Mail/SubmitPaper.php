@@ -25,6 +25,7 @@ class SubmitPaper extends Mailable
     {
         return $this->from(['address' => 'no-reply@hanoiforum.vnu.edu.vn', 'name' => 'Hanoi forum 2018'])
             ->subject('Confirmation of Paper Submission')
+            ->cc('hanoiforum@vnu.edu.vn')
             ->view('email.submitPaper')->with(['user' => $this->user]);
     }
 }

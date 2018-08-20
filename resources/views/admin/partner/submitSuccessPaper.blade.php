@@ -15,7 +15,7 @@
     </style>
 @endsection
 @section('content')
-    <h3>Submit Abstract/Paper</h3>
+    <h3>Submit full-text paper</h3>
 
     @include('admin.flash_message')
 

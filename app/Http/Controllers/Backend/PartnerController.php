@@ -45,20 +45,24 @@ class PartnerController extends AdminController
             \DB::beginTransaction();
             try {
                 $abstract_panel = $request->input('abstract_panel');
-                $title_of_paper = $request->input('title_of_paper');
+                $panelAbstract = $request->input('panel_of_abstract',[]);
                 $files = $request->file('abstract', []);
                 $titleAbstract = $request->input('title_abstract', []);
                 $abstract = [];
                 $title_of_abstract = [];
+                $panel_of_abstract = [];
                 foreach ($files as $index => $file) {
                     $ta = (isset($titleAbstract[$index])) ? $titleAbstract[$index] : '';
+                    $title_of_abstract[] = $ta;
+                    $panel_of_abstract[] = (isset($panelAbstract[$index])) ? $panelAbstract[$index] : '';
                     $filename = $abstract_panel . $index . '_' . str_slug($user->first_name) . str_slug($user->last_name) . '_' . str_slug($ta);
                     $abstract[] = $this->saveFile($file, null, $filename);
-                    $title_of_abstract[] = $ta;
+
                 }
                 $user->abstract = json_encode($abstract);
                 $user->title_abstract = json_encode($title_of_abstract);
-                $user->title_of_paper = $title_of_paper;
+                $user->panel_of_abstract = json_encode($panel_of_abstract);
+
                 $user->reject_abstract = null;
                 $user->abstract_panel = $abstract_panel;
                 $user->save();

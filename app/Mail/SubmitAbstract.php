@@ -31,6 +31,7 @@ class SubmitAbstract extends Mailable
     {
         return $this->from(['address' => 'no-reply@hanoiforum.vnu.edu.vn', 'name' => 'Hanoi forum 2018'])
             ->subject('Confirmation of Abstract Submission')
+            ->cc('hanoiforum@vnu.edu.vn')
             ->view('email.submitAbstract')->with(['user' => $this->user]);
     }
 }

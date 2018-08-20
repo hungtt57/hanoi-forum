@@ -6,14 +6,14 @@
     }
 </style>
 <p>Dear {{ucfirst($user->title)}} {{ucfirst ($user->last_name)}},</p>
-<p>This email is to confirm that we have received your abstract. A copy of your submission is as follows:</p>
+<p>This email is to confirm that we have received your abstract(s). A copy of your submission is as follows:</p>
 @php $files = json_decode($user->abstract,true); @endphp
 @php $title_abstract = json_decode($user->title_abstract,true); @endphp
 @foreach($files as $index => $file)
     <p>{{$title_abstract[$index]}}</p>
     <p><a href="{{url($file)}}">{{url($file)}}</a></p>
 @endforeach
-<p>Your abstract will be reviewed by the Academic Committee. Notification of the result will be announced by July 15,
+<p>Your abstract(s) will be reviewed by the Academic Committee. Notification of the result will be announced by July 15,
     2018.
 </p>
 <p> Thank you for your interest in Hanoi Forum 2018.</p>

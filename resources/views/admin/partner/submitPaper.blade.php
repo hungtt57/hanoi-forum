@@ -45,13 +45,20 @@
                 {{--</div>--}}
 
             <div class="form-group">
-                <label class="control-label col-md-3 " for="Name">Full-text Paper**</label>
+                <label class="control-label col-md-3 " for="Name">Full-text Paper*</label>
                 <div class="col-md-6">
                     <div class="col-md-6" id="list-file-abstract">
                         <div class="item-file row">
                             <div class="col-md-10"> <input type="text" name="title_paper[]"
-                                                           class="form-control title_input" placeholder="Enter title of paper"
-                                >  <input type="file" class="post-image form-control" name="paper[]"></div>
+                                                           class="form-control title_input" placeholder="Enter title of paper">
+
+
+                                <label for="first" class="btn btn-primary">
+                                    <input id="first" type="file" class="post-image form-control hide" name="paper[]">
+                                    Browser
+                                </label>
+
+                            </div>
                             <div class="col-md-2">    <button class="btn btn-danger remove-file" type="button" ><i class="fa fa-close"></i></button></div>
 
                         </div>
@@ -106,9 +113,12 @@
         });
         $('#add-more-file').click(function (e) {
           e.preventDefault();
+          var id = $('#item-file').length() + '123';
           $('#list-file-abstract').append(  '<div class="item-file row"> <div class="col-md-10">  <input type="text" name="title_paper[]"' +
             '                                                           class="form-control title_input" placeholder="Enter title of paper"' +
-            '                                >   <input type="file" class="post-image form-control" name="paper[]"></div> <div class="col-md-2">    <button class="btn btn-danger remove-file" type="button" ><i class="fa fa-close"></i></button></div> </div>');
+            '                                > '+
+          '<label for="'+id+'" class="btn btn-primary"><input id="'+id+'" type="file" class="post-image form-control hide" name="paper[]"> Browser </label>'
+            +'</div> <div class="col-md-2">    <button class="btn btn-danger remove-file" type="button" ><i class="fa fa-close"></i></button></div> </div>');
         });
         $(document).on('submit','#form',function(e){
 

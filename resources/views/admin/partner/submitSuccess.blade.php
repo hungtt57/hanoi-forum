@@ -12,10 +12,13 @@
         .col-lg-6 {
             padding-left: 0px;
         }
+        .input-abstract {
+            margin-bottom: 5px;
+        }
     </style>
 @endsection
 @section('content')
-    <h3>Submit Abstract/Paper</h3>
+    <h3>Submit Abstract</h3>
 
     @include('admin.flash_message')
 
@@ -41,32 +44,35 @@
                 <div class="col-md-6">
                     @php $files = json_decode($user->abstract,true); @endphp
                     @php $titleAbstract = json_decode($user->title_abstract,true); @endphp
+                    @php $panelAbstract = json_decode($user->panel_of_abstract,true); @endphp
                     @foreach($files as $index => $file)
-                        <input type="text"
-                               class="form-control"
+                        <input type="text" class="form-control input-abstract"
                                value="{{(isset($titleAbstract[$index])) ? $titleAbstract[$index] : ''}}" disabled>
-                        <a class="btn btn-primary green start" href="{{$user->$file}}"
+                        <a class="btn btn-primary green start input-abstract" href="{{$user->$file}}"
                            download="" style="float: left;margin-right: 10px;margin-top: 10px"><i class="fa fa-download"></i><span>Download File</span>
                             <div class="clearfix"></div>
                         </a>
+                        @if(isset($panelAbstract[$index]) and $panelAbstract[$index])
+                        <input type="text"  class="form-control input-abstract" disabled value="{{\App\Models\User::$panelText[$panelAbstract[$index]]}}">
+                        @endif
                     @endforeach
 
                 </div>
             </div>
 
-            <div class="form-group">
-                <label class="control-label col-md-3 " for="Name">Submission to panel session</label>
-                <div class="col-md-6">
-                    <div class="col-md-6">
+            {{--<div class="form-group">--}}
+                {{--<label class="control-label col-md-3 " for="Name">Submission to panel session</label>--}}
+                {{--<div class="col-md-6">--}}
+                    {{--<div class="col-md-6">--}}
 
-                        <select class="form-control" name="abstract_panel" disabled >
-                            @foreach(\App\Models\User::$panelText as $key => $value)
-                                <option value="{{$key}}" @if($key == old('abstract_panel',@$user->abstract_panel)) selected @endif>{{$value}}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                </div>
-            </div>
+                        {{--<select class="form-control" name="abstract_panel" disabled >--}}
+                            {{--@foreach(\App\Models\User::$panelText as $key => $value)--}}
+                                {{--<option value="{{$key}}" @if($key == old('abstract_panel',@$user->abstract_panel)) selected @endif>{{$value}}</option>--}}
+                            {{--@endforeach--}}
+                        {{--</select>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
 
         </div>
         <div class="form-actions">
