@@ -132,7 +132,7 @@
                             href="{{url('admin/partner/edit')}}"><i class="fa   fa-user-circle"></i>
                         <span>Manage your profile</span></a></li>
                 @if(auth('backend')->user()->apply)
-                    @if(auth('backend')->user()->created_at < Carbon\Carbon::createFromDate(2018,8,1))
+                    @if(auth('backend')->user()->created_at < Carbon\Carbon::createFromDate(2018,8,31))
                     <li class="{{ (Request::is('admin/submit')) ? 'active' : '' }}"><a
                                 href="{{url('admin/submit')}}"><i class="fa   fa-cloud-upload"></i>
                             <span>Submit your abstract</span></a></li>
