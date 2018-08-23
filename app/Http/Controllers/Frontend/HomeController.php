@@ -338,5 +338,12 @@ class HomeController extends AdminController
     public function policy2() {
         return view('frontend.policy2');
     }
+
+    public function publicationBook() {
+        return view('frontend.publication.books');
+    }
+    public function publicationJournalArticle () {
+        return view('frontend.publication.journalArticle');
+    }
 }
 

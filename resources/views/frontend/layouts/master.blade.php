@@ -179,7 +179,7 @@
 
                 <section class="widget widget_sec">
                     <div class="widget-main">
-                        <h2 class="widget-title"><a href="{{url('/')}}"> Contact Us </a></h2>
+                        <h2 class="widget-title"><a href="{{url('/contact-us')}}"> Contact Us </a></h2>
 
                     </div>
                 </section>

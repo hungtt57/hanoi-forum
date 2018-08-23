@@ -116,8 +116,21 @@
                     <a href="{{url('/news')}}" title="News">News</a>
                 </li>
 
-                <li>
-                    <a href="{{url('/contact-us')}}" title="Contact Us">Contact Us</a>
+                <li class="dropdown">
+
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" title="Publications" data-hover="dropdown"
+                       data-animations="zoomIn">Publications<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="{{url('publications/books')}}" title="Books">Books</a>
+                        </li>
+                        <li>
+                            <a href="{{url('publications/journal-articles')}}" title="Journal Articles">Journal Articles
+                            </a>
+                        </li>
+
+
+                    </ul>
                 </li>
 
 

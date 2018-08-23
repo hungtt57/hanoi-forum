@@ -13,9 +13,9 @@
     <p>{{$title_abstract[$index]}}</p>
     <p><a href="{{url($file)}}">{{url($file)}}</a></p>
 @endforeach
-<p>Your abstract(s) will be reviewed by the Academic Committee. Notification of the result will be announced by July 15,
-    2018.
-</p>
+{{--<p>Your abstract(s) will be reviewed by the Academic Committee. Notification of the result will be announced by July 15,--}}
+    {{--2018.--}}
+{{--</p>--}}
 <p> Thank you for your interest in Hanoi Forum 2018.</p>
 <p> Regards,</p>
 
