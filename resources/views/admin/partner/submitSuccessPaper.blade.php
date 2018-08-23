@@ -20,7 +20,7 @@
     </style>
 @endsection
 @section('content')
-    <h3>Submit full-text paper</h3>
+    <h3>Submit papers</h3>
 
     @include('admin.flash_message')
 
@@ -32,29 +32,31 @@
         <div class="form-body">
             {{ csrf_field() }}
 
-                <div class="form-group">
-                    <label class="control-label col-md-3">Title of the paper</label>
-                    <div class="col-md-6">
+                {{--<div class="form-group">--}}
+                    {{--<label class="control-label col-md-3">Title of the paper</label>--}}
+                    {{--<div class="col-md-6">--}}
 
-                        <input type="text" name="paper"
-                               class="form-control"
-                               value="{{old('paper',$user->title_of_full_paper)}}" disabled>
-                    </div>
-                </div>
+                        {{--<input type="text" name="paper"--}}
+                               {{--class="form-control"--}}
+                               {{--value="{{old('paper',$user->title_of_full_paper)}}" disabled>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
             <div class="form-group">
-                <label class="control-label col-md-3 " for="Name">Full-text paper</label>
+                <label class="control-label col-md-3 " for="Name">Papers</label>
                 <div class="col-md-6">
                     @php $files = json_decode($user->paper,true); @endphp
                     @php $titlePaper = json_decode($user->title_paper,true); @endphp
+                    @php $panelPaper = json_decode($user->panel_of_panel,true); @endphp
                     @foreach($files as $index => $file)
                         <div class="file-container">
-                        <input type="text"
-                               class="form-control"
-                               value="{{(isset($titlePaper[$index])) ? $titlePaper[$index] : ''}}" disabled>
-                        <a class="btn btn-primary green start" href="{{$user->$file}}"
-                           download="" style="float: left;margin-right: 10px;margin-top: 10px"><i class="fa fa-download"></i><span>Download File</span>
-                            <div class="clearfix"></div>
-                        </a>
+                        <input type="text" class="form-control" value="{{(isset($titlePaper[$index])) ? $titlePaper[$index] : ''}}" disabled>
+                            <a class="btn btn-primary green start" href="{{$user->$file}}"
+                               download="" style="float: left;margin-right: 10px;margin-top: 10px"><i class="fa fa-download"></i><span>Download File</span>
+                                <div class="clearfix"></div>
+                            </a>
+                            @if(isset($panelPaper[$index]) and $panelPaper[$index])
+                                <input type="text"  class="form-control input-abstract" disabled value="{{\App\Models\User::$panelText[$panelPaper[$index]]}}">
+                            @endif
                         </div>
                     @endforeach
 
