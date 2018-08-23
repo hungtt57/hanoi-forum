@@ -12,6 +12,11 @@
         .col-lg-6 {
             padding-left: 0px;
         }
+        .file-container {
+            border-bottom: 1px solid rgb(221, 221, 221);
+            padding-bottom: 20px;
+            margin-bottom: 14px;
+        }
     </style>
 @endsection
 @section('content')
@@ -42,6 +47,7 @@
                     @php $files = json_decode($user->paper,true); @endphp
                     @php $titlePaper = json_decode($user->title_paper,true); @endphp
                     @foreach($files as $index => $file)
+                        <div class="file-container">
                         <input type="text"
                                class="form-control"
                                value="{{(isset($titlePaper[$index])) ? $titlePaper[$index] : ''}}" disabled>
@@ -49,6 +55,7 @@
                            download="" style="float: left;margin-right: 10px;margin-top: 10px"><i class="fa fa-download"></i><span>Download File</span>
                             <div class="clearfix"></div>
                         </a>
+                        </div>
                     @endforeach
 
                 </div>

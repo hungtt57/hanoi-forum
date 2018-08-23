@@ -20,6 +20,11 @@
         }
         .item-file {
             margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgb(221, 221, 221);
+        }
+        .file_input {
+            margin-bottom: 5px;
         }
     </style>
 @endsection
@@ -28,8 +33,8 @@
 
     @include('admin.flash_message')
     <div id="example-panel" class="hide">
-        <select class="form-control" name="panel_of_abstract[]"  >
-            {{--<option value="">Please choose panel</option>--}}
+        <select class="form-control panel_of_abstract" name="panel_of_abstract[]"  >
+            <option value="">Please choose panel</option>
             @foreach(\App\Models\User::$panelText as $key => $value)
                 <option value="{{$key}}">{{$value}}</option>
             @endforeach
@@ -58,18 +63,18 @@
                 {{--</div>--}}
 
                 <div class="form-group">
-                    <label class="control-label col-md-3 " for="Name">Abstract*</label>
+                    <label class="control-label col-md-3 " for="Name">Abstracts*</label>
                     <div class="col-md-6">
                         <div class="col-md-6" id="list-file-abstract">
                             <div class="item-file row">
                                 <div class="col-md-10">
                                     <input type="text" name="title_abstract[]" class="form-control title_input" placeholder="Enter title of abstract">
-                                    <label for="first" class="btn btn-primary">
-                                        <input id="first" type="file" class="post-image form-control hide" name="abstract[]">
-                                        Browser
-                                    </label>
-
-                                    <select class="form-control" name="panel_of_abstract[]" >
+                                    {{--<label for="first" class="btn btn-primary file_input">--}}
+                                        {{--<input id="first" type="file" class="post-image form-control hide" name="abstract[]">--}}
+                                        {{--Browser--}}
+                                    {{--</label>--}}
+                                    <input id="first" type="file" class="post-image form-control" name="abstract[]">
+                                    <select class="form-control panel_of_abstract" name="panel_of_abstract[]" >
                                         <option value="">Please choose panel</option>
                                         @foreach(\App\Models\User::$panelText as $key => $value)
                                             <option value="{{$key}}" @if($key == old('abstract_panel',@$user->abstract_panel)) selected @endif>{{$value}}</option>
@@ -126,6 +131,13 @@
 
     <script >
       $(document).ready(function () {
+        $("#first").fileinput({
+            'showUpload': false,
+          'showRemove': true,
+          'previewFileType': 'any',
+          'showCaption': false,
+          'showUploadedThumbs': false,
+        });
         $(document).on('click','.remove-file',function (e) {
           e.preventDefault();
           $(this).parent().parent().remove();
@@ -137,19 +149,34 @@
             $('#list-file-abstract').append(  '<div class="item-file row"> <div class="col-md-10">  <input type="text" name="title_abstract[]"' +
               '                                           class="form-control title_input" placeholder="Enter title of abstract"' +
               '                                          >' +
-            '<label for="'+id+'" class="btn btn-primary"> <input id="'+id+'" type="file" class="post-image form-control hide" name="abstract[]"> Browser </label>'+
+            // '<label for="'+id+'" class="btn btn-primary file_input"> ' +
+              '<input id="'+id+'" type="file" class="post-image form-control " name="abstract[]">' +
+              // ' Browser </label>'+
               panel
               +'</div> <div class="col-md-2">    <button class="btn btn-danger remove-file" type="button" ><i class="fa fa-close"></i></button></div> </div>');
+          $("#"+id).fileinput({
+            'showUpload': false,
+            'showRemove': true,
+            'previewFileType': 'any',
+            'showCaption': false,
+            'showUploadedThumbs': false,
+          });
         });
         $(document).on('submit','#form',function(e){
 
           $('.post-image').each(function () {
             if($(this).val()) {
-
               if(!$(this).parents('.item-file').find('.title_input').val()) {
                 e.preventDefault()
                 swal("Please enter title of abstract", '', 'error');
               }
+              if(!$(this).parents('.item-file').find('.panel_of_abstract').val()) {
+                e.preventDefault()
+                swal("Please choose panel of abstract", '', 'error');
+              }
+            }else {
+              e.preventDefault()
+              swal("Please upload file", '', 'error');
             }
           });
 

@@ -15,10 +15,16 @@
         .input-abstract {
             margin-bottom: 5px;
         }
+
+        .file-container {
+            border-bottom: 1px solid rgb(221, 221, 221);
+            padding-bottom: 20px;
+            margin-bottom: 14px;
+        }
     </style>
 @endsection
 @section('content')
-    <h3>Submit Abstract</h3>
+    <h3>Submit Abstracts</h3>
 
     @include('admin.flash_message')
 
@@ -40,21 +46,23 @@
                     {{--</div>--}}
                 {{--</div>--}}
             <div class="form-group">
-                <label class="control-label col-md-3 " for="Name">Abstract</label>
+                <label class="control-label col-md-3 " for="Name">Abstracts</label>
                 <div class="col-md-6">
                     @php $files = json_decode($user->abstract,true); @endphp
                     @php $titleAbstract = json_decode($user->title_abstract,true); @endphp
                     @php $panelAbstract = json_decode($user->panel_of_abstract,true); @endphp
                     @foreach($files as $index => $file)
-                        <input type="text" class="form-control input-abstract"
-                               value="{{(isset($titleAbstract[$index])) ? $titleAbstract[$index] : ''}}" disabled>
-                        <a class="btn btn-primary green start input-abstract" href="{{$user->$file}}"
-                           download="" style="float: left;margin-right: 10px;margin-top: 10px"><i class="fa fa-download"></i><span>Download File</span>
-                            <div class="clearfix"></div>
-                        </a>
-                        @if(isset($panelAbstract[$index]) and $panelAbstract[$index])
-                        <input type="text"  class="form-control input-abstract" disabled value="{{\App\Models\User::$panelText[$panelAbstract[$index]]}}">
-                        @endif
+                        <div class="file-container">
+                            <input type="text" class="form-control input-abstract"
+                                   value="{{(isset($titleAbstract[$index])) ? $titleAbstract[$index] : ''}}" disabled>
+                            <a class="btn btn-primary green start input-abstract" href="{{$user->$file}}"
+                               download="" style="float: left;margin-right: 10px;margin-top: 10px"><i class="fa fa-download"></i><span>Download File</span>
+                                <div class="clearfix"></div>
+                            </a>
+                            @if(isset($panelAbstract[$index]) and $panelAbstract[$index])
+                            <input type="text"  class="form-control input-abstract" disabled value="{{\App\Models\User::$panelText[$panelAbstract[$index]]}}">
+                            @endif
+                        </div>
                     @endforeach
 
                 </div>

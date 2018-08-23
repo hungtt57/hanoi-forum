@@ -18,6 +18,12 @@
         .title_input {
             margin-bottom: 5px;
         }
+        .item-file {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgb(221, 221, 221);
+        }
+
     </style>
 @endsection
 @section('content')
@@ -53,10 +59,10 @@
                                                            class="form-control title_input" placeholder="Enter title of paper">
 
 
-                                <label for="first" class="btn btn-primary">
-                                    <input id="first" type="file" class="post-image form-control hide" name="paper[]">
-                                    Browser
-                                </label>
+                                {{--<label for="first" class="btn btn-primary">--}}
+                                    <input id="first" type="file" class="post-image form-control " name="paper[]">
+                                {{--?    Browser--}}
+                                {{--</label>--}}
 
                             </div>
                             <div class="col-md-2">    <button class="btn btn-danger remove-file" type="button" ><i class="fa fa-close"></i></button></div>
@@ -107,6 +113,13 @@
 
     <script >
       $(document).ready(function () {
+        $("#first").fileinput({
+          'showUpload': false,
+          'showRemove': true,
+          'previewFileType': 'any',
+          'showCaption': false,
+          'showUploadedThumbs': false,
+        });
         $(document).on('click','.remove-file',function (e) {
           e.preventDefault();
           $(this).parent().parent().remove();
@@ -117,8 +130,17 @@
           $('#list-file-abstract').append(  '<div class="item-file row"> <div class="col-md-10">  <input type="text" name="title_paper[]"' +
             '                                                           class="form-control title_input" placeholder="Enter title of paper"' +
             '                                > '+
-          '<label for="'+id+'" class="btn btn-primary"><input id="'+id+'" type="file" class="post-image form-control hide" name="paper[]"> Browser </label>'
+          // '<label for="'+id+'" class="btn btn-primary">' +
+            '<input id="'+id+'" type="file" class="post-image form-control " name="paper[]">' +
+            // ' Browser </label>'
             +'</div> <div class="col-md-2">    <button class="btn btn-danger remove-file" type="button" ><i class="fa fa-close"></i></button></div> </div>');
+          $("#"+id).fileinput({
+            'showUpload': false,
+            'showRemove': true,
+            'previewFileType': 'any',
+            'showCaption': false,
+            'showUploadedThumbs': false,
+          });
         });
         $(document).on('submit','#form',function(e){
 
@@ -128,6 +150,9 @@
                 e.preventDefault()
                 swal("Please enter title of paper", '', 'error');
               }
+            }else {
+              e.preventDefault()
+              swal("Please upload file", '', 'error');
             }
           });
 
