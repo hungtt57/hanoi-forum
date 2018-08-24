@@ -1,167 +1,93 @@
 @extends('frontend.layouts.master')
 @section('title','Home')
 @section('content')
+    <style>
+        .book-list-meta {
+            padding-left: 10px;
+        }
+    </style>
     <header class="sabbi-page-header-classic page-header-lg">
         <div class="page-header-content conternt-center">
             <div class="header-title-block">
-                <h2 class="page-sub-title">Oloain Books</h2>
-                <h1 class="page-title">Publication</h1>
+                {{--<h2 class="page-sub-title">Oloain Books</h2>--}}
+                <h1 class="page-title">BOOKs</h1>
             </div>
         </div>
     </header>
     <main class="sabbi-page-wrap">
-        <section class="ripepage-peak">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-3 col-md-4">
-                        <div class="page_piky-title">
-                            <h2 class="page-title font-md lil-line">Oloain is one of England’s Leading Research University</h2>
-                        </div>
-                    </div>
-                    <div class="col-sm-8 col-sm-offset-1 col-md-7 col-md-offset-1">
-                        <p class="page_piky-text">Lorem ipsum dolor sit amet, con adipiscing elit. Etiam convallis elit id impedie. Quisq commodo ornare tortor Quiue bibendu m. magna vitae ex interdum cursus. Nullam lacinia pretium nibh, vitae imperdiet lacus tempor sit amet. Donec ultrices est nec tellus finibus facilisis. Nullam sodales justo id magna fringilla rutrum. Duis bibendum id eros congue bibendum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam convallis elit id odio imperdiet feugiat. Quisque commodo ornare tortor. Quisque bibendum magna vitae ex interdum cursus. Nullam lacinia pretium nibh, vitae imperdiet lacus tempor sit amet. Donec ultrices est nec tellus finibus facilisis. </p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <section class="book-timeline-section">
             <div class="container">
                 <div class="sabbi-book_timeline-segment">
                     <ul class="sabbi-book_timeline list-unstyled">
                         <li>
-                            <span class="year">2017</span>
+                            <span class="year">2018</span>
                             <ul class="book-list list-unstyled">
                                 <li>
                                     <figure>
-                                        <img src="assets/img/timeline/booktimeline_book.png" alt="published books" class="img-responsive">
+                                        <img src="/frontend/book/book1.png" alt="published books" class="img-responsive">
                                     </figure>
                                     <div class="book-list-meta">
-                                        <h3 class="book-list-title"><a href="#">A Forward-Design Approach to Increase the Production of Poly-3-Hydroxybutyrate in Genetically</a> </h3>
-                                        <div class="book-list-brand"><em>Psychonomic Bulletin and Review 2014</em></div>
-                                        <p class="book-author">foster et al</p>
+                                        <h3 class="book-list-title">
+                                            <a href="https://www.crcpress.com/Sustainable-Development-Goals-in-the-Republic-of-Korea/Jung/p/book/9781138478893">Sustainable Development Goals in the Republic of Korea</a>
+                                        </h3>
+                                        <div class="book-list-brand"><em>Edited by Tae Yong Jung </em></div>
+                                        <p class="book-author">This book explores the attempts of South Korea in achieving the UN’s Sustainable Development Goals (SDGs) by 2030. It addresses six of the 17 goals ...
+                                            <a target="_blank" href="https://www.crcpress.com/Sustainable-Development-Goals-in-the-Republic-of-Korea/Jung/p/book/9781138478893">[Read more]</a>
+                                        </p>
                                     </div>
                                 </li>
-                                <li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="year">2018</span>
+                            <ul class="book-list list-unstyled">
+                                <li >
                                     <figure>
-                                        <img src="assets/img/timeline/booktimeline_book_2.png" alt="published books" class="img-responsive">
+                                        <img src="/frontend/book/book2.png" alt="published books" class="img-responsive">
                                     </figure>
                                     <div class="book-list-meta">
-                                        <h3 class="book-list-title"><a href="#">Increase the Production of Poly-3-Hydroxybutyrate in Genetically Engineered Escherichia coli</a>,</h3>
-                                        <div class="book-list-brand"><em>Psychonomic Bulletin and Review 2014</em></div>
-                                        <p class="book-author">foster et al</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <figure>
-                                        <img src="assets/img/timeline/booktimeline_book_3.png" alt="published books" class="img-responsive">
-                                    </figure>
-                                    <div class="book-list-meta">
-                                        <h3 class="book-list-title"><a href="#">A Forward-Design Approach to Increase the Production of Poly-3-Hydroxybutyrate in Genetically</a> </h3>
-                                        <div class="book-list-brand"><em>Psychonomic Bulletin and Review 2014</em></div>
-                                        <p class="book-author">foster et al</p>
-                                    </div>
-                                </li>
-                                <li class="onexpan">
-                                    <figure>
-                                        <img src="assets/img/timeline/booktimeline_book_3.png" alt="published books" class="img-responsive">
-                                    </figure>
-                                    <div class="book-list-meta">
-                                        <h3 class="book-list-title"><a href="#">A Forward-Design Approach to Increase the Production of Poly-3-Hydroxybutyrate in Genetically</a> </h3>
-                                        <div class="book-list-brand"><em>Psychonomic Bulletin and Review 2014</em></div>
-                                        <p class="book-author">foster et al</p>
-                                    </div>
-                                </li>
-                                <li class="onexpan">
-                                    <figure>
-                                        <img src="assets/img/timeline/booktimeline_book.png" alt="published books" class="img-responsive">
-                                    </figure>
-                                    <div class="book-list-meta">
-                                        <h3 class="book-list-title"><a href="#">A Forward-Design Approach to Increase the Production of Poly-3-Hydroxybutyrate in Genetically</a> </h3>
-                                        <div class="book-list-brand"><em>Psychonomic Bulletin and Review 2014</em></div>
-                                        <p class="book-author">foster et al</p>
-                                    </div>
-                                </li>
-                                <li class="onexpan">
-                                    <figure>
-                                        <img src="assets/img/timeline/booktimeline_book_2.png" alt="published books" class="img-responsive">
-                                    </figure>
-                                    <div class="book-list-meta">
-                                        <h3 class="book-list-title"><a href="#">Increase the Production of Poly-3-Hydroxybutyrate in Genetically Engineered Escherichia coli</a>,</h3>
-                                        <div class="book-list-brand"><em>Psychonomic Bulletin and Review 2014</em></div>
-                                        <p class="book-author">foster et al</p>
+                                        <h3 class="book-list-title"><a href="https://www.springer.com/gp/book/9781461461197" target="_blank">The Water-Food-Energy Nexus in the Mekong Region:
+                                                Assessing Development Strategies Considering Cross-Sectoral and Transboundary Impacts</a> </h3>
+                                        <div class="book-list-brand"><em>Edited by Alexander Smajgl and John Ward</em></div>
+                                        <p class="book-author">This brief provides a cross-sectional analysis of development-directed investments in the wider Mekong region. The wider Mekong region includes Laos, Cambodia, Thailand, Vietnam, Myanmar, and the Chinese province of Yunnan…
+                                            <a target="_blank" href="https://www.springer.com/gp/book/9781461461197">[Read more]</a></p>
                                     </div>
                                 </li>
                             </ul>
-                            <a href="#" class="btn btn-unsolemn btn-expand" data-text="Explore More">Explore More</a>
                         </li>
                         <li>
                             <span class="year">2017</span>
                             <ul class="book-list list-unstyled">
-                                <li>
+                                <li >
                                     <figure>
-                                        <img src="assets/img/timeline/booktimeline_book_4.png" alt="published books" class="img-responsive">
+                                        <img src="/frontend/book/book3.png" alt="published books" class="img-responsive">
                                     </figure>
                                     <div class="book-list-meta">
-                                        <h3 class="book-list-title"><a href="#">A Forward-Design Approach to Increase the Production of Poly-3-Hydroxybutyrate in Genetically</a> </h3>
-                                        <div class="book-list-brand"><em>Psychonomic Bulletin and Review 2014</em></div>
-                                        <p class="book-author">foster et al</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <figure>
-                                        <img src="assets/img/timeline/booktimeline_book_5.png" alt="published books" class="img-responsive">
-                                    </figure>
-                                    <div class="book-list-meta">
-                                        <h3 class="book-list-title"><a href="#">A Forward-Design Approach to Increase the Production of Poly-3-Hydroxybutyrate in Genetically</a> </h3>
-                                        <div class="book-list-brand"><em>Psychonomic Bulletin and Review 2014</em></div>
-                                        <p class="book-author">foster et al</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <figure>
-                                        <img src="assets/img/timeline/booktimeline_book_6.png" alt="published books" class="img-responsive">
-                                    </figure>
-                                    <div class="book-list-meta">
-                                        <h3 class="book-list-title"><a href="#">A Forward-Design Approach to Increase the Production of Poly-3-Hydroxybutyrate in Genetically</a> </h3>
-                                        <div class="book-list-brand"><em>Psychonomic Bulletin and Review 2014</em></div>
-                                        <p class="book-author">foster et al</p>
-                                    </div>
-                                </li>
-
-                                <li class="onexpan">
-                                    <figure>
-                                        <img src="assets/img/timeline/booktimeline_book_6.png" alt="published books" class="img-responsive">
-                                    </figure>
-                                    <div class="book-list-meta">
-                                        <h3 class="book-list-title"><a href="#">A Forward-Design Approach to Increase the Production of Poly-3-Hydroxybutyrate in Genetically</a> </h3>
-                                        <div class="book-list-brand"><em>Psychonomic Bulletin and Review 2014</em></div>
-                                        <p class="book-author">foster et al</p>
-                                    </div>
-                                </li>
-                                <li class="onexpan">
-                                    <figure>
-                                        <img src="assets/img/timeline/booktimeline_book_5.png" alt="published books" class="img-responsive">
-                                    </figure>
-                                    <div class="book-list-meta">
-                                        <h3 class="book-list-title"><a href="#">A Forward-Design Approach to Increase the Production of Poly-3-Hydroxybutyrate in Genetically</a> </h3>
-                                        <div class="book-list-brand"><em>Psychonomic Bulletin and Review 2014</em></div>
-                                        <p class="book-author">foster et al</p>
-                                    </div>
-                                </li>
-
-                                <li class="onexpan">
-                                    <figure>
-                                        <img src="assets/img/timeline/booktimeline_book_4.png" alt="published books" class="img-responsive">
-                                    </figure>
-                                    <div class="book-list-meta">
-                                        <h3 class="book-list-title"><a href="#">A Forward-Design Approach to Increase the Production of Poly-3-Hydroxybutyrate in Genetically</a> </h3>
-                                        <div class="book-list-brand"><em>Psychonomic Bulletin and Review 2014</em></div>
-                                        <p class="book-author">foster et al</p>
+                                        <h3 class="book-list-title"><a href="https://www.adb.org/publications/pathways-low-carbon-development-viet-nam" target="_blank">Pathways to Low-Carbon Development for Viet Nam</a> </h3>
+                                        <div class="book-list-brand"><em>Asian Development Bank </em></div>
+                                        <p class="book-author">This study assesses how Viet Nam’s green growth objectives can be achieved through a detailed modeling approach that draws on extensive national stakeholder input to ensure alignment with sector plans and strategies...
+                                            <a target="_blank" href="https://www.adb.org/publications/pathways-low-carbon-development-viet-nam">[Read more]</a></p>
                                     </div>
                                 </li>
                             </ul>
-                            <a href="#" class="btn btn-unsolemn btn-expand" data-text="View More Books">View More Books</a>
+                        </li>
+                        <li>
+                            <span class="year">2016</span>
+                            <ul class="book-list list-unstyled">
+                                <li>
+                                    <figure>
+                                        <img src="/frontend/book/book4.png" alt="published books" class="img-responsive">
+                                    </figure>
+                                    <div class="book-list-meta">
+                                        <h3 class="book-list-title"><a href="https://www.adb.org/publications/nature-based-solutions-building-resilience-towns-cities-gms" target="_blank">Nature-Based Solutions for Building Resilience in Towns and Cities: Case Studies from the Greater Mekong Subregion</a> </h3>
+                                        <div class="book-list-brand"><em>Asian Development Bank </em></div>
+                                        <p class="book-author">Green infrastructure can play a significant role in offsetting losses from climate-related disasters and contribute to building resilience through rehabilitation and expansion of natural ecosystems within built areas...
+                                            <a target="_blank" href="https://www.adb.org/publications/nature-based-solutions-building-resilience-towns-cities-gms">[Read more]</a></p>
+                                    </div>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
