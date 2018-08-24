@@ -49,7 +49,7 @@
                     @php $panelPaper = json_decode($user->panel_of_panel,true); @endphp
                     @foreach($files as $index => $file)
                         <div class="file-container">
-                        <input type="text" class="form-control" value="{{(isset($titlePaper[$index])) ? $titlePaper[$index] : ''}}" disabled>
+                              <input type="text" class="form-control" value="{{(isset($titlePaper[$index])) ? $titlePaper[$index] : ''}}" disabled>
                             <a class="btn btn-primary green start" href="{{$user->$file}}"
                                download="" style="float: left;margin-right: 10px;margin-top: 10px"><i class="fa fa-download"></i><span>Download File</span>
                                 <div class="clearfix"></div>
@@ -57,6 +57,7 @@
                             @if(isset($panelPaper[$index]) and $panelPaper[$index])
                                 <input type="text"  class="form-control input-abstract" disabled value="{{\App\Models\User::$panelText[$panelPaper[$index]]}}">
                             @endif
+                            <div class="clearfix"></div>
                         </div>
                     @endforeach
 

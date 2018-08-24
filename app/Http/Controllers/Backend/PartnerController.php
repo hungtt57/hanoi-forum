@@ -134,7 +134,7 @@ class PartnerController extends AdminController
             $titlePaper = $request->input('title_paper', []);
             $title_of_abstract = [];
             foreach ($files as $index => $file) {
-                $ta = (isset($titleAbstract[$index])) ? $titlePaper[$index] : '';
+                $ta = (isset($titlePaper[$index])) ? $titlePaper[$index] : '';
                 $filename = $paper_panel . $index . '_' . str_slug($user->first_name) . str_slug($user->last_name) . '_' . str_slug($ta);
                 $abstract[] = $this->saveFile($file, null, $filename);
                 $title_of_abstract[] = $ta;

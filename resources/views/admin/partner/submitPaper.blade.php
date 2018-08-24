@@ -126,14 +126,13 @@
         });
         $('#add-more-file').click(function (e) {
           e.preventDefault();
-          var id = $('#item-file').length + '123';
+          var id = $('.item-file').length + '123';
           $('#list-file-abstract').append(  '<div class="item-file row"> <div class="col-md-10">  <input type="text" name="title_paper[]"' +
             '                                                           class="form-control title_input" placeholder="Enter title of paper"' +
             '                                > '+
-          // '<label for="'+id+'" class="btn btn-primary">' +
-            '<input id="'+id+'" type="file" class="post-image form-control " name="paper[]">' +
-            // ' Browser </label>'
+            '<input id="'+id+'" type="file" class="post-image form-control " name="paper[]">'
             +'</div> <div class="col-md-2">    <button class="btn btn-danger remove-file" type="button" ><i class="fa fa-close"></i></button></div> </div>');
+
           $("#"+id).fileinput({
             'showUpload': false,
             'showRemove': true,
