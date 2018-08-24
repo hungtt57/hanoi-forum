@@ -16,31 +16,30 @@
                         <p><strong>Disclaimer:</strong> The papers below are intended for private viewing by the page owner or those who otherwise have legitimate access to them. No part of it may in any form or by any electronic, mechanical, photocopying, recording, or any other means be reproduced, stored in a retrieval system or be broadcast or transmitted without the prior permission of the respective publishers. If your organization has a valid subscription of the journals, click on the DOI link for the legitimate copy of the papers.</p>
                     </div>
                     <ul class="journal-papers-nav-list list-inline">
-                        <li><a href="#" class="link-prev_def">2018-2017</a></li>
-                        <li><a href="#" class="link-prev_def">2016-2015</a></li>
-                        <li><a href="#" class="link-prev_def">2014-2013</a></li>
+                        <li><a href="#" class="link-prev_def">2017-2016</a></li>
+                        <li><a href="#" class="link-prev_def">2015-2014</a></li>
+                        <li><a href="#" class="link-prev_def">2013-2012</a></li>
 
                     </ul>
                 </nav><!--  /.journal-papers-nav -->
                 <div class="journal-papers-mound-wrap">
                     <div class="journal-papers-mound">
                         <nav class="journal-papers-mound-nav">
-                            <h3 class="nav-title">2018</h3>
+                            <h3 class="nav-title">2017</h3>
                         </nav>
                         <div class="journal-papers-list">
                             <div class="journal-papers">
                                 <div class="row">
                                     <div class="col-sm-3">
-                                        <p class="jp-name">The Water-Food-Energy Nexus in the Mekong Region:
-                                            Assessing Development Strategies Considering Cross-Sectoral and Transboundary Impacts</p>
+                                        <p class="jp-name">Roderick van der Linden, Andreas H.F., Joaquim G.P. , Tan P.V.</p>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="journal-papers-meta">
-                                            <p>Edited by Alexander Smajgl and John Ward</p>
+                                            <p>The Dynamics of an Extreme Precipitation Event in Northeastern Vietnam in 2015 and Its Predictability in the ECMWF Ensemble Prediction System. AMS Journals Online</p>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
-                                        <div class="journal-papers-doi"><span>DOI:</span> <a href="#">10.1016/j.icheatmasstransfer.2016.12.017</a></div>
+                                        <div class="journal-papers-doi"> <a href="https://journals.ametsoc.org/doi/10.1175/WAF-D-16-0142.1" target="_blank">https://journals.ametsoc.org/doi/10.1175/WAF-D-16-0142.1</a></div>
                                     </div>
                                 </div>
                             </div><!-- /.journal-papers -->
@@ -49,69 +48,71 @@
                     </div>
                     <div class="journal-papers-mound">
                         <nav class="journal-papers-mound-nav">
-                            <h3 class="nav-title">20016</h3>
+                            <h3 class="nav-title">2015</h3>
                         </nav>
                         <div class="journal-papers-list">
                             <div class="journal-papers">
                                 <div class="row">
                                     <div class="col-sm-3">
-                                        <p class="jp-name">[287] A. Teo, K. H. H. Li, N.-T. Youuyen, W. Guo, N. Heere, H.D. Xi, C. W.  Tsao, W.  Li, S. H. Tan,</p>
+                                        <p class="jp-name">Smajgl, A., Toan, T.Q., Nhan, D.K., Ward, J., Trung, N.H. , Tri, L.Q., Tri, V.P.D., Vu, P.T.</p>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="journal-papers-meta">
-                                            <p>Negative Pressure Induced Droplet Generation in a Microfluidic Flow-focusing Device, <em>Analytical Chemistry</em>,2017, <strong>Vol. 89</strong>, No. 8, pp. <span>4387–4391</span>. <a href="#" class="pdf-link" target="_blank">PDF</a></p>
+                                            <p>Responding to rising sea-levels in Vietnam’s Mekong Delta. Nature Climate Change, 5, 167-174</p>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
-                                        <div class="journal-papers-doi"><span>DOI:</span> <a href="#">10.1016/j.icheatmasstransfer.2016.12.017</a></div>
+                                        <div class="journal-papers-doi"> <a href="https://www.nature.com/articles/nclimate2469" target="_blank">https://www.nature.com/articles/nclimate2469</a></div>
                                     </div>
                                 </div>
                             </div><!-- /.journal-papers -->
+
+                        </div>
+                    </div>
+                    <div class="journal-papers-mound">
+                        <nav class="journal-papers-mound-nav">
+                            <h3 class="nav-title">2015</h3>
+                        </nav>
+                        <div class="journal-papers-list">
                             <div class="journal-papers">
                                 <div class="row">
                                     <div class="col-sm-3">
-                                        <p class="jp-name">[281] A. Teo, K. H. H. Li, N.-T. Youuyen, W. Guo, N. Heere, H.D. Xi, C. W.  Tsao, W.  Li, S. H. Tan,</p>
+                                        <p class="jp-name">Smajgl, A., & Ward, J.</p>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="journal-papers-meta">
-                                            <p>Magnetofluidics for manipulation of convective heat transfer, <em>International Communicarions in Heat and Mass Transfer,</em> <strong>Vol. 7</strong>, pp. 3461.  <a href="#" class="pdf-link" target="_blank">PDF</a></p>
+                                            <p>Evaluating participatory research: Framework, methods and implementation results. Journal of Environmental Management, 157, 311-319.</p>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
-                                        <div class="journal-papers-doi"><span>DOI:</span> <a href="#">10.1016/j.icheatmasstransfer.2016.12.017</a></div>
+                                        <div class="journal-papers-doi"> <a href="https://www.sciencedirect.com/science/article/pii/S0301479715300177" target="_blank">https://www.sciencedirect.com/science/article/pii/S0301479715300177</a></div>
                                     </div>
                                 </div>
                             </div><!-- /.journal-papers -->
+
+                        </div>
+                    </div>
+                    <div class="journal-papers-mound">
+                        <nav class="journal-papers-mound-nav">
+                            <h3 class="nav-title">2015</h3>
+                        </nav>
+                        <div class="journal-papers-list">
                             <div class="journal-papers">
                                 <div class="row">
                                     <div class="col-sm-3">
-                                        <p class="jp-name">[281] A. Teo, K. H. H. Li, N.-T. Youuyen, W. Guo, N. Heere, H.D. Xi, C. W.  Tsao, W.  Li, S. H. Tan,</p>
+                                        <p class="jp-name">Tae Yong Jung</p>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="journal-papers-meta">
-                                            <p>Magnetofluidics for manipulation of convective heat transfer, <em>International Communicarions in Heat and Mass Transfer,</em> <strong>Vol. 7</strong>, pp. 3461.  <a href="#" class="pdf-link" target="_blank">PDF</a></p>
+                                            <p>Climate Technology Promotion in the Republic of Korea, Advances in Climate Change Research, Vol. 6, pp. 229-233.</p>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
-                                        <div class="journal-papers-doi"><span>DOI:</span> <a href="#">10.1016/j.icheatmasstransfer.2016.12.017</a></div>
+                                        <div class="journal-papers-doi"> <a href="https://www.sciencedirect.com/science/article/pii/S1674927815000817" target="_blank">https://www.sciencedirect.com/science/article/pii/S1674927815000817</a></div>
                                     </div>
                                 </div>
                             </div><!-- /.journal-papers -->
-                            <div class="journal-papers">
-                                <div class="row">
-                                    <div class="col-sm-3">
-                                        <p class="jp-name">[281] A. Teo, K. H. H. Li, N.-T. Youuyen, W. Guo, N. Heere, H.D. Xi, C. W.  Tsao, W.  Li, S. H. Tan,</p>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="journal-papers-meta">
-                                            <p>Magnetofluidics for manipulation of convective heat transfer, <em>International Communicarions in Heat and Mass Transfer,</em> <strong>Vol. 7</strong>, pp. 3461.  <a href="#" class="pdf-link" target="_blank">PDF</a></p>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="journal-papers-doi"><span>DOI:</span> <a href="#">10.1016/j.icheatmasstransfer.2016.12.017</a></div>
-                                    </div>
-                                </div>
-                            </div><!-- /.journal-papers -->
+
                         </div>
                     </div>
                 </div><!-- /.journal-papers-mound-wrap-->
