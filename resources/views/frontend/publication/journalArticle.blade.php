@@ -31,15 +31,15 @@
                             <div class="journal-papers">
                                 <div class="row">
                                     <div class="col-sm-3">
-                                        <p class="jp-name">Roderick van der Linden, Andreas H.F., Joaquim G.P. , Tan P.V.</p>
+                                        <p class="jp-name">van der Linden, R., A. H. Fink, J.G. Pinto, and T. Phan-Van</p>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="journal-papers-meta">
-                                            <p>The Dynamics of an Extreme Precipitation Event in Northeastern Vietnam in 2015 and Its Predictability in the ECMWF Ensemble Prediction System. AMS Journals Online</p>
+                                            <p>The Dynamics of an Extreme Precipitation Event in Northeastern Vietnam in 2015 and Its Predictability in the ECMWF Ensemble Prediction System. <i>Wea. Forecasting,</i> <b>32</b>,  1041–1056</p>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
-                                        <div class="journal-papers-doi"> <a href="https://journals.ametsoc.org/doi/10.1175/WAF-D-16-0142.1" target="_blank">https://journals.ametsoc.org/doi/10.1175/WAF-D-16-0142.1</a></div>
+                                        <div class="journal-papers-doi"> <a href="https://doi.org/10.1175/WAF-D-16-0142.1" target="_blank">https://doi.org/10.1175/WAF-D-16-0142.1</a></div>
                                     </div>
                                 </div>
                             </div><!-- /.journal-papers -->
@@ -58,22 +58,14 @@
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="journal-papers-meta">
-                                            <p>Responding to rising sea-levels in Vietnam’s Mekong Delta. Nature Climate Change, 5, 167-174</p>
+                                            <p>Responding to rising sea-levels in Vietnam’s Mekong Delta. <i> Nature Climate Change </i>, <b>5</b>, 167-174</p>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
-                                        <div class="journal-papers-doi"> <a href="https://www.nature.com/articles/nclimate2469" target="_blank">https://www.nature.com/articles/nclimate2469</a></div>
+                                        <div class="journal-papers-doi"> <a href="https://doi.org/10.1038/nclimate2469" target="_blank">https://doi.org/10.1038/nclimate2469</a></div>
                                     </div>
                                 </div>
                             </div><!-- /.journal-papers -->
-
-                        </div>
-                    </div>
-                    <div class="journal-papers-mound">
-                        <nav class="journal-papers-mound-nav">
-                            <h3 class="nav-title">2015</h3>
-                        </nav>
-                        <div class="journal-papers-list">
                             <div class="journal-papers">
                                 <div class="row">
                                     <div class="col-sm-3">
@@ -81,22 +73,14 @@
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="journal-papers-meta">
-                                            <p>Evaluating participatory research: Framework, methods and implementation results. Journal of Environmental Management, 157, 311-319.</p>
+                                            <p>Evaluating participatory research: Framework, methods and implementation results. <i>Journal of Environmental Management </i>, <b>157</b>, 311-319.</p>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
-                                        <div class="journal-papers-doi"> <a href="https://www.sciencedirect.com/science/article/pii/S0301479715300177" target="_blank">https://www.sciencedirect.com/science/article/pii/S0301479715300177</a></div>
+                                        <div class="journal-papers-doi"> <a href="https://doi.org/10.1016/j.jenvman.2015.04.014" target="_blank">https://doi.org/10.1016/j.jenvman.2015.04.014</a></div>
                                     </div>
                                 </div>
                             </div><!-- /.journal-papers -->
-
-                        </div>
-                    </div>
-                    <div class="journal-papers-mound">
-                        <nav class="journal-papers-mound-nav">
-                            <h3 class="nav-title">2015</h3>
-                        </nav>
-                        <div class="journal-papers-list">
                             <div class="journal-papers">
                                 <div class="row">
                                     <div class="col-sm-3">
@@ -104,17 +88,18 @@
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="journal-papers-meta">
-                                            <p>Climate Technology Promotion in the Republic of Korea, Advances in Climate Change Research, Vol. 6, pp. 229-233.</p>
+                                            <p>Climate Technology Promotion in the Republic of Korea, <i>Advances in Climate Change Research </i>, <b>Vol. 6 </b>, pp. 229-233. </p>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
-                                        <div class="journal-papers-doi"> <a href="https://www.sciencedirect.com/science/article/pii/S1674927815000817" target="_blank">https://www.sciencedirect.com/science/article/pii/S1674927815000817</a></div>
+                                        <div class="journal-papers-doi"> <a href="https://doi.org/10.1016/j.accre.2015.10.003" target="_blank">https://doi.org/10.1016/j.accre.2015.10.003</a></div>
                                     </div>
                                 </div>
                             </div><!-- /.journal-papers -->
 
                         </div>
                     </div>
+
                 </div><!-- /.journal-papers-mound-wrap-->
             </div>
         </section><!-- /.section-journal-papers -->
