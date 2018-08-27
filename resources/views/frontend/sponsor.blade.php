@@ -23,6 +23,10 @@
                     <div class="col-md-8 col-sm-5 col-md-offset-2 col-xs-12">
                         <div class="col-md-12">
 
+                            <a href="http://www.sk.co.kr/" target="_blank" >
+                                <img src="/frontend/assets/img/SK.jpg" alt=""  style="max-width: 100%;    width: 300px;
+    margin-bottom: 10px;">
+                            </a>
 
                                 <a href="http://kfas.or.kr/" target="_blank">
                                 <img src="/frontend/assets/img/kfas_logo.jpg" alt=""  style="max-width: 100%">
