@@ -40,12 +40,6 @@
                                         </p>
                                     </div>
                                 </li>
-
-                            </ul>
-                        </li>
-                        <li>
-                            <span class="year">2018</span>
-                            <ul class="book-list list-unstyled">
                                 <li >
                                     <figure>
                                         <img src="/frontend/book/book2.png" alt="published books" class="img-responsive">
