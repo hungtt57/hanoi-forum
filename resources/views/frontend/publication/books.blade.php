@@ -5,12 +5,15 @@
         .book-list-meta {
             padding-left: 10px;
         }
+        .sabbi-book_timeline .book-list:before {
+            display: none;
+        }
     </style>
     <header class="sabbi-page-header-classic page-header-lg">
         <div class="page-header-content conternt-center">
             <div class="header-title-block">
                 {{--<h2 class="page-sub-title">Oloain Books</h2>--}}
-                <h1 class="page-title">BOOKs</h1>
+                <h1 class="page-title">BOOKS</h1>
             </div>
         </div>
     </header>
@@ -32,7 +35,7 @@
                                             <a href="https://www.crcpress.com/Sustainable-Development-Goals-in-the-Republic-of-Korea/Jung/p/book/9781138478893">Sustainable Development Goals in the Republic of Korea</a>
                                         </h3>
                                         <div class="book-list-brand"><em>Edited by Tae Yong Jung </em></div>
-                                        <p class="book-author">This book explores the attempts of South Korea in achieving the UN’s Sustainable Development Goals (SDGs) by 2030. It addresses six of the 17 goals ...
+                                        <p class="book-author">This book explores the attempts of South Korea in achieving the UN’s Sustainable Development Goals (SDGs) by 2030. It addresses six of the 17 goals – clean water, affordable and clean energy, decent work and economic growth, sustainable cities and communities, climate action, and partnership – and defines specific national strategies. For each strategy, the contributors define the research indicators they selected, then analyze and examine the extent to which South Korea has met the SDG concerned.....
                                             <a target="_blank" href="https://www.crcpress.com/Sustainable-Development-Goals-in-the-Republic-of-Korea/Jung/p/book/9781138478893">[Read more]</a>
                                         </p>
                                     </div>
@@ -51,7 +54,7 @@
                                         <h3 class="book-list-title"><a href="https://www.springer.com/gp/book/9781461461197" target="_blank">The Water-Food-Energy Nexus in the Mekong Region:
                                                 Assessing Development Strategies Considering Cross-Sectoral and Transboundary Impacts</a> </h3>
                                         <div class="book-list-brand"><em>Edited by Alexander Smajgl and John Ward</em></div>
-                                        <p class="book-author">This brief provides a cross-sectional analysis of development-directed investments in the wider Mekong region. The wider Mekong region includes Laos, Cambodia, Thailand, Vietnam, Myanmar, and the Chinese province of Yunnan…
+                                        <p class="book-author">This brief provides a cross-sectional analysis of development-directed investments in the wider Mekong region. The wider Mekong region includes Laos, Cambodia, Thailand, Vietnam, Myanmar, and the Chinese province of Yunnan. Evidence highlights that a few critical dynamics, including human migration, natural resource flows, and financial investments, generate a high level of connectivity between these countries....
                                             <a target="_blank" href="https://www.springer.com/gp/book/9781461461197">[Read more]</a></p>
                                     </div>
                                 </li>
@@ -67,7 +70,7 @@
                                     <div class="book-list-meta">
                                         <h3 class="book-list-title"><a href="https://www.adb.org/publications/pathways-low-carbon-development-viet-nam" target="_blank">Pathways to Low-Carbon Development for Viet Nam</a> </h3>
                                         <div class="book-list-brand"><em>Asian Development Bank </em></div>
-                                        <p class="book-author">This study assesses how Viet Nam’s green growth objectives can be achieved through a detailed modeling approach that draws on extensive national stakeholder input to ensure alignment with sector plans and strategies...
+                                        <p class="book-author">Vietnam’s rapid economic growth in recent years has been energy dependent. Viet Nam’s economy could expand by almost 14 times between 2010 and 2050, but the country’s energy system has become more carbon intensive. This study uses a bottom–up model to evaluate 63 measures to reduce greenhouse gas emissions from household electricity, industry, power generation, and transport...
                                             <a target="_blank" href="https://www.adb.org/publications/pathways-low-carbon-development-viet-nam">[Read more]</a></p>
                                     </div>
                                 </li>

@@ -16,14 +16,14 @@
                         <p><strong>Disclaimer:</strong> The papers below are intended for private viewing by the page owner or those who otherwise have legitimate access to them. No part of it may in any form or by any electronic, mechanical, photocopying, recording, or any other means be reproduced, stored in a retrieval system or be broadcast or transmitted without the prior permission of the respective publishers. If your organization has a valid subscription of the journals, click on the DOI link for the legitimate copy of the papers.</p>
                     </div>
                     <ul class="journal-papers-nav-list list-inline">
-                        <li><a href="#" class="link-prev_def">2017-2016</a></li>
-                        <li><a href="#" class="link-prev_def">2015-2014</a></li>
-                        <li><a href="#" class="link-prev_def">2013-2012</a></li>
+                        <li><a href="#" id="2017link" class="link-prev_def">2017-2016</a></li>
+                        <li><a href="#" id="2015link" class="link-prev_def">2015-2014</a></li>
+                        {{--<li><a href="#" class="link-prev_def">2013-2012</a></li>--}}
 
                     </ul>
                 </nav><!--  /.journal-papers-nav -->
-                <div class="journal-papers-mound-wrap">
-                    <div class="journal-papers-mound">
+                <div class="journal-papers-mound-wrap" >
+                    <div class="journal-papers-mound" id="2017">
                         <nav class="journal-papers-mound-nav">
                             <h3 class="nav-title">2017</h3>
                         </nav>
@@ -46,7 +46,7 @@
 
                         </div>
                     </div>
-                    <div class="journal-papers-mound">
+                    <div class="journal-papers-mound" id="2015">
                         <nav class="journal-papers-mound-nav">
                             <h3 class="nav-title">2015</h3>
                         </nav>
@@ -105,3 +105,23 @@
         </section><!-- /.section-journal-papers -->
     </main>
 @endsection
+@push('scripts')
+    <script>
+      function goToByScroll(id){
+        // Reove "link" from the ID
+        id = id.replace("link", "");
+        // Scroll
+        console.log(id);
+        $('html,body').animate({
+            scrollTop: $("#"+id).offset().top -115},
+          'slow');
+      }
+
+      $(".link-prev_def").click(function(e) {
+        // Prevent a page reload when a link is pressed
+        e.preventDefault();
+        // Call the scroll function
+        goToByScroll($(this).attr("id"));
+      });
+    </script>
+    @endpush
