@@ -344,6 +344,9 @@ html,
 }
 
 .seq .seq-in {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
   /* Animate in positions for content */
 }
 

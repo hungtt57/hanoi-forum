@@ -49,7 +49,7 @@ jQuery(document).ready(function($) {
 		var options = {
 		  startingStepAnimatesIn: true,
 		  autoPlay: true,
-      autoPlayInterval: 4000,
+      autoPlayInterval: 5000,
 		  /* Make this the same as the animateCanvasDuration */
 		  phaseThreshold: 250,
 		  preloader: true,
