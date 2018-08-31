@@ -103,10 +103,6 @@
                                 Abstract
                             </label>
                             <label>
-                                <input type="checkbox" class="minimal" name="title_of_paper">
-                                Title of paper
-                            </label>
-                            <label>
                                 <input type="checkbox" class="minimal" name="paper">
                                 Paper
                             </label>

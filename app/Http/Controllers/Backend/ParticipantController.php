@@ -379,6 +379,10 @@ class ParticipantController extends AdminController
         if (count($keys) == 0) {
             return redirect()->back()->with('error', 'Please choose field to export');
         }
+        $keys[] = 'title_abstract';
+        $keys[] = 'title_paper';
+        $keys[] = 'panel_of_abstract';
+
         $user = User::select($keys)->orderBy('updated_at', 'desc');
         if ($request->input('id')) {
             $user = $user->whereIn('id', $request->input('id'));
@@ -425,18 +429,46 @@ class ParticipantController extends AdminController
                     unset($user[$key]['email']);
                 }
                 if (array_key_exists('abstract', $value)) {
-                    if ($value['abstract'] and str_contains($value['abstract'], '/files/attachments/')) {
-                        $user[$key]['Abstract'] = url($value['abstract']);
-                    } else {
-                        $user[$key]['Abstract'] = $value['abstract'];
+//                    if ($value['abstract'] and str_contains($value['abstract'], '/files/attachments/')) {
+//                        $user[$key]['Abstract'] = url($value['abstract']);
+//                    } else {
+//                        $user[$key]['Abstract'] = $value['abstract'];
+//                    }
+                    $abstracts = json_decode($value['abstract'],true);
+                    $titleAbstract = json_decode($value['title_abstract'],true);
+                    $panelAbstract = json_decode($value['panel_of_abstract'],true);
+                    foreach ($abstracts as $index => $abstract) {
+                        $user[$key]['Abstract ' . $index] = '';
+                        $user[$key]['Abstract title ' . $index] =  (isset($titleAbstract[$index])) ? $titleAbstract[$index] : ' ' ;
+                        if ($abstract and str_contains($abstract, '/files/attachments/')) {
+                            $user[$key]['Abstract ' . $index] = url($abstract) ;
+                        }
+                        $user[$key]['Abstract panel ' . $index] =  (isset($panelAbstract[$index])) ? User::$panelText[$panelAbstract[$index]] : '' ;
                     }
 
                     unset($user[$key]['abstract']);
+                    unset($user[$key]['title_abstract']);
+                    unset($user[$key]['panel_of_abstract']);
                 }
-                if (array_key_exists('title_of_paper', $value)) {
-                    $user[$key]['Title of paper'] = $value['title_of_paper'];
-                    unset($user[$key]['title_of_paper']);
+                if (array_key_exists('paper', $value)) {
+                    $abstracts = json_decode($value['paper'],true);
+                    $titleAbstract = json_decode($value['title_paper'],true);
+
+                    foreach ($abstracts as $index => $paper) {
+                        $user[$key]['Paper ' . $index] = '';
+                        $user[$key]['Paper title ' . $index] =  (isset($titleAbstract[$index])) ? $titleAbstract[$index] : ' ' ;
+                        if ($paper and str_contains($paper, '/files/attachments/')) {
+                            $user[$key]['Abstract ' . $index] = url($paper) ;
+                        }
+                    }
+                    unset($user[$key]['paper']);
+                    unset($user[$key]['title_paper']);
+
                 }
+//                if (array_key_exists('title_of_paper', $value)) {
+//                    $user[$key]['Title of paper'] = $value['title_of_paper'];
+//                    unset($user[$key]['title_of_paper']);
+//                }
                 if (array_key_exists('abstract_panel', $value)) {
                     $user[$key]['Submission to panel'] = isset(User::$panelText[$value['abstract_panel']]) ? User::$panelText[$value['abstract_panel']] : '';
                     unset($user[$key]['abstract_panel']);
