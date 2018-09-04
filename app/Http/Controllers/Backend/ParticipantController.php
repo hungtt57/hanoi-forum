@@ -437,14 +437,17 @@ class ParticipantController extends AdminController
                     $abstracts = json_decode($value['abstract'],true);
                     $titleAbstract = json_decode($value['title_abstract'],true);
                     $panelAbstract = json_decode($value['panel_of_abstract'],true);
-                    foreach ($abstracts as $index => $abstract) {
-                        $user[$key]['Abstract ' . $index] = '';
-                        $user[$key]['Abstract title ' . $index] =  (isset($titleAbstract[$index])) ? $titleAbstract[$index] : ' ' ;
-                        if ($abstract and str_contains($abstract, '/files/attachments/')) {
-                            $user[$key]['Abstract ' . $index] = url($abstract) ;
+                    if($abstracts) {
+                        foreach ($abstracts as $index => $abstract) {
+                            $user[$key]['Abstract ' . $index] = '';
+                            $user[$key]['Abstract title ' . $index] =  (isset($titleAbstract[$index])) ? $titleAbstract[$index] : ' ' ;
+                            if ($abstract and str_contains($abstract, '/files/attachments/')) {
+                                $user[$key]['Abstract ' . $index] = url($abstract) ;
+                            }
+                            $user[$key]['Abstract panel ' . $index] =  (isset($panelAbstract[$index])) ? User::$panelText[$panelAbstract[$index]] : '' ;
                         }
-                        $user[$key]['Abstract panel ' . $index] =  (isset($panelAbstract[$index])) ? User::$panelText[$panelAbstract[$index]] : '' ;
                     }
+
 
                     unset($user[$key]['abstract']);
                     unset($user[$key]['title_abstract']);
@@ -453,14 +456,16 @@ class ParticipantController extends AdminController
                 if (array_key_exists('paper', $value)) {
                     $abstracts = json_decode($value['paper'],true);
                     $titleAbstract = json_decode($value['title_paper'],true);
-
-                    foreach ($abstracts as $index => $paper) {
-                        $user[$key]['Paper ' . $index] = '';
-                        $user[$key]['Paper title ' . $index] =  (isset($titleAbstract[$index])) ? $titleAbstract[$index] : ' ' ;
-                        if ($paper and str_contains($paper, '/files/attachments/')) {
-                            $user[$key]['Abstract ' . $index] = url($paper) ;
+                    if($abstracts) {
+                        foreach ($abstracts as $index => $paper) {
+                            $user[$key]['Paper ' . $index] = '';
+                            $user[$key]['Paper title ' . $index] =  (isset($titleAbstract[$index])) ? $titleAbstract[$index] : ' ' ;
+                            if ($paper and str_contains($paper, '/files/attachments/')) {
+                                $user[$key]['Abstract ' . $index] = url($paper) ;
+                            }
                         }
                     }
+
                     unset($user[$key]['paper']);
                     unset($user[$key]['title_paper']);
 
