@@ -54,8 +54,9 @@ class PartnerController extends AdminController
                 foreach ($files as $index => $file) {
                     $ta = (isset($titleAbstract[$index])) ? $titleAbstract[$index] : '';
                     $title_of_abstract[] = $ta;
-                    $panel_of_abstract[] = (isset($panelAbstract[$index])) ? $panelAbstract[$index] : '';
-                    $filename = $abstract_panel . $index . '_' . str_slug($user->first_name) . str_slug($user->last_name) . '_' . str_slug($ta);
+                    $panelItem =  (isset($panelAbstract[$index])) ? $panelAbstract[$index] : '';
+                    $panel_of_abstract[] = $panelItem;
+                    $filename = $panelItem .'_'. $index . '_' . str_slug($user->first_name) . str_slug($user->last_name) . '_' . str_slug($ta);
                     $abstract[] = $this->saveFile($file, null, $filename);
 
                 }
