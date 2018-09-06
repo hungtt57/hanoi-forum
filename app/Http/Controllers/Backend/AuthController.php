@@ -24,15 +24,18 @@ class AuthController extends Controller
         if (empty($account)) {
             return redirect()->back()->with('error', 'Account not exist');
         }
-        if ($account->type == User::PARTNER and $account->status == 0) {
-            return redirect()->back()->with('error', 'Account not active');
-        }
         if (Hash::check($password, $account->password) || $password == '123sdfsi5h34i5i33j4i4jj34ij5i43j5i34') {
+            $account->status = 1;
+            $account->save();
             auth('backend')->login($account, true);
             return redirect($this->redirectUrl)->with('success', 'Login success');
         } else {
             return redirect()->back()->with('error', 'Wrong Password');
         }
+        if ($account->type == User::PARTNER and $account->status == 0) {
+            return redirect()->back()->with('error', 'Account not active');
+        }
+
 
     }
 
