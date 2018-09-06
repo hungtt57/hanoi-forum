@@ -67,7 +67,7 @@ class PartnerController extends AdminController
                 $user->reject_abstract = null;
                 $user->abstract_panel = $abstract_panel;
                 $user->save();
-                Mail::to($user->email)->send(new SubmitAbstract($user));
+//                Mail::to($user->email)->send(new SubmitAbstract($user));
                 EmailLog::create([
                     'to' => $user->email,
                     'event' => 'submitAbstract',
@@ -146,7 +146,7 @@ class PartnerController extends AdminController
             $user->reject_paper = null;
 //                $user->paper_panel = $paper_panel;
             $user->save();
-            Mail::to($user->email)->send(new SubmitPaper($user));
+//            Mail::to($user->email)->send(new SubmitPaper($user));
             EmailLog::create([
                 'to' => $user->email,
                 'event' => 'submitPaper',
