@@ -50,7 +50,7 @@
                     @foreach($files as $index => $file)
                         <div class="file-container">
                               <input type="text" class="form-control" value="{{(isset($titlePaper[$index])) ? $titlePaper[$index] : ''}}" disabled>
-                            <a class="btn btn-primary green start" href="{{$user->$file}}"
+                            <a class="btn btn-primary green start" href="{{$file}}"
                                download="" style="float: left;margin-right: 10px;margin-top: 10px"><i class="fa fa-download"></i><span>Download File</span>
                                 <div class="clearfix"></div>
                             </a>

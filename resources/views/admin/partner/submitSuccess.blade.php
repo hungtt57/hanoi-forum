@@ -48,14 +48,15 @@
             <div class="form-group">
                 <label class="control-label col-md-3 " for="Name">Abstracts</label>
                 <div class="col-md-6">
-                    @php $files = json_decode($user->abstract,true); @endphp
+                    @php $files = json_decode($user->abstract,true);
+                    @endphp
                     @php $titleAbstract = json_decode($user->title_abstract,true); @endphp
                     @php $panelAbstract = json_decode($user->panel_of_abstract,true); @endphp
                     @foreach($files as $index => $file)
                         <div class="file-container">
                             <input type="text" class="form-control input-abstract"
                                    value="{{(isset($titleAbstract[$index])) ? $titleAbstract[$index] : ''}}" disabled>
-                            <a class="btn btn-primary green start input-abstract" href="{{$user->$file}}"
+                            <a class="btn btn-primary green start input-abstract" href="{{$file}}"
                                download="" style="float: left;margin-right: 10px;margin-top: 10px"><i class="fa fa-download"></i><span>Download File</span>
                                 <div class="clearfix"></div>
                             </a>
