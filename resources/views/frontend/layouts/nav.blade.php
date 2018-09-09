@@ -1,4 +1,4 @@
-<nav class="navbar navbar-white navbar-kawsa navbar-fixed-top" role="navigation">
+<nav id="nav-site" class="navbar navbar-white navbar-kawsa navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
 

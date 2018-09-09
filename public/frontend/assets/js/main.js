@@ -14,14 +14,14 @@ jQuery(document).ready(function($) {
 		event.preventDefault();
 		var btnThis = $(this);
 		btnThis.siblings('.book-list').find('.onexpan').slideToggle(200);
-		
+
 		if (btnThis.text() != "View Less" ) {
 			btnThis.text('View Less');
 		} else {
 			btnThis.text(btnThis.data('text'));
 		}
 	});
-	
+
 	// Place your Sequence options here to override defaults
 	// See: http://sequencejs.com/documentation/#options
 	var options = {
@@ -38,18 +38,18 @@ jQuery(document).ready(function($) {
 		var mySequence_single = sequence(sequenceElement_single, options);
 	}
 	// Launch Sequence on the element, and with the options we specified above
-	
-	
+
+
 	(function(){
 		var sequenceElement = document.getElementById("sequence");
 		//console.log(sequenceElement)
-		
+
 		// Place your Sequence options here to override defaults
 		// See: http://sequencejs.com/documentation/#options
 		var options = {
 		  startingStepAnimatesIn: true,
 		  autoPlay: true,
-      autoPlayInterval: 5000,
+      autoPlayInterval: 4000,
 		  /* Make this the same as the animateCanvasDuration */
 		  phaseThreshold: 250,
 		  preloader: true,
@@ -104,7 +104,7 @@ jQuery(document).ready(function($) {
 	    e.preventDefault();
 	    $('#form_errors').addClass('hide');
 	    var data = $(this).serialize();
-	    
+
 	    if (validateEmail( $(this).find('input[name="email"]').val() )) {
 	        $.ajax({
 	            type: "POST",

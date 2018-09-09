@@ -68,6 +68,19 @@
         .footer-c3 {
             margin-left: 10px;
         }
+
+        .fix-nav .img-logo {
+            max-width: 160px !important;
+        }
+        .fix-nav .nav-btn-wrap {
+            margin-top: 0px !important;
+            max-height: 30px;
+        }
+        .fix-nav .navbar-nav>li>a {
+            padding-top: 5px !important;
+            padding-bottom: 5px !important;
+        }
+
     </style>
 
 
@@ -345,12 +358,19 @@
     } else {
       $('#return-to-top').fadeOut(200);   // Else fade out the arrow
     }
+    if ($(this).scrollTop() > 0) {
+      $('#nav-site').addClass('fix-nav')
+    }else {
+      $('#nav-site').removeClass('fix-nav')
+    }
+
   });
   $('#return-to-top').click(function() {      // When arrow is clicked
     $('body,html').animate({
       scrollTop : 0                       // Scroll to top of body
     }, 300);
   });
+
 </script>
 </body>
 
