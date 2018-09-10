@@ -91,11 +91,11 @@
                             <ul class="book-list list-unstyled">
                                 <li>
                                     <figure>
-                                        <img src="/frontend/book/book4.png" alt="published books" class="img-responsive">
+                                        <img src="/frontend/book/book6.jpg" alt="published books" class="img-responsive">
                                     </figure>
                                     <div class="book-list-meta">
                                         <h3 class="book-list-title"><a href="https://www.cisl.cam.ac.uk/resources/faculty-publications/jorgen-randers-2052" target="_blank">2052: A Global Forecast for the Next Forty Years</a> </h3>
-                                        <div class="book-list-brand"><em>Jorgen Randers</em></div>
+                                        <div class="book-list-brand"><em>Jørgen Randers</em></div>
                                         <p class="book-author">Forty years ago, The Limits to Growth study addressed the grand question of how humans would adapt to the physical limitations of planet Earth. It predicted that during the first half of the 21st century the ongoing growth in the human ecological footprint would stop-either through catastrophic "overshoot and collapse"-or through well-managed "peak and decline."
                                             So, where are we now? And what does our future look like?  In the book 2052, Jorgen Randers, one of the coauthors of Limits to Growth, issues a progress report and makes a forecast for the next forty years...[Read more]...
                                             <a target="_blank" href="https://www.cisl.cam.ac.uk/resources/faculty-publications/jorgen-randers-2052">[Read more]</a></p>
@@ -108,7 +108,7 @@
                             <ul class="book-list list-unstyled">
                                 <li>
                                     <figure>
-                                        <img src="/frontend/book/book5.png" alt="published books" class="img-responsive">
+                                        <img src="/frontend/book/book5.jpg" alt="published books" class="img-responsive">
                                     </figure>
                                     <div class="book-list-meta">
                                         <h3 class="book-list-title"><a href="https://www.chelseagreen.com/product/limits-to-growth/" target="_blank">Limits to Growth: The 30-Year Update</a> </h3>
