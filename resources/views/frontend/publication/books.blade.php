@@ -86,6 +86,40 @@
                                 </li>
                             </ul>
                         </li>
+                        <li>
+                            <span class="year">2012</span>
+                            <ul class="book-list list-unstyled">
+                                <li>
+                                    <figure>
+                                        <img src="/frontend/book/book4.png" alt="published books" class="img-responsive">
+                                    </figure>
+                                    <div class="book-list-meta">
+                                        <h3 class="book-list-title"><a href="https://www.cisl.cam.ac.uk/resources/faculty-publications/jorgen-randers-2052" target="_blank">2052: A Global Forecast for the Next Forty Years</a> </h3>
+                                        <div class="book-list-brand"><em>Jorgen Randers</em></div>
+                                        <p class="book-author">Forty years ago, The Limits to Growth study addressed the grand question of how humans would adapt to the physical limitations of planet Earth. It predicted that during the first half of the 21st century the ongoing growth in the human ecological footprint would stop-either through catastrophic "overshoot and collapse"-or through well-managed "peak and decline."
+                                            So, where are we now? And what does our future look like?  In the book 2052, Jorgen Randers, one of the coauthors of Limits to Growth, issues a progress report and makes a forecast for the next forty years...[Read more]...
+                                            <a target="_blank" href="https://www.cisl.cam.ac.uk/resources/faculty-publications/jorgen-randers-2052">[Read more]</a></p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="year">2004</span>
+                            <ul class="book-list list-unstyled">
+                                <li>
+                                    <figure>
+                                        <img src="/frontend/book/book5.png" alt="published books" class="img-responsive">
+                                    </figure>
+                                    <div class="book-list-meta">
+                                        <h3 class="book-list-title"><a href="https://www.chelseagreen.com/product/limits-to-growth/" target="_blank">Limits to Growth: The 30-Year Update</a> </h3>
+                                        <div class="book-list-brand"><em>Donella H. Meadows, Jorgen Randers, Dennis L. Meadows</em></div>
+                                        <p class="book-author">In 1972, three scientists from MIT created a computer model that analyzed global resource consumption and production. Their results shocked the world and created stirring conversation about global 'overshoot,' or resource use beyond the carrying capacity of the planet. Now, preeminent environmental scientists Donnella Meadows, Jorgen Randers, and Dennis Meadows have teamed up again to update and expand their original findings in The Limits to Growth: The 30 Year Global Update...
+
+                                            <a target="_blank" href="https://www.chelseagreen.com/product/limits-to-growth/">[Read more]</a></p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
