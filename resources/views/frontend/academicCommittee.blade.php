@@ -417,7 +417,7 @@
                             <div class="col-md-12 content-human">
 
                                 <div class="image-human">
-                                    <img  src="/frontend/anh/smajgl.png" alt="">
+                                    <img  src="/frontend/anh/smajgl.jpg" alt="">
                                 </div>
                                 <p><strong>Adj. Prof. Alex SMAJGL</strong></p>
 
