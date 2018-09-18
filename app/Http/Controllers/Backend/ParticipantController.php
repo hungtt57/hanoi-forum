@@ -404,10 +404,6 @@ class ParticipantController extends AdminController
                     $user[$key]['Gender'] = ($value['gender'] == User::FEMALE) ? 'female' : 'male';
                     unset($user[$key]['gender']);
                 }
-                if (array_key_exists('paper', $value)) {
-                    $user[$key]['Paper'] = ($value['paper']) ? url($value['paper']) : '';
-                    unset($user[$key]['paper']);
-                }
                 if (array_key_exists('first_name', $value)) {
                     $user[$key]['First name'] = $value['first_name'];
                     unset($user[$key]['first_name']);
@@ -461,19 +457,14 @@ class ParticipantController extends AdminController
                             $user[$key]['Paper ' . $index] = '';
                             $user[$key]['Paper title ' . $index] =  (isset($titleAbstract[$index])) ? $titleAbstract[$index] : ' ' ;
                             if ($paper and str_contains($paper, '/files/attachments/')) {
-                                $user[$key]['Abstract ' . $index] = url($paper) ;
+                                $user[$key]['Paper ' . $index] = url($paper) ;
                             }
                         }
                     }
-
                     unset($user[$key]['paper']);
                     unset($user[$key]['title_paper']);
 
                 }
-//                if (array_key_exists('title_of_paper', $value)) {
-//                    $user[$key]['Title of paper'] = $value['title_of_paper'];
-//                    unset($user[$key]['title_of_paper']);
-//                }
                 if (array_key_exists('abstract_panel', $value)) {
                     $user[$key]['Submission to panel'] = isset(User::$panelText[$value['abstract_panel']]) ? User::$panelText[$value['abstract_panel']] : '';
                     unset($user[$key]['abstract_panel']);
@@ -504,7 +495,7 @@ class ParticipantController extends AdminController
                 }
             }
         }
-
+        dd($user);
         Excel::create('list-delegates-' . Carbon::now()->toDateString(), function ($excel) use ($user) {
 
             $excel->sheet('sheet', function ($sheet) use ($user) {
