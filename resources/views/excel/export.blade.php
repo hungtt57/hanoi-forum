@@ -61,14 +61,14 @@
             @if(in_array('abstract',$keys))
                 @for($i = 0 ; $i < $countAbstract; $i ++)
                     <td>{{(isset($user['Abstract ' . $i])) ? $user['Abstract ' . $i] : ''}}</td>
-                    <td>{{(isset($user['Abstract title' . $i])) ? $user['Abstract title' . $i] : ''}}</td>
+                    <td>{{(isset($user['Abstract title ' . $i])) ? $user['Abstract title' . $i] : ''}}</td>
                     <td>{{(isset($user['Abstract panel ' . $i])) ? $user['Abstract panel ' . $i] : ''}}</td>
                 @endfor
             @endif
             @if(in_array('paper',$keys))
                 @for($i = 0 ; $i < $countPaper; $i ++)
                     <td>{{(isset($user['Paper ' . $i])) ? $user['Paper ' . $i] : ''}}</td>
-                    <td>{{(isset($user['Paper title' . $i])) ? $user['Paper title' . $i] : ''}}</td>
+                    <td>{{(isset($user['Paper title ' . $i])) ? $user['Paper title' . $i] : ''}}</td>
                 @endfor
             @endif
             @if(in_array('nationality',$keys))
