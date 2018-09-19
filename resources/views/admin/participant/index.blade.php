@@ -114,10 +114,10 @@
                                 <input type="checkbox" class="minimal" name="know">
                                 Source
                             </label>
-                            <label>
-                                <input type="checkbox" class="minimal" name="abstract_panel">
-                                Submission to panel
-                            </label>
+                            {{--<label>--}}
+                                {{--<input type="checkbox" class="minimal" name="abstract_panel">--}}
+                                {{--Submission to panel--}}
+                            {{--</label>--}}
 
                             <div class="row">
                                 <div class="form-group">

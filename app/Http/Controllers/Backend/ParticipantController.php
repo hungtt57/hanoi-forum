@@ -397,7 +397,8 @@ class ParticipantController extends AdminController
         }
 
         $user = $user->where('type', User::PARTNER)->get()->toArray();
-
+    $countAbstract = 0;
+    $countPaper = 0;
         if (count($user)) {
             foreach ($user as $key => $value) {
                 if (array_key_exists('gender', $value)) {
@@ -406,34 +407,32 @@ class ParticipantController extends AdminController
                 }
                 if (array_key_exists('first_name', $value)) {
                     $user[$key]['First name'] = $value['first_name'];
-                    unset($user[$key]['first_name']);
+//                    unset($user[$key]['first_name']);
                 }
                 if (array_key_exists('last_name', $value)) {
                     $user[$key]['Last name'] = $value['last_name'];
-                    unset($user[$key]['last_name']);
+//                    unset($user[$key]['last_name']);
                 }
                 if (array_key_exists('title', $value)) {
                     $user[$key]['Title'] = $value['title'];
-                    unset($user[$key]['title']);
+//                    unset($user[$key]['title']);
                 }
                 if (array_key_exists('affiliation', $value)) {
                     $user[$key]['Affiliation'] = $value['affiliation'];
-                    unset($user[$key]['affiliation']);
+//                    unset($user[$key]['affiliation']);
                 }
                 if (array_key_exists('email', $value)) {
                     $user[$key]['Email'] = $value['email'];
-                    unset($user[$key]['email']);
+//                    unset($user[$key]['email']);
                 }
                 if (array_key_exists('abstract', $value)) {
-//                    if ($value['abstract'] and str_contains($value['abstract'], '/files/attachments/')) {
-//                        $user[$key]['Abstract'] = url($value['abstract']);
-//                    } else {
-//                        $user[$key]['Abstract'] = $value['abstract'];
-//                    }
                     $abstracts = json_decode($value['abstract'],true);
                     $titleAbstract = json_decode($value['title_abstract'],true);
                     $panelAbstract = json_decode($value['panel_of_abstract'],true);
                     if($abstracts) {
+                        if(count($abstracts) > $countAbstract) {
+                            $countAbstract = count($abstracts);
+                        }
                         foreach ($abstracts as $index => $abstract) {
                             $user[$key]['Abstract ' . $index] = '';
                             $user[$key]['Abstract title ' . $index] =  (isset($titleAbstract[$index])) ? $titleAbstract[$index] : ' ' ;
@@ -445,14 +444,17 @@ class ParticipantController extends AdminController
                     }
 
 
-                    unset($user[$key]['abstract']);
-                    unset($user[$key]['title_abstract']);
-                    unset($user[$key]['panel_of_abstract']);
+//                    unset($user[$key]['abstract']);
+//                    unset($user[$key]['title_abstract']);
+//                    unset($user[$key]['panel_of_abstract']);
                 }
                 if (array_key_exists('paper', $value)) {
                     $abstracts = json_decode($value['paper'],true);
                     $titleAbstract = json_decode($value['title_paper'],true);
                     if($abstracts) {
+                        if(count($abstracts) > $countPaper) {
+                            $countPaper = count($countPaper);
+                        }
                         foreach ($abstracts as $index => $paper) {
                             $user[$key]['Paper ' . $index] = '';
                             $user[$key]['Paper title ' . $index] =  (isset($titleAbstract[$index])) ? $titleAbstract[$index] : ' ' ;
@@ -461,13 +463,13 @@ class ParticipantController extends AdminController
                             }
                         }
                     }
-                    unset($user[$key]['paper']);
-                    unset($user[$key]['title_paper']);
+//                    unset($user[$key]['paper']);
+//                    unset($user[$key]['title_paper']);
 
                 }
                 if (array_key_exists('abstract_panel', $value)) {
                     $user[$key]['Submission to panel'] = isset(User::$panelText[$value['abstract_panel']]) ? User::$panelText[$value['abstract_panel']] : '';
-                    unset($user[$key]['abstract_panel']);
+//                    unset($user[$key]['abstract_panel']);
                 }
                 if (array_key_exists('nationality', $value)) {
                     $country = Country::where('iso', $value['nationality'])->first();
@@ -476,7 +478,7 @@ class ParticipantController extends AdminController
                     }
 
 
-                    unset($user[$key]['nationality']);
+//                    unset($user[$key]['nationality']);
                 }
                 if (array_key_exists('know', $value)) {
                     $knowUser = $value['know'];
@@ -491,16 +493,20 @@ class ParticipantController extends AdminController
                             }
                         }
                     }
-                    unset($user[$key]['know']);
+//                    unset($user[$key]['know']);
                 }
             }
         }
-        dd($user);
-        Excel::create('list-delegates-' . Carbon::now()->toDateString(), function ($excel) use ($user) {
+        Excel::create('list-delegates-' . Carbon::now()->toDateString(), function ($excel) use ($user,$keys,$countAbstract,$countPaper) {
 
-            $excel->sheet('sheet', function ($sheet) use ($user) {
+            $excel->sheet('sheet', function ($sheet) use ($user,$keys,$countAbstract,$countPaper)  {
 
-                $sheet->fromArray($user);
+//                $sheet->fromArray($user);
+                $sheet->loadView('excel.export')->with('users',$user)
+                    ->with('countAbstract',$countAbstract)
+                    ->with('countPaper',$countPaper)
+                    ->with('keys',$keys)
+                ;
 
             });
 
