@@ -51,6 +51,14 @@
                             </div>
                         </div>
 
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Nội dung tiếng việt</label>
+                            <div class="col-md-6">
+                    <textarea class="form-control ckeditor" placeholder="Điền miêu tả"
+                              name="content_vn">{{old('content_vn',@$article->content_vn)}} </textarea>
+                            </div>
+                        </div>
+
 
                     </div>
                     <div class="form-actions">

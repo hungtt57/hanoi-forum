@@ -4,7 +4,7 @@
     <header class="sabbi-page-header page-header-lg">
         <div class="page-header-content conternt-center">
             <div class="header-title-block">
-                <h1 class="page-title">Hanoi Forum 2018</h1>
+                <h1 class="page-title">{{trans('home.hanoiForum2018')}}</h1>
             </div>
         </div>
     </header>

@@ -4,15 +4,15 @@
     <header class="sabbi-page-header page-header-lg">
         <div class="page-header-content conternt-center">
             <div class="header-title-block">
-                <h1 class="page-title">Organizing Committee</h1>
+                <h1 class="page-title">{{trans('home.organizingCommittee')}}</h1>
             </div>
         </div>
     </header>
     <div class="auth-breadcrumb-wrap">
         <div class="container">
             <ol class="breadcrumb sabbi-breadcrumb list-unstyled list-inline">
-                <li><a href="{{url('/')}}">Home</a></li>
-                <li class="active"><a href="#">Organizing Committee</a></li>
+                <li><a href="{{url('/')}}">{{trans('home.home')}}</a></li>
+                <li class="active"><a href="#">{{trans('home.organizingCommittee')}}</a></li>
             </ol>
         </div>
     </div>

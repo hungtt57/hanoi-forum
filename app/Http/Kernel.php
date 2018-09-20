@@ -3,6 +3,7 @@
 namespace App\Http;
 
 use App\Http\Middleware\HttpsProtocol;
+use App\Http\Middleware\Language;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -61,5 +62,6 @@ class Kernel extends HttpKernel
         'ADMIN' => \App\Http\Middleware\Admin::class,
         'REVIEWER' => \App\Http\Middleware\REVIEWER::class,
         'PARTNER' => \App\Http\Middleware\PARTNER::class,
+        'language' => Language::class,
     ];
 }

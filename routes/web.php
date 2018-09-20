@@ -11,10 +11,16 @@
 |
 */
 //Frontend
+Route::get('language/{locale}', function ($locale) {
+    Session::put('locale', $locale);
+    return redirect()->back();
+});
+
 Route::get('/send_email', array('uses' => 'Frontend\HomeController@sendEmailReminder'));
 Route::group([
     'namespace' => 'Frontend',
-    'as' => 'Frontend::'
+    'as' => 'Frontend::',
+    'middleware' => ['language']
 ], function () {
     Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
     Route::get('verify-email', ['as' => 'confirm', 'uses' => 'HomeController@vefiryEmail']);

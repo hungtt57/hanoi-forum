@@ -4,15 +4,15 @@
     <header class="sabbi-page-header page-header-lg">
         <div class="page-header-content conternt-center">
             <div class="header-title-block">
-                <h1 class="page-title">Registration</h1>
+                <h1 class="page-title">{{trans('home.registration')}}</h1>
             </div>
         </div>
     </header>
     <div class="auth-breadcrumb-wrap">
         <div class="container">
             <ol class="breadcrumb sabbi-breadcrumb list-unstyled list-inline">
-                <li><a href="{{url('/')}}">Home</a></li>
-                <li class="active"><a href="#">Registration</a></li>
+                <li><a href="{{url('/')}}">{{trans('home.home')}}</a></li>
+                <li class="active"><a href="#">{{trans('home.registration')}}</a></li>
             </ol>
         </div>
     </div>

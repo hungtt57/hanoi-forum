@@ -34,15 +34,15 @@
     <header class="sabbi-page-header page-header-lg">
         <div class="page-header-content conternt-center">
             <div class="header-title-block">
-                <h1 class="page-title">Steering Committee</h1>
+                <h1 class="page-title">{{trans('home.steeringCommittee')}}</h1>
             </div>
         </div>
     </header>
     <div class="auth-breadcrumb-wrap">
         <div class="container">
             <ol class="breadcrumb sabbi-breadcrumb list-unstyled list-inline">
-                <li><a href="{{url('/')}}">Home</a></li>
-                <li class="active"><a href="#">Steering Committee</a></li>
+                <li><a href="{{url('/')}}">{{trans('home.home')}}</a></li>
+                <li class="active"><a href="#">{{trans('home.steeringCommittee')}}</a></li>
             </ol>
         </div>
     </div>
