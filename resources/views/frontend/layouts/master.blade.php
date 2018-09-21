@@ -145,7 +145,7 @@
                     {{--</address>--}}
                     <section class="widget widget_sec">
                         <div class="widget-main">
-                            <h2 class="widget-title">Address</h2>
+                            <h2 class="widget-title">{{trans('home.address')}}</h2>
                             <ul class="list list-unstyled list-footer-nav">
                                 <li><a >Hanoi Forum Secretariat</a></li>
                                 <li><a >R1006, Administration Building</a></li>
@@ -157,7 +157,7 @@
                     </section>
                 <section class="widget widget_sec">
                     <div class="widget-main">
-                        <h2 class="widget-title">Contact Information</h2>
+                        <h2 class="widget-title">{{trans('contactInfo')}}</h2>
                         <ul class="list list-unstyled list-footer-nav">
                             <li><a >Tel: (84) 24 39983856</a></li>
                             <li><a >Email: hanoiforum@vnu.edu.vn</a></li>

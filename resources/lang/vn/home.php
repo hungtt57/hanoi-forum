@@ -5,6 +5,8 @@ return [
 
 
     'home' => 'Trang chủ',
+    'address' => 'Địa chỉ',
+    'contactInfo' => 'Thông tin liên lạc',
     'about' => 'Giới thiệu',
     'hanoiForum' => 'Diễn đàn hà nội',
     'hanoiForum2018' => 'Diễn đàn hà nội 2018',

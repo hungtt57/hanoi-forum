@@ -14,6 +14,8 @@ return [
     */
 
     'home' => 'Home',
+    'address' => 'Address',
+    'contactInfo' => 'Contact information',
     'about' => 'About',
     'hanoiForum' => 'Hanoi Forum',
     'hanoiForum2018' => 'Hanoi Forum 2018',
