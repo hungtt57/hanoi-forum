@@ -15,6 +15,7 @@ use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Input;
 use Mail;
 use App\Models\EmailLog;
+use Hash;
 use DB;
 class ParticipantController extends AdminController
 {
