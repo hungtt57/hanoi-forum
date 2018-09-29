@@ -31,13 +31,13 @@
                             <a href="{{url('/language/vn')}}" class="block site-lang-switch"
                                style="padding-left: 2px; padding-right: 2px; display: inline-block">
                                 <img src="{{url('frontend/flag-vi.png')}}" class="flag">
-                                <span class="hidden-xs">Việt Nam</span>
+                                <span class="hidden-xs"></span>
 
                             </a>
                             <a href="{{url('/language/en')}}"  class="block site-lang-switch"
                                style="padding-left: 2px; padding-right: 2px; display: inline-block">
                                 <img src="{{url('frontend/flag-us.png')}}" class="flag">
-                                <span class="hidden-xs">English</span>
+                                <span class="hidden-xs"></span>
 
                             </a>
                         </div>
