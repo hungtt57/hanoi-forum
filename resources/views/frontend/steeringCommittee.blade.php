@@ -31,6 +31,13 @@
             font-weight: bold;
         }
     </style>
+    <style>
+        .sabbi-page-header {
+            background-image: url({{url('frontend/anhbanner/6.jpg')}});
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
     <header class="sabbi-page-header page-header-lg">
         <div class="page-header-content conternt-center">
             <div class="header-title-block">

@@ -1,6 +1,13 @@
 @extends('frontend.layouts.master')
 @section('title','Home')
 @section('content')
+    <style>
+        .sabbi-page-header {
+            background-image: url({{url('frontend/anhbanner/4.jpg')}});
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
     <header class="sabbi-page-header page-header-lg">
         <div class="page-header-content conternt-center">
             <div class="header-title-block">
@@ -894,7 +901,7 @@
 
                                     </ul>
 
-                                    <p>Lĩnh vực nghiên cứu: Phản ứng và khả năng phục hồi của môi trường trước tác động không kiểm soát và có kiểm soát của con người trong tương lai, hoạt động kiến tạo địa hình.
+                                    <p>Lĩnh vực nghiên cứu: Ứng phó và chống chịu môi trường trước các tác động tương lai của con người và các quy hoạch; Các quá trình tích hợp từ môi trường địa chất đến quá trình nhân sinh; Kiến tạo hoạt động và địa mạo kiến tạo; Quyển nhân sinh.
 
                                     </p>
 

@@ -13,6 +13,13 @@
             padding-left: 0px;
         }
     </style>
+    <style>
+        .sabbi-page-header {
+            background-image: url({{url('frontend/anhbanner/6.jpg')}});
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
 @endpush
 @section('content')
     <header class="sabbi-page-header page-header-lg">

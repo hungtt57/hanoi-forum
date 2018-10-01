@@ -2,6 +2,13 @@
 @section('title','Home')
 @section('content')
     <style>
+        .sabbi-page-header {
+            background-image: url({{url('frontend/anhbanner/1.jpg')}});
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+    <style>
         .book-list-meta {
             padding-left: 10px;
         }

@@ -2,6 +2,13 @@
 @section('title','Home')
 @section('content')
     <style>
+        .sabbi-page-header {
+            background-image: url({{url('frontend/anhbanner/redriver.jpg')}});
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+    <style>
 
         .image-human img {
             width: 150px;

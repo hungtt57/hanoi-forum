@@ -1,7 +1,13 @@
 @extends('frontend.layouts.master')
 @section('title','Home')
 @section('content')
-
+    <style>
+        .sabbi-page-header {
+            background-image: url({{url('frontend/anhbanner/7.jpg')}});
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
         <header class="sabbi-page-header page-header-lg"
                 style="background-image: url('{{url('frontend/anhbaiviet/faq.png')}}');
                         background-size: cover;
