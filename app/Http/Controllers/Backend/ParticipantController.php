@@ -17,6 +17,7 @@ use Mail;
 use App\Models\EmailLog;
 use Hash;
 use DB;
+
 class ParticipantController extends AdminController
 {
     public function sendEmail(Request $request, $id)
@@ -61,9 +62,8 @@ class ParticipantController extends AdminController
 //                if($user->paper)  {
 //                    return view('admin.participant.paper_panel', compact('user'))->render();
 //                }
-               return '';
+                return '';
             })
-
 //            ->editColumn('payment_status', function ($user) {
 //
 ////                return User::$paymentText[$post->payment_status];
@@ -90,7 +90,7 @@ class ParticipantController extends AdminController
             })
             ->editColumn('link_cv', function ($post) {
                 $string = '';
-                $string .=' <div style="max-width: 200px">';
+                $string .= ' <div style="max-width: 200px">';
                 if ($post->link_cv) {
                     $string .= '<a target="_blank" href="' . $post->link_cv . '">' . $post->link_cv . '</a>';
                 }
@@ -103,17 +103,17 @@ class ParticipantController extends AdminController
                                 <div class="clearfix"></div>
                             </a>';
                 }
-                $string.= '</div>';
+                $string .= '</div>';
 
                 return $string;
             })
             ->editColumn('paper', function ($post) {
                 if ($post->paper) {
                     $string = '';
-                    $files = json_decode($post->paper,true);
+                    $files = json_decode($post->paper, true);
                     foreach ($files as $file) {
-                        $string.='<a class="btn btn-primary green start" href="' . $file . '"
-                               download="' .$file. '"
+                        $string .= '<a class="btn btn-primary green start" href="' . $file . '"
+                               download="' . $file . '"
                                style="float: left;margin-right: 10px;margin-top: 10px">
                                 <i class="fa fa-download"></i>
                                 <span>Download File</span>
@@ -143,7 +143,7 @@ class ParticipantController extends AdminController
 
                 $string .= '<a  href="' . $urlEdit . '" class="btn btn-info">Edit</a>';
 
-                $string .= '<a href="#" data-url="'.$urlDelete.'" class="btn btn-danger delete-part">Delete</a>';
+                $string .= '<a href="#" data-url="' . $urlDelete . '" class="btn btn-danger delete-part">Delete</a>';
 
 
                 return $string;
@@ -178,11 +178,11 @@ class ParticipantController extends AdminController
         ], 200);
     }
 
-    public function delete(Request $request,$id)
+    public function delete(Request $request, $id)
     {
         $post = User::where('id', $id)->where('type', User::PARTNER)->first();
         if (empty($post)) {
-            if($request->ajax()) {
+            if ($request->ajax()) {
                 return response([
                     'status' => 0,
                     'message' => 'Delegate not exist'
@@ -191,7 +191,7 @@ class ParticipantController extends AdminController
             return redirect()->back()->with('error', 'Delegate not exist!');
         }
         $post->delete();
-        if($request->ajax()) {
+        if ($request->ajax()) {
             return response([
                 'status' => 1,
                 'message' => 'Delegate not exist'
@@ -230,7 +230,7 @@ class ParticipantController extends AdminController
         ], 200);
     }
 
- public function selectPaperPanel(Request $request)
+    public function selectPaperPanel(Request $request)
     {
         $id = $request->input('id');
         $panel = $request->input('panel');
@@ -388,18 +388,18 @@ class ParticipantController extends AdminController
         if ($request->input('id')) {
             $user = $user->whereIn('id', $request->input('id'));
         }
-        if($request->input('start_time')) {
-            $time = Carbon::createFromFormat('d/m/Y',$request->input('start_time'));
-            $user = $user->where('created_at','>=',$time);
+        if ($request->input('start_time')) {
+            $time = Carbon::createFromFormat('d/m/Y', $request->input('start_time'));
+            $user = $user->where('created_at', '>=', $time);
         }
-        if($request->input('end_time')) {
-            $time = Carbon::createFromFormat('d/m/Y',$request->input('end_time'));
-            $user = $user->where('created_at','<=',$time);
+        if ($request->input('end_time')) {
+            $time = Carbon::createFromFormat('d/m/Y', $request->input('end_time'));
+            $user = $user->where('created_at', '<=', $time);
         }
 
         $user = $user->where('type', User::PARTNER)->get()->toArray();
-    $countAbstract = 0;
-    $countPaper = 0;
+        $countAbstract = 0;
+        $countPaper = 0;
         if (count($user)) {
             foreach ($user as $key => $value) {
                 if (array_key_exists('gender', $value)) {
@@ -427,20 +427,20 @@ class ParticipantController extends AdminController
 //                    unset($user[$key]['email']);
                 }
                 if (array_key_exists('abstract', $value)) {
-                    $abstracts = json_decode($value['abstract'],true);
-                    $titleAbstract = json_decode($value['title_abstract'],true);
-                    $panelAbstract = json_decode($value['panel_of_abstract'],true);
-                    if($abstracts) {
-                        if(count($abstracts) > $countAbstract) {
+                    $abstracts = json_decode($value['abstract'], true);
+                    $titleAbstract = json_decode($value['title_abstract'], true);
+                    $panelAbstract = json_decode($value['panel_of_abstract'], true);
+                    if ($abstracts) {
+                        if (count($abstracts) > $countAbstract) {
                             $countAbstract = count($abstracts);
                         }
                         foreach ($abstracts as $index => $abstract) {
                             $user[$key]['Abstract ' . $index] = '';
-                            $user[$key]['Abstract title ' . $index] =  (isset($titleAbstract[$index])) ? $titleAbstract[$index] : ' ' ;
+                            $user[$key]['Abstract title ' . $index] = (isset($titleAbstract[$index])) ? $titleAbstract[$index] : ' ';
                             if ($abstract and str_contains($abstract, '/files/attachments/')) {
-                                $user[$key]['Abstract ' . $index] = url($abstract) ;
+                                $user[$key]['Abstract ' . $index] = url($abstract);
                             }
-                            $user[$key]['Abstract panel ' . $index] =  (isset($panelAbstract[$index])) ? User::$panelText[$panelAbstract[$index]] : '' ;
+                            $user[$key]['Abstract panel ' . $index] = (isset($panelAbstract[$index])) ? User::$panelText[$panelAbstract[$index]] : '';
                         }
                     }
 
@@ -450,17 +450,17 @@ class ParticipantController extends AdminController
 //                    unset($user[$key]['panel_of_abstract']);
                 }
                 if (array_key_exists('paper', $value)) {
-                    $abstracts = json_decode($value['paper'],true);
-                    $titleAbstract = json_decode($value['title_paper'],true);
-                    if($abstracts) {
-                        if(count($abstracts) > $countPaper) {
+                    $abstracts = json_decode($value['paper'], true);
+                    $titleAbstract = json_decode($value['title_paper'], true);
+                    if ($abstracts) {
+                        if (count($abstracts) > $countPaper) {
                             $countPaper = count($countPaper);
                         }
                         foreach ($abstracts as $index => $paper) {
                             $user[$key]['Paper ' . $index] = '';
-                            $user[$key]['Paper title ' . $index] =  (isset($titleAbstract[$index])) ? $titleAbstract[$index] : ' ' ;
+                            $user[$key]['Paper title ' . $index] = (isset($titleAbstract[$index])) ? $titleAbstract[$index] : ' ';
                             if ($paper and str_contains($paper, '/files/attachments/')) {
-                                $user[$key]['Paper ' . $index] = url($paper) ;
+                                $user[$key]['Paper ' . $index] = url($paper);
                             }
                         }
                     }
@@ -498,16 +498,15 @@ class ParticipantController extends AdminController
                 }
             }
         }
-        Excel::create('list-delegates-' . Carbon::now()->toDateString(), function ($excel) use ($user,$keys,$countAbstract,$countPaper) {
+        Excel::create('list-delegates-' . Carbon::now()->toDateString(), function ($excel) use ($user, $keys, $countAbstract, $countPaper) {
 
-            $excel->sheet('sheet', function ($sheet) use ($user,$keys,$countAbstract,$countPaper)  {
+            $excel->sheet('sheet', function ($sheet) use ($user, $keys, $countAbstract, $countPaper) {
 
 //                $sheet->fromArray($user);
-                $sheet->loadView('excel.export')->with('users',$user)
-                    ->with('countAbstract',$countAbstract)
-                    ->with('countPaper',$countPaper)
-                    ->with('keys',$keys)
-                ;
+                $sheet->loadView('excel.export')->with('users', $user)
+                    ->with('countAbstract', $countAbstract)
+                    ->with('countPaper', $countPaper)
+                    ->with('keys', $keys);
 
             });
 

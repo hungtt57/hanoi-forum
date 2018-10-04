@@ -114,6 +114,14 @@
                                 <input type="checkbox" class="minimal" name="know">
                                 Source
                             </label>
+                            <label>
+                                <input type="checkbox" class="minimal" name="dietary">
+                                Special diet
+                            </label>
+                            <label>
+                                <input type="checkbox" class="minimal" name="indicate">
+                                Indicate
+                            </label>
                             {{--<label>--}}
                                 {{--<input type="checkbox" class="minimal" name="abstract_panel">--}}
                                 {{--Submission to panel--}}
