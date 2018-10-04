@@ -72,7 +72,7 @@
                 @endfor
             @endif
             @if(in_array('nationality',$keys))
-                <td>{{$user['nationality']}}</td>
+                <td>{{$user['Nationality']}}</td>
             @endif
                 @if(in_array('know',$keys))
                     @for($i = 0 ; $i < 7; $i ++)
