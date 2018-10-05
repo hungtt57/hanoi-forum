@@ -38,7 +38,7 @@ class Article extends Model
         'scienceTechnology' => 'Science, technology and education for climate change response and sustainability',
         'policy1' => 'Policy Dialogue 1: Sustainable development of Mekong Delta responding to Climate change',
         'policy2' => 'Policy Dialogue 2: Building Resilient, safe and sustainable cities in Red River delta (Hanoi City, Vinh Phuc City, Hai Phong city)',
-      'hanoi-forum' => 'Hanoi forum',
+         'hanoi-forum' => 'Hanoi forum',
         'hanoi-forum-2018' => 'Hanoi forum 2018',
 
     ];
