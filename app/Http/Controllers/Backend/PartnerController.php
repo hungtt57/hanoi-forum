@@ -318,4 +318,7 @@ class PartnerController extends AdminController
             })
             ->make(true);
     }
+    public function onlineService(Request $request) {
+        return view('admin.partner.onlineService');
+    }
 }

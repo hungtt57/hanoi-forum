@@ -298,5 +298,9 @@ Route::group([
             'as' => 'postSubmitPaper',
             'uses' => 'PartnerController@postSubmitPaper'
         ]);
+        Route::get('/online-service', [
+           'as' => 'onlineService',
+           'uses' => 'PartnerController@onlineService'
+        ]);
     });
 });
