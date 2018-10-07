@@ -28,7 +28,14 @@ class User extends Authenticatable
         'Ms.' => 'Ms.',
         'Mr.' => 'Mr.'
     ];
+    public static $room = [
+        0 => 'Double room',
+        1 => 'Twin room',
+        2 => 'Smoking room',
+        3 => 'Non-smoking room',
+        4 => 'None',
 
+    ];
     public static $dietaryText = [
         0 => 'None',
         1 => 'Vegetarian',
