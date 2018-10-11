@@ -52,7 +52,7 @@
     <h3>Online service form </h3>
 
     @include('admin.flash_message')
-    <form action="{{url('admin/partner/edit')}}" class="form-horizontal" method="POST"
+    <form action="{{url('admin/online-service')}}" class="form-horizontal" method="POST"
           enctype="multipart/form-data">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -375,7 +375,7 @@
                                             >
                                             Others (Please specify) : <input type="text"
                                                                              @if(isset($form))
-                                                                             @if(is_array($user->indicate) && isset($user->indicate[$key]))  value="{{old('indicate.'.$key.'.content',$user->indicate[$key]['content'])}}"  @endif
+                                                                             @if(is_array($form->indicate) && isset($form->indicate[$key]))  value="{{old('indicate.'.$key.'.content',$form->indicate[$key]['content'])}}"  @endif
                                                                              @else
                                                                              value="{{old('indicate.'.$key.'.content]')}}"
                                                                              @endif
@@ -587,19 +587,22 @@
                     </div>
                     <p style="color:red">Please attach your photo and a copy of your passports. Please also attach a photo of and a copy of the accompanying person(s).</p>
                 </div>
+                <div class="form-actions">
+                    <div class="row" style="text-align: center">
 
+
+
+                        <button type="submit" class="btn btn-primary">Update</button>
+
+                        {{--<button type="button" class="btn default">Reset</button>--}}
+
+                    </div>
+                </div>
             </div>
         </div>
         </div>
 
-        <div class="form-actions">
-            <div class="row" style="text-align: center">
 
-
-                {{--<button type="button" class="btn default">Reset</button>--}}
-
-            </div>
-        </div>
     </form>
 
 

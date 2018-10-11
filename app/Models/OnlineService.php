@@ -8,6 +8,7 @@ class OnlineService extends Model
 {
     public $table = 'online_services';
     public $fillable = [
+        'account_id',
         'attendingForum',
         'presentationForum',
         'presentation',
@@ -67,5 +68,9 @@ class OnlineService extends Model
         'event_3',
         'accom_obtain_visa',
         'accom_where_visa',
+    ];
+    public $casts = [
+      'room' => 'array',
+      'indicate' => 'array',
     ];
 }

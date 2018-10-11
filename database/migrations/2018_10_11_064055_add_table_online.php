@@ -16,6 +16,7 @@ class AddTableOnline extends Migration
         Schema::create('online_services', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
+            $table->integer('account_id');
             $table->tinyInteger('attendingForum')->default(0);
             $table->tinyInteger('presentationForum')->default(0);
             $table->tinyInteger('presentation')->default(0);

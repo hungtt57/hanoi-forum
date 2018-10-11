@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Mail\SubmitPaper;
+use App\Models\OnlineService;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -319,6 +320,16 @@ class PartnerController extends AdminController
             ->make(true);
     }
     public function onlineService(Request $request) {
-        return view('admin.partner.onlineService');
+        $accountId = auth('backend')->user()->id;
+        $form = OnlineService::where('account_id',$accountId)->first();
+        return view('admin.partner.onlineService',compact('form'));
     }
+    public function postOnlineService(Request $request) {
+        $data = $request->all();
+        $data['account_id'] = auth('backend')->user()->id;
+        $online = OnlineService::firstOrCreate(['account_id' =>   $data['account_id'] ]);
+        $online->update($data);
+        return redirect()->back()->with('success','Success');
+    }
+
 }

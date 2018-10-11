@@ -302,5 +302,9 @@ Route::group([
            'as' => 'onlineService',
            'uses' => 'PartnerController@onlineService'
         ]);
+        Route::post('/online-service', [
+            'as' => 'postOnlineService',
+            'uses' => 'PartnerController@postOnlineService'
+        ]);
     });
 });
