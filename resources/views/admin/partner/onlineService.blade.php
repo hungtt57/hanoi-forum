@@ -107,7 +107,7 @@
                     <div class="form-group">
                         <label class=" col-md-3 ">First name*</label>
                         <div class="col-md-6">
-                            <input type="text" name="first_name" tabindex="2"
+                            <input type="text" name="first_name"
                                    class="form-control"
                                    value="{{old('first_name',@$form->first_name)}}">
                         </div>
@@ -115,7 +115,7 @@
                     <div class="form-group">
                         <label class=" col-md-3 ">Sur name*</label>
                         <div class="col-md-6">
-                            <input type="text" name="last_name" tabindex="2"
+                            <input type="text" name="last_name"
                                    class="form-control"
                                    value="{{old('last_name',@$form->last_name)}}">
                         </div>
@@ -556,8 +556,8 @@
                                                       @if(old('panel_4',@$form->panel_4) == 1) checked @endif>
                         </div>
                         <div class="col-md-4">
-                            Panel 5 (10 Nov)   <input type="checkbox" name="panel_4" value="1"
-                                                      @if(old('panel_4',@$form->panel_4) == 1) checked @endif>
+                            Panel 5 (10 Nov)   <input type="checkbox" name="panel_5panel_5" value="1"
+                                                      @if(old('panel_5',@$form->panel_5) == 1) checked @endif>
                         </div>
                     </div>
                     <div class="form-group">
