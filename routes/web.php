@@ -28,7 +28,22 @@ Route::group([
         'as' => 'register',
         'uses' => 'HomeController@register'
     ]);
-
+    Route::get('forgot-password', [
+        'as' => 'forgotPassword',
+        'uses' => 'HomeController@forgotPassword'
+    ]);
+    Route::post('forgot-password', [
+        'as' => 'forgotPassword',
+        'uses' => 'HomeController@postForgotPassword'
+    ]);
+    Route::get('new-password', [
+        'as' => 'newPassword',
+        'uses' => 'HomeController@newPassword'
+    ]);
+    Route::post('new-password', [
+        'as' => 'postNewPassword',
+        'uses' => 'HomeController@postNewPassword'
+    ]);
     Route::post('register', [
         'as' => 'postRegister',
         'uses' => 'HomeController@postRegister'

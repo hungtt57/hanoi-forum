@@ -110,7 +110,8 @@ class User extends Authenticatable
         'title_abstract',
         'title_paper',
         'panel_of_abstract',
-        'panel_of_paper'
+        'panel_of_paper',
+        'code_password'
 
     ];
     protected $casts = [

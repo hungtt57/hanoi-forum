@@ -149,9 +149,9 @@
                                 {{--href="{{url('admin/list-delegates')}}"><i class="fa  fa-user-plus"></i>--}}
                             {{--<span>List Delegates  </span></a></li>--}}
                 @endif
-                    <li class="{{ (Request::is('admin/online-service')) ? 'active' : '' }}"><a
-                                href="{{url('admin/online-service')}}"><i class="fa   fa-user-circle"></i>
-                            <span>Online Service Form</span></a></li>
+                    {{--<li class="{{ (Request::is('admin/online-service')) ? 'active' : '' }}"><a--}}
+                                {{--href="{{url('admin/online-service')}}"><i class="fa   fa-user-circle"></i>--}}
+                            {{--<span>Online Service Form</span></a></li>--}}
                 <li class=""><a
                             href="{{url('contact-us')}}"><i class="fa  fa-question-circle"></i>
                         <span>Contact us</span></a></li>

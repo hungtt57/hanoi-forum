@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Mail\RegisterEmail;
+use App\Mail\ResetPassword;
 use App\Mail\SendContactEmail;
 use App\Models\Contact;
 use App\Models\EmailLog;
@@ -16,6 +17,54 @@ use Mail;
 
 class HomeController extends AdminController
 {
+    public function newPassword(Request $request) {
+        $code = $request->input('code');
+        if(empty($code)) {
+            return redirect('/')->with('error','Something went wrong');
+        }
+        $user = User::where('code_password', $code)->first();
+        if(empty($user)) {
+            return redirect('admin/login')->with('error','User do not exist');
+        }
+        return view('admin.auth.newPassword',compact('user'));
+    }
+    public function postNewPassword(Request $request) {
+        $this->validate($request, [
+            'password' => 'required|min:6|confirmed',
+        ]);
+        $code = $request->input('code');
+        if(empty($code)) {
+            return redirect('/')->with('error','Something went wrong');
+        }
+        $password = $request->input('password');
+        $user = User::where('code_password', $code)->first();
+        if(empty($user)) {
+            return redirect('admin/login')->with('error','User do not exist');
+        }
+       $user->password= Hash::make($password);
+        $user->code_password = '';
+        $user->save();
+        return redirect('admin/login')->with('success','Change password successfully');
+    }
+    public function forgotPassword(Request $request){
+        return view('admin.auth.forgotPassword');
+    }
+    public function postForgotPassword(Request $request) {
+        $email = $request->input('email');
+        if(empty($email)) {
+            return redirect()->back()->with('error','Please enter email');
+        }
+        $user = User::where('email', $email)->first();
+        if(empty($user)) {
+            return redirect()->back()->with('error','User do not exist');
+        }
+        $code = str_random(5);
+        $code= md5($code.time());
+        $user->code_password = $code;
+        $user->save();
+        Mail::to($user->email)->cc('hanoiforum@vnu.edu.vn')->send(new ResetPassword($user));
+        return redirect()->back()->with('success','Please check your email to reset password');
+    }
     public function sendEmailReminder(Request $request)
     {
         $id = 1; // điền 1 mã id bất kỳ của user trong bảng users

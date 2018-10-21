@@ -34,37 +34,34 @@
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">
-        <p class="login-box-msg">Sign in to start your session</p>
+        <p class="login-box-msg">Enter new password</p>
         @include('admin.flash_message')
-        <form class="login-form" action="{{url('admin/login')}}" method="post">
+        <form class="login-form" action="{{url('new-password')}}" method="post">
             {{csrf_field()}}
-            <div class="form-group has-feedback">
-                <input type="email" class="form-control" placeholder="Email"  autocomplete="off" name="email" >
-                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+            <input type="hidden" name="code" value="{{$user->code_password}}">
+            <div class="form-group">
+                <label class="control-label ">Password*</label>
+                <div class="controls">
+                    <input type="password" name="password" class="form-control"
+                           placeholder="Password">
+                </div>
             </div>
-            <div class="form-group has-feedback">
-                <input type="password" class="form-control" placeholder="Password" name="password"  autocomplete="off">
-                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+            <div class="form-group">
+                <label class="control-label ">Password confirmation*</label>
+                <div class="controls">
+                    <input type="password" name="password_confirmation"
+                           class="form-control"
+                           placeholder="Password">
+                </div>
             </div>
             <div class="row">
-                {{--<div class="col-xs-8">--}}
-                    {{--<div class="checkbox icheck">--}}
-                        {{--<label>--}}
-                            {{--<input type="checkbox"> Remember Me--}}
-                        {{--</label>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-                {{--<!-- /.col -->--}}
+
                 <div class="col-xs-4 col-xs-offset-4">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat">Login</button>
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">Save</button>
                 </div>
                 <!-- /.col -->
             </div>
         </form>
-
-
-        <a href="{{url('forgot-password')}}">I forgot my password</a><br>
-        <a href="{{url('register')}}" class="text-center">Register</a>
 
     </div>
     <!-- /.login-box-body -->
