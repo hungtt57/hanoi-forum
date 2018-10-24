@@ -15,6 +15,9 @@
         @if(in_array('email',$keys))
             <td>Email</td>
         @endif
+            @if(in_array('dietary',$keys))
+            <td>Special diet</td>
+        @endif
         @if(in_array('abstract',$keys))
             @for($i = 0 ; $i < $countAbstract; $i ++)
                 <td>Abstract {{$i}}</td>
@@ -32,8 +35,13 @@
             <td>Nationality</td>
         @endif
         @if(in_array('know',$keys))
-            @for($i = 0 ; $i < 7; $i ++)
+            @for($i = 0 ; $i < 8; $i ++)
                 <td>Source of info {{$i}}</td>
+            @endfor
+        @endif
+            @if(in_array('indicate',$keys))
+            @for($i = 0 ; $i < 5; $i ++)
+                <td>Indicate {{$i}}</td>
             @endfor
         @endif
     </tr>
@@ -58,6 +66,9 @@
             @if(in_array('email',$keys))
                 <td>{{$user['email']}}</td>
             @endif
+                @if(in_array('dietary',$keys))
+                    <td>{{$user['Special diet']}}</td>
+                @endif
             @if(in_array('abstract',$keys))
                 @for($i = 0 ; $i < $countAbstract; $i ++)
                     <td>{{(isset($user['Abstract ' . $i])) ? $user['Abstract ' . $i] : ''}}</td>
@@ -75,8 +86,13 @@
                 <td>{{$user['Nationality']}}</td>
             @endif
                 @if(in_array('know',$keys))
-                    @for($i = 0 ; $i < 7; $i ++)
+                    @for($i = 0 ; $i < 8; $i ++)
                         <td>{{(isset($user['Source of info' . $i])) ? $user['Source of info' . $i] : ''}}</td>
+                    @endfor
+                @endif
+                @if(in_array('know',$keys))
+                    @for($i = 0 ; $i < 5; $i ++)
+                        <td>{{(isset($user['Indicate' . $i])) ? $user['Indicate' . $i] : ''}}</td>
                     @endfor
                 @endif
         </tr>

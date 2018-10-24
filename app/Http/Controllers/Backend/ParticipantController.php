@@ -383,6 +383,8 @@ class ParticipantController extends AdminController
         $keys[] = 'title_abstract';
         $keys[] = 'title_paper';
         $keys[] = 'panel_of_abstract';
+        $keys[] = 'dietary_content';
+        $keys[] = 'indicate_content';
 
         $user = User::select($keys)->orderBy('updated_at', 'desc');
         if ($request->input('id')) {
@@ -491,6 +493,29 @@ class ParticipantController extends AdminController
                             $user[$key]['Source of info' . $k] = $know;
                             if ($k == 7) {
                                 $user[$key]['Source of info' . $k] = $knowUser[$k]['content'];
+                            }
+                        }
+                    }
+//                    unset($user[$key]['know']);
+                }
+                if(array_key_exists('dietary', $value)) {
+                    $dietary = $value['dietary'];
+                    if($dietary == 4) {
+                        $user[$key]['Special diet'] = $value['dietary_content'];
+                    }else {
+                        $user[$key]['Special diet'] = User::$dietaryText[$dietary];
+                    }
+                }
+                if (array_key_exists('indicate', $value)) {
+                    $knowUser = $value['indicate'];
+
+                    foreach (User::$indicateText as $k => $know) {
+                        $user[$key]['Indicate' . $k] = '';
+
+                        if (isset($knowUser[$k])) {
+                            $user[$key]['Indicate' . $k] = $know;
+                            if ($k == 4) {
+                                $user[$key]['Indicate' . $k] = $knowUser[$k]['content'];
                             }
                         }
                     }
