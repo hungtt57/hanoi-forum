@@ -163,6 +163,21 @@
                                     <div class="clearfix"></div>
                                 </div>
 
+
+                                <div class="col-md-12 content-human">
+
+                                    <div class="image-human">
+                                        <img class="" src="/frontend/keynote/sokona.jpg" alt="">
+                                    </div>
+                                    <p class="name-human"><strong>Dr Youba Sokona</strong></p>
+                                    <p><strong>Vice-Chair of the Intergovernmental Panel on Climate Change (IPCC)</strong></p>
+                                    <p>Dr Sokona is currently Special Advisor for Sustainable Development at the South Centre.</p>
+                                    <p>With over 35 years of experience addressing energy, environment and sustainable development in Africa. Reflecting his status, Dr Sokona was elected Vice-Chair of the Intergovernmental Panel on Climate Change (IPCC) in October 2015.
+                                    </p>
+                                    <p>Prior to this, Dr Sokona was Co-Chair of IPCC Working Group III on the mitigation of climate change for the Fifth Assessment Report after serving as a Lead Author since 1990. In addition to these achievements, Dr Sokona has a proven track record of organisational leadership and management, for example, leading the conception, development and initiating the Africa Renewable Energy Initiative, as the first Coordinator of the African Climate Policy Centre (ACPC) and as Executive Secretary of the Sahara and the Sahel Observatory (OSS). Dr Sokona’s advice is highly sought after, and as such, he is affiliated with numerous boards and organisations, including Honorary Professor at the University College London (UCL), Member of Science Advisory Committee of the International Institute for Applied Systems Analysis (IIASA), Member of the Advisory Board of the Payne Institute at the Colorado School of Mines, and as a Special Advisor to the African Energy Leaders Group. In short, Dr Sokona is a global figure, with deep technical knowledge, extensive policy experience and an unreserved personal commitment to African led development.</p>
+
+                                    <div class="clearfix"></div>
+                                </div>
                             @endif
 
                         </div>
