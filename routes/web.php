@@ -24,10 +24,10 @@ Route::group([
 ], function () {
     Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
     Route::get('verify-email', ['as' => 'confirm', 'uses' => 'HomeController@vefiryEmail']);
-    Route::get('register', [
-        'as' => 'register',
-        'uses' => 'HomeController@register'
-    ]);
+//    Route::get('register', [
+//        'as' => 'register',
+//        'uses' => 'HomeController@register'
+//    ]);
     Route::get('forgot-password', [
         'as' => 'forgotPassword',
         'uses' => 'HomeController@forgotPassword'

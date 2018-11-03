@@ -44,15 +44,15 @@
                     </li>
                 </ul>
                 <a href="{{url('/admin/login')}}" class="pull-right" style="font-weight: bold">Login </a>
-                <a href="{{url('/register')}}" class="pull-right" style="margin-right:10px; font-weight: bold">Register |</a>
+                {{--<a href="{{url('/register')}}" class="pull-right" style="margin-right:10px; font-weight: bold">Register |</a>--}}
             </div>
             <ul class="nav navbar-nav navbar-right" id="menu-main-nav">
                 <li class="hidden-sm hidden-md hidden-lg{{Request::is('/admin/login') ? 'active' : ''}}">
                     <a href="{{url('/admin/login')}}" title="Login">Login</a>
                 </li>
-                <li class="hidden-sm hidden-md hidden-lg {{Request::is('/register') ? 'active' : ''}}">
-                    <a href="{{url('/register')}}" title="Register">Register</a>
-                </li>
+                {{--<li class="hidden-sm hidden-md hidden-lg {{Request::is('/register') ? 'active' : ''}}">--}}
+                    {{--<a href="{{url('/register')}}" title="Register">Register</a>--}}
+                {{--</li>--}}
                 <li>
                     <a href="{{url('/')}}" title="{{trans('home.home')}}">{{trans('home.home')}}</a>
 

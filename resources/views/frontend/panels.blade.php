@@ -152,7 +152,7 @@
 
             <div class="sabbi-thumlinepost-card-meta">
                 <a href="{{url('building-resilient-safe-and-sustainable-cities-in-red-river-delta')}}" style="color:inherit">
-                    <h2 class="meta-title ht-5"> Policy Dialogue 2: Building Resilient, safe and sustainable cities in Red River delta (Hanoi City, Vinh Phuc City, Hai Phong city)
+                    <h2 class="meta-title ht-5"> Policy Dialogue 2: Building Resilient, safe and sustainable cities in Red River delta (Hanoi City, Vinh Phuc province, Hai Phong city)
                     </h2>
                 </a>
                 <p class="meta-text"></p>
