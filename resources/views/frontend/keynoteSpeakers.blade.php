@@ -120,6 +120,53 @@
                                     <div class="clearfix"></div>
                                 </div>
 
+                                <div class="col-md-12 content-human">
+
+                                    <div class="image-human">
+                                        <img class="" src="/frontend/keynote/sokona.jpg" alt="">
+                                    </div>
+                                    <p class="name-human"><strong>Dr Youba Sokona</strong></p>
+                                    <p><strong>Vice-Chair of the Intergovernmental Panel on Climate Change (IPCC)</strong></p>
+                                    <p>Dr Sokona is currently Special Advisor for Sustainable Development at the South Centre.</p>
+                                    <p>With over 35 years of experience addressing energy, environment and sustainable development in Africa. Reflecting his status, Dr Sokona was elected Vice-Chair of the Intergovernmental Panel on Climate Change (IPCC) in October 2015.
+                                    </p>
+                                    <p>Prior to this, Dr Sokona was Co-Chair of IPCC Working Group III on the mitigation of climate change for the Fifth Assessment Report after serving as a Lead Author since 1990. In addition to these achievements, Dr Sokona has a proven track record of organisational leadership and management, for example, leading the conception, development and initiating the Africa Renewable Energy Initiative, as the first Coordinator of the African Climate Policy Centre (ACPC) and as Executive Secretary of the Sahara and the Sahel Observatory (OSS). Dr Sokona’s advice is highly sought after, and as such, he is affiliated with numerous boards and organisations, including Honorary Professor at the University College London (UCL), Member of Science Advisory Committee of the International Institute for Applied Systems Analysis (IIASA), Member of the Advisory Board of the Payne Institute at the Colorado School of Mines, and as a Special Advisor to the African Energy Leaders Group. In short, Dr Sokona is a global figure, with deep technical knowledge, extensive policy experience and an unreserved personal commitment to African led development.</p>
+
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="col-md-12 content-human">
+
+                                    <div class="image-human">
+                                        <img class="" src="/frontend/keynote/diana.jpg" alt="">
+                                    </div>
+                                    <p class="name-human"><strong>Dr Diana ÜRGE-VORSATZ</strong></p>
+                                    <p>Diana Ürge-Vorsatz is a Professor at the Department of Environmental Sciences and Policy at the Central European University (CEU). She serves as Vice Chair of Working Group III of the Intergovernmental Panel on Climate Change (IPCC). She holds a Ph.D. from the University of California (Los Angeles and Berkeley).  She served as the Director for the Center for Climate Change and Sustainable Energy Policy at CEU between 2007 and 2017, as the Acting Head of Department in 2002-2003 and directed the PhD program in 2003 – 2004.
+                                        Diana Urge-Vorsatz was a Coordinating Lead Author in two Assessment Reports of the IPCC.  She served on the United Nation’s Scientific Expert Group on Climate Change, and led the buildings-related work in the Global Energy Assessment. She serves as associate editor of the journal “Energy Efficiency”, and is a member of the Editorial Board of “Annual Reviews of Environment and Resources”. She was a Visiting Professor at the International Christian University of Tokyo and a Research Scholar at IIASA (International Institute for Applied Systems Analysis).  She has been serving on the Governing and Advisory boards of several organizations, including Innogy (formerly RWE), the Austrian Climate and Energy Fund (KLIEN), the European Climate Foundation (ECF), the UK Energy Research Centre (UKERC), and the Hungarian Energy-Efficiency Cofinancing Program (HEECP), and the Club of Budapest.  She is regularly invited to high-level review panels, such as that evaluating the work at Lawrence Berkeley National Laboratory and the EU’s Joint Research Centre. She is regularly invited as a keynote or plenary speaker worldwide. She has over 200 scientific publications, in outlets including PNAS, Nature, Nature Climate Change. She has over 100 media appearances per year on climate and energy issues. She received the Hungarian Republic’s Presidential Award “Medium Cross” in 2008, as well as the “Role Model” award in 2009 and was invited as a member of Academia Europaea in 2017.
+                                    </p>
+
+                                    <div class="clearfix"></div>
+                                </div>
+
+                                <div class="col-md-12 content-human">
+
+                                    <div class="image-human">
+                                        <img class="" src="/frontend/keynote/maitrongnhuan.jpg" alt="">
+                                    </div>
+                                    <p class="name-human"><strong>Dr. Mai Trong Nhuan</strong></p>
+                                    <p>
+                                        Professor Dr. Mai Trong Nhuan, former President of Vietnam National University, Hanoi, is a MONRE and Bao Son awards winning environmentalist/earth scientist. He is a Vice Chairman of Vietnam Panel on Climate Change; Chairman of Quality Assurance Committee, Vietnam National University, Hanoi (VNU), Director of VNU Key Lab of Geoenvironment and Climate Change Response, and Deputy Director of Vietnam National Science and Technology Program for Sustainable Development of North West Vietnam.
+                                    </p>
+                                    <p>
+                                        He serves as a national distinguished expert and advisor in earth sciences, climate change, natural resources and environment management for sustainable development
+                                    </p>
+                                    <p>
+                                        Professor Mai Trong Nhuan is the author and co-author of eight books, about 100 papers in international and national journals and a leader of National and ministerial scientific projects related to the earth sciences, climate change impact and response, disaster mitigation, natural resources and environmental management for sustainable development and proactive response to extreme events, environmental change for ensuring non-traditional security. Professor Mai Trong Nhuan was one of the lead authors of IPCC report 2001, and review editors of chapter 9 of IPCC, 2012: Managing the Risks of Extreme Events and Disasters to Advance Climate Change Adaptation, a special report of Working Groups I and II of the Intergovernmental Panel on Climate Change.
+                                    </p>
+                                    <p>
+                                        His research areas are climate change and disaster assessment and response, natural resource, and environmental management, sustainability science, non-traditional security.
+                                    </p>
+                                    <div class="clearfix"></div>
+                                </div>
                             @else
                                 <div class="col-md-12 content-human">
 
@@ -176,6 +223,39 @@
                                     </p>
                                     <p>Prior to this, Dr Sokona was Co-Chair of IPCC Working Group III on the mitigation of climate change for the Fifth Assessment Report after serving as a Lead Author since 1990. In addition to these achievements, Dr Sokona has a proven track record of organisational leadership and management, for example, leading the conception, development and initiating the Africa Renewable Energy Initiative, as the first Coordinator of the African Climate Policy Centre (ACPC) and as Executive Secretary of the Sahara and the Sahel Observatory (OSS). Dr Sokona’s advice is highly sought after, and as such, he is affiliated with numerous boards and organisations, including Honorary Professor at the University College London (UCL), Member of Science Advisory Committee of the International Institute for Applied Systems Analysis (IIASA), Member of the Advisory Board of the Payne Institute at the Colorado School of Mines, and as a Special Advisor to the African Energy Leaders Group. In short, Dr Sokona is a global figure, with deep technical knowledge, extensive policy experience and an unreserved personal commitment to African led development.</p>
 
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="col-md-12 content-human">
+
+                                    <div class="image-human">
+                                        <img class="" src="/frontend/keynote/diana.jpg" alt="">
+                                    </div>
+                                    <p class="name-human"><strong>Dr Diana ÜRGE-VORSATZ</strong></p>
+                                    <p>Diana Ürge-Vorsatz is a Professor at the Department of Environmental Sciences and Policy at the Central European University (CEU). She serves as Vice Chair of Working Group III of the Intergovernmental Panel on Climate Change (IPCC). She holds a Ph.D. from the University of California (Los Angeles and Berkeley).  She served as the Director for the Center for Climate Change and Sustainable Energy Policy at CEU between 2007 and 2017, as the Acting Head of Department in 2002-2003 and directed the PhD program in 2003 – 2004.
+                                        Diana Urge-Vorsatz was a Coordinating Lead Author in two Assessment Reports of the IPCC.  She served on the United Nation’s Scientific Expert Group on Climate Change, and led the buildings-related work in the Global Energy Assessment. She serves as associate editor of the journal “Energy Efficiency”, and is a member of the Editorial Board of “Annual Reviews of Environment and Resources”. She was a Visiting Professor at the International Christian University of Tokyo and a Research Scholar at IIASA (International Institute for Applied Systems Analysis).  She has been serving on the Governing and Advisory boards of several organizations, including Innogy (formerly RWE), the Austrian Climate and Energy Fund (KLIEN), the European Climate Foundation (ECF), the UK Energy Research Centre (UKERC), and the Hungarian Energy-Efficiency Cofinancing Program (HEECP), and the Club of Budapest.  She is regularly invited to high-level review panels, such as that evaluating the work at Lawrence Berkeley National Laboratory and the EU’s Joint Research Centre. She is regularly invited as a keynote or plenary speaker worldwide. She has over 200 scientific publications, in outlets including PNAS, Nature, Nature Climate Change. She has over 100 media appearances per year on climate and energy issues. She received the Hungarian Republic’s Presidential Award “Medium Cross” in 2008, as well as the “Role Model” award in 2009 and was invited as a member of Academia Europaea in 2017.
+                                    </p>
+
+                                    <div class="clearfix"></div>
+                                </div>
+
+                                <div class="col-md-12 content-human">
+
+                                    <div class="image-human">
+                                        <img class="" src="/frontend/keynote/maitrongnhuan.jpg" alt="">
+                                    </div>
+                                    <p class="name-human"><strong>Dr. Mai Trong Nhuan</strong></p>
+                                    <p>
+                                        Professor Dr. Mai Trong Nhuan, former President of Vietnam National University, Hanoi, is a MONRE and Bao Son awards winning environmentalist/earth scientist. He is a Vice Chairman of Vietnam Panel on Climate Change; Chairman of Quality Assurance Committee, Vietnam National University, Hanoi (VNU), Director of VNU Key Lab of Geoenvironment and Climate Change Response, and Deputy Director of Vietnam National Science and Technology Program for Sustainable Development of North West Vietnam.
+                                    </p>
+                                    <p>
+                                        He serves as a national distinguished expert and advisor in earth sciences, climate change, natural resources and environment management for sustainable development
+                                    </p>
+                                    <p>
+                                        Professor Mai Trong Nhuan is the author and co-author of eight books, about 100 papers in international and national journals and a leader of National and ministerial scientific projects related to the earth sciences, climate change impact and response, disaster mitigation, natural resources and environmental management for sustainable development and proactive response to extreme events, environmental change for ensuring non-traditional security. Professor Mai Trong Nhuan was one of the lead authors of IPCC report 2001, and review editors of chapter 9 of IPCC, 2012: Managing the Risks of Extreme Events and Disasters to Advance Climate Change Adaptation, a special report of Working Groups I and II of the Intergovernmental Panel on Climate Change.
+                                    </p>
+                                    <p>
+                                        His research areas are climate change and disaster assessment and response, natural resource, and environmental management, sustainability science, non-traditional security.
+                                    </p>
                                     <div class="clearfix"></div>
                                 </div>
                             @endif

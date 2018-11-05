@@ -29,11 +29,11 @@
                 <div class="row">
                     <div class="col-md-8 col-sm-5 col-md-offset-2 col-xs-12">
                         <div class="col-md-12">
-
-                            @php $article = \App\Models\Article::where('title','forum-program')->first(); @endphp
-                            @if($article)
-                                {!! $article->content !!}
-                            @endif
+                            <a href="{{url('frontend/forum_program.pdf')}}">Hanoi Forum 2018 Agenda</a>
+                            {{--@php $article = \App\Models\Article::where('title','forum-program')->first(); @endphp--}}
+                            {{--@if($article)--}}
+                                {{--{!! $article->content !!}--}}
+                            {{--@endif--}}
                             {{--<p>Detailed schedule will be updated on August 30th, 2018.</p>--}}
 
                             {{--<p>&nbsp;</p>--}}
