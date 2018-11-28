@@ -36,7 +36,7 @@
                             </a>
 
                                 <a href="http://kfas.or.kr/" target="_blank">
-                                <img src="/frontend/assets/img/kfas_logo.jpg" alt=""  style="max-width: 100%">
+                                <img src="/frontend/bkhvcn.png" alt=""  style="max-width: 100%">
                                 </a>
 
                         </div>
