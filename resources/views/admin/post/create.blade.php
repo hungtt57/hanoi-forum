@@ -40,45 +40,7 @@
                             </div>
                         </div>
 
-                        {{--<input type="hidden" name="category_id" id="category_id">--}}
-                        {{--<div class="form-group clearfix">--}}
-                        {{--<label class="col-md-3 control-label">Danh mục</label>--}}
-                        {{--<div class="col-md-6">--}}
-                        {{--<div class="form-group">--}}
-                        {{--<div class="dropdown ht-list-filter-dropdown">--}}
-                        {{--<button class="form-control text-left dropdown-toggle" id="category_name" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">--}}
-                        {{--Chọn danh mục--}}
-                        {{--</button>--}}
-                        {{--<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">--}}
-                        {{--<li class="pa-12">--}}
-                        {{--<div class="input-group">--}}
-                        {{--<input type="text" class="form-control border-square new_category" placeholder="Thêm danh mục tin tức mới" style="min-width: 200px">--}}
-                        {{--<span class="input-group-btn">--}}
-                        {{--<button class="btn btn-success create_new_category" type="button">Thêm</button>--}}
-                        {{--</span>--}}
-                        {{--</div>--}}
-                        {{--</li>--}}
 
-                        {{--<div id="list-categories">--}}
-                        {{--@if(count($categories) > 0)--}}
-                        {{--@foreach($categories as $category)--}}
-                        {{--<li class="single-option">--}}
-                        {{--<div class="single-option_label">--}}
-                        {{--<a href="" class="choose-category" data-id="{{ $category->id }}" data-name="{{ $category->name }}" >{{ $category->name }}</a>--}}
-                        {{--</div>--}}
-                        {{--<div class="single-option_actions">--}}
-                        {{--<a href="#editCategory" class="single-action edit-category" data-id="{{ $category->id }}" data-name="{{ $category->name }}" data-toggle="modal"><i class="fa fa-pencil-square"></i>Sửa</a>--}}
-                        {{--<a href="#" class="single-action remove-category" data-id="{{ $category->id }}"><i class="fa fa-trash"></i>Xóa</a>--}}
-                        {{--</div>--}}
-                        {{--</li>--}}
-                        {{--@endforeach--}}
-                        {{--@endif--}}
-                        {{--</div>--}}
-                        {{--</ul>--}}
-                        {{--</div>--}}
-                        {{--</div>--}}
-                        {{--</div>--}}
-                        {{--</div>--}}
                         <div class="form-group clearfix">
                             <label class="col-md-3 control-label">Image</label>
                             <div class="col-md-6">
@@ -86,64 +48,58 @@
                                        rel="post_status_images">
                             </div>
                         </div>
-                        {{--<div class="form-group">--}}
-                        {{--<label class="col-md-3 control-label">Mô tả ngắn</label>--}}
-                        {{--<div class="col-md-6">--}}
-                        {{--<textarea class="form-control" placeholder="Điền mô tả ngắn "--}}
-                        {{--name="desc"> {{old('desc')}} </textarea>--}}
-                        {{--</div>--}}
-                        {{--</div>--}}
+
                         <div class="form-group">
                             <label class="col-md-3 control-label">Content</label>
                             <div class="col-md-6">
-                                  <textarea class="form-control ckeditor"  placeholder="Điền miêu tả"
-                              name="content">{{old('content',@$post->content)}} </textarea>
+                                  <textarea class="form-control ckeditor" placeholder="Điền miêu tả"
+                                            name="content">{{old('content',@$post->content)}} </textarea>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-3 control-label">Content English</label>
                             <div class="col-md-6">
-                    <textarea class="form-control ckeditor"  placeholder="Điền miêu tả"
+                              <textarea class="form-control ckeditor" placeholder="Điền miêu tả"
                               name="content_en">{{old('content_en',@$post->content_en)}} </textarea>
                             </div>
                         </div>
 
-                    </div>
 
-                        <div class="form-group">
-                            <label class="col-md-3 control-label">Meta title</label>
-                            <div class="col-md-6">
-                                <input type="text" name="meta_title" class="form-control" placeholder="Điền meta title"
-                                       value="{{old('meta_title',@$post->meta_title)}}">
-                            </div>
+
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Meta title</label>
+                        <div class="col-md-6">
+                            <input type="text" name="meta_title" class="form-control" placeholder="Điền meta title"
+                                   value="{{old('meta_title',@$post->meta_title)}}">
                         </div>
-                        <div class="form-group">
-                            <label class="col-md-3 control-label">Meta description</label>
-                            <div class="col-md-6">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Meta description</label>
+                        <div class="col-md-6">
                     <textarea class="form-control" placeholder="Điền meta description"
                               name="meta_description">{{old('meta_description',@$post->meta_description)}}</textarea>
-                            </div>
                         </div>
-                        <div class="form-group">
-                            <label class="col-md-3 control-label">Meta keyword</label>
-                            <div class="col-md-6">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Meta keyword</label>
+                        <div class="col-md-6">
                     <textarea class="form-control" placeholder="Điền miêu tả"
                               name="meta_keyword">{{old('meta_keyword',@$post->meta_keyword)}}</textarea>
-                            </div>
                         </div>
+                    </div>
 
-                        <div class="form-group">
-                            <label class="col-md-3 control-label">Status</label>
-                            <div class="col-md-6">
-                                <div class="mt-checkbox-inline">
-                                    <label class="mt-checkbox mt-checkbox-outline">
-                                        <input type="checkbox" name="status"
-                                               @if(isset($post) and $post->status == 1) checked @endif>
-                                        <span></span>
-                                    </label>
-                                </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Status</label>
+                        <div class="col-md-6">
+                            <div class="mt-checkbox-inline">
+                                <label class="mt-checkbox mt-checkbox-outline">
+                                    <input type="checkbox" name="status"
+                                           @if(isset($post) and $post->status == 1) checked @endif>
+                                    <span></span>
+                                </label>
                             </div>
                         </div>
+                    </div>
 
 
                     </div>
