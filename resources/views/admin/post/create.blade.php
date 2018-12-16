@@ -96,11 +96,19 @@
                         <div class="form-group">
                             <label class="col-md-3 control-label">Content</label>
                             <div class="col-md-6">
-                    <textarea class="form-control ckeditor"  placeholder="Điền miêu tả"
+                                  <textarea class="form-control ckeditor"  placeholder="Điền miêu tả"
                               name="content">{{old('content',@$post->content)}} </textarea>
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Content English</label>
+                            <div class="col-md-6">
+                    <textarea class="form-control ckeditor"  placeholder="Điền miêu tả"
+                              name="content_en">{{old('content_en',@$post->content_en)}} </textarea>
+                            </div>
+                        </div>
 
+                    </div>
 
                         <div class="form-group">
                             <label class="col-md-3 control-label">Meta title</label>
