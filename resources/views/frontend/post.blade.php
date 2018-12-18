@@ -11,15 +11,9 @@
     <header class="sabbi-page-header page-header-lg">
         <div class="page-header-content conternt-center">
             <div class="header-title-block">
-              @php
-                            $raw_locale = \Session::get('locale');
-
-                        @endphp
-                        @if($raw_locale != null and $raw_locale == 'vn')
+           
                 <h1 class="page-title">{{$post->title}}</h1>
-                @else
-                    <h1 class="page-title">{{$post->meta_title}}</h1>
-                @endif
+              
             </div>
         </div>
     </header>
