@@ -212,11 +212,11 @@
             @for($i = 1; $i <= 27; $i++)
                 <div class="col-md-4 col-sm-6 lighterbox">
                     <a data-toggle="lightbox" data-gallery="1" href="{{ url('/gallery/'.$i.'-min.jpg') }}">
-                        <div class="profile-card profile-card-meta_center">
-                            <figure>
-                                <img class="img-responsive" src="{{ url('/gallery/'.$i.'-min.jpg') }}" style="height: 100%"
-                                     alt="{{ $i }}.jpg">
-                            </figure>
+                        <div class="profile-card profile-card-meta_center" style="background-size: cover; background-repeat: no-repeat; background-image: url({{ url('/gallery/'.$i.'-min.jpeg') }}); height: 336px">
+                            {{--<figure>--}}
+                                {{--<img class="img-responsive" src="{{ url('/gallery/'.$i.'-min.jpg') }}" style="height: 100%"--}}
+                                     {{--alt="{{ $i }}.jpg">--}}
+                            {{--</figure>--}}
                         </div>
                     </a>
                 </div>
