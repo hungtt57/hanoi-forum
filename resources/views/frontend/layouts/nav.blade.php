@@ -43,12 +43,12 @@
                         </div>
                     </li>
                 </ul>
-                <a href="{{url('/admin/login')}}" class="pull-right" style="font-weight: bold">Login </a>
+                <a href="{{url('/admin/login')}}" class="pull-right" style="font-weight: bold">{{ trans('home.login') }} </a>
                 {{--<a href="{{url('/register')}}" class="pull-right" style="margin-right:10px; font-weight: bold">Register |</a>--}}
             </div>
             <ul class="nav navbar-nav navbar-right" id="menu-main-nav">
                 <li class="hidden-sm hidden-md hidden-lg{{Request::is('/admin/login') ? 'active' : ''}}">
-                    <a href="{{url('/admin/login')}}" title="Login">Login</a>
+                    <a href="{{url('/admin/login')}}" title="Login">{{ trans('home.login') }}</a>
                 </li>
                 {{--<li class="hidden-sm hidden-md hidden-lg {{Request::is('/register') ? 'active' : ''}}">--}}
                     {{--<a href="{{url('/register')}}" title="Register">Register</a>--}}
@@ -73,16 +73,16 @@
                 </li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" title="Program" data-hover="dropdown"
-                       data-animations="zoomIn">Program <span class="caret"></span></a>
+                       data-animations="zoomIn">{{trans('home.program')}} <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li>
-                            <a href="{{url('important-dates')}}" title="Important dates">Important dates</a>
+                            <a href="{{url('important-dates')}}" title="Important dates">{{trans('home.importantDates')}}</a>
                         </li>
                         <li>
-                            <a href="{{url('forum-program')}}" title="Forum Program">Forum Program</a>
+                            <a href="{{url('forum-program')}}" title="Forum Program">{{trans('home.forumProgram')}}</a>
                         </li>
                         <li>
-                            <a href="{{url('keynote-speakers')}}" title="Keynote Speakers">Keynote Speakers</a>
+                            <a href="{{url('keynote-speakers')}}" title="Keynote Speakers">{{trans('home.keynoteSpeakers')}}</a>
                         </li>
                     </ul>
                 </li>
@@ -109,24 +109,23 @@
                 </li>
 
                 <li class="{{Request::is('call-deadlines') ? 'active' : ''}}">
-                    <a href="{{url('/call-deadlines')}}" title="Calls & Deadlines">Calls & Deadlines</a>
+                    <a href="{{url('/call-deadlines')}}" title="Calls & Deadlines">{{trans('home.calldeadlines')}}</a>
                 </li>
 
                 <li>
-                    <a href="{{url('/registration')}}" title="Registration ">Registration </a>
+                    <a href="{{url('/registration')}}" title="Registration ">{{trans('home.registration')}} </a>
                 </li>
                 <li class="dropdown">
 
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" title="Plan Your Visit"
                        data-hover="dropdown"
-                       data-animations="zoomIn">Plan Your Visit <span class="caret"></span></a>
+                       data-animations="zoomIn">{{trans('home.planyourvisit')}} <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li>
-                            <a href="{{url('hanoi-experience')}}" title="Hanoi Experience">Hanoi Experience</a>
+                            <a href="{{url('hanoi-experience')}}" title="Hanoi Experience">{{trans('home.hanoiexperience')}}</a>
                         </li>
                         <li>
-                            <a href="{{url('about-and-around-vietnam')}}" title="About and Around Vietnam">About and
-                                Around Vietnam
+                            <a href="{{url('about-and-around-vietnam')}}" title="About and Around Vietnam">{{trans('home.aboutandaroundvietnam')}}
                             </a>
                         </li>
                         <li>
@@ -143,20 +142,20 @@
 
 
                 <li class="{{Request::is('news') ? 'active' : ''}}">
-                    <a href="{{url('/news')}}" title="News">News</a>
+                    <a href="{{url('/news')}}" title="News">{{ trans('home.news') }}</a>
                 </li>
 
                 <li class="dropdown">
 
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" title="Publications"
                        data-hover="dropdown"
-                       data-animations="zoomIn">Publications<span class="caret"></span></a>
+                       data-animations="zoomIn">{{ trans('home.publications') }}<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li>
-                            <a href="{{url('publications/books')}}" title="Books">Books</a>
+                            <a href="{{url('publications/books')}}" title="Books">{{ trans('home.books') }}</a>
                         </li>
                         <li>
-                            <a href="{{url('publications/journal-articles')}}" title="Journal Articles">Journal Articles
+                            <a href="{{url('publications/journal-articles')}}" title="Journal Articles">{{ trans('home.journals') }}
                             </a>
                         </li>
 

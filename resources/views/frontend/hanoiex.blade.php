@@ -28,7 +28,7 @@
             <div class="container">
                 <ol class="breadcrumb sabbi-breadcrumb list-unstyled list-inline">
                     <li><a href="{{url('/')}}">Home</a></li>
-                    <li class="active"><a href="#">Hanoi Experience</a></li>
+                    <li class="active"><a href="#">{{ trans('home.hanoiexperience') }}</a></li>
                 </ol>
             </div>
         </div>

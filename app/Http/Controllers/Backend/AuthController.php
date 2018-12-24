@@ -35,8 +35,6 @@ class AuthController extends Controller
         if ($account->type == User::PARTNER and $account->status == 0) {
             return redirect()->back()->with('error', 'Account not active');
         }
-
-
     }
 
     public function logout(Request $request)

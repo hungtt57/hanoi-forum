@@ -150,10 +150,8 @@
                         <div class="widget-main">
                             <h2 class="widget-title">{{trans('home.address')}}</h2>
                             <ul class="list list-unstyled list-footer-nav">
-                                <li><a >Hanoi Forum Secretariat</a></li>
-                                <li><a >R1006, Administration Building</a></li>
-                                <li><a >Vietnam National University, Hanoi</a></li>
-                                <li><a >144 Xuan Thuy Rd., Cau Giay dist.</a></li>
+                                <li>{!! trans('home.address_detail') !!}
+                                </li>
 
                             </ul>
                         </div>
@@ -162,7 +160,7 @@
                     <div class="widget-main">
                         <h2 class="widget-title">{{trans('contactInfo')}}</h2>
                         <ul class="list list-unstyled list-footer-nav">
-                            <li><a >Tel: (84) 24 39983856</a></li>
+                            <li><a >{{ trans('home.tel') }}: (84) 24 39983856</a></li>
                             <li><a >Email: hanoiforum@vnu.edu.vn</a></li>
 
 
@@ -176,11 +174,11 @@
 
                 <section class="widget widget_sec">
                     <div class="widget-main">
-                        <h2 class="widget-title">PROGRAM</h2>
+                        <h2 class="widget-title">{{ trans('home.program') }}</h2>
                         <ul class="list list-unstyled list-footer-nav">
-                            <li><a href="{{url('important-dates')}}">Important dates</a></li>
-                            <li><a href="{{url('forum-program')}}">Forum program</a></li>
-                            <li><a href="{{url('keynote-speakers')}}">Keynote speakers</a></li>
+                            <li><a href="{{url('important-dates')}}">{{ trans('home.importantDates') }}</a></li>
+                            <li><a href="{{url('forum-program')}}">{{ trans('home.forumProgram') }}</a></li>
+                            <li><a href="{{url('keynote-speakers')}}">{{ trans('home.keynoteSpeakers') }}</a></li>
 
                         </ul>
                     </div>
@@ -188,14 +186,14 @@
 
                 <section class="widget widget_sec">
                     <div class="widget-main">
-                        <h2 class="widget-title"><a href="{{url('/faq')}}"> FAQ</a><span style="text-transform: none !important;">s</span></h2>
+                        <h2 class="widget-title"><a href="{{url('/faq')}}"> {{ trans('home.faqs') }}</a><span style="text-transform: none !important;"></span></h2>
 
                     </div>
                 </section>
 
                 <section class="widget widget_sec">
                     <div class="widget-main">
-                        <h2 class="widget-title"><a href="{{url('/contact-us')}}"> Contact Us </a></h2>
+                        <h2 class="widget-title"><a href="{{url('/contact-us')}}"> {{ trans('home.contactus') }} </a></h2>
 
                     </div>
                 </section>
@@ -205,11 +203,11 @@
             <div class="col-sm-3">
                 <section class="widget widget_sec">
                     <div class="widget-main">
-                        <h2 class="widget-title">ORGANIZERS</h2>
+                        <h2 class="widget-title">{{ trans('home.organizers') }}</h2>
                         <ul class="list list-unstyled list-footer-nav">
-                            <li><a href="{{url('steering-committee')}}">Steering Committee</a></li>
-                            <li><a href="{{url('organizing-committee')}}">Organizing Committee</a></li>
-                            <li><a href="{{url('academic-committee')}}">Academic Committee</a></li>
+                            <li><a href="{{url('steering-committee')}}">{{  trans('home.steeringCommittee') }}</a></li>
+                            <li><a href="{{url('organizing-committee')}}">{{  trans('home.organizingCommittee') }}</a></li>
+                            <li><a href="{{url('academic-committee')}}">{{  trans('home.academicCommittee') }}</a></li>
                             {{--<li><a href="{{url('sponsors')}}">Sponsors</a></li>--}}
                         </ul>
                     </div>
@@ -218,7 +216,7 @@
 
                 <section class="widget widget_sec">
                     <div class="widget-main">
-                        <h2 class="widget-title"><a href="{{url('visa')}}"> Visa to Vietnam </a></h2>
+                        <h2 class="widget-title"><a href="{{url('visa')}}"> {{ trans('home.visaToVietnam') }} </a></h2>
                     </div>
                 </section>
 
@@ -229,10 +227,10 @@
             <div class="col-sm-3">
                 <section class="widget widget_sec">
                     <div class="widget-main">
-                        <h2 class="widget-title">Plan Your Visit</h2>
+                        <h2 class="widget-title">{{  trans('home.planyourvisit') }}</h2>
                         <ul class="list list-unstyled list-footer-nav">
-                            <li><a href="{{url('hanoi-experience')}}">Hanoi Experience</a></li>
-                            <li><a href="{{url('about-and-around-vietnam')}}">About and Around Vietnam</a></li>
+                            <li><a href="{{url('hanoi-experience')}}">{{  trans('home.hanoiexperience') }}</a></li>
+                            <li><a href="{{url('about-and-around-vietnam')}}">{{  trans('home.aboutandaroundvietnam') }}</a></li>
                             <li><a href="{{url('accommodation')}}">Accommodation</a></li>
                             <li><a href="{{url('forum-site-information')}}">Forum Site Information</a></li>
 
@@ -241,7 +239,7 @@
                 </section>
                 <section class="widget widget_sec">
                     <div class="widget-main">
-                        <h2 class="widget-title"><a href="{{url('transportation')}}">Transportation </a></h2>
+                        <h2 class="widget-title"><a href="{{url('transportation')}}">{{ trans('home.transportation') }} </a></h2>
                         <ul class="list list-unstyled list-footer-nav">
                             {{--<li><a href="">From-and-to Noi Bai airport</a></li>--}}
                             {{--<li><a href="">Around Hanoi city</a></li>--}}

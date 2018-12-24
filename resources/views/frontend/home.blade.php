@@ -129,19 +129,14 @@
 
                 <div class="col-sm-4" id="left-b">
                     <article class="sabbi-thumlinepost-card solitude-bg__x" id="left">
-                        <a href="{{url('hanoi-forum')}}" style="color:inherit"><h2 class="entry-title ht-4">About Hanoi
-                                Forum</h2>
+                        <a href="{{url('hanoi-forum')}}" style="color:inherit"><h2 class="entry-title ht-4">{{ trans('home.abouthanoiforum') }}</h2>
                             <div class="sabbi-thumlinepost-card-meta">
 
                                 <p class="entry-text" style="text-align: justify">
-                                    Hanoi Forum is an international academic conference co-hosted by Vietnam National
-                                    University, Hanoi (VNU) and Korea Foundation for Advanced Studies (KFAS). The
-                                    general theme of Hanoi Forum is “Towards Sustainable Development”. Hanoi Forum aims
-                                    at promoting the goal of inclusive and sustainable development for all.
+                                    {{ trans('home.abouthanoiforum_text') }}
 
                                 </p>
-                                <div class="btn btn-unsolemn btn-action read-more" style="color: #32813E;">Read
-                                    More
+                                <div class="btn btn-unsolemn btn-action read-more" style="color: #32813E;">{{ trans('home.readmore') }}
                                 </div>
                             </div>
                         </a>
@@ -163,29 +158,29 @@
 
 
                             <li class="tl-item with-icon">
-                                <p><span class="item-section">8 - 10 November 2018</span></p>
+                                <p><span class="item-section">{{ trans('home.08-10/11/2018') }}</span></p>
                                 <div class="content-wrapper">
-                                    <h3 class="title">Forum dates</h3>
+                                    <h3 class="title">{{ trans('home.forumdates') }}</h3>
                                 </div>
                             </li>
 
                             <li class="tl-item with-icon">
-                                <p><span class="item-section">15 September 2018</span></p>
+                                <p><span class="item-section">{{ trans('home.15/09/2018') }}</span></p>
                                 <div class="content-wrapper">
-                                    <h3 class="title">Deadline for full papers</h3>
+                                    <h3 class="title">{{ trans('home.deadlineforfullpapers') }}</h3>
                                 </div>
                             </li>
                             <li class="tl-item with-icon">
-                                <p><span class="item-section">15 July 2018</span></p>
+                                <p><span class="item-section">{{ trans('home.15/07/2018') }}</span></p>
                                 <div class="content-wrapper">
-                                    <h3 class="title">Notification of abstract review results</h3>
+                                    <h3 class="title">{{ trans('home.notificationOfAbstractReviewResults') }}</h3>
                                 </div>
                             </li>
 
                             <li class="tl-item with-icon">
-                                <p><span class="item-section">30 June 2018</span></p>
+                                <p><span class="item-section">{{ trans('home.30/06/2018') }}</span></p>
                                 <div class="content-wrapper">
-                                    <h3 class="title">Deadline for abstracts</h3>
+                                    <h3 class="title">{{ trans('home.deadlineForAbstracts') }}</h3>
                                 </div>
                             </li>
                         </ol>
@@ -197,7 +192,7 @@
 
                         <article class="news-card sabbi-thumlinepost-card solitude-bg__x" id="right">
                             {{--<img src="/assets/img/hnforum.jpg" style="width: 100%">--}}
-                            <h2 class="stage-title">Latest Events</h2>
+                            <h2 class="stage-title">{{ trans('home.latestEvents') }}</h2>
                             <ul class="list-unstyled lst_news_list" tabindex="0">
                                 @foreach($posts as $post)
                                     <li class="lst_news_item">
@@ -205,7 +200,11 @@
                                                     href="{{url('post').'/'.str_slug($post->title).'-'.$post->id}}">{{$post->title}}</a>
                                         </h3>
                                         <div>
+                                            @if(app()->isLocale('en'))
                                             <span class="date">{{$post->created_at->format('M d Y')}}</span>
+                                                @else
+                                                <span class="date">{{$post->created_at->format('d/m/Y')}}</span>
+                                            @endif
                                         </div>
                                     </li>
                                 @endforeach
@@ -223,14 +222,14 @@
                         <div class="row taitro" >
                             <div class="col-sm-6">
                                 <div class="row">
-                                    <h4 style="text-align: center; font-weight: bold">ORGANIZERS</h4>
+                                    <h4 style="text-align: center; font-weight: bold">{{ trans('home.organizers_2') }}</h4>
                                     <a href="http://www.vnu.edu.vn/home/" target="_blank">
                                         <div class="col-sm-6">
 
                                             <img src="/frontend/assets/img/vnu.png" style="max-width: 80px"
                                                  class="img-responsive center-block img-s-2">
                                             <div style="margin-top: 10px">
-                                                <p class="text-banner-top">Vietnam National University, Hanoi</p>
+                                                <p class="text-banner-top">{{ trans('home.vnu') }}</p>
                                             </div>
                                         </div>
                                     </a>
@@ -240,22 +239,21 @@
                                         <img src="/frontend/assets/img/kfas_logo.jpg" style=""
                                              class="img-responsive center-block img-s">
 
-                                        <p class="text-banner-top text-s" style="">Korea Foundation for Advanced
-                                            Studies</p>
+                                        <p class="text-banner-top text-s" style="">{{ trans('home.koreaFoundation') }}</p>
                                     </div>
                                     </a>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="row">
-                                    <h4 style="text-align: center; font-weight: bold">PARTNERS</h4>
+                                    <h4 style="text-align: center; font-weight: bold">{{ trans('home.partners') }}</h4>
                                     <a href="https://www.most.gov.vn/en/Pages/home.aspx" target="_blank">
                                     <div class="col-sm-3 box-partner">
 
                                         <img src="/frontend/bkhvcn.png"
                                              class="img-responsive center-block img-partners ">
 
-                                        <p class="text-banner">Ministry of Science and Technology</p>
+                                        <p class="text-banner">{{ trans('home.ministryOfScience') }}</p>
 
                                     </div>
                                     </a>
@@ -264,7 +262,7 @@
 
                                         <img src="/frontend/btnvmt.png"
                                              class="img-responsive center-block img-partners ">
-                                        <p class="text-banner"> Ministry of Natural Resources and Environment</p>
+                                        <p class="text-banner"> {{ trans('home.ministryOfNaturalResources') }}</p>
                                     </div>
                                     </a>
                                     <a href="http://hanoi.gov.vn/home" target="_blank">
@@ -272,7 +270,7 @@
 
                                         <img src="/frontend/hanoi.png"
                                              class="img-responsive center-block img-partners ">
-                                        <p class="text-banner">Hanoi Municipal People's Committee</p>
+                                        <p class="text-banner">{{ trans('home.hanoiCommittee') }}</p>
 
                                     </div>
                                     </a>
@@ -282,7 +280,7 @@
                                         <img src="/frontend/vast.png" class="img-responsive center-block img2"
                                              style="max-height: 80px">
 
-                                        <p class="text-banner">Vietnam Academy Of Science And Technology</p>
+                                        <p class="text-banner">{{ trans('home.vnAcademy') }}</p>
 
                                     </div>
                                     </a>

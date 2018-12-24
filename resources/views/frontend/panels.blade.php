@@ -25,10 +25,10 @@
 
             <div class="sabbi-thumlinepost-card-meta">
                 <a href="{{url('climate-change-evidence-and-security')}}" style="color:inherit">
-                    <h2 class="meta-title ht-5">Panel 1: Climate change evidence and security</h2></a>
+                    <h2 class="meta-title ht-5">{{ trans('home.panel1_title') }}</h2></a>
                 <p class="meta-text"></p>
                 <a href="{{url('climate-change-evidence-and-security')}}"
-                   class="btn btn-unsolemn btn-action read-more">Read More</a>
+                   class="btn btn-unsolemn btn-action read-more">{{ trans('home.readmore') }}</a>
             </div>
 
         </article>
@@ -43,11 +43,10 @@
             </a>
             <div class="sabbi-thumlinepost-card-meta">
                 <a href="{{url('humans-impact-climate')}}" style="color:inherit"><h2
-                            class="meta-title ht-5">Panel 2: Human impacts on climate change</h2></a>
+                            class="meta-title ht-5">{{ trans('home.panel2_title') }}</h2></a>
 
                 <p class="meta-text"></p>
-                <a href="{{url('humans-impact-climate')}}" class="btn btn-unsolemn btn-action read-more">Read
-                    More</a>
+                <a href="{{url('humans-impact-climate')}}" class="btn btn-unsolemn btn-action read-more">{{ trans('home.readmore') }}</a>
             </div>
         </article>
     </div>
@@ -61,11 +60,10 @@
             </a>
             <div class="sabbi-thumlinepost-card-meta">
                 <a href="{{url('climate-change-response')}}" style="color:inherit">
-                    <h2 class="meta-title ht-5">Panel 3: Climate change response</h2>
+                    <h2 class="meta-title ht-5">{{ trans('home.panel3_title') }}</h2>
                 </a>
                 <p class="meta-text"></p>
-                <a href="{{url('climate-change-response')}}" class="btn btn-unsolemn btn-action read-more">Read
-                    More</a>
+                <a href="{{url('climate-change-response')}}" class="btn btn-unsolemn btn-action read-more">{{ trans('home.readmore') }}</a>
             </div>
         </article>
     </div>
@@ -81,12 +79,11 @@
             <div class="sabbi-thumlinepost-card-meta">
                 <a href="{{url('policy-and-governance-of-climate-change-response-and-sustainability')}}"
                    style="color:inherit">
-                    <h2 class="meta-title ht-5">Panel 4: Policy and governance of climate change response and
-                        sustainability</h2>
+                    <h2 class="meta-title ht-5">{{ trans('home.panel4_title') }}</h2>
                 </a>
                 <p class="meta-text"></p>
                 <a href="{{url('policy-and-governance-of-climate-change-response-and-sustainability')}}"
-                   class="btn btn-unsolemn btn-action read-more">Read More</a>
+                   class="btn btn-unsolemn btn-action read-more">{{ trans('home.readmore') }}</a>
             </div>
         </article>
     </div>
@@ -107,12 +104,11 @@
             <div class="sabbi-thumlinepost-card-meta">
                 <a href="{{url('science-technology-and-education-for-climate-change-response-and-sustainability')}}"
                    style="color:inherit">
-                    <h2 class="meta-title ht-5">Panel 5: Science, technology and education for climate change
-                        response and sustainability</h2>
+                    <h2 class="meta-title ht-5">{{ trans('home.panel5_title') }}</h2>
                 </a>
                 <p class="meta-text"></p>
                 <a href="{{url('science-technology-and-education-for-climate-change-response-and-sustainability')}}"
-                   class="btn btn-unsolemn btn-action read-more">Read More</a>
+                   class="btn btn-unsolemn btn-action read-more">{{ trans('home.readmore') }}</a>
             </div>
 
         </article>
@@ -129,12 +125,12 @@
 
             <div class="sabbi-thumlinepost-card-meta">
                 <a href="{{url('sustainable-development-of-mekong-delta-responding-to-climate-change')}}" style="color:inherit">
-                    <h2 class="meta-title ht-5"> Policy Dialogue 1: Sustainable development of Mekong Delta responding to Climate change
+                    <h2 class="meta-title ht-5"> {{ trans('home.policy1_title') }}
                     </h2>
                 </a>
 
                 <p class="meta-text"></p>
-                <a href="{{url('sustainable-development-of-mekong-delta-responding-to-climate-change')}}" class="btn btn-unsolemn btn-action read-more">Read More</a>
+                <a href="{{url('sustainable-development-of-mekong-delta-responding-to-climate-change')}}" class="btn btn-unsolemn btn-action read-more">{{ trans('home.readmore') }}</a>
             </div>
 
 
@@ -152,11 +148,11 @@
 
             <div class="sabbi-thumlinepost-card-meta">
                 <a href="{{url('building-resilient-safe-and-sustainable-cities-in-red-river-delta')}}" style="color:inherit">
-                    <h2 class="meta-title ht-5"> Policy Dialogue 2: Building Resilient, safe and sustainable cities in Red River delta (Hanoi City,  Vinh Yen city, Hai Phong city)
+                    <h2 class="meta-title ht-5"> {{ trans('home.policy2_title') }}
                     </h2>
                 </a>
                 <p class="meta-text"></p>
-                <a href="{{url('building-resilient-safe-and-sustainable-cities-in-red-river-delta')}}" class="btn btn-unsolemn btn-action read-more">Read More</a>
+                <a href="{{url('building-resilient-safe-and-sustainable-cities-in-red-river-delta')}}" class="btn btn-unsolemn btn-action read-more">{{ trans('home.readmore') }}</a>
             </div>
 
         </article>
