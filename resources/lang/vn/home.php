@@ -84,5 +84,6 @@ return [
 
     'abouthanoiforum_text' => 'Diễn đàn Hà Nội là một hội thảo khoa học quốc tế được đồng tổ chức bởi Đại học Quốc gia Hà Nội (VNU) và Quỹ Giáo dục Cao học Hàn Quốc (KFAS).
 Chủ đề xuyên suốt của Diễn đàn Hà Nội là “Hướng tới Phát triển Bền vững”. Như tên gọi, Diễn đàn ra đời với mục tiêu thúc đẩy việc hiện thực hóa mục tiêu phát triển bền vững và bao trùm trên toàn thế giới cũng như tại Việt Nam. Diễn đàn Hà Nội khuyến khích các nghiên cứu liên ngành giúp đạt được sự hiểu biết sâu sắc hơn về mối quan hệ giữa phát triển và bảo tồn, tương tác của xã hội loài người và môi trường tự nhiên, giữa thịnh vượng và công bằng xã hội. 
-Chúng tôi tin rằng tương lai nhân loại phụ thuộc vào sự hiểu biết của con người và khả năng ứng phó của chúng ta đối với các mối nguy hiểm đang gia tăng như biến đổi khí hậu, ô nhiễm môi trường, mất đa dạng sinh học, suy thoái nguồn tài nguyên đất và nước.  '
+Chúng tôi tin rằng tương lai nhân loại phụ thuộc vào sự hiểu biết của con người và khả năng ứng phó của chúng ta đối với các mối nguy hiểm đang gia tăng như biến đổi khí hậu, ô nhiễm môi trường, mất đa dạng sinh học, suy thoái nguồn tài nguyên đất và nước.  ',
+    'gallery' => 'Thư viện ảnh'
 ];

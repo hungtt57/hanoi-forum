@@ -231,8 +231,10 @@
                         <ul class="list list-unstyled list-footer-nav">
                             <li><a href="{{url('hanoi-experience')}}">{{  trans('home.hanoiexperience') }}</a></li>
                             <li><a href="{{url('about-and-around-vietnam')}}">{{  trans('home.aboutandaroundvietnam') }}</a></li>
+                            @if(app()->isLocale('en'))
                             <li><a href="{{url('accommodation')}}">Accommodation</a></li>
                             <li><a href="{{url('forum-site-information')}}">Forum Site Information</a></li>
+                                @endif
 
                         </ul>
                     </div>

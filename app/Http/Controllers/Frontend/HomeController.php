@@ -394,5 +394,10 @@ class HomeController extends AdminController
     public function publicationJournalArticle () {
         return view('frontend.publication.journalArticle');
     }
+
+    public function gallery()
+    {
+        return view('frontend.publication.gallery');
+    }
 }
 

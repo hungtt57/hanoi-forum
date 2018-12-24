@@ -128,6 +128,7 @@
                             <a href="{{url('about-and-around-vietnam')}}" title="About and Around Vietnam">{{trans('home.aboutandaroundvietnam')}}
                             </a>
                         </li>
+                        @if(app()->isLocale('en'))
                         <li>
                             <a href="{{url('accommodation')}}" title="Accommodation">Accommodation</a>
                         </li>
@@ -135,6 +136,7 @@
                             <a href="{{url('forum-site-information')}}" title="Forum Site Information">Forum Site
                                 Information</a>
                         </li>
+                            @endif
 
 
                     </ul>
@@ -156,6 +158,10 @@
                         </li>
                         <li>
                             <a href="{{url('publications/journal-articles')}}" title="Journal Articles">{{ trans('home.journals') }}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{url('publications/gallery')}}" title="Gallery">{{ trans('home.gallery') }}
                             </a>
                         </li>
 

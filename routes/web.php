@@ -103,6 +103,7 @@ Route::group([
         ->where(['slug' => '[a-zA-Z0-9-]+', 'id' => '[0-9-]+']);
     Route::get('publications/books','HomeController@publicationBook');
     Route::get('publications/journal-articles','HomeController@publicationJournalArticle');
+    Route::get('publications/gallery','HomeController@gallery');
 });
 
 

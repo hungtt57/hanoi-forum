@@ -90,7 +90,8 @@ return [
                                     general theme of Hanoi Forum is “Towards Sustainable Development”. Hanoi Forum aims
                                     at promoting the goal of inclusive and sustainable development for all.
 
-                                '
+                                ',
+    'gallery' => 'Gallery'
 
 
 ];
