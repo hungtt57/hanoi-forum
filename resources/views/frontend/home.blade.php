@@ -192,7 +192,7 @@
 
                         <article class="news-card sabbi-thumlinepost-card solitude-bg__x" id="right">
                             {{--<img src="/assets/img/hnforum.jpg" style="width: 100%">--}}
-                            <h2 class="stage-title">{{ trans('home.latestEvents') }}</h2>
+                            <a href="{{ url('news') }}"> <h2 class="stage-title">{{ trans('home.news') }}</h2></a>
                             <ul class="list-unstyled lst_news_list" tabindex="0">
                                 @foreach($posts as $post)
                                     <li class="lst_news_item">

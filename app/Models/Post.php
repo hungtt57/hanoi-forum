@@ -15,9 +15,19 @@ class Post extends Model
         $raw_locale = \Session::get('locale');
 
         if ($raw_locale != null and $raw_locale == 'vn') {
-            return $this->attributes['title'];
+            if (!empty($this->attributes['title'])) {
+                return $this->attributes['title'];
+            }
+            return $this->attributes['meta_title'];
         }
-        return $this->attributes['meta_title'];
+
+        if (!empty($this->attributes['meta_title'])) {
+
+            return $this->attributes['meta_title'];
+        }
+        return $this->attributes['title'];
+
+       //return $this->attributes['meta_title'];
 
     }
 
@@ -27,9 +37,17 @@ class Post extends Model
         $raw_locale = \Session::get('locale');
 
         if ($raw_locale != null and $raw_locale == 'vn') {
-            return $this->attributes['content'];
+            if (!empty($this->attributes['content'])) {
+                return $this->attributes['content'];
+            }
+            return $this->attributes['content_en'];
         }
-        return $this->attributes['content_en'];
+
+        if (!empty($this->attributes['content_en'])) {
+
+            return $this->attributes['content_en'];
+        }
+        return $this->attributes['content'];
 
     }
 }

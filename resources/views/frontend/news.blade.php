@@ -52,7 +52,7 @@
                             @foreach($posts as $index => $post)
 
                                 <div class="content-page  @if($index != 0) hide @endif" id="post-{{$post->id}}">
-                                    <h2>{{ $post->title }}</h2>
+                                    <h2 class="text-center" style="color: #007F49">{{ $post->title }}</h2>
                                     {!! $post->content !!}
                                 </div>
                             @endforeach
