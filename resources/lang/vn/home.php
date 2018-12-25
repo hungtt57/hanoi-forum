@@ -15,7 +15,7 @@ return [
 
     'home' => 'Trang chủ',
     'address' => 'Địa chỉ',
-    'contactInfo' => 'Thông tin liên lạc',
+    'contactInfo' => 'Thông tin liên hệ',
     'about' => 'Giới thiệu',
     'hanoiForum' => 'Diễn đàn Hà Nội',
     'hanoiForum2018' => 'Diễn đàn Hà Nội 2018',
