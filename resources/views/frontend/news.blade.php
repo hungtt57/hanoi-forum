@@ -50,7 +50,9 @@
                         @php $posts = App\Models\Post::where('status',1)->orderBy('created_at','desc')->get(); @endphp
                         @if($posts)
                             @foreach($posts as $index => $post)
+
                                 <div class="content-page  @if($index != 0) hide @endif" id="post-{{$post->id}}">
+                                    <h2>{{ $post->title }}</h2>
                                     {!! $post->content !!}
                                 </div>
                             @endforeach
