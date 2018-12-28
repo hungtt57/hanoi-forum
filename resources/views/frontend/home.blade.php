@@ -197,7 +197,7 @@
                                 @foreach($posts as $post)
                                     <li class="lst_news_item">
                                         <h3 class="title mg_0"><a
-                                                    href="{{url('post').'/'.str_slug($post->title).'-'.$post->id}}">{{$post->title}}</a>
+                                                    href="{{ url('/news') }}">{{$post->title}}</a>
                                         </h3>
                                         <div>
                                             @if(app()->isLocale('en'))

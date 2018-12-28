@@ -143,9 +143,9 @@
                 </li>
 
 
-                <li class="{{Request::is('news') ? 'active' : ''}}">
-                    <a href="{{url('/news')}}" title="News">{{ trans('home.news') }}</a>
-                </li>
+                {{--<li class="{{Request::is('news') ? 'active' : ''}}">--}}
+                    {{--<a href="{{url('/news')}}" title="News">{{ trans('home.news') }}</a>--}}
+                {{--</li>--}}
 
                 <li class="dropdown">
 
