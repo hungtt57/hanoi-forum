@@ -30,7 +30,7 @@
     <link href="/frontend/assets/css/main.css" rel="stylesheet">
     <link href="/frontend/assets/css/style.css" rel="stylesheet">
     <script src="/frontend/assets/js/vendor/modernizr-2.8.3.min.js"></script>
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     @stack('styles')
 
 

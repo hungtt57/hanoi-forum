@@ -59,6 +59,10 @@ Route::group([
 
 
     Route::get('about', 'HomeController@about');
+    Route::get('cvs', function() {
+        $cvs = \App\Models\User::where('type', \App\Models\User::PARTNER)->get();
+        return view('frontend.cvs', compact('cvs'));
+    });
     Route::get('hanoi-forum', 'HomeController@hanoi');
     Route::get('hanoi-forum-2018', 'HomeController@hanoiForum2018');
     Route::get('visa','HomeController@visa');

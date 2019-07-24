@@ -111,7 +111,8 @@ class User extends Authenticatable
         'title_paper',
         'panel_of_abstract',
         'panel_of_paper',
-        'code_password'
+        'code_password',
+        'pdf_cv'
 
     ];
     protected $casts = [

@@ -3,6 +3,7 @@
 namespace App\Console;
 
 use App\Console\Commands\BlurBanner;
+use App\Console\Commands\MapCv;
 use App\Console\Commands\SendMail;
 use App\Console\Commands\TestHin;
 use Illuminate\Console\Scheduling\Schedule;
@@ -20,6 +21,7 @@ class Kernel extends ConsoleKernel
         SendMail::class,
 	    BlurBanner::class,
 	    TestHin::class,
+        MapCv::class
     ];
 
     /**
