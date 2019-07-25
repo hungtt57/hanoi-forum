@@ -84,5 +84,6 @@ return [
 
     'abouthanoiforum_text' => 'Diễn đàn Hà Nội là một hội thảo khoa học quốc tế được đồng tổ chức bởi Đại học Quốc gia Hà Nội (VNU) và Quỹ Giáo dục Cao học Hàn Quốc (KFAS).
 Chủ đề xuyên suốt của Diễn đàn Hà Nội là “Hướng tới Phát triển Bền vững”. Như tên gọi, Diễn đàn ra đời với mục tiêu thúc đẩy việc hiện thực hóa mục tiêu phát triển bền vững và bao trùm trên toàn thế giới cũng như tại Việt Nam.',
-    'gallery' => 'Thư viện ảnh'
+    'gallery' => 'Thư viện ảnh',
+    'delegates' => 'Đại biểu'
 ];

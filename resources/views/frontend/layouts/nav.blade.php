@@ -156,9 +156,13 @@
                         <li>
                             <a href="{{url('publications/books')}}" title="Books">{{ trans('home.books') }}</a>
                         </li>
+
                         <li>
                             <a href="{{url('publications/journal-articles')}}" title="Journal Articles">{{ trans('home.journals') }}
                             </a>
+                        </li>
+                        <li>
+                            <a href="{{url('cvs')}}" title="Books">{{ trans('home.delegates') }}</a>
                         </li>
                         <li>
                             <a href="{{url('publications/gallery')}}" title="Gallery">{{ trans('home.gallery') }}

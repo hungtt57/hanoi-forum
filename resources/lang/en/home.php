@@ -91,7 +91,8 @@ return [
                                     at promoting the goal of inclusive and sustainable development for all.
 
                                 ',
-    'gallery' => 'Gallery'
+    'gallery' => 'Gallery',
+    'delegates' => 'Delegates'
 
 
 ];
